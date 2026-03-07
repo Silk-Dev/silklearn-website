@@ -4,21 +4,21 @@ import { featurePages, guidePages, primaryNavigation, useCasePages } from '@/lib
 
 export function SiteFooter() {
   return (
-    <footer className="mt-10 rounded-[24px] border border-[color:var(--border)] bg-white/82 px-6 py-8 shadow-[0_16px_40px_rgba(22,47,88,0.06)] sm:px-8">
+    <footer className="mt-10 rounded-3xl border border-(--border) bg-white/82 px-6 py-8 shadow-[0_16px_40px_rgba(22,47,88,0.06)] sm:px-8">
       <div className="grid gap-8 lg:grid-cols-[1.2fr_1.8fr] lg:items-start">
         <div>
-          <p className="text-sm font-semibold text-[color:var(--foreground)]">SilkLearn</p>
+          <p className="text-sm font-semibold text-(--foreground)">SilkLearn</p>
           <p className="mt-3 max-w-[54ch] text-sm leading-7 text-[color:var(--muted-foreground)]">
-            Turn dense source material into structured, dependency-ordered learning paths without rebuilding your knowledge as a separate course library.
+            SilkLearn compiles dense source material into reviewable learning paths, dependency-aware graphs, and context-efficient outputs for teams working from complex internal knowledge.
           </p>
-          <p className="mt-4 text-xs uppercase tracking-[0.16em] text-[color:var(--primary)]">
-            Source material in. Reviewable learning order out.
-              SilkLearn compiles dense source material into reviewable learning paths, dependency-aware graphs, and context-efficient outputs for teams working from complex internal knowledge.
+          <p className="mt-4 text-xs uppercase tracking-[0.16em] text-(--primary)">
+            Compile messy knowledge into usable structure.
+          </p>
         </div>
 
-              Compile messy knowledge into usable structure.
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div className="grid gap-3">
-            <p className="text-sm font-semibold text-[color:var(--foreground)]">Pages</p>
+            <p className="text-sm font-semibold text-(--foreground)">Pages</p>
             {primaryNavigation.map((item) => (
               <Link
                 key={item.href}
@@ -34,11 +34,11 @@ export function SiteFooter() {
           </div>
 
           <div className="grid gap-3">
-            <p className="text-sm font-semibold text-[color:var(--foreground)]">Features</p>
+            <p className="text-sm font-semibold text-(--foreground)">Features</p>
             {featurePages.map((page) => (
               <Link
                 key={page.slug}
-                className="text-sm text-[color:var(--muted-foreground)] transition-colors hover:text-[color:var(--foreground)]"
+                className="text-sm text-(--muted-foreground) transition-colors hover:text-(--foreground)"
                 href={`/features/${page.slug}`}
               >
                 {page.title}
