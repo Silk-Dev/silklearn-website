@@ -65,11 +65,11 @@ export function WaitlistForm() {
 
   return (
     <form
-      className="grid gap-4 rounded-[22px] border border-[color:var(--border)] bg-[color:var(--card-strong)] p-6 shadow-[0_18px_44px_rgba(22,47,88,0.08)]"
+      className="grid gap-4 rounded-[22px] border border-(--border) bg-(--card-strong) p-6 shadow-[0_18px_44px_rgba(22,47,88,0.08)]"
       onSubmit={handleSubmit}
     >
       <label className="grid gap-2">
-        <span className="text-sm font-semibold text-[color:var(--foreground)]">Email</span>
+        <span className="text-sm font-semibold text-(--foreground)">Email</span>
         <Input
           autoComplete="email"
           name="email"
@@ -82,7 +82,7 @@ export function WaitlistForm() {
       </label>
 
       <label className="grid gap-2">
-        <span className="text-sm font-semibold text-[color:var(--foreground)]">Company</span>
+        <span className="text-sm font-semibold text-(--foreground)">Company</span>
         <Input
           autoComplete="organization"
           name="companyName"
@@ -100,16 +100,16 @@ export function WaitlistForm() {
       <p
         className={`min-h-6 text-sm ${
           submissionState.kind === 'success'
-            ? 'text-[color:var(--success)]'
+            ? 'text-(--success)'
             : submissionState.kind === 'error'
-              ? 'text-[color:var(--warning)]'
-              : 'text-[color:var(--muted-foreground)]'
+              ? 'text-(--warning)'
+              : 'text-(--muted-foreground)'
         }`}
       >
         {submissionState.message || 'Private beta access is rolling out in waves.'}
       </p>
 
-      <p className="text-xs leading-6 text-[color:var(--muted-foreground)]">
+      <p className="text-xs leading-6 text-(--muted-foreground)">
         Early access is aimed at leaders testing roadmap generation from private docs and dense technical material.
       </p>
     </form>

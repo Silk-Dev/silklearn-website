@@ -44,20 +44,20 @@ export default async function GuideDetailPage({ params }: GuideDetailPageProps) 
 
   return (
     <PageShell>
-      <article className="rounded-[28px] border border-[color:var(--border)] bg-[color:var(--surface)] px-6 py-10 shadow-[var(--shadow)] sm:px-8 lg:px-10">
-        <p className="text-[0.82rem] font-bold uppercase tracking-[0.18em] text-[color:var(--primary)]">Guide</p>
-        <h1 className="mt-4 max-w-[13ch] font-[family-name:var(--font-display)] text-[clamp(3rem,7vw,5.2rem)] leading-[0.92] tracking-[-0.05em] text-[color:var(--foreground)] max-sm:max-w-none">
+      <article className="rounded-[28px] border border-(--border) bg-(--surface) px-6 py-10 shadow-(--shadow) sm:px-8 lg:px-10">
+        <p className="text-[0.82rem] font-bold uppercase tracking-[0.18em] text-(--primary)">Guide</p>
+        <h1 className="mt-4 max-w-[13ch] font-(family-name:--font-display) text-[clamp(3rem,7vw,5.2rem)] leading-[0.92] tracking-[-0.05em] text-(--foreground) max-sm:max-w-none">
           {page.title}
         </h1>
-        <p className="mt-5 max-w-[66ch] text-[1.02rem] leading-8 text-[color:var(--muted-foreground)]">{page.summary}</p>
+        <p className="mt-5 max-w-[66ch] text-[1.02rem] leading-8 text-(--muted-foreground)">{page.summary}</p>
 
         <div className="mt-8 grid gap-5">
           {page.sections.map((section) => (
             <section key={section.heading}>
-              <h2 className="font-[family-name:var(--font-display)] text-[clamp(1.8rem,4vw,2.6rem)] leading-[1] tracking-[-0.03em] text-[color:var(--foreground)]">
+              <h2 className="font-(family-name:--font-display) text-[clamp(1.8rem,4vw,2.6rem)] leading-none tracking-[-0.03em] text-(--foreground)">
                 {section.heading}
               </h2>
-              <p className="mt-3 max-w-[66ch] text-[1rem] leading-8 text-[color:var(--muted-foreground)]">{section.body}</p>
+              <p className="mt-3 max-w-[66ch] text-[1rem] leading-8 text-(--muted-foreground)">{section.body}</p>
             </section>
           ))}
         </div>
@@ -69,7 +69,7 @@ export default async function GuideDetailPage({ params }: GuideDetailPageProps) 
             <CardTitle>Related feature</CardTitle>
           </CardHeader>
           <CardContent className="text-sm leading-7">
-            <Link className="font-semibold text-[color:var(--foreground)]" href={page.featureHref}>
+            <Link className="font-semibold text-(--foreground)" href={page.featureHref}>
               Continue to the relevant feature page
             </Link>
           </CardContent>
@@ -80,7 +80,7 @@ export default async function GuideDetailPage({ params }: GuideDetailPageProps) 
             <CardTitle>Related use case</CardTitle>
           </CardHeader>
           <CardContent className="text-sm leading-7">
-            <Link className="font-semibold text-[color:var(--foreground)]" href={page.useCaseHref}>
+            <Link className="font-semibold text-(--foreground)" href={page.useCaseHref}>
               See where this guide applies in practice
             </Link>
           </CardContent>

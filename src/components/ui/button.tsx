@@ -5,16 +5,16 @@ import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
 
 const buttonVariants = cva(
-  'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors disabled:pointer-events-none disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--ring)] focus-visible:ring-offset-2 focus-visible:ring-offset-[color:var(--background)]',
+  'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors disabled:pointer-events-none disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--ring) focus-visible:ring-offset-2 focus-visible:ring-offset-(--background)',
   {
     variants: {
       variant: {
         default:
-          'bg-[color:var(--primary)] text-[color:var(--primary-foreground)] hover:bg-[color:var(--primary-muted)]',
+          'bg-(--primary) text-(--primary-foreground) hover:bg-(--primary-muted)',
         outline:
-          'border border-[color:var(--border)] bg-transparent text-[color:var(--foreground)] hover:bg-[color:var(--surface-hover)]',
+          'border border-(--border) bg-transparent text-(--foreground) hover:bg-(--surface-hover)',
         secondary:
-          'bg-[color:var(--card-dark)] text-[color:var(--card-dark-foreground)] hover:bg-[color:var(--card-dark-muted)]',
+          'bg-(--card-dark) text-(--card-dark-foreground) hover:bg-(--card-dark-muted)',
       },
       size: {
         default: 'h-11 px-4 py-2',

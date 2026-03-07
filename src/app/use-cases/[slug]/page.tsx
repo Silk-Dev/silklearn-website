@@ -45,12 +45,12 @@ export default async function UseCaseDetailPage({ params }: UseCaseDetailPagePro
 
   return (
     <PageShell>
-      <section className="rounded-[28px] border border-[color:var(--border)] bg-[color:var(--surface)] px-6 py-10 shadow-[var(--shadow)] sm:px-8 lg:px-10">
-        <p className="text-[0.82rem] font-bold uppercase tracking-[0.18em] text-[color:var(--primary)]">Use case</p>
-        <h1 className="mt-4 max-w-[12ch] font-[family-name:var(--font-display)] text-[clamp(3rem,7vw,5.2rem)] leading-[0.92] tracking-[-0.05em] text-[color:var(--foreground)] max-sm:max-w-none">
+      <section className="rounded-[28px] border border-(--border) bg-(--surface) px-6 py-10 shadow-(--shadow) sm:px-8 lg:px-10">
+        <p className="text-[0.82rem] font-bold uppercase tracking-[0.18em] text-(--primary)">Use case</p>
+        <h1 className="mt-4 max-w-[12ch] font-(family-name:--font-display) text-[clamp(3rem,7vw,5.2rem)] leading-[0.92] tracking-[-0.05em] text-(--foreground) max-sm:max-w-none">
           {page.title}
         </h1>
-        <p className="mt-5 max-w-[62ch] text-[1.02rem] leading-8 text-[color:var(--muted-foreground)]">{page.summary}</p>
+        <p className="mt-5 max-w-[62ch] text-[1.02rem] leading-8 text-(--muted-foreground)">{page.summary}</p>
       </section>
 
       <section className="mt-5 grid gap-5 lg:grid-cols-[1fr_360px]">
@@ -59,7 +59,7 @@ export default async function UseCaseDetailPage({ params }: UseCaseDetailPagePro
             <CardTitle>Expected outcomes</CardTitle>
           </CardHeader>
           <CardContent>
-            <ul className="space-y-3 text-sm leading-7 text-[color:var(--muted-foreground)]">
+            <ul className="space-y-3 text-sm leading-7 text-(--muted-foreground)">
               {page.outcomes.map((outcome) => (
                 <li key={outcome}>{outcome}</li>
               ))}
@@ -67,18 +67,18 @@ export default async function UseCaseDetailPage({ params }: UseCaseDetailPagePro
           </CardContent>
         </Card>
 
-        <Card className="bg-[color:var(--card)]">
+        <Card className="bg-(--card)">
           <CardHeader>
             <CardTitle>Related paths</CardTitle>
           </CardHeader>
           <CardContent className="space-y-3 text-sm leading-7">
             <p>
-              <Link className="font-semibold text-[color:var(--foreground)]" href={page.featureHref}>
+              <Link className="font-semibold text-(--foreground)" href={page.featureHref}>
                 Relevant feature
               </Link>
             </p>
             <p>
-              <Link className="font-semibold text-[color:var(--foreground)]" href={page.guideHref}>
+              <Link className="font-semibold text-(--foreground)" href={page.guideHref}>
                 Supporting guide
               </Link>
             </p>

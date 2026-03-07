@@ -9,7 +9,7 @@ type PageShellProps = {
 
 export function PageShell({ children }: PageShellProps) {
   return (
-    <main className="mx-auto w-full max-w-[1240px] px-4 pb-20 pt-6 sm:px-6 lg:px-8">
+    <main className="mx-auto w-full max-w-310 px-4 pb-24 sm:px-6 lg:px-8">
       <SiteHeader />
       {children}
       <SiteFooter />

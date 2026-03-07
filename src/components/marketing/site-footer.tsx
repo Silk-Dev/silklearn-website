@@ -4,14 +4,14 @@ import { featurePages, guidePages, primaryNavigation, useCasePages } from '@/lib
 
 export function SiteFooter() {
   return (
-    <footer className="mt-10 rounded-3xl border border-(--border) bg-white/82 px-6 py-8 shadow-[0_16px_40px_rgba(22,47,88,0.06)] sm:px-8">
-      <div className="grid gap-8 lg:grid-cols-[1.2fr_1.8fr] lg:items-start">
+    <footer className="mt-14 border-t border-[rgba(10,25,49,0.08)] pt-10">
+      <div className="grid gap-10 lg:grid-cols-[1.1fr_1.9fr] lg:items-start">
         <div>
-          <p className="text-sm font-semibold text-(--foreground)">SilkLearn</p>
-          <p className="mt-3 max-w-[54ch] text-sm leading-7 text-[color:var(--muted-foreground)]">
+          <p className="text-sm font-semibold uppercase tracking-[0.14em] text-(--foreground)">SilkLearn</p>
+          <p className="mt-4 max-w-[54ch] text-sm leading-7 text-(--muted-foreground)">
             SilkLearn compiles dense source material into reviewable learning paths, dependency-aware graphs, and context-efficient outputs for teams working from complex internal knowledge.
           </p>
-          <p className="mt-4 text-xs uppercase tracking-[0.16em] text-(--primary)">
+          <p className="mt-5 text-xs uppercase tracking-[0.16em] text-(--primary)">
             Compile messy knowledge into usable structure.
           </p>
         </div>
@@ -22,13 +22,13 @@ export function SiteFooter() {
             {primaryNavigation.map((item) => (
               <Link
                 key={item.href}
-                className="text-sm text-[color:var(--muted-foreground)] transition-colors hover:text-[color:var(--foreground)]"
+                className="text-sm text-(--muted-foreground) transition-colors hover:text-(--foreground)"
                 href={item.href}
               >
                 {item.label}
               </Link>
             ))}
-            <Link className="text-sm text-[color:var(--muted-foreground)] transition-colors hover:text-[color:var(--foreground)]" href="/waitlist">
+            <Link className="text-sm text-(--muted-foreground) transition-colors hover:text-(--foreground)" href="/waitlist">
               Waitlist
             </Link>
           </div>
@@ -47,11 +47,11 @@ export function SiteFooter() {
           </div>
 
           <div className="grid gap-3">
-            <p className="text-sm font-semibold text-[color:var(--foreground)]">Use Cases</p>
+            <p className="text-sm font-semibold text-(--foreground)">Use Cases</p>
             {useCasePages.map((page) => (
               <Link
                 key={page.slug}
-                className="text-sm text-[color:var(--muted-foreground)] transition-colors hover:text-[color:var(--foreground)]"
+                className="text-sm text-(--muted-foreground) transition-colors hover:text-(--foreground)"
                 href={`/use-cases/${page.slug}`}
               >
                 {page.title}
@@ -60,11 +60,11 @@ export function SiteFooter() {
           </div>
 
           <div className="grid gap-3">
-            <p className="text-sm font-semibold text-[color:var(--foreground)]">Guides</p>
+            <p className="text-sm font-semibold text-(--foreground)">Guides</p>
             {guidePages.map((page) => (
               <Link
                 key={page.slug}
-                className="text-sm text-[color:var(--muted-foreground)] transition-colors hover:text-[color:var(--foreground)]"
+                className="text-sm text-(--muted-foreground) transition-colors hover:text-(--foreground)"
                 href={`/guides/${page.slug}`}
               >
                 {page.title}

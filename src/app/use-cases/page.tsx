@@ -18,9 +18,9 @@ export const metadata: Metadata = buildMetadata({
 export default function UseCasesPage() {
   return (
     <PageShell>
-      <section className="rounded-[28px] border border-[color:var(--border)] bg-[color:var(--surface)] px-6 py-10 shadow-[var(--shadow)] sm:px-8 lg:px-10">
-        <p className="text-[0.82rem] font-bold uppercase tracking-[0.18em] text-[color:var(--primary)]">Use cases</p>
-        <h1 className="mt-4 max-w-[12ch] font-[family-name:var(--font-display)] text-[clamp(3rem,7vw,5.4rem)] leading-[0.92] tracking-[-0.05em] text-[color:var(--foreground)] max-sm:max-w-none">
+      <section className="rounded-[28px] border border-(--border) bg-(--surface) px-6 py-10 shadow-(--shadow) sm:px-8 lg:px-10">
+        <p className="text-[0.82rem] font-bold uppercase tracking-[0.18em] text-(--primary)">Use cases</p>
+        <h1 className="mt-4 max-w-[12ch] font-(family-name:--font-display) text-[clamp(3rem,7vw,5.4rem)] leading-[0.92] tracking-[-0.05em] text-(--foreground) max-sm:max-w-none">
           Where the product is most useful first.
         </h1>
       </section>
@@ -34,8 +34,8 @@ export default function UseCasesPage() {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-sm leading-7 text-[color:var(--muted-foreground)]">{page.summary}</p>
-              <ul className="mt-4 space-y-2 text-sm leading-7 text-[color:var(--muted-foreground)]">
+              <p className="text-sm leading-7 text-(--muted-foreground)">{page.summary}</p>
+              <ul className="mt-4 space-y-2 text-sm leading-7 text-(--muted-foreground)">
                 {page.outcomes.map((outcome) => (
                   <li key={outcome}>{outcome}</li>
                 ))}
