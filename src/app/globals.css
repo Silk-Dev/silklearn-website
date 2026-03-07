@@ -1,32 +1,34 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f3efe5;
-  --foreground: #152018;
-  --surface: rgba(255, 252, 246, 0.78);
-  --card: rgba(255, 255, 255, 0.5);
-  --card-foreground: #152018;
-  --card-dark: rgba(21, 29, 25, 0.95);
-  --card-dark-foreground: rgba(247, 243, 234, 0.92);
-  --card-dark-muted: rgba(247, 243, 234, 0.56);
-  --popover: rgba(255, 252, 246, 0.92);
-  --popover-foreground: #152018;
-  --primary: #0b5e49;
-  --primary-muted: #0f7a5f;
-  --primary-foreground: #f7f3ea;
-  --secondary: #d9cab1;
-  --secondary-foreground: #152018;
-  --muted: rgba(255, 255, 255, 0.5);
-  --muted-foreground: rgba(21, 32, 24, 0.72);
-  --accent: #0f7a5f;
-  --accent-foreground: #f7f3ea;
+  --background: #f5f8fc;
+  --foreground: #16263f;
+  --surface: rgba(255, 255, 255, 0.84);
+  --surface-highlight: rgba(222, 229, 240, 0.76);
+  --card: rgba(255, 255, 255, 0.7);
+  --card-strong: rgba(255, 255, 255, 0.82);
+  --card-foreground: #16263f;
+  --card-dark: rgba(22, 47, 88, 0.98);
+  --card-dark-foreground: rgba(255, 255, 255, 0.94);
+  --card-dark-muted: rgba(228, 228, 228, 0.72);
+  --popover: rgba(255, 255, 255, 0.94);
+  --popover-foreground: #16263f;
+  --primary: #162f58;
+  --primary-muted: #26487f;
+  --primary-foreground: #ffffff;
+  --secondary: #e4e4e4;
+  --secondary-foreground: #16263f;
+  --muted: rgba(228, 228, 228, 0.58);
+  --muted-foreground: rgba(22, 38, 63, 0.74);
+  --accent: #26487f;
+  --accent-foreground: #ffffff;
   --warning: #a4412b;
-  --success: #0c6a52;
-  --border: rgba(21, 32, 24, 0.12);
-  --input: rgba(21, 32, 24, 0.16);
-  --ring: rgba(15, 122, 95, 0.3);
-  --surface-hover: rgba(255, 255, 255, 0.4);
-  --shadow: 0 24px 80px rgba(21, 32, 24, 0.12);
+  --success: #1f4d8b;
+  --border: rgba(22, 47, 88, 0.14);
+  --input: rgba(22, 47, 88, 0.18);
+  --ring: rgba(22, 47, 88, 0.28);
+  --surface-hover: rgba(228, 228, 228, 0.45);
+  --shadow: 0 24px 80px rgba(22, 47, 88, 0.12);
   --radius: 1rem;
 }
 
@@ -42,9 +44,9 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
-    radial-gradient(circle at top left, rgba(217, 202, 177, 0.9), transparent 35%),
-    radial-gradient(circle at top right, rgba(15, 122, 95, 0.12), transparent 28%),
-    linear-gradient(180deg, #f7f3ea 0%, var(--background) 100%);
+    radial-gradient(circle at top left, rgba(22, 47, 88, 0.07), transparent 32%),
+    radial-gradient(circle at top right, rgba(169, 169, 169, 0.14), transparent 24%),
+    linear-gradient(180deg, #fcfdff 0%, var(--background) 100%);
   color: var(--foreground);
   font-family: var(--font-body), sans-serif;
 }

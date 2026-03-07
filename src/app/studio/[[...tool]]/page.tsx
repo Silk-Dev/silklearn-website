@@ -5,6 +5,11 @@ import { StudioShell } from '@/app/studio/[[...tool]]/components/studio-shell';
 
 export { metadata };
 
+export const robots = {
+  index: false,
+  follow: false,
+};
+
 export default function StudioPage() {
   if (!isSanityConfigured) {
     return (

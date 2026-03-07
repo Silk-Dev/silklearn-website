@@ -64,7 +64,10 @@ export function WaitlistForm() {
   }
 
   return (
-    <form className="grid gap-4 rounded-2xl border border-[color:var(--border)] bg-white/65 p-6" onSubmit={handleSubmit}>
+    <form
+      className="grid gap-4 rounded-[22px] border border-[color:var(--border)] bg-[color:var(--card-strong)] p-6 shadow-[0_18px_44px_rgba(22,47,88,0.08)]"
+      onSubmit={handleSubmit}
+    >
       <label className="grid gap-2">
         <span className="text-sm font-semibold text-[color:var(--foreground)]">Email</span>
         <Input
@@ -104,6 +107,10 @@ export function WaitlistForm() {
         }`}
       >
         {submissionState.message || 'Private beta access is rolling out in waves.'}
+      </p>
+
+      <p className="text-xs leading-6 text-[color:var(--muted-foreground)]">
+        Early access is aimed at leaders testing roadmap generation from private docs and dense technical material.
       </p>
     </form>
   );
