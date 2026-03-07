@@ -1,16 +1,33 @@
+@import "tailwindcss";
+
 :root {
   --background: #f3efe5;
-  --background-strong: #d9cab1;
+  --foreground: #152018;
   --surface: rgba(255, 252, 246, 0.78);
-  --surface-strong: rgba(21, 29, 25, 0.9);
-  --ink: #152018;
-  --ink-soft: rgba(21, 32, 24, 0.72);
-  --line: rgba(21, 32, 24, 0.12);
+  --card: rgba(255, 255, 255, 0.5);
+  --card-foreground: #152018;
+  --card-dark: rgba(21, 29, 25, 0.95);
+  --card-dark-foreground: rgba(247, 243, 234, 0.92);
+  --card-dark-muted: rgba(247, 243, 234, 0.56);
+  --popover: rgba(255, 252, 246, 0.92);
+  --popover-foreground: #152018;
+  --primary: #0b5e49;
+  --primary-muted: #0f7a5f;
+  --primary-foreground: #f7f3ea;
+  --secondary: #d9cab1;
+  --secondary-foreground: #152018;
+  --muted: rgba(255, 255, 255, 0.5);
+  --muted-foreground: rgba(21, 32, 24, 0.72);
   --accent: #0f7a5f;
-  --accent-strong: #0b5e49;
+  --accent-foreground: #f7f3ea;
   --warning: #a4412b;
   --success: #0c6a52;
+  --border: rgba(21, 32, 24, 0.12);
+  --input: rgba(21, 32, 24, 0.16);
+  --ring: rgba(15, 122, 95, 0.3);
+  --surface-hover: rgba(255, 255, 255, 0.4);
   --shadow: 0 24px 80px rgba(21, 32, 24, 0.12);
+  --radius: 1rem;
 }
 
 * {
@@ -28,7 +45,7 @@ body {
     radial-gradient(circle at top left, rgba(217, 202, 177, 0.9), transparent 35%),
     radial-gradient(circle at top right, rgba(15, 122, 95, 0.12), transparent 28%),
     linear-gradient(180deg, #f7f3ea 0%, var(--background) 100%);
-  color: var(--ink);
+  color: var(--foreground);
   font-family: var(--font-body), sans-serif;
 }
 
@@ -46,319 +63,6 @@ code {
   font-family: 'SFMono-Regular', Consolas, monospace;
 }
 
-.page-shell {
-  width: min(1180px, calc(100% - 32px));
-  margin: 0 auto;
-  padding: 24px 0 72px;
-}
-
-.hero-panel,
-.section-block,
-.waitlist-panel {
-  position: relative;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: 32px;
-  background: var(--surface);
-  backdrop-filter: blur(18px);
-  box-shadow: var(--shadow);
-}
-
-.hero-panel {
-  display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
-  gap: 32px;
-  padding: 40px;
-}
-
-.hero-panel::after,
-.waitlist-panel::after {
-  content: '';
-  position: absolute;
-  inset: auto -10% -30% auto;
-  width: 320px;
-  height: 320px;
-  border-radius: 999px;
-  background: radial-gradient(circle, rgba(15, 122, 95, 0.18), transparent 65%);
-  pointer-events: none;
-}
-
-.hero-copy h1,
-.section-heading h2,
-.waitlist-panel h2,
-.studio-card h1 {
-  margin: 0;
-  font-family: var(--font-display), serif;
-  font-weight: 400;
-  letter-spacing: -0.04em;
-  line-height: 0.95;
-}
-
-.hero-copy h1 {
-  max-width: 10ch;
-  font-size: clamp(3.4rem, 9vw, 6.9rem);
-}
-
-.section-heading h2,
-.waitlist-panel h2,
-.studio-card h1 {
-  max-width: 14ch;
-  font-size: clamp(2.4rem, 6vw, 4.2rem);
-}
-
-.hero-text,
-.waitlist-copy,
-.pillar-card p,
-.faq-card p,
-.studio-card p {
-  color: var(--ink-soft);
-  font-size: 1.02rem;
-  line-height: 1.7;
-}
-
-.hero-text {
-  max-width: 56ch;
-  margin: 24px 0 0;
-}
-
-.eyebrow {
-  margin: 0 0 16px;
-  color: var(--accent-strong);
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-}
-
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 28px;
-}
-
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 48px;
-  padding: 0 20px;
-  border: 1px solid transparent;
-  border-radius: 999px;
-  font-weight: 600;
-  transition:
-    transform 140ms ease,
-    border-color 140ms ease,
-    background-color 140ms ease;
-}
-
-.button:hover {
-  transform: translateY(-1px);
-}
-
-.button.primary {
-  background: var(--ink);
-  color: #f7f3ea;
-}
-
-.button.ghost {
-  border-color: var(--line);
-  color: var(--ink);
-  background: rgba(255, 255, 255, 0.4);
-}
-
-.signal-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 24px;
-  color: var(--ink-soft);
-  font-size: 0.95rem;
-}
-
-.signal-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 999px;
-  background: var(--accent);
-  box-shadow: 0 0 0 6px rgba(15, 122, 95, 0.12);
-}
-
-.hero-frame {
-  display: grid;
-  gap: 16px;
-}
-
-.code-card {
-  border-radius: 28px;
-  padding: 24px;
-  background: linear-gradient(180deg, rgba(21, 29, 25, 0.95), rgba(21, 29, 25, 0.86));
-  color: rgba(247, 243, 234, 0.92);
-}
-
-.code-card-header,
-.terminal-title {
-  font-size: 0.82rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
-
-.code-card-header {
-  display: flex;
-  justify-content: space-between;
-  color: rgba(247, 243, 234, 0.56);
-}
-
-.code-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
-  margin-top: 24px;
-}
-
-.code-grid ul {
-  margin: 12px 0 0;
-  padding-left: 18px;
-  line-height: 1.8;
-}
-
-.metrics-grid,
-.pillar-grid,
-.faq-list {
-  display: grid;
-  gap: 16px;
-}
-
-.metrics-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.metric-card,
-.pillar-card,
-.faq-card {
-  border: 1px solid var(--line);
-  border-radius: 24px;
-  background: rgba(255, 255, 255, 0.5);
-}
-
-.metric-card {
-  padding: 18px;
-}
-
-.metric-card p {
-  margin: 0 0 10px;
-  color: var(--ink-soft);
-  font-size: 0.92rem;
-}
-
-.metric-card strong {
-  font-size: 1.12rem;
-}
-
-.section-block {
-  margin-top: 20px;
-  padding: 32px;
-}
-
-.section-heading {
-  display: grid;
-  gap: 14px;
-  margin-bottom: 28px;
-}
-
-.pillar-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.pillar-card,
-.faq-card {
-  padding: 24px;
-}
-
-.pillar-card h3,
-.faq-card h3 {
-  margin: 0 0 10px;
-  font-size: 1.2rem;
-}
-
-.pillar-card p,
-.faq-card p {
-  margin: 0;
-}
-
-.faq-block {
-  background:
-    linear-gradient(180deg, rgba(255, 252, 246, 0.82), rgba(255, 252, 246, 0.7)),
-    radial-gradient(circle at bottom right, rgba(169, 65, 43, 0.08), transparent 26%);
-}
-
-.faq-list {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.waitlist-panel {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 420px);
-  gap: 28px;
-  margin-top: 20px;
-  padding: 32px;
-}
-
-.waitlist-copy {
-  max-width: 58ch;
-  margin-top: 18px;
-}
-
-.waitlist-form {
-  display: grid;
-  gap: 14px;
-  padding: 24px;
-  border: 1px solid var(--line);
-  border-radius: 28px;
-  background: rgba(255, 255, 255, 0.65);
-}
-
-.field {
-  display: grid;
-  gap: 8px;
-}
-
-.field span {
-  font-size: 0.92rem;
-  font-weight: 600;
-}
-
-.field input {
-  min-height: 48px;
-  padding: 0 14px;
-  border: 1px solid rgba(21, 32, 24, 0.16);
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.8);
-}
-
-.field input:focus {
-  outline: 2px solid rgba(15, 122, 95, 0.24);
-  outline-offset: 1px;
-}
-
-.form-message {
-  margin: 0;
-  min-height: 24px;
-  font-size: 0.92rem;
-}
-
-.form-message.idle {
-  color: var(--ink-soft);
-}
-
-.form-message.success {
-  color: var(--success);
-}
-
-.form-message.error {
-  color: var(--warning);
-}
-
 .studio-placeholder {
   display: grid;
   place-items: center;
@@ -369,57 +73,42 @@ code {
 .studio-card {
   max-width: 720px;
   padding: 32px;
-  border: 1px solid var(--line);
+  border: 1px solid var(--border);
   border-radius: 28px;
   background: rgba(255, 255, 255, 0.75);
   box-shadow: var(--shadow);
 }
 
+.studio-card .eyebrow {
+  margin: 0 0 16px;
+  color: var(--primary);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.studio-card h1 {
+  margin: 0;
+  max-width: 14ch;
+  font-family: var(--font-display), serif;
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+}
+
+.studio-card p {
+  color: var(--muted-foreground);
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
 @media (max-width: 980px) {
-  .hero-panel,
-  .waitlist-panel,
-  .pillar-grid,
-  .faq-list,
-  .metrics-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-copy h1 {
-    max-width: 12ch;
-  }
-
-  .code-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (max-width: 640px) {
-  .page-shell {
-    width: min(100% - 20px, 1180px);
-    padding-top: 10px;
-    padding-bottom: 32px;
-  }
-
-  .hero-panel,
-  .section-block,
-  .waitlist-panel,
   .studio-card,
-  .waitlist-form,
-  .code-card,
-  .pillar-card,
-  .faq-card {
-    border-radius: 24px;
-  }
-
-  .hero-panel,
-  .section-block,
-  .waitlist-panel {
-    padding: 22px;
-  }
-
-  .hero-copy h1,
-  .section-heading h2,
-  .waitlist-panel h2,
   .studio-card h1 {
     max-width: none;
   }

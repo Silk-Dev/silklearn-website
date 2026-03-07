@@ -16,7 +16,29 @@ const bodyFont = Space_Grotesk({
   subsets: ['latin'],
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000';
+function getSiteUrl() {
+  const configuredUrl = process.env.NEXT_PUBLIC_SITE_URL;
+
+  if (configuredUrl) {
+    return configuredUrl;
+  }
+
+  const productionUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL;
+
+  if (productionUrl) {
+    return `https://${productionUrl}`;
+  }
+
+  const previewUrl = process.env.VERCEL_URL;
+
+  if (previewUrl) {
+    return `https://${previewUrl}`;
+  }
+
+  return 'http://localhost:3000';
+}
+
+const siteUrl = getSiteUrl();
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

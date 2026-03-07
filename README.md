@@ -1,10 +1,12 @@
 # SilkLearn Website
 
-Standalone marketing site scaffold for SilkLearn using Next.js, embedded Sanity Studio, and local Postgres via Docker Compose.
+Standalone marketing site scaffold for SilkLearn using Next.js, Tailwind CSS, shadcn/ui, embedded Sanity Studio, and local Postgres via Docker Compose.
 
 ## Stack
 
 - Next.js 16 with App Router
+- Tailwind CSS 4
+- shadcn/ui primitives configured in `src/components/ui`
 - Sanity Studio mounted at `/studio`
 - Postgres 17 in Docker Compose for operational data like waitlist capture
 
@@ -36,6 +38,28 @@ Standalone marketing site scaffold for SilkLearn using Next.js, embedded Sanity 
 
 The website runs at `http://localhost:3000`.
 
+## Deploying To Vercel
+
+1. Push this repository to GitHub.
+2. Import the repo into Vercel as a Next.js project.
+3. Set the package manager to `pnpm` if Vercel does not detect it automatically.
+4. Add the required environment variables in Vercel:
+
+	- `NEXT_PUBLIC_SITE_URL`
+	- `NEXT_PUBLIC_SANITY_PROJECT_ID`
+	- `NEXT_PUBLIC_SANITY_DATASET`
+	- `SANITY_API_TOKEN` if you later add preview or write flows
+	- `DATABASE_URL` pointing to a hosted Postgres instance
+
+5. Deploy.
+
+Notes:
+
+- `vercel.json` is included so Vercel uses `pnpm install --frozen-lockfile` and `pnpm build`.
+- The waitlist API route runs on the Node.js runtime and auto-creates the `waitlist_signups` table if it does not exist yet.
+- Local Docker Compose is only for development. Vercel cannot run `docker-compose.yml`, so production must use a hosted Postgres provider.
+- If `NEXT_PUBLIC_SITE_URL` is not set, the app falls back to Vercel-provided deployment URLs for metadata.
+
 ## Environment Variables
 
 - `NEXT_PUBLIC_SITE_URL`: public site origin for metadata
@@ -49,6 +73,7 @@ The website runs at `http://localhost:3000`.
 - The compose stack exposes Postgres on `localhost:5434` to avoid conflicting with the main SilkGuild Postgres instance on `5432`.
 - On first boot, Docker runs `docker/postgres/init/001-create-waitlist.sql` to create the `waitlist_signups` table.
 - The `/api/waitlist` route inserts emails into that table.
+- In production, the waitlist route also creates the table automatically if it is missing.
 
 ## Sanity Notes
 

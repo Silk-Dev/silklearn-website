@@ -3,6 +3,9 @@
 import type { FormEvent } from 'react';
 import { useState } from 'react';
 
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+
 type SubmissionState = {
   kind: 'idle' | 'success' | 'error';
   message: string;
@@ -61,10 +64,10 @@ export function WaitlistForm() {
   }
 
   return (
-    <form className="waitlist-form" onSubmit={handleSubmit}>
-      <label className="field">
-        <span>Email</span>
-        <input
+    <form className="grid gap-4 rounded-2xl border border-[color:var(--border)] bg-white/65 p-6" onSubmit={handleSubmit}>
+      <label className="grid gap-2">
+        <span className="text-sm font-semibold text-[color:var(--foreground)]">Email</span>
+        <Input
           autoComplete="email"
           name="email"
           onChange={(event) => setEmail(event.target.value)}
@@ -75,9 +78,9 @@ export function WaitlistForm() {
         />
       </label>
 
-      <label className="field">
-        <span>Company</span>
-        <input
+      <label className="grid gap-2">
+        <span className="text-sm font-semibold text-[color:var(--foreground)]">Company</span>
+        <Input
           autoComplete="organization"
           name="companyName"
           onChange={(event) => setCompanyName(event.target.value)}
@@ -87,11 +90,19 @@ export function WaitlistForm() {
         />
       </label>
 
-      <button className="button primary" disabled={isSubmitting} type="submit">
+      <Button disabled={isSubmitting} type="submit">
         {isSubmitting ? 'Saving...' : 'Request early access'}
-      </button>
+      </Button>
 
-      <p className={`form-message ${submissionState.kind}`}>
+      <p
+        className={`min-h-6 text-sm ${
+          submissionState.kind === 'success'
+            ? 'text-[color:var(--success)]'
+            : submissionState.kind === 'error'
+              ? 'text-[color:var(--warning)]'
+              : 'text-[color:var(--muted-foreground)]'
+        }`}
+      >
         {submissionState.message || 'Private beta access is rolling out in waves.'}
       </p>
     </form>

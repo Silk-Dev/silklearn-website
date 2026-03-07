@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server';
 
-import { getSql, isDatabaseConfigured } from '@/lib/postgres';
+import { ensureWaitlistTable, getSql, isDatabaseConfigured } from '@/lib/postgres';
+
+export const runtime = 'nodejs';
 
 type WaitlistPayload = {
   companyName?: string;
@@ -32,6 +34,8 @@ export async function POST(request: Request) {
   }
 
   try {
+    await ensureWaitlistTable();
+
     const sql = getSql();
     const inserted = await sql`
       insert into waitlist_signups (email, company_name)
