@@ -1,0 +1,37 @@
+# SilkLearn
+
+## About
+SilkLearn turns dense source material into structured, dependency-ordered learning paths for teams. The product is designed for leaders who need teams proficient in complex knowledge without manually designing every learning step from scratch.
+
+## Core Idea
+- Input: internal docs, specs, runbooks, PDFs, and technical reference material
+- Process: parse, segment, enrich, link, and reconcile the knowledge into a reviewable graph
+- Output: a dependency-ordered learning path that leaders can inspect before rollout
+
+## Key Pages
+- /: homepage and product overview
+- /product: primary product explanation
+- /how-it-works: 5-pass decomposition workflow
+- /features: feature index
+- /features/dependency-mapping: prerequisite graphing and sequencing
+- /features/leader-review: human review before rollout
+- /use-cases: use-case index
+- /use-cases/engineering-onboarding: onboarding from internal docs
+- /use-cases/internal-docs-training: training directly from documentation
+- /guides: guide index
+- /guides/how-to-turn-docs-into-learning-paths: guide on reconstructing order from documents
+- /guides/dependency-ordered-learning-for-teams: guide on structured team learning
+- /waitlist: early access signup
+
+## Positioning
+SilkLearn is not a generic course builder. The product starts from the source material itself and reconstructs the dependency order hidden inside it.
+
+## Audience
+- CEOs and CTOs
+- team leads and operators
+- organizations onboarding people into dense private knowledge
+
+## Stack
+- Next.js website
+- Sanity for editable marketing content
+- Postgres for operational website data like waitlist capture

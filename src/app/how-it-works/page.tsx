@@ -9,33 +9,33 @@ import { buildMetadata } from '@/lib/seo';
 
 const steps = [
   {
-    title: 'Parse the material',
-    body: 'SilkLearn reads the source and preserves enough structure to work with real documents instead of flattened snippets.',
+    title: 'Parse source structure',
+    body: 'SilkLearn reads the source and preserves enough structure to work with real documents instead of flattening everything into anonymous chunks.',
   },
   {
-    title: 'Segment what is learnable',
-    body: 'The system identifies meaningful chunks of knowledge instead of treating every paragraph like a separate lesson.',
+    title: 'Segment coherent units',
+    body: 'The system identifies meaningful units of knowledge instead of treating every paragraph like a separate lesson or every chunk like a peer.',
   },
   {
-    title: 'Enrich and classify',
-    body: 'Each segment gets additional signals so the path is more useful than a simple outline.',
+    title: 'Enrich with scope and metadata',
+    body: 'Each segment gains concepts, difficulty, and related signals so the result is useful for reasoning, not just display.',
   },
   {
-    title: 'Link dependencies',
-    body: 'Segments are compared to determine what depends on what, producing a graph instead of a flat list.',
+    title: 'Link dependencies across sources',
+    body: 'Segments are compared to determine what depends on what, producing a graph instead of a flat list of vaguely similar text.',
   },
   {
     title: 'Reconcile for review',
-    body: 'The system outputs a cycle-free result that leaders can inspect before it turns into operational guidance.',
+    body: 'The system reconciles overlaps and contradictions, then outputs a reviewable structure before it turns into operational guidance.',
   },
 ];
 
 export const metadata: Metadata = buildMetadata({
   title: 'How It Works',
   description:
-    'See how SilkLearn parses source material, maps dependencies, and produces a reviewable learning path for teams.',
+    'See how SilkLearn parses source material, maps dependencies, reconciles overlap, and produces reviewable outputs for teams and AI workflows.',
   path: '/how-it-works',
-  keywords: ['how SilkLearn works', 'dependency mapping workflow', 'learning path generation process'],
+  keywords: ['how SilkLearn works', 'knowledge compilation workflow', 'dependency mapping workflow'],
 });
 
 export default function HowItWorksPage() {
@@ -44,10 +44,10 @@ export default function HowItWorksPage() {
       <section className="rounded-[28px] border border-[color:var(--border)] bg-[color:var(--surface)] px-6 py-10 shadow-[var(--shadow)] sm:px-8 lg:px-10">
         <p className="text-[0.82rem] font-bold uppercase tracking-[0.18em] text-[color:var(--primary)]">How it works</p>
         <h1 className="mt-4 max-w-[11ch] font-[family-name:var(--font-display)] text-[clamp(3rem,7vw,5.6rem)] leading-[0.92] tracking-[-0.05em] text-[color:var(--foreground)] max-sm:max-w-none">
-          A 5-pass system for turning documents into learning order.
+          A 5-pass compiler for turning raw knowledge into usable structure.
         </h1>
         <p className="mt-5 max-w-[64ch] text-[1.02rem] leading-8 text-[color:var(--muted-foreground)]">
-          The pipeline is built around the idea that the order of knowledge matters. SilkLearn reconstructs that order from source material, then hands the result to leaders for review.
+          The pipeline is built around one core idea: access to text is not the same as access to usable structure. SilkLearn reconstructs dependency order, preserves provenance, and hands the result to leaders for review before it is used downstream.
         </p>
       </section>
 
@@ -70,7 +70,7 @@ export default function HowItWorksPage() {
           The system is only useful if leaders can trust it.
         </h2>
         <p className="mt-4 max-w-[62ch] text-[1rem] leading-8 text-[color:var(--muted-foreground)]">
-          That is why the output is designed for inspection, not blind automation. Generated structure reduces manual effort, and review keeps the final path grounded in real domain expectations.
+          That is why the output is designed for inspection, not blind automation. Compilation reduces manual effort, and review keeps the final graph, roadmap, or context bundle grounded in real domain expectations.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
           <Button asChild>

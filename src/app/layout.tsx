@@ -2,8 +2,15 @@ import type { ReactNode } from 'react';
 
 import type { Metadata } from 'next';
 import { Inter, Montserrat } from 'next/font/google';
+import Script from 'next/script';
 
 import { defaultMetadata } from '@/lib/seo';
+import {
+  getOrganizationSchema,
+  getSoftwareApplicationSchema,
+  getWebsiteSchema,
+} from '@/lib/structured-data';
+import { Analytics } from '@vercel/analytics/next';
 
 import './globals.css';
 
@@ -29,7 +36,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${displayFont.variable} ${bodyFont.variable}`}>
+        <Script id="silklearn-structured-data" type="application/ld+json">
+          {JSON.stringify([
+            getOrganizationSchema(),
+            getWebsiteSchema(),
+            getSoftwareApplicationSchema(),
+          ])}
+        </Script>
         {children}
+        <Analytics />
       </body>
     </html>
   );

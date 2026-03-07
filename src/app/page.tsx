@@ -1,5 +1,6 @@
 import {
   ArrowRight,
+  CheckCircle2,
   Database,
   FileStack,
   Link2,
@@ -17,6 +18,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import { getFaqPageSchema } from '@/lib/structured-data';
 import { WaitlistForm } from '@/components/waitlist-form';
 import { getHomePageContent, isSanityConfigured } from '@/lib/sanity';
 
@@ -39,13 +41,34 @@ export default async function Home() {
   ];
 
   const proofPoints = [
-    'Leaders review the graph before rollout',
-    'Built for dense private knowledge, not generic course slides',
-    'Operational capture via Postgres and editable marketing content via Sanity',
+    'Compiled outputs stay tied to source provenance',
+    'Prerequisite structure is explicit instead of implied',
+    'Leaders review the graph before it becomes team guidance',
+  ];
+
+  const trustPrinciples = [
+    {
+      title: 'Grounded in the source',
+      body: 'The output is derived from the documents your team already works from, not from a separate curriculum or a pile of synthetic summaries that drift over time.',
+    },
+    {
+      title: 'Reviewable before rollout',
+      body: 'Leaders inspect sequence, dependencies, provenance, and exceptions before a compiled output becomes team guidance.',
+    },
+    {
+      title: 'Built for minimum sufficient context',
+      body: 'The goal is not to surface more text. It is to deliver the smallest defensible set of knowledge units required to reason or act correctly.',
+    },
   ];
 
   return (
     <PageShell>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getFaqPageSchema(content.faq)),
+        }}
+        type="application/ld+json"
+      />
 
       <section className="relative overflow-hidden rounded-[28px] border border-[color:var(--border)] bg-[color:var(--surface)] px-6 py-8 shadow-[var(--shadow)] sm:px-8 sm:py-10 lg:px-10">
         <div className="pointer-events-none absolute inset-x-[12%] top-0 h-52 bg-[radial-gradient(circle_at_top,rgba(38,72,127,0.14),transparent_62%)]" />
@@ -110,9 +133,9 @@ export default async function Home() {
             <Card className="relative overflow-hidden rounded-[26px] border-[rgba(22,47,88,0.14)] bg-[linear-gradient(180deg,rgba(255,255,255,0.95),rgba(241,245,251,0.92))] shadow-[0_26px_70px_rgba(22,47,88,0.14)]">
               <CardHeader className="flex-row items-center justify-between gap-3 border-b border-[color:var(--border)] pb-4">
                 <div>
-                  <CardTitle className="text-base">Learning path compiler</CardTitle>
+                  <CardTitle className="text-base">Knowledge compiler</CardTitle>
                   <CardDescription className="mt-1 text-sm leading-6">
-                    Source material goes in. Reviewed dependency order comes out.
+                    Source material goes in. Reviewable structure comes out.
                   </CardDescription>
                 </div>
                 <div className="rounded-full bg-[color:var(--surface-highlight)] px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-[color:var(--primary)]">
@@ -152,8 +175,8 @@ export default async function Home() {
                     <CardContent className="pt-0">
                       <div className="space-y-3 text-sm leading-6">
                         <div className="rounded-2xl bg-white/8 px-4 py-3">95 segments</div>
-                        <div className="rounded-2xl bg-white/8 px-4 py-3">29.8 estimated hours</div>
-                        <div className="rounded-2xl bg-white/8 px-4 py-3">Cycle-free prerequisite graph</div>
+                        <div className="rounded-2xl bg-white/8 px-4 py-3">Dependency-aware graph</div>
+                        <div className="rounded-2xl bg-white/8 px-4 py-3">Reviewable roadmap and context bundle</div>
                       </div>
                     </CardContent>
                   </Card>
@@ -182,23 +205,34 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className="mt-5 rounded-[26px] border border-[color:var(--border)] bg-white/80 px-6 py-6 shadow-[0_18px_52px_rgba(22,47,88,0.08)] backdrop-blur-xl sm:px-8">
-        <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
+      <section className="mt-5 rounded-[26px] border border-[color:var(--border)] bg-white/80 px-6 py-8 shadow-[0_18px_52px_rgba(22,47,88,0.08)] backdrop-blur-xl sm:px-8">
+        <div className="grid gap-6 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
           <div>
-            <p className="text-[0.82rem] font-bold uppercase tracking-[0.18em] text-[color:var(--primary)]">Trusted by the workflow</p>
-            <h2 className="mt-3 max-w-[16ch] text-3xl font-[family-name:var(--font-display)] leading-[0.96] tracking-[-0.04em] text-[color:var(--foreground)] sm:text-[2.8rem]">
-              The site should look like a product team built it, not a placeholder launch page.
+            <p className="text-[0.82rem] font-bold uppercase tracking-[0.18em] text-[color:var(--primary)]">Trust and reviewability</p>
+            <h2 className="mt-3 max-w-[13ch] text-3xl font-[family-name:var(--font-display)] leading-[0.96] tracking-[-0.04em] text-[color:var(--foreground)] sm:text-[2.8rem]">
+              Teams can trust the output because it is inspectable before it is assigned.
             </h2>
+            <p className="mt-4 max-w-[56ch] text-[1rem] leading-8 text-[color:var(--muted-foreground)]">
+              SilkLearn is not asking leaders to accept a generic black-box curriculum. The output stays tied to source material, the dependency graph stays visible, and the final path is reviewed before rollout.
+            </p>
           </div>
 
-          <div className="grid gap-3 sm:grid-cols-3 lg:w-[52%]">
-            {['Dependency graph', 'Leader review', 'Structured rollout'].map((item) => (
-              <div
-                className="rounded-[18px] border border-[rgba(22,47,88,0.1)] bg-[color:var(--card-strong)] px-4 py-4 text-sm font-semibold text-[color:var(--foreground)]"
-                key={item}
+          <div className="grid gap-3 sm:grid-cols-3">
+            {trustPrinciples.map((item) => (
+              <Card
+                className="rounded-[20px] border-[rgba(22,47,88,0.1)] bg-[color:var(--card-strong)] shadow-none"
+                key={item.title}
               >
-                {item}
-              </div>
+                <CardHeader className="gap-3 pb-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[color:var(--surface-highlight)] text-[color:var(--primary)]">
+                    <CheckCircle2 className="size-4.5" />
+                  </div>
+                  <CardTitle className="text-base">{item.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-sm leading-7">{item.body}</CardDescription>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
@@ -211,7 +245,7 @@ export default async function Home() {
             The order of knowledge is usually trapped in someone&apos;s head.
           </h2>
           <p className="mt-5 max-w-[58ch] text-[1rem] leading-8 text-[color:var(--muted-foreground)]">
-            SilkLearn reconstructs that order from the material itself. Instead of building a parallel training layer from memory, teams start with the source and expose the real prerequisite logic underneath it.
+            When structure is missing, both people and models guess. SilkLearn reconstructs dependency order from the material itself so teams can move from raw documents to the minimum sufficient context required to reason correctly.
           </p>
 
           <div className="mt-8 grid gap-4 md:grid-cols-2">
@@ -245,7 +279,7 @@ export default async function Home() {
               </div>
               <CardTitle className="text-[1.2rem] text-white">What leaders actually get</CardTitle>
               <CardDescription className="text-[rgba(255,255,255,0.72)]">
-                A dependency-ordered path that can be reviewed, assigned, and trusted.
+                A reviewable dependency graph that can generate learning paths, onboarding flows, and AI-ready context.
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-3">
@@ -262,9 +296,9 @@ export default async function Home() {
               <div className="flex h-11 w-11 items-center justify-center rounded-[14px] bg-[color:var(--surface-highlight)] text-[color:var(--primary)]">
                 <ShieldCheck className="size-4.5" />
               </div>
-              <CardTitle>Operationally simple</CardTitle>
+              <CardTitle>More than flat retrieval</CardTitle>
               <CardDescription className="text-base leading-7">
-                Marketing content lives in Sanity. Operational capture lives in Postgres. The website stays fast, editable, and deployable.
+                SilkLearn does more than return similar chunks. It preserves provenance, exposes dependencies, and reconciles overlap before the output is used.
               </CardDescription>
             </CardHeader>
           </Card>
@@ -299,12 +333,10 @@ export default async function Home() {
         <div>
           <p className="text-[0.82rem] font-bold uppercase tracking-[0.18em] text-[color:var(--primary)]">Early access</p>
           <h2 className="mt-4 max-w-[14ch] font-[family-name:var(--font-display)] text-[clamp(2.4rem,6vw,4.2rem)] leading-[0.95] tracking-[-0.04em] text-[color:var(--foreground)] max-sm:max-w-none">
-            Start with a site that can market the product and collect demand now.
+            Bring dense internal knowledge into reviewable structure.
           </h2>
           <p className="mt-5 max-w-[58ch] text-[1.02rem] leading-7 text-[color:var(--muted-foreground)]">
-            This scaffold keeps content editable in Sanity and waitlist capture in
-            Postgres so the marketing site can move before the full application is
-            public.
+            Early access is for teams testing onboarding flows, knowledge audits, and context-efficient AI workflows built from real source material rather than guesswork and search overhead.
           </p>
         </div>
 

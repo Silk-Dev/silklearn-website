@@ -11,12 +11,12 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata: Metadata = buildMetadata({
   title: 'Product',
   description:
-    'Learn how SilkLearn turns internal docs, specs, and source material into dependency-ordered learning paths for teams.',
+    'Learn how SilkLearn compiles internal docs, specs, and source material into reviewable learning paths, dependency graphs, and context bundles.',
   path: '/product',
   keywords: [
-    'learning path software',
+    'knowledge compilation infrastructure',
     'docs to learning paths',
-    'team learning path generation',
+    'reviewable context bundles',
   ],
 });
 
@@ -26,10 +26,10 @@ export default function ProductPage() {
       <section className="rounded-[28px] border border-[color:var(--border)] bg-[color:var(--surface)] px-6 py-10 shadow-[var(--shadow)] sm:px-8 lg:px-10">
         <p className="text-[0.82rem] font-bold uppercase tracking-[0.18em] text-[color:var(--primary)]">Product</p>
         <h1 className="mt-4 max-w-[11ch] font-[family-name:var(--font-display)] text-[clamp(3rem,7vw,5.6rem)] leading-[0.92] tracking-[-0.05em] text-[color:var(--foreground)] max-sm:max-w-none">
-          Source material becomes a structured learning path.
+          SilkLearn compiles messy knowledge into reviewable outputs.
         </h1>
         <p className="mt-5 max-w-[64ch] text-[1.02rem] leading-8 text-[color:var(--muted-foreground)]">
-          SilkLearn is built for teams that already have the knowledge in documents, but do not have the dependency order made explicit. The system decomposes source material into segments, links prerequisite logic, and keeps leaders in review before rollout.
+          SilkLearn is knowledge compilation infrastructure for teams that already have the knowledge, but not the usable structure. It parses, segments, links, and reconciles source material into dependency-aware artifacts that leaders can inspect before they are used by teams or AI systems.
         </p>
 
         <div className="mt-8 flex flex-wrap gap-3">
@@ -48,25 +48,25 @@ export default function ProductPage() {
             <CardTitle>Input</CardTitle>
           </CardHeader>
           <CardContent className="text-sm leading-7 text-[color:var(--muted-foreground)]">
-            Internal docs, architecture specs, onboarding handbooks, PDFs, and operational references your team already uses.
+            Internal docs, architecture specs, runbooks, policies, onboarding handbooks, PDFs, and operational references your team already uses.
           </CardContent>
         </Card>
 
         <Card className="bg-white/78">
           <CardHeader>
-            <CardTitle>Process</CardTitle>
+            <CardTitle>Compilation</CardTitle>
           </CardHeader>
           <CardContent className="text-sm leading-7 text-[color:var(--muted-foreground)]">
-            Parse, segment, enrich, link, and reconcile the material into a cycle-free graph that exposes actual learning order.
+            Parse, segment, enrich, link, and reconcile the material into a dependency-aware graph that exposes scope, order, provenance, and contradiction.
           </CardContent>
         </Card>
 
         <Card className="bg-white/78">
           <CardHeader>
-            <CardTitle>Output</CardTitle>
+            <CardTitle>Outputs</CardTitle>
           </CardHeader>
           <CardContent className="text-sm leading-7 text-[color:var(--muted-foreground)]">
-            A dependency-ordered learning path leaders can inspect, refine, and eventually use for team rollout.
+            Reviewable learning paths, onboarding flows, knowledge graphs, and context bundles that humans and models can use with less guesswork.
           </CardContent>
         </Card>
       </section>

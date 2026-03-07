@@ -27,51 +27,51 @@ export type HomePageContent = {
 };
 
 export const fallbackHomePageContent: HomePageContent = {
-  kicker: 'Structured learning for teams that cannot afford guesswork.',
-  headline: 'Turn dense knowledge into a learning path your team can actually follow.',
+  kicker: 'Knowledge compilation for teams that need correct reasoning, not more raw docs.',
+  headline: 'Compile messy source material into reviewable learning paths and context.',
   subheadline:
-    'SilkLearn decomposes internal docs, specs, and domain material into dependency-ordered steps so leaders can stop hand-building training plans from scratch.',
+    'SilkLearn parses, segments, links, and reconciles dense internal knowledge so teams can see what must be learned first, what depends on what, and what context a human or model actually needs.',
   primaryCtaLabel: 'Join the waitlist',
   primaryCtaHref: '#waitlist',
-  secondaryCtaLabel: 'Open the studio',
-  secondaryCtaHref: '/studio',
+  secondaryCtaLabel: 'See how it works',
+  secondaryCtaHref: '/how-it-works',
   metrics: [
-    { label: 'Pipeline shape', value: '5-pass compiler' },
-    { label: 'Primary input', value: 'Docs, specs, PDFs' },
-    { label: 'Core output', value: 'Dependency-ordered learning path' },
+    { label: 'Category', value: 'Knowledge compilation infrastructure' },
+    { label: 'Core system', value: '5-pass compiler with review' },
+    { label: 'Outputs', value: 'Learning paths, graphs, context bundles' },
   ],
   pillars: [
     {
-      title: 'Decompose real source material',
+      title: 'Compile usable structure from raw documents',
       description:
-        'Use the actual docs your team works from instead of inventing a parallel curriculum that drifts from reality.',
+        'Turn long, assumption-heavy source material into coherent segments with provenance instead of leaving the structure trapped inside pages and experts.',
     },
     {
-      title: 'Expose prerequisite logic',
+      title: 'Deliver minimum sufficient context',
       description:
-        'Make the hidden order of concepts explicit so leaders can see what must be learned first and what can be skipped.',
+        'Expose prerequisite logic so people and models get the right context in the right order instead of a pile of loosely related chunks.',
     },
     {
-      title: 'Review before rollout',
+      title: 'Review compiled outputs before rollout',
       description:
-        'Keep a human in the loop. Leaders review, tweak, and approve the graph before a roadmap becomes team policy.',
+        'Keep a human in the loop. Leaders inspect the graph, reconcile edge cases, and approve downstream artifacts before they become operational guidance.',
     },
   ],
   faq: [
     {
       question: 'Who is SilkLearn for?',
       answer:
-        'CEOs, CTOs, team leads, and operators who need a team fluent in complex private or public knowledge without manually designing every learning step.',
+        'SilkLearn is for engineering, product, operations, and compliance teams working from dense private knowledge where reasoning mistakes are expensive and manual structuring does not scale.',
     },
     {
-      question: 'What makes this different from a course builder?',
+      question: 'What makes this different from RAG or a course builder?',
       answer:
-        'The product starts from the source material and reconstructs dependency order. The graph is the product, not a slideshow wrapped around existing docs.',
+        'SilkLearn does more than retrieve similar text or wrap documents in lessons. It compiles source material into dependency-aware, provenance-backed structure that can be reviewed before use.',
     },
     {
-      question: 'Why is the website wired to both Sanity and Postgres?',
+      question: 'What does a team actually get from the product?',
       answer:
-        'Sanity gives you fast editorial control for marketing content. Postgres supports operational data like waitlist capture without blocking on a separate backend.',
+        'The durable asset is a compiled knowledge graph. From that, teams can generate learning paths, onboarding flows, context bundles, and other reviewable artifacts grounded in the source material.',
     },
   ],
 };

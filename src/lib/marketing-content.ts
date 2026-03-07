@@ -47,30 +47,30 @@ export const primaryNavigation: NavItem[] = [
 export const featurePages: FeaturePage[] = [
   {
     slug: 'dependency-mapping',
-    title: 'Dependency Mapping For Team Learning',
+    title: 'Compile Dependency Order From Source Material',
     description:
-      'Make hidden prerequisite logic explicit so teams learn in an order that actually matches the source material.',
+      'Expose prerequisite structure across dense documents so teams and AI systems receive knowledge in a defensible order.',
     summary:
-      'SilkLearn identifies what should be learned first, what depends on it, and where leaders should inspect the graph before rollout.',
+      'SilkLearn turns hidden assumptions into explicit edges so teams can see what must come first, what unlocks the next concept, and where review is still required.',
     bullets: [
       'Turns implicit expert order into explicit prerequisite edges',
-      'Reduces wasted onboarding time caused by learning steps in the wrong sequence',
-      'Keeps leader review inside the workflow before a path becomes team policy',
+      'Reduces wasted onboarding and search time caused by wrong sequencing',
+      'Produces a graph that can power roadmaps, briefings, and context bundles',
     ],
     useCaseHref: '/use-cases/engineering-onboarding',
     guideHref: '/guides/how-to-turn-docs-into-learning-paths',
   },
   {
     slug: 'leader-review',
-    title: 'Leader Review Before Rollout',
+    title: 'Review Compiled Outputs Before Rollout',
     description:
-      'Keep humans in the loop so generated learning paths can be checked, adjusted, and trusted before teams are assigned against them.',
+      'Keep humans in the loop so compiled outputs can be inspected, corrected, and trusted before they affect team execution.',
     summary:
-      'SilkLearn does not ask leaders to trust a black box. It gives them a reviewable graph grounded in the source material.',
+      'SilkLearn does not ask leaders to trust a black box. It gives them a reviewable graph with provenance, dependency logic, and visible downstream implications.',
     bullets: [
       'Review nodes, edges, and sequence before launch',
-      'Catch domain-specific exceptions that generic course tools miss',
-      'Build trust with a visible path from source documents to final roadmap',
+      'Catch domain-specific exceptions that flat retrieval and generic course tools miss',
+      'Build trust with a visible path from source documents to final artifact',
     ],
     useCaseHref: '/use-cases/internal-docs-training',
     guideHref: '/guides/dependency-ordered-learning-for-teams',
@@ -80,30 +80,30 @@ export const featurePages: FeaturePage[] = [
 export const useCasePages: UseCasePage[] = [
   {
     slug: 'engineering-onboarding',
-    title: 'Engineering Onboarding From Internal Docs',
+    title: 'Engineering Onboarding From Internal Systems Knowledge',
     description:
-      'Turn architecture docs, runbooks, and standards into a dependency-ordered engineering onboarding path.',
+      'Turn architecture docs, runbooks, and technical standards into a dependency-aware onboarding path for engineers.',
     summary:
-      'Instead of asking senior engineers to manually sequence onboarding every time, SilkLearn extracts the order directly from your documentation.',
+      'Instead of asking senior engineers to repeatedly explain the same system from scratch, SilkLearn compiles the order directly from the documentation and related sources.',
     outcomes: [
       'Reduce ramp time on complex internal systems',
       'Use current docs instead of stale onboarding decks',
-      'Give leads a reviewable map of prerequisite knowledge',
+      'Give leads a reviewable map of prerequisite knowledge and hidden assumptions',
     ],
     featureHref: '/features/dependency-mapping',
     guideHref: '/guides/how-to-turn-docs-into-learning-paths',
   },
   {
     slug: 'internal-docs-training',
-    title: 'Internal Documentation Training',
+    title: 'Operational Knowledge Transfer From Internal Documentation',
     description:
-      'Convert dense internal documentation into a structured learning path without rewriting everything as a course.',
+      'Convert dense internal documentation into structured, reviewable guidance without rewriting everything as a course.',
     summary:
-      'SilkLearn is useful when the knowledge is already in the docs, but the order is fragmented across multiple sources.',
+      'SilkLearn is useful when the knowledge is already in the docs, but the dependency order, hidden assumptions, and contradictions are fragmented across multiple sources.',
     outcomes: [
       'Reuse existing documentation instead of rebuilding it as slides',
       'Expose what people need to understand before advanced topics',
-      'Create a stable path leaders can refine over time',
+      'Create a stable compiled asset leaders can refine over time',
     ],
     featureHref: '/features/leader-review',
     guideHref: '/guides/dependency-ordered-learning-for-teams',
@@ -115,9 +115,9 @@ export const guidePages: GuidePage[] = [
     slug: 'how-to-turn-docs-into-learning-paths',
     title: 'How To Turn Docs Into Learning Paths',
     description:
-      'A practical guide to turning technical documents, runbooks, and internal references into a structured learning path.',
+      'A practical guide to turning technical documents, runbooks, and internal references into a compiled, dependency-aware learning path.',
     summary:
-      'Most teams already have the knowledge they need in documents. The problem is that the sequence is scattered. This guide explains how to reconstruct it.',
+      'Most teams already have the knowledge they need in documents. The problem is that the sequence, scope, and assumptions are scattered. This guide explains how to reconstruct them.',
     sections: [
       {
         heading: 'Start with the real source material',
@@ -142,9 +142,9 @@ export const guidePages: GuidePage[] = [
     slug: 'dependency-ordered-learning-for-teams',
     title: 'Dependency-Ordered Learning For Teams',
     description:
-      'Why team learning paths need explicit prerequisite structure instead of flat content lists or generic course modules.',
+      'Why team learning paths need explicit prerequisite structure instead of flat content lists, dashboards, or generic course modules.',
     summary:
-      'If the order is wrong, the training feels slow even when the content is correct. Dependency-ordered learning solves that sequencing problem.',
+      'If the order is wrong, the reasoning fails even when the raw content is present. Dependency-ordered learning solves the sequencing problem by making structure explicit.',
     sections: [
       {
         heading: 'Flat training wastes time',
