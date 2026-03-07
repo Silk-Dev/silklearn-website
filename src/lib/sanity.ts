@@ -1,0 +1,73 @@
+import { createClient } from 'next-sanity';
+
+import { fallbackHomePageContent, type HomePageContent } from '@/lib/site-content';
+
+const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
+const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET;
+
+export const isSanityConfigured = Boolean(projectId && dataset);
+
+const sanityClient = createClient({
+  projectId: projectId ?? 'placeholder',
+  dataset: dataset ?? 'production',
+  apiVersion: '2026-03-07',
+  useCdn: true,
+});
+
+const homePageQuery = `*[_type == "homePage"][0]{
+  kicker,
+  headline,
+  subheadline,
+  primaryCtaLabel,
+  primaryCtaHref,
+  secondaryCtaLabel,
+  secondaryCtaHref,
+  metrics[]{label, value},
+  pillars[]{title, description},
+  faq[]{question, answer}
+}`;
+
+function mergeHomePageContent(content: Partial<HomePageContent> | null): HomePageContent {
+  if (!content) {
+    return fallbackHomePageContent;
+  }
+
+  return {
+    kicker: content.kicker || fallbackHomePageContent.kicker,
+    headline: content.headline || fallbackHomePageContent.headline,
+    subheadline: content.subheadline || fallbackHomePageContent.subheadline,
+    primaryCtaLabel:
+      content.primaryCtaLabel || fallbackHomePageContent.primaryCtaLabel,
+    primaryCtaHref: content.primaryCtaHref || fallbackHomePageContent.primaryCtaHref,
+    secondaryCtaLabel:
+      content.secondaryCtaLabel || fallbackHomePageContent.secondaryCtaLabel,
+    secondaryCtaHref:
+      content.secondaryCtaHref || fallbackHomePageContent.secondaryCtaHref,
+    metrics:
+      content.metrics && content.metrics.length > 0
+        ? content.metrics
+        : fallbackHomePageContent.metrics,
+    pillars:
+      content.pillars && content.pillars.length > 0
+        ? content.pillars
+        : fallbackHomePageContent.pillars,
+    faq:
+      content.faq && content.faq.length > 0 ? content.faq : fallbackHomePageContent.faq,
+  };
+}
+
+export async function getHomePageContent(): Promise<HomePageContent> {
+  if (!isSanityConfigured) {
+    return fallbackHomePageContent;
+  }
+
+  try {
+    const content = await sanityClient.fetch<Partial<HomePageContent> | null>(
+      homePageQuery,
+    );
+
+    return mergeHomePageContent(content);
+  } catch {
+    return fallbackHomePageContent;
+  }
+}
