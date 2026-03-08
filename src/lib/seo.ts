@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 
-const siteName = 'SilkLearn';
-const defaultTitle = 'SilkLearn | Compile Source Material Into Reviewable Learning Paths';
+const siteName = 'SILKLEARN';
+const defaultTitle = 'SILKLEARN | Compile Source Material Into Reviewable Learning Paths';
 const defaultDescription =
-  'SilkLearn is knowledge compilation infrastructure for teams working from dense source material. It produces reviewable learning paths, dependency graphs, and context bundles from messy internal knowledge.';
+  'SILKLEARN is knowledge compilation infrastructure for teams working from dense source material. It produces reviewable learning paths, dependency graphs, and context bundles from messy internal knowledge.';
 
 export function getSiteUrl() {
   const configuredUrl = process.env.NEXT_PUBLIC_SITE_URL;

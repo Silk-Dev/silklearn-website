@@ -22,6 +22,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { type HomePageContent } from '@/lib/site-content';
 import { getFaqPageSchema } from '@/lib/structured-data';
 
+import { AceternityBentoGrid } from './aceternity-bento-grid';
+import { AceternitySpotlightGrid } from './aceternity-spotlight-grid';
 import { HomeProcessShowcase } from './home-process-showcase';
 
 const trustMarks = [
@@ -38,41 +40,79 @@ const features = [
     title: 'Dependency-aware graph',
     body: 'Expose what depends on what instead of forcing teams to infer order from pages and tribal memory.',
     icon: GitBranch,
+    eyebrow: 'Graph layer',
+    bullets: ['Explicit prerequisite edges', 'Cross-document linking', 'Reviewable sequence'],
+    className: 'md:col-span-3 md:row-span-2',
+    dark: true,
   },
   {
     title: 'Structured segmentation',
     body: 'Break dense documents into coherent knowledge units without losing provenance or scope.',
     icon: ScanSearch,
+    eyebrow: 'Compiler pass',
+    className: 'md:col-span-3',
   },
   {
     title: 'Leader review loop',
     body: 'Approve sequence, unresolved edges, and downstream outputs before they become operational guidance.',
     icon: ShieldCheck,
+    eyebrow: 'Approval surface',
+    className: 'md:col-span-2',
   },
   {
     title: 'Minimum-context outputs',
     body: 'Generate the smallest defensible bundle of knowledge required for people or models to reason correctly.',
     icon: BrainCircuit,
+    eyebrow: 'Downstream use',
+    className: 'md:col-span-4',
   },
   {
     title: 'Learning path generation',
     body: 'Turn the compiled graph into onboarding plans and knowledge ramps grounded in the source material.',
     icon: LibraryBig,
+    eyebrow: 'Activation',
+    className: 'md:col-span-3',
   },
   {
     title: 'Reusable knowledge assets',
     body: 'Keep a durable compiled structure that can feed multiple workflows instead of rebuilding context every time.',
     icon: Layers3,
+    eyebrow: 'Durable asset',
+    className: 'md:col-span-3',
   },
 ];
 
 const useCases = [
-  'Engineering onboarding from system docs',
-  'Support escalation training from runbooks',
-  'Operational handoff between teams',
-  'Compliance knowledge transfer',
-  'AI context bundles for internal copilots',
-  'Knowledge audits before major rollouts',
+  {
+    title: 'Engineering onboarding from system docs',
+    description: 'Compile internal architecture and system docs into an inspectable path instead of asking senior engineers to reteach the stack manually.',
+    icon: Network,
+  },
+  {
+    title: 'Support escalation training from runbooks',
+    description: 'Turn support documents and escalation references into a dependency-aware training surface for faster judgment under pressure.',
+    icon: Network,
+  },
+  {
+    title: 'Operational handoff between teams',
+    description: 'Preserve cross-team dependency logic during transitions so critical assumptions do not vanish in handoff meetings.',
+    icon: Network,
+  },
+  {
+    title: 'Compliance knowledge transfer',
+    description: 'Keep regulatory or policy knowledge connected to source material while surfacing what must be understood before higher-risk steps.',
+    icon: Network,
+  },
+  {
+    title: 'AI context bundles for internal copilots',
+    description: 'Build slimmer, provenance-backed context bundles from the compiled graph instead of dumping raw documentation into a prompt.',
+    icon: Network,
+  },
+  {
+    title: 'Knowledge audits before major rollouts',
+    description: 'Inspect gaps, missing prerequisites, and risky assumptions before a rollout depends on the knowledge base being correct.',
+    icon: Network,
+  },
 ];
 
 const rolloutModes = [
@@ -88,7 +128,7 @@ const rolloutModes = [
   },
   {
     title: 'Private deployment',
-    body: 'Run SilkLearn against sensitive internal knowledge with provenance, review, and structure preserved.',
+    body: 'Run SILKLEARN against sensitive internal knowledge with provenance, review, and structure preserved.',
     bullets: ['Private document stacks', 'Structured review controls', 'Enterprise workflow fit'],
   },
 ];
@@ -108,17 +148,17 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
         type="application/ld+json"
       />
 
-      <section className="grid gap-10 px-1 pb-10 pt-6 text-center">
+      <section className="grid gap-9 px-1 pb-12 pt-8 text-center">
         <div className="mx-auto flex max-w-fit items-center gap-2 rounded-full border border-[rgba(31,63,122,0.14)] bg-white px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-(--primary)">
           <Sparkles className="size-3.5" />
           {content.kicker}
         </div>
 
-        <div className="mx-auto max-w-245">
-          <h1 className="mx-auto max-w-[12ch] font-(family-name:--font-display) text-[clamp(3.8rem,8vw,7rem)] leading-[0.88] tracking-[-0.065em] text-(--foreground)">
+        <div className="mx-auto max-w-225">
+          <h1 className="mx-auto max-w-[10.5ch] font-(family-name:--font-display) text-[clamp(3.6rem,7.5vw,6.4rem)] leading-[0.88] tracking-[-0.065em] text-(--foreground)">
             {content.headline}
           </h1>
-          <p className="mx-auto mt-6 max-w-[64ch] text-[1.06rem] leading-8 text-(--muted-foreground)">
+          <p className="mx-auto mt-5 max-w-[58ch] text-[1.04rem] leading-7 text-(--muted-foreground)">
             {content.subheadline}
           </p>
         </div>
@@ -282,73 +322,54 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
         </div>
       </section>
 
-      <section className="mt-6">
+      <section className="mt-8">
         <HomeProcessShowcase />
       </section>
 
-      <section className="mt-6 rounded-4xl border border-[rgba(10,25,49,0.08)] bg-white px-6 py-8 shadow-[0_18px_70px_rgba(15,23,42,0.06)] sm:px-8">
+      <section className="mt-8 rounded-4xl border border-[rgba(10,25,49,0.08)] bg-white px-6 py-8 shadow-[0_18px_70px_rgba(15,23,42,0.06)] sm:px-8">
         <div className="max-w-190">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-(--primary)">Features</p>
-          <h2 className="mt-4 max-w-[11ch] font-(family-name:--font-display) text-[clamp(2.8rem,5vw,4.4rem)] leading-[0.92] tracking-[-0.05em] text-(--foreground)">
+          <h2 className="mt-4 max-w-[9.5ch] font-(family-name:--font-display) text-[clamp(2.6rem,4.8vw,4rem)] leading-[0.92] tracking-[-0.05em] text-(--foreground)">
             Built for knowledge work that cannot rely on guesswork.
           </h2>
-          <p className="mt-4 max-w-[58ch] text-base leading-8 text-(--muted-foreground)">
-            The reference site uses a dense capability grid after the workflow section. SilkLearn needs the same density, but with features tied to structure, review, and provenance.
+          <p className="mt-4 max-w-[58ch] text-base leading-7 text-(--muted-foreground)">
+            The reference site uses a dense capability grid after the workflow section. SILKLEARN needs the same density, but with features tied to structure, review, and provenance.
           </p>
         </div>
 
-        <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {features.map((feature) => {
-            const Icon = feature.icon;
-
-            return (
-              <Card key={feature.title} className="rounded-3xl border-[rgba(10,25,49,0.08)] bg-[rgba(247,250,253,0.92)] shadow-none">
-                <CardHeader>
-                  <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white text-(--primary)">
-                    <Icon className="size-4.5" />
-                  </div>
-                  <CardTitle className="mt-4 text-[1.1rem] leading-tight">{feature.title}</CardTitle>
-                  <CardDescription className="text-sm leading-7">{feature.body}</CardDescription>
-                </CardHeader>
-              </Card>
-            );
-          })}
-        </div>
+        <AceternityBentoGrid
+          className="mt-8"
+          items={features.map((feature) => ({
+            title: feature.title,
+            description: feature.body,
+            icon: feature.icon,
+            eyebrow: feature.eyebrow,
+            bullets: feature.bullets,
+            className: feature.className,
+            dark: feature.dark,
+          }))}
+        />
       </section>
 
-      <section className="mt-6 rounded-4xl border border-[rgba(10,25,49,0.08)] bg-[linear-gradient(180deg,#ffffff_0%,#f6f9fd_100%)] px-6 py-8 shadow-[0_18px_70px_rgba(15,23,42,0.06)] sm:px-8">
+      <section className="mt-8 rounded-4xl border border-[rgba(10,25,49,0.08)] bg-[linear-gradient(180deg,#ffffff_0%,#f6f9fd_100%)] px-6 py-8 shadow-[0_18px_70px_rgba(15,23,42,0.06)] sm:px-8">
         <div className="max-w-190">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-(--primary)">Use cases</p>
-          <h2 className="mt-4 max-w-[10ch] font-(family-name:--font-display) text-[clamp(2.8rem,5vw,4.4rem)] leading-[0.92] tracking-[-0.05em] text-(--foreground)">
+          <h2 className="mt-4 max-w-[9ch] font-(family-name:--font-display) text-[clamp(2.6rem,4.8vw,4rem)] leading-[0.92] tracking-[-0.05em] text-(--foreground)">
             Apply the same compiled structure across teams.
           </h2>
         </div>
 
-        <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {useCases.map((item) => (
-            <Card key={item} className="rounded-3xl border-[rgba(10,25,49,0.08)] bg-white shadow-none">
-              <CardHeader>
-                <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[rgba(31,63,122,0.08)] text-(--primary)">
-                  <Network className="size-4.5" />
-                </div>
-                <CardTitle className="mt-4 text-[1.1rem] leading-tight">{item}</CardTitle>
-                <CardDescription className="text-sm leading-7">
-                  Start from the source material your team already has and compile a reviewable path instead of manually redesigning knowledge every time.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-          ))}
-        </div>
+        <AceternitySpotlightGrid className="mt-8" items={useCases} />
       </section>
 
-      <section className="mt-6 grid gap-6 lg:grid-cols-[1.08fr_0.92fr]">
+      <section className="mt-8 grid gap-6 lg:grid-cols-[1.08fr_0.92fr]">
         <Card className="overflow-hidden rounded-4xl border-[rgba(10,25,49,0.08)] bg-[linear-gradient(180deg,#1b315a_0%,#25477d_100%)] text-white shadow-[0_26px_90px_rgba(15,23,42,0.18)]">
           <CardHeader>
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[rgba(255,255,255,0.56)]">Benefits</p>
             <CardTitle className="max-w-[11ch] font-(family-name:--font-display) text-[clamp(2.6rem,4.6vw,4rem)] leading-[0.94] tracking-[-0.05em] text-white">
               Better reasoning starts with better structure.
             </CardTitle>
-            <CardDescription className="max-w-[54ch] text-base leading-7 text-[rgba(255,255,255,0.74)]">
+            <CardDescription className="max-w-[54ch] text-base leading-6 text-[rgba(255,255,255,0.74)]">
               Notus uses a dashboard-style benefit section. Here the equivalent is a live-looking knowledge graph panel that shows why compiled structure improves downstream work.
             </CardDescription>
           </CardHeader>
@@ -396,18 +417,18 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
                   <CheckCircle2 className="size-4.5" />
                 </div>
                 <CardTitle className="mt-4 text-[1.08rem] leading-tight">{pillar.title}</CardTitle>
-                <CardDescription className="text-sm leading-7">{pillar.description}</CardDescription>
+                <CardDescription className="text-sm leading-6">{pillar.description}</CardDescription>
               </CardHeader>
             </Card>
           ))}
         </div>
       </section>
 
-      <section className="mt-6 rounded-4xl border border-[rgba(10,25,49,0.08)] bg-white px-6 py-8 shadow-[0_18px_70px_rgba(15,23,42,0.06)] sm:px-8">
+      <section className="mt-8 rounded-4xl border border-[rgba(10,25,49,0.08)] bg-white px-6 py-8 shadow-[0_18px_70px_rgba(15,23,42,0.06)] sm:px-8">
         <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-(--primary)">Core thesis</p>
-            <h2 className="mt-4 max-w-[12ch] font-(family-name:--font-display) text-[clamp(2.6rem,4.6vw,4rem)] leading-[0.94] tracking-[-0.05em] text-(--foreground)">
+            <h2 className="mt-4 max-w-[10.5ch] font-(family-name:--font-display) text-[clamp(2.45rem,4.4vw,3.6rem)] leading-[0.94] tracking-[-0.05em] text-(--foreground)">
               Access to text is not the same thing as access to usable knowledge.
             </h2>
           </div>
@@ -417,18 +438,18 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
               <CardTitle className="font-(family-name:--font-display) text-[2rem] leading-tight tracking-[-0.04em]">
                 “The durable asset is the compiled graph, not another summary.”
               </CardTitle>
-              <CardDescription className="text-base leading-7">
-                SilkLearn produces a structure leaders can inspect and reuse across onboarding, knowledge transfer, and AI context delivery.
+              <CardDescription className="text-base leading-6">
+                SILKLEARN produces a structure leaders can inspect and reuse across onboarding, knowledge transfer, and AI context delivery.
               </CardDescription>
             </CardHeader>
           </Card>
         </div>
       </section>
 
-      <section className="mt-6 rounded-4xl border border-[rgba(10,25,49,0.08)] bg-[linear-gradient(180deg,#ffffff_0%,#f6f9fd_100%)] px-6 py-8 shadow-[0_18px_70px_rgba(15,23,42,0.06)] sm:px-8">
+      <section className="mt-8 rounded-4xl border border-[rgba(10,25,49,0.08)] bg-[linear-gradient(180deg,#ffffff_0%,#f6f9fd_100%)] px-6 py-8 shadow-[0_18px_70px_rgba(15,23,42,0.06)] sm:px-8">
         <div className="max-w-190">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-(--primary)">Rollout modes</p>
-          <h2 className="mt-4 max-w-[12ch] font-(family-name:--font-display) text-[clamp(2.6rem,4.6vw,4rem)] leading-[0.94] tracking-[-0.05em] text-(--foreground)">
+          <h2 className="mt-4 max-w-[10.5ch] font-(family-name:--font-display) text-[clamp(2.45rem,4.4vw,3.6rem)] leading-[0.94] tracking-[-0.05em] text-(--foreground)">
             Start small, then expand the compiled knowledge base.
           </h2>
         </div>
@@ -443,7 +464,7 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
             >
               <CardHeader>
                 <CardTitle className={index === 1 ? 'text-white' : ''}>{mode.title}</CardTitle>
-                <CardDescription className={index === 1 ? 'text-[rgba(255,255,255,0.72)]' : 'text-sm leading-7'}>
+                <CardDescription className={index === 1 ? 'leading-6 text-[rgba(255,255,255,0.72)]' : 'text-sm leading-6'}>
                   {mode.body}
                 </CardDescription>
               </CardHeader>
@@ -464,15 +485,15 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
         </div>
       </section>
 
-      <section className="mt-6 rounded-4xl border border-[rgba(10,25,49,0.08)] bg-[linear-gradient(180deg,#162f58_0%,#1d3e74_100%)] px-6 py-8 text-white shadow-[0_24px_90px_rgba(15,23,42,0.18)] sm:px-8">
+      <section className="mt-8 rounded-4xl border border-[rgba(10,25,49,0.08)] bg-[linear-gradient(180deg,#162f58_0%,#1d3e74_100%)] px-6 py-8 text-white shadow-[0_24px_90px_rgba(15,23,42,0.18)] sm:px-8">
         <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[rgba(255,255,255,0.6)]">For structure-first teams</p>
-            <h2 className="mt-4 max-w-[12ch] font-(family-name:--font-display) text-[clamp(2.6rem,4.6vw,4rem)] leading-[0.94] tracking-[-0.05em] text-white">
+            <h2 className="mt-4 max-w-[10.5ch] font-(family-name:--font-display) text-[clamp(2.45rem,4.4vw,3.6rem)] leading-[0.94] tracking-[-0.05em] text-white">
               Scale knowledge transfer without losing review or provenance.
             </h2>
-            <p className="mt-4 max-w-[60ch] text-base leading-8 text-[rgba(255,255,255,0.76)]">
-              SilkLearn is designed for teams that need the output to stay grounded in private source material, explicit dependency order, and leader review before rollout.
+            <p className="mt-4 max-w-[60ch] text-base leading-7 text-[rgba(255,255,255,0.76)]">
+              SILKLEARN is designed for teams that need the output to stay grounded in private source material, explicit dependency order, and leader review before rollout.
             </p>
           </div>
 
@@ -486,15 +507,15 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
         </div>
       </section>
 
-      <section className="mt-6 rounded-4xl border border-[rgba(10,25,49,0.08)] bg-white px-6 py-8 shadow-[0_18px_70px_rgba(15,23,42,0.06)] sm:px-8">
+      <section className="mt-8 rounded-4xl border border-[rgba(10,25,49,0.08)] bg-white px-6 py-8 shadow-[0_18px_70px_rgba(15,23,42,0.06)] sm:px-8">
         <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-(--primary)">FAQs</p>
-            <h2 className="mt-4 max-w-[12ch] font-(family-name:--font-display) text-[clamp(2.6rem,4.6vw,4rem)] leading-[0.94] tracking-[-0.05em] text-(--foreground)">
+            <h2 className="mt-4 max-w-[10.5ch] font-(family-name:--font-display) text-[clamp(2.45rem,4.4vw,3.6rem)] leading-[0.94] tracking-[-0.05em] text-(--foreground)">
               Core questions, answered directly.
             </h2>
-            <p className="mt-4 max-w-[54ch] text-base leading-8 text-(--muted-foreground)">
-              The reference ends with a large FAQ and a final CTA. SilkLearn needs the same closing clarity.
+            <p className="mt-4 max-w-[54ch] text-base leading-7 text-(--muted-foreground)">
+              The reference ends with a large FAQ and a final CTA. SILKLEARN needs the same closing clarity.
             </p>
           </div>
 
@@ -502,8 +523,8 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
             {content.faq.map((item) => (
               <Card key={item.question} className="rounded-[22px] border-[rgba(10,25,49,0.08)] bg-[rgba(247,250,253,0.92)] shadow-none">
                 <CardHeader>
-                  <CardTitle className="text-lg leading-7">{item.question}</CardTitle>
-                  <CardDescription className="text-sm leading-7">{item.answer}</CardDescription>
+                  <CardTitle className="text-lg leading-6">{item.question}</CardTitle>
+                  <CardDescription className="text-sm leading-6">{item.answer}</CardDescription>
                 </CardHeader>
               </Card>
             ))}
@@ -512,7 +533,7 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
       </section>
 
       <section
-        className="mt-6 rounded-[36px] border border-[rgba(10,25,49,0.08)] bg-[linear-gradient(180deg,#ffffff_0%,#eef4fb_100%)] px-6 py-8 shadow-[0_20px_80px_rgba(15,23,42,0.08)] sm:px-8 lg:px-10"
+        className="mt-8 rounded-[36px] border border-[rgba(10,25,49,0.08)] bg-[linear-gradient(180deg,#ffffff_0%,#eef4fb_100%)] px-6 py-8 shadow-[0_20px_80px_rgba(15,23,42,0.08)] sm:px-8 lg:px-10"
         id="waitlist"
       >
         <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
@@ -521,7 +542,7 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
             <h2 className="mt-4 max-w-[13ch] font-(family-name:--font-display) text-[clamp(2.8rem,5vw,4.6rem)] leading-[0.92] tracking-[-0.05em] text-(--foreground)">
               Bring dense internal knowledge into reviewable structure.
             </h2>
-            <p className="mt-5 max-w-[58ch] text-base leading-8 text-(--muted-foreground)">
+            <p className="mt-5 max-w-[58ch] text-base leading-7 text-(--muted-foreground)">
               Early access is for teams testing onboarding flows, knowledge audits, and AI context workflows built from real source material rather than search overhead and document drift.
             </p>
 

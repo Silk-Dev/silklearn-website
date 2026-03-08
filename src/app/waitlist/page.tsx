@@ -7,9 +7,9 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata: Metadata = buildMetadata({
   title: 'Waitlist',
   description:
-    'Join the SilkLearn waitlist if your team works from dense source material and wants reviewable learning paths, dependency graphs, and context bundles.',
+    'Join the SILKLEARN waitlist if your team works from dense source material and wants reviewable learning paths, dependency graphs, and context bundles.',
   path: '/waitlist',
-  keywords: ['SilkLearn waitlist', 'knowledge compilation beta', 'reviewable learning path software'],
+  keywords: ['SILKLEARN waitlist', 'knowledge compilation beta', 'reviewable learning path software'],
 });
 
 export default function WaitlistPage() {
@@ -21,8 +21,8 @@ export default function WaitlistPage() {
           <h1 className="mt-4 max-w-[11ch] font-(family-name:--font-display) text-[clamp(3rem,7vw,5.4rem)] leading-[0.92] tracking-[-0.05em] text-(--foreground) max-sm:max-w-none">
             Bring your team’s raw knowledge into reviewable structure.
           </h1>
-          <p className="mt-5 max-w-[62ch] text-[1.02rem] leading-8 text-(--muted-foreground)">
-            Early access is aimed at teams testing onboarding flows, knowledge audits, and AI context workflows built from dense private material. If your problem is hidden structure, not missing documents, SilkLearn is for you.
+          <p className="mt-5 max-w-[62ch] text-[1.02rem] leading-7 text-(--muted-foreground)">
+            Early access is aimed at teams testing onboarding flows, knowledge audits, and AI context workflows built from dense private material. If your problem is hidden structure, not missing documents, SILKLEARN is for you.
           </p>
         </div>
 

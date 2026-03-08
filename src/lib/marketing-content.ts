@@ -51,7 +51,7 @@ export const featurePages: FeaturePage[] = [
     description:
       'Expose prerequisite structure across dense documents so teams and AI systems receive knowledge in a defensible order.',
     summary:
-      'SilkLearn turns hidden assumptions into explicit edges so teams can see what must come first, what unlocks the next concept, and where review is still required.',
+      'SILKLEARN turns hidden assumptions into explicit edges so teams can see what must come first, what unlocks the next concept, and where review is still required.',
     bullets: [
       'Turns implicit expert order into explicit prerequisite edges',
       'Reduces wasted onboarding and search time caused by wrong sequencing',
@@ -66,7 +66,7 @@ export const featurePages: FeaturePage[] = [
     description:
       'Keep humans in the loop so compiled outputs can be inspected, corrected, and trusted before they affect team execution.',
     summary:
-      'SilkLearn does not ask leaders to trust a black box. It gives them a reviewable graph with provenance, dependency logic, and visible downstream implications.',
+      'SILKLEARN does not ask leaders to trust a black box. It gives them a reviewable graph with provenance, dependency logic, and visible downstream implications.',
     bullets: [
       'Review nodes, edges, and sequence before launch',
       'Catch domain-specific exceptions that flat retrieval and generic course tools miss',
@@ -84,7 +84,7 @@ export const useCasePages: UseCasePage[] = [
     description:
       'Turn architecture docs, runbooks, and technical standards into a dependency-aware onboarding path for engineers.',
     summary:
-      'Instead of asking senior engineers to repeatedly explain the same system from scratch, SilkLearn compiles the order directly from the documentation and related sources.',
+      'Instead of asking senior engineers to repeatedly explain the same system from scratch, SILKLEARN compiles the order directly from the documentation and related sources.',
     outcomes: [
       'Reduce ramp time on complex internal systems',
       'Use current docs instead of stale onboarding decks',
@@ -99,7 +99,7 @@ export const useCasePages: UseCasePage[] = [
     description:
       'Convert dense internal documentation into structured, reviewable guidance without rewriting everything as a course.',
     summary:
-      'SilkLearn is useful when the knowledge is already in the docs, but the dependency order, hidden assumptions, and contradictions are fragmented across multiple sources.',
+      'SILKLEARN is useful when the knowledge is already in the docs, but the dependency order, hidden assumptions, and contradictions are fragmented across multiple sources.',
     outcomes: [
       'Reuse existing documentation instead of rebuilding it as slides',
       'Expose what people need to understand before advanced topics',

@@ -3,13 +3,13 @@ applyTo: "**/*"
 description: "Use when working in the silklearn-website repo for Next.js, Tailwind, shadcn/ui, Sanity, and Docker-backed Postgres work."
 ---
 
-# SilkLearn Website Patterns
+# SILKLEARN Website Patterns
 
-This repository is the standalone SilkLearn marketing website. Keep the product story aligned with the main SilkLearn thesis, but do not assume the SilkGuild monorepo structure exists here.
+This repository is the standalone SILKLEARN marketing website. Keep the product story aligned with the main SILKLEARN thesis, but do not assume the SilkGuild monorepo structure exists here.
 
 ## What This Repo Is
 
-- A standalone Next.js 16 site for SilkLearn marketing, editorial content, and lightweight operational capture.
+- A standalone Next.js 16 site for SILKLEARN marketing, editorial content, and lightweight operational capture.
 - Embedded Sanity Studio for content editing.
 - Local Postgres via Docker Compose for waitlist capture and future website-side operational data.
 
@@ -28,7 +28,7 @@ This repository is the standalone SilkLearn marketing website. Keep the product 
 
 ## Product Context
 
-- SilkLearn turns source material into dependency-ordered learning paths.
+- SILKLEARN turns source material into dependency-ordered learning paths.
 - Target users are leaders who need teams proficient in complex knowledge without manually designing every learning step.
 - Website copy should reflect the actual product thesis: source material in, structured learning path out.
 - Do not drift into generic AI, course-builder, or vague productivity messaging.

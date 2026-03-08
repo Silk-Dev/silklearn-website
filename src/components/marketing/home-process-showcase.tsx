@@ -23,7 +23,7 @@ const stages: WorkflowStage[] = [
     panelEyebrow: 'Source intake',
     panelTitle: 'Structured input, not random uploads',
     panelDescription:
-      'SilkLearn keeps document boundaries and provenance visible so every downstream segment can be traced back to the source.',
+      'SILKLEARN keeps document boundaries and provenance visible so every downstream segment can be traced back to the source.',
     rows: [
       'Architecture spec.pdf',
       'Onboarding handbook.md',
@@ -80,13 +80,13 @@ export function HomeProcessShowcase() {
   const selectedStage = stages[selectedIndex];
 
   return (
-    <section className="grid gap-10 rounded-4xl border border-[rgba(10,25,49,0.08)] bg-white px-6 py-8 shadow-[0_22px_80px_rgba(15,23,42,0.08)] lg:grid-cols-[0.86fr_1.14fr] lg:px-8 lg:py-10">
+    <section className="grid gap-8 rounded-4xl border border-[rgba(10,25,49,0.08)] bg-white px-6 py-8 shadow-[0_22px_80px_rgba(15,23,42,0.08)] lg:grid-cols-[0.86fr_1.14fr] lg:px-8 lg:py-10">
       <div>
         <p className="text-sm font-semibold uppercase tracking-[0.18em] text-(--primary)">How it works</p>
-        <h2 className="mt-4 max-w-[11ch] font-(family-name:--font-display) text-[clamp(2.8rem,5vw,4.5rem)] leading-[0.92] tracking-[-0.05em] text-(--foreground)">
+        <h2 className="mt-4 max-w-[9.5ch] font-(family-name:--font-display) text-[clamp(2.55rem,4.8vw,4rem)] leading-[0.92] tracking-[-0.05em] text-(--foreground)">
           Rebuild the order hidden inside the documents.
         </h2>
-        <p className="mt-4 max-w-[56ch] text-base leading-8 text-(--muted-foreground)">
+        <p className="mt-4 max-w-[56ch] text-base leading-7 text-(--muted-foreground)">
           The workflow follows the same discipline as the reference: a clear left-to-right story with one active system view at a time.
         </p>
 
@@ -129,7 +129,7 @@ export function HomeProcessShowcase() {
                 {selectedStage.panelEyebrow}
               </p>
               <CardTitle className="mt-3 text-[1.55rem] leading-tight">{selectedStage.panelTitle}</CardTitle>
-              <CardDescription className="mt-3 max-w-[54ch] text-sm leading-7">
+              <CardDescription className="mt-3 max-w-[54ch] text-sm leading-6">
                 {selectedStage.panelDescription}
               </CardDescription>
             </div>

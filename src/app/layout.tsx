@@ -17,13 +17,15 @@ import './globals.css';
 const displayFont = Montserrat({
   variable: '--font-display',
   subsets: ['latin'],
-  weight: ['600', '700'],
+  display: 'swap',
+  weight: ['500', '600', '700'],
 });
 
 const bodyFont = Inter({
   variable: '--font-body',
   subsets: ['latin'],
-  weight: ['400', '500', '600'],
+  display: 'swap',
+  weight: ['400', '500', '600', '700'],
 });
 
 export const metadata: Metadata = defaultMetadata;

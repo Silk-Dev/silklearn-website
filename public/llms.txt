@@ -1,7 +1,7 @@
-# SilkLearn
+# SILKLEARN
 
 ## About
-SilkLearn turns dense source material into structured, dependency-ordered learning paths for teams. The product is designed for leaders who need teams proficient in complex knowledge without manually designing every learning step from scratch.
+SILKLEARN turns dense source material into structured, dependency-ordered learning paths for teams. The product is designed for leaders who need teams proficient in complex knowledge without manually designing every learning step from scratch.
 
 ## Core Idea
 - Input: internal docs, specs, runbooks, PDFs, and technical reference material
@@ -24,7 +24,7 @@ SilkLearn turns dense source material into structured, dependency-ordered learni
 - /waitlist: early access signup
 
 ## Positioning
-SilkLearn is not a generic course builder. The product starts from the source material itself and reconstructs the dependency order hidden inside it.
+SILKLEARN is not a generic course builder. The product starts from the source material itself and reconstructs the dependency order hidden inside it.
 
 ## Audience
 - CEOs and CTOs

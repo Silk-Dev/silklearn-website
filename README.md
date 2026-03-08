@@ -1,6 +1,6 @@
-# SilkLearn Website
+# SILKLEARN Website
 
-Standalone marketing site scaffold for SilkLearn using Next.js, Tailwind CSS, shadcn/ui, embedded Sanity Studio, and local Postgres via Docker Compose.
+Standalone marketing site scaffold for SILKLEARN using Next.js, Tailwind CSS, shadcn/ui, embedded Sanity Studio, and local Postgres via Docker Compose.
 
 ## Stack
 
@@ -83,7 +83,7 @@ Notes:
 
 ## Current Scope
 
-- Bold landing page aligned to the SilkLearn product thesis
+- Bold landing page aligned to the SILKLEARN product thesis
 - Embedded CMS for marketing copy
 - Waitlist capture API backed by Postgres
 - Clean base for adding pages, analytics, and richer content models

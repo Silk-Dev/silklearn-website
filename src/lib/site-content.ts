@@ -30,7 +30,7 @@ export const fallbackHomePageContent: HomePageContent = {
   kicker: 'Knowledge compilation for teams that need correct reasoning, not more raw docs.',
   headline: 'Compile messy source material into reviewable learning paths and context.',
   subheadline:
-    'SilkLearn parses, segments, links, and reconciles dense internal knowledge so teams can see what must be learned first, what depends on what, and what context a human or model actually needs.',
+    'SILKLEARN parses, segments, links, and reconciles dense internal knowledge so teams can see what must be learned first, what depends on what, and what context a human or model actually needs.',
   primaryCtaLabel: 'Join the waitlist',
   primaryCtaHref: '#waitlist',
   secondaryCtaLabel: 'See how it works',
@@ -59,14 +59,14 @@ export const fallbackHomePageContent: HomePageContent = {
   ],
   faq: [
     {
-      question: 'Who is SilkLearn for?',
+      question: 'Who is SILKLEARN for?',
       answer:
-        'SilkLearn is for engineering, product, operations, and compliance teams working from dense private knowledge where reasoning mistakes are expensive and manual structuring does not scale.',
+        'SILKLEARN is for engineering, product, operations, and compliance teams working from dense private knowledge where reasoning mistakes are expensive and manual structuring does not scale.',
     },
     {
       question: 'What makes this different from RAG or a course builder?',
       answer:
-        'SilkLearn does more than retrieve similar text or wrap documents in lessons. It compiles source material into dependency-aware, provenance-backed structure that can be reviewed before use.',
+        'SILKLEARN does more than retrieve similar text or wrap documents in lessons. It compiles source material into dependency-aware, provenance-backed structure that can be reviewed before use.',
     },
     {
       question: 'What does a team actually get from the product?',
