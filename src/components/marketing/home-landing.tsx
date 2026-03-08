@@ -1,30 +1,18 @@
+import { Fragment } from 'react';
 import {
   ArrowRight,
   BadgeCheck,
-  BookOpenText,
-  BrainCircuit,
+  ChevronRight,
   CheckCircle2,
-  FileStack,
   GitBranch,
-  Layers3,
-  LibraryBig,
-  Network,
-  ScanSearch,
-  ShieldCheck,
+  FileStack,
   Sparkles,
-  UsersRound,
-  Waypoints,
 } from 'lucide-react';
 
 import { WaitlistForm } from '@/components/waitlist-form';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { type HomePageContent } from '@/lib/site-content';
 import { getFaqPageSchema } from '@/lib/structured-data';
-
-import { AceternityBentoGrid } from './aceternity-bento-grid';
-import { AceternitySpotlightGrid } from './aceternity-spotlight-grid';
-import { HomeProcessShowcase } from './home-process-showcase';
 
 const trustMarks = [
   'Engineering onboarding',
@@ -35,101 +23,75 @@ const trustMarks = [
   'Internal documentation systems',
 ];
 
-const features = [
+const operatingModes = [
   {
-    title: 'Dependency-aware graph',
-    body: 'Expose what depends on what instead of forcing teams to infer order from pages and tribal memory.',
+    title: 'Make prerequisite order obvious before teams make mistakes',
+    body: 'Turn architecture docs, onboarding notes, and runbooks into a reviewed sequence so teams stop guessing what comes first.',
     icon: GitBranch,
-    eyebrow: 'Graph layer',
-    bullets: ['Explicit prerequisite edges', 'Cross-document linking', 'Reviewable sequence'],
-    className: 'md:col-span-3 md:row-span-2',
-    dark: true,
+    eyebrow: 'Compile',
+    metrics: ['See what must be learned first', 'Keep every step tied to source'],
   },
   {
-    title: 'Structured segmentation',
-    body: 'Break dense documents into coherent knowledge units without losing provenance or scope.',
-    icon: ScanSearch,
-    eyebrow: 'Compiler pass',
-    className: 'md:col-span-3',
-  },
-  {
-    title: 'Leader review loop',
-    body: 'Approve sequence, unresolved edges, and downstream outputs before they become operational guidance.',
-    icon: ShieldCheck,
-    eyebrow: 'Approval surface',
-    className: 'md:col-span-2',
-  },
-  {
-    title: 'Minimum-context outputs',
-    body: 'Generate the smallest defensible bundle of knowledge required for people or models to reason correctly.',
-    icon: BrainCircuit,
-    eyebrow: 'Downstream use',
-    className: 'md:col-span-4',
-  },
-  {
-    title: 'Learning path generation',
-    body: 'Turn the compiled graph into onboarding plans and knowledge ramps grounded in the source material.',
-    icon: LibraryBig,
-    eyebrow: 'Activation',
-    className: 'md:col-span-3',
-  },
-  {
-    title: 'Reusable knowledge assets',
-    body: 'Keep a durable compiled structure that can feed multiple workflows instead of rebuilding context every time.',
-    icon: Layers3,
-    eyebrow: 'Durable asset',
-    className: 'md:col-span-3',
+    title: 'Reuse one compiled graph across onboarding, rollout, and AI',
+    body: 'Build one reviewed structure that feeds onboarding, rollout review, and AI context delivery without rebuilding the logic each time.',
+    icon: FileStack,
+    eyebrow: 'Consolidate',
+    metrics: ['One structure, multiple outputs', 'Leader-approved context bundles'],
   },
 ];
 
-const useCases = [
+const actionPanels = [
   {
-    title: 'Engineering onboarding from system docs',
-    description: 'Compile internal architecture and system docs into an inspectable path instead of asking senior engineers to reteach the stack manually.',
-    icon: Network,
+    step: 'Step 01',
+    title: 'Start with the real document stack, not a rewritten summary',
+    summary: 'Document boundaries stay visible so leaders can see what was actually compiled, what remains unresolved, and what still needs human review.',
+    rows: [
+      'Architecture spec.pdf',
+      'Support escalation runbook.docx',
+      'Internal onboarding handbook.md',
+    ],
+    note: 'Source provenance preserved',
   },
   {
-    title: 'Support escalation training from runbooks',
-    description: 'Turn support documents and escalation references into a dependency-aware training surface for faster judgment under pressure.',
-    icon: Network,
+    step: 'Step 02',
+    title: 'Surface the dependency order before a rollout depends on it',
+    summary: 'The graph makes hidden prerequisite logic visible before onboarding, handoff, or internal AI depends on it being correct.',
+    rows: [
+      'Auth model -> Access policy',
+      'Access policy -> Incident recovery',
+      'Incident recovery -> Escalation workflow',
+    ],
+    note: 'Cross-document links reviewed',
   },
   {
-    title: 'Operational handoff between teams',
-    description: 'Preserve cross-team dependency logic during transitions so critical assumptions do not vanish in handoff meetings.',
-    icon: Network,
-  },
-  {
-    title: 'Compliance knowledge transfer',
-    description: 'Keep regulatory or policy knowledge connected to source material while surfacing what must be understood before higher-risk steps.',
-    icon: Network,
-  },
-  {
-    title: 'AI context bundles for internal copilots',
-    description: 'Build slimmer, provenance-backed context bundles from the compiled graph instead of dumping raw documentation into a prompt.',
-    icon: Network,
-  },
-  {
-    title: 'Knowledge audits before major rollouts',
-    description: 'Inspect gaps, missing prerequisites, and risky assumptions before a rollout depends on the knowledge base being correct.',
-    icon: Network,
+    step: 'Step 03',
+    title: 'Ship outputs teams can actually use',
+    summary: 'Teams publish onboarding ramps, review queues, and minimum-context bundles from the same compiled structure instead of rebuilding from scratch.',
+    rows: [
+      'Engineering onboarding path',
+      'Support agent context bundle',
+      'Leader review queue',
+    ],
+    note: 'Outputs stay reviewable',
   },
 ];
 
-const rolloutModes = [
+const stageJourney = [
   {
-    title: 'Pilot',
-    body: 'Start with one document stack and one team-critical workflow to validate the compiled graph.',
-    bullets: ['Single domain focus', 'Leader review queue', 'Early artifacts'],
+    label: 'Stage A',
+    title: 'Raise team understanding from dense source material',
   },
   {
-    title: 'Team rollout',
-    body: 'Extend the graph across multiple sources and publish role-specific learning paths and context bundles.',
-    bullets: ['Cross-source linking', 'Knowledge path outputs', 'Ops handoff support'],
+    label: 'Stage B',
+    title: 'Connect the next document stack before the next handoff',
   },
   {
-    title: 'Private deployment',
-    body: 'Run SILKLEARN against sensitive internal knowledge with provenance, review, and structure preserved.',
-    bullets: ['Private document stacks', 'Structured review controls', 'Enterprise workflow fit'],
+    label: 'Stage C',
+    title: 'Reuse the compiled graph across teams and internal tools',
+  },
+  {
+    label: 'Stage D',
+    title: 'Standardize knowledge transfer without losing review',
   },
 ];
 
@@ -148,421 +110,335 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
         type="application/ld+json"
       />
 
-      <section className="grid gap-9 px-1 pb-12 pt-8 text-center">
-        <div className="mx-auto flex max-w-fit items-center gap-2 rounded-full border border-[rgba(31,63,122,0.14)] bg-white px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-(--primary)">
-          <Sparkles className="size-3.5" />
-          {content.kicker}
-        </div>
+      {/* Outer rails — border-left + border-right form the two continuous vertical lines */}
+      <div className="border-x border-(--border)">
 
-        <div className="mx-auto max-w-225">
-          <h1 className="mx-auto max-w-[10.5ch] font-(family-name:--font-display) text-[clamp(3.6rem,7.5vw,6.4rem)] leading-[0.88] tracking-[-0.065em] text-(--foreground)">
-            {content.headline}
-          </h1>
-          <p className="mx-auto mt-5 max-w-[58ch] text-[1.04rem] leading-7 text-(--muted-foreground)">
-            {content.subheadline}
-          </p>
-        </div>
+        {/* ── HERO ── grid with 1px structural divider column */}
+        <div className="grid lg:grid-cols-[1fr_1px_1fr]">
+          <div className="px-6 py-14 sm:px-8 lg:px-10 lg:py-20">
+            <div className="max-w-125">
+              <div className="flex max-w-fit items-center gap-2 rounded-full border border-[oklch(from_var(--primary)_l_c_h/0.18)] bg-[oklch(from_var(--primary)_l_c_h/0.06)] px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--primary)">
+                <Sparkles className="size-3.5" />
+                {content.kicker}
+              </div>
 
-        <div className="flex flex-wrap items-center justify-center gap-3">
-          <Button asChild size="lg">
-            <a href={content.primaryCtaHref}>
-              {content.primaryCtaLabel}
-              <ArrowRight className="size-4" />
-            </a>
-          </Button>
-          <Button asChild size="lg" variant="outline">
-            <a href={content.secondaryCtaHref}>{content.secondaryCtaLabel}</a>
-          </Button>
-        </div>
+              <h1 className="mt-10 max-w-[9.5ch] font-(family-name:--font-display) text-[clamp(2.4rem,4.2vw,3.375rem)] leading-none tracking-[-0.02em] text-(--foreground)">
+                {content.headline}
+              </h1>
 
-        <div className="mx-auto flex items-center justify-center gap-2 text-sm text-(--muted-foreground)">
-          <BadgeCheck className="size-4 text-(--primary)" />
-          <span>
-            {isSanityConfigured
-              ? 'Homepage content is loading from Sanity.'
-              : 'Using fallback marketing content until Sanity is configured.'}
-          </span>
-        </div>
+              <p className="mt-6 max-w-[56ch] text-[1.02rem] leading-7 text-(--muted-foreground)">
+                {content.subheadline}
+              </p>
 
-        <div className="relative mx-auto w-full max-w-295 overflow-hidden rounded-[34px] border border-[rgba(10,25,49,0.08)] bg-[linear-gradient(180deg,#fbfdff_0%,#f1f6fc_100%)] p-4 shadow-[0_30px_120px_rgba(15,23,42,0.09)] sm:p-6 lg:p-8">
-          <div className="pointer-events-none absolute inset-x-[16%] top-0 h-40 bg-[radial-gradient(circle_at_top,rgba(31,63,122,0.14),transparent_65%)]" />
-          <div className="grid gap-5 lg:grid-cols-[1.25fr_0.75fr]">
-            <Card className="overflow-hidden rounded-[28px] border-[rgba(10,25,49,0.08)] bg-white shadow-none">
-              <CardHeader className="flex-row items-center justify-between gap-4 border-b border-(--border) pb-4">
-                <div className="text-left">
-                  <CardTitle className="text-lg">Compiled knowledge workspace</CardTitle>
-                  <CardDescription className="mt-1 text-sm leading-6">
-                    Source material in, dependency-aware structure out.
-                  </CardDescription>
+              <div className="mt-8 flex flex-wrap items-center gap-3">
+                <Button asChild size="lg">
+                  <a href={content.primaryCtaHref}>
+                    {content.primaryCtaLabel}
+                    <ArrowRight className="size-4" />
+                  </a>
+                </Button>
+                <Button asChild size="lg" variant="outline">
+                  <a href={content.secondaryCtaHref}>{content.secondaryCtaLabel}</a>
+                </Button>
+              </div>
+
+              {!isSanityConfigured && (
+                <div className="mt-8 flex items-center gap-2 text-sm text-(--muted-foreground)">
+                  <BadgeCheck className="size-4 text-(--primary)" />
+                  <span>Using fallback marketing content until Sanity is configured.</span>
                 </div>
-                <div className="rounded-full bg-[rgba(31,63,122,0.08)] px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-(--primary)">
-                  5-pass system
-                </div>
-              </CardHeader>
+              )}
+            </div>
+          </div>
 
-              <CardContent className="grid gap-4 pt-6 xl:grid-cols-[0.92fr_1.08fr]">
-                <div className="rounded-[22px] border border-[rgba(10,25,49,0.08)] bg-[rgba(247,250,253,0.95)] p-4 text-left">
-                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
-                    Source stack
-                  </p>
-                  <div className="mt-4 grid gap-3">
-                    {[
-                      'Security architecture spec.pdf',
-                      'Internal onboarding handbook.md',
-                      'Customer support escalation runbook.docx',
-                      'Product system glossary.export',
-                    ].map((item) => (
-                      <div
-                        key={item}
-                        className="flex items-center justify-between rounded-[18px] border border-[rgba(10,25,49,0.08)] bg-white px-4 py-3"
-                      >
-                        <span className="text-sm font-medium text-(--foreground)">{item}</span>
-                        <FileStack className="size-4 text-(--primary)" />
-                      </div>
-                    ))}
-                  </div>
-                </div>
+          {/* Structural vertical divider — a real 1px column, not an absolute div */}
+          <div className="hidden bg-(--border) lg:block" />
 
-                <div className="grid gap-4 text-left">
-                  <div className="rounded-[22px] border border-[rgba(31,63,122,0.12)] bg-[linear-gradient(180deg,rgba(24,45,84,1),rgba(28,58,106,0.96))] p-5 text-white">
-                    <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[rgba(255,255,255,0.66)]">
-                      Output layer
-                    </p>
-                    <div className="mt-4 grid gap-3 sm:grid-cols-3">
-                      {content.metrics.map((metric) => (
-                        <div key={metric.label} className="rounded-[18px] border border-white/10 bg-white/6 p-4">
-                          <p className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-[rgba(255,255,255,0.56)]">
-                            {metric.label}
-                          </p>
-                          <p className="mt-2 text-sm leading-6 text-white">{metric.value}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
+          <div className="border-t border-(--border) px-6 py-14 sm:px-8 lg:border-t-0 lg:px-10 lg:py-20">
+            <div className="flex items-center justify-between text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
+              <span>From raw docs to usable output</span>
+              <span>Live preview</span>
+            </div>
 
-                  <div className="grid gap-3 sm:grid-cols-3">
-                    {[
-                      'Reviewable graph',
-                      'Learning path outputs',
-                      'AI context bundles',
-                    ].map((item) => (
-                      <div
-                        key={item}
-                        className="rounded-[20px] border border-[rgba(10,25,49,0.08)] bg-white px-4 py-4"
-                      >
-                        <p className="text-sm font-semibold text-(--foreground)">{item}</p>
-                        <p className="mt-2 text-sm leading-6 text-(--muted-foreground)">
-                          Grounded in provenance and ready for review.
-                        </p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <div className="grid gap-4">
-              <Card className="rounded-[28px] border-[rgba(10,25,49,0.08)] bg-[rgba(255,255,255,0.9)] shadow-none">
-                <CardHeader>
-                  <CardTitle className="text-left text-lg">Why teams use it</CardTitle>
-                </CardHeader>
-                <CardContent className="grid gap-3 text-left">
+            <div className="mt-6 grid lg:grid-cols-[0.86fr_1px_1.14fr]">
+              <div className="py-5">
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">Source stack</p>
+                <div className="mt-5 grid gap-3">
                   {[
-                    'Reasoning mistakes become visible when dependency order is explicit.',
-                    'Compiled outputs stay reviewable before they affect real teams or models.',
-                    'Knowledge assets can be reused instead of rebuilt for every workflow.',
+                    'Security architecture spec.pdf',
+                    'Internal onboarding handbook.md',
+                    'Support escalation runbook.docx',
+                    'Product system glossary.export',
                   ].map((item) => (
-                    <div key={item} className="rounded-[18px] border border-[rgba(10,25,49,0.08)] bg-[rgba(247,250,253,0.95)] px-4 py-3 text-sm leading-6 text-(--foreground)">
-                      {item}
+                    <div key={item} className="flex items-center justify-between border-b border-(--border) px-1 pb-3 last:border-b-0 last:pb-0">
+                      <span className="text-sm font-medium text-(--foreground)">{item}</span>
+                      <FileStack className="size-4 text-(--primary)" />
                     </div>
                   ))}
-                </CardContent>
-              </Card>
+                </div>
+              </div>
 
-              <Card className="rounded-[28px] border-[rgba(10,25,49,0.08)] bg-[rgba(247,250,253,0.95)] shadow-none">
-                <CardHeader>
-                  <CardTitle className="text-left text-lg">Current focus</CardTitle>
-                  <CardDescription className="text-left">
-                    Knowledge-heavy teams where onboarding and context quality matter.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="grid gap-3 text-left text-sm text-(--muted-foreground)">
-                  <div className="flex items-center gap-3">
-                    <UsersRound className="size-4 text-(--primary)" />
-                    Engineering, operations, compliance
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Waypoints className="size-4 text-(--primary)" />
-                    Dense private document stacks
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <BookOpenText className="size-4 text-(--primary)" />
-                    Reviewable rollout artifacts
-                  </div>
-                </CardContent>
-              </Card>
+              <div className="hidden bg-(--border) lg:block" />
+
+              <div className="border-t border-(--border) py-5 lg:border-t-0 lg:pl-6">
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">Output layer</p>
+                <div className="mt-5 grid gap-3">
+                  {content.metrics.map((metric) => (
+                    <div key={metric.label} className="border-b border-(--border) pb-3 last:border-b-0 last:pb-0">
+                      <p className="text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-(--muted-foreground)">{metric.label}</p>
+                      <p className="mt-1 text-sm leading-6 text-(--foreground)">{metric.value}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-5 grid gap-3">
+                  {['Reviewable graph', 'Learning path outputs', 'AI context bundles'].map((item) => (
+                    <div key={item} className="border-b border-(--border) pb-3 last:border-b-0 last:pb-0">
+                      <p className="text-sm font-semibold text-(--foreground)">{item}</p>
+                      <p className="mt-1 text-sm leading-6 text-(--muted-foreground)">Grounded in provenance and ready for review.</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </section>
 
-      <section className="rounded-[28px] border border-[rgba(10,25,49,0.08)] bg-white px-6 py-6 shadow-[0_16px_60px_rgba(15,23,42,0.05)] sm:px-8">
-        <p className="text-center text-[0.76rem] font-semibold uppercase tracking-[0.18em] text-(--muted-foreground)">
-          Built for teams working from dense internal knowledge
-        </p>
-        <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-6">
-          {trustMarks.map((mark) => (
-            <div
-              key={mark}
-              className="flex min-h-16 items-center justify-center rounded-[18px] border border-[rgba(10,25,49,0.08)] bg-[rgba(247,250,253,0.92)] px-4 text-center text-sm font-semibold text-(--foreground)"
-            >
+        {/* ── TRUST MARKS ── horizontal rule via border-top, items divided by border */}
+        <div className="grid border-t border-(--border) sm:grid-cols-2 lg:grid-cols-6">
+          {trustMarks.map((mark, i) => (
+            <div key={mark} className={`px-5 py-5 text-sm font-semibold text-(--foreground)${i > 0 ? ' border-t sm:border-t-0 sm:border-l border-(--border)' : ''}`}>
               {mark}
             </div>
           ))}
         </div>
-      </section>
 
-      <section className="mt-8">
-        <HomeProcessShowcase />
-      </section>
-
-      <section className="mt-8 rounded-4xl border border-[rgba(10,25,49,0.08)] bg-white px-6 py-8 shadow-[0_18px_70px_rgba(15,23,42,0.06)] sm:px-8">
-        <div className="max-w-190">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-(--primary)">Features</p>
-          <h2 className="mt-4 max-w-[9.5ch] font-(family-name:--font-display) text-[clamp(2.6rem,4.8vw,4rem)] leading-[0.92] tracking-[-0.05em] text-(--foreground)">
-            Built for knowledge work that cannot rely on guesswork.
-          </h2>
-          <p className="mt-4 max-w-[58ch] text-base leading-7 text-(--muted-foreground)">
-            The reference site uses a dense capability grid after the workflow section. SILKLEARN needs the same density, but with features tied to structure, review, and provenance.
-          </p>
+        {/* ── SOLUTIONS ── centered header then 2-col grid */}
+        <div className="border-t border-(--border) px-6 py-12 sm:px-8 lg:px-10 lg:py-16">
+          <div className="mx-auto max-w-140 text-center">
+            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">SILKLEARN solutions</p>
+            <h2 className="mt-4 font-(family-name:--font-display) text-[clamp(2rem,3.6vw,3.375rem)] leading-none tracking-[-0.02em] text-(--foreground)">
+              Two ways teams use SILKLEARN to reduce guesswork.
+            </h2>
+          </div>
         </div>
 
-        <AceternityBentoGrid
-          className="mt-8"
-          items={features.map((feature) => ({
-            title: feature.title,
-            description: feature.body,
-            icon: feature.icon,
-            eyebrow: feature.eyebrow,
-            bullets: feature.bullets,
-            className: feature.className,
-            dark: feature.dark,
-          }))}
-        />
-      </section>
+        <div className="grid border-t border-(--border) lg:grid-cols-[1fr_1px_1fr]">
+          {operatingModes.map((mode, i) => {
+            const Icon = mode.icon;
+            return (
+              <Fragment key={mode.title}>
+                {i > 0 && <div className="bg-(--border) max-lg:h-px" />}
+                <div className="p-6 sm:p-8 lg:p-10">
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">{mode.eyebrow}</p>
+                  <h3 className="mt-3 max-w-[18ch] text-[1.5rem] leading-tight tracking-[-0.02em] text-(--foreground)">{mode.title}</h3>
+                  <p className="mt-3 max-w-[48ch] text-sm leading-7 text-(--muted-foreground)">{mode.body}</p>
 
-      <section className="mt-8 rounded-4xl border border-[rgba(10,25,49,0.08)] bg-[linear-gradient(180deg,#ffffff_0%,#f6f9fd_100%)] px-6 py-8 shadow-[0_18px_70px_rgba(15,23,42,0.06)] sm:px-8">
-        <div className="max-w-190">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-(--primary)">Use cases</p>
-          <h2 className="mt-4 max-w-[9ch] font-(family-name:--font-display) text-[clamp(2.6rem,4.8vw,4rem)] leading-[0.92] tracking-[-0.05em] text-(--foreground)">
-            Apply the same compiled structure across teams.
-          </h2>
-        </div>
-
-        <AceternitySpotlightGrid className="mt-8" items={useCases} />
-      </section>
-
-      <section className="mt-8 grid gap-6 lg:grid-cols-[1.08fr_0.92fr]">
-        <Card className="overflow-hidden rounded-4xl border-[rgba(10,25,49,0.08)] bg-[linear-gradient(180deg,#1b315a_0%,#25477d_100%)] text-white shadow-[0_26px_90px_rgba(15,23,42,0.18)]">
-          <CardHeader>
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[rgba(255,255,255,0.56)]">Benefits</p>
-            <CardTitle className="max-w-[11ch] font-(family-name:--font-display) text-[clamp(2.6rem,4.6vw,4rem)] leading-[0.94] tracking-[-0.05em] text-white">
-              Better reasoning starts with better structure.
-            </CardTitle>
-            <CardDescription className="max-w-[54ch] text-base leading-6 text-[rgba(255,255,255,0.74)]">
-              Notus uses a dashboard-style benefit section. Here the equivalent is a live-looking knowledge graph panel that shows why compiled structure improves downstream work.
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="grid gap-4 lg:grid-cols-[0.9fr_1.1fr]">
-            <div className="rounded-3xl border border-white/10 bg-white/6 p-5">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[rgba(255,255,255,0.52)]">Signals</p>
-              <div className="mt-4 grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
-                <div className="rounded-[18px] bg-white/7 p-4">
-                  <p className="text-[0.72rem] uppercase tracking-[0.14em] text-[rgba(255,255,255,0.52)]">Segments</p>
-                  <p className="mt-2 text-3xl font-semibold tracking-[-0.04em]">95</p>
-                </div>
-                <div className="rounded-[18px] bg-white/7 p-4">
-                  <p className="text-[0.72rem] uppercase tracking-[0.14em] text-[rgba(255,255,255,0.52)]">Resolved edges</p>
-                  <p className="mt-2 text-3xl font-semibold tracking-[-0.04em]">241</p>
-                </div>
-                <div className="rounded-[18px] bg-white/7 p-4">
-                  <p className="text-[0.72rem] uppercase tracking-[0.14em] text-[rgba(255,255,255,0.52)]">Outputs</p>
-                  <p className="mt-2 text-3xl font-semibold tracking-[-0.04em]">4</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="rounded-3xl border border-white/10 bg-white/6 p-5">
-              <div className="grid gap-3">
-                {[
-                  'Reusable knowledge graph',
-                  'Role-specific learning paths',
-                  'Review queue for unresolved dependencies',
-                  'Context bundles for internal AI tools',
-                ].map((item) => (
-                  <div key={item} className="rounded-[18px] border border-white/10 bg-white/6 px-4 py-3 text-sm leading-6">
-                    {item}
+                  <div className="mt-8 flex min-h-40 items-center justify-center border border-(--border)">
+                    <div className="flex size-14 items-center justify-center rounded-xl border border-[oklch(from_var(--primary)_l_c_h/0.16)] bg-(--card) text-(--primary)">
+                      <Icon className="size-5" />
+                    </div>
                   </div>
-                ))}
-              </div>
-            </div>
-          </CardContent>
-        </Card>
 
-        <div className="grid gap-4">
-          {content.pillars.map((pillar) => (
-            <Card key={pillar.title} className="rounded-[26px] border-[rgba(10,25,49,0.08)] bg-white shadow-none">
-              <CardHeader>
-                <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[rgba(31,63,122,0.08)] text-(--primary)">
+                  <div className="mt-4">
+                    {mode.metrics.map((metric) => (
+                      <div key={metric} className="border-t border-(--border) py-3 text-sm font-medium text-(--foreground)">
+                        {metric}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </Fragment>
+            );
+          })}
+        </div>
+
+        {/* ── IN ACTION ── left rail + stacked cards, Rollups pattern */}
+        <div className="grid border-t border-(--border) lg:grid-cols-[1fr_1px_2fr]">
+          <div className="p-6 sm:p-8 lg:p-10 lg:sticky lg:top-28 lg:self-start">
+            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">SILKLEARN in action</p>
+            <h2 className="mt-4 max-w-[10ch] font-(family-name:--font-display) text-[clamp(2rem,3.6vw,3.375rem)] leading-none tracking-[-0.02em] text-(--foreground)">
+              Use one compiled source across onboarding, handoff, and AI.
+            </h2>
+            <p className="mt-4 max-w-[42ch] text-base leading-7 text-(--muted-foreground)">
+              Each operating view shows how dense source material becomes something a team can review, trust, and reuse.
+            </p>
+
+            <div className="mt-8">
+              {[
+                'Review dense internal knowledge before rollout.',
+                'Make prerequisite logic visible before teams guess.',
+                'Ship outputs that stay tied to the source.',
+              ].map((item) => (
+                <div key={item} className="flex items-start gap-3 border-t border-(--border) py-3 text-sm leading-7 text-(--muted-foreground) first:border-t-0 first:pt-0">
+                  <ChevronRight className="mt-1 size-4 shrink-0 text-(--primary)" />
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Structural divider between left rail and cards */}
+          <div className="hidden bg-(--border) lg:block" />
+
+          <div>
+            {actionPanels.map((panel, i) => (
+              <div key={panel.step} className={`grid lg:grid-cols-[1.3fr_1px_1fr]${i > 0 ? ' border-t border-(--border)' : ''}`}>
+                {/* Illustration / data side */}
+                <div className="p-6 sm:p-8">
+                  <div className="flex items-center justify-between text-xs font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
+                    <span>{panel.step}</span>
+                    <span>{panel.note}</span>
+                  </div>
+                  <div className="mt-6">
+                    <div className="mb-5 h-28 border border-dashed border-[oklch(from_var(--primary)_l_c_h/0.18)]" />
+                    {panel.rows.map((row) => (
+                      <div key={row} className="flex items-center justify-between border-t border-(--border) py-3 text-sm">
+                        <span className="font-medium text-(--foreground)">{row}</span>
+                        <span className="text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-(--muted-foreground)">mapped</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Structural divider */}
+                <div className="hidden bg-(--border) lg:block" />
+
+                {/* Text side */}
+                <div className="border-t border-(--border) p-6 sm:p-8 lg:border-t-0">
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">{panel.step}</p>
+                  <h3 className="mt-4 max-w-[16ch] text-[1.25rem] leading-tight tracking-[-0.02em] text-(--foreground)">{panel.title}</h3>
+                  <p className="mt-4 text-sm leading-7 text-(--muted-foreground)">{panel.summary}</p>
+                  <a className="mt-8 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-(--foreground)" href="#waitlist">
+                    Learn more
+                    <ArrowRight className="size-4" />
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* ── STAGES ── left text block + right sidebar, Rollups "Used by companies" */}
+        <div className="grid border-t border-(--border) lg:grid-cols-[1.3fr_1px_1fr]">
+          <div className="p-6 sm:p-8 lg:p-10">
+            <h2 className="max-w-[11ch] font-(family-name:--font-display) text-[clamp(2rem,3.6vw,3.375rem)] leading-none tracking-[-0.02em] text-(--foreground)">
+              Built for teams where missing context creates expensive mistakes.
+            </h2>
+
+            <div className="mt-10">
+              {stageJourney.map((stage) => (
+                <div key={stage.label} className="grid gap-2 border-t border-(--border) py-5 first:border-t-0 first:pt-0 lg:grid-cols-[110px_1fr]">
+                  <p className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">{stage.label}</p>
+                  <p className="text-base leading-7 text-(--foreground)">{stage.title}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="hidden bg-(--border) lg:block" />
+
+          <div className="border-t border-(--border) p-6 sm:p-8 lg:border-t-0 lg:p-10">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">Why this works</p>
+            <h3 className="mt-4 max-w-[16ch] text-[1.25rem] leading-tight tracking-[-0.02em] text-(--foreground)">
+              When order is visible, teams ramp faster and handoffs break less often.
+            </h3>
+            <p className="mt-4 text-sm leading-7 text-(--muted-foreground)">
+              Teams can only reuse internal knowledge safely when the order, provenance, and downstream implications are visible before rollout, onboarding, or AI delivery.
+            </p>
+            <div className="mt-8">
+              {[
+                'Raise team understanding from dense documents',
+                'Connect the next source stack before the next handoff',
+                'Standardize outputs for humans and internal AI tools',
+              ].map((item) => (
+                <div key={item} className="border-t border-(--border) py-4 text-sm font-medium text-(--foreground)">
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* ── CORE PILLARS ── */}
+        <div className="grid border-t border-(--border) lg:grid-cols-[1fr_1px_1.3fr]">
+          <div className="p-6 sm:p-8 lg:p-10">
+            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">Core pillars</p>
+            <h2 className="mt-4 max-w-[10ch] font-(family-name:--font-display) text-[clamp(2rem,3.6vw,3.375rem)] leading-none tracking-[-0.02em] text-(--foreground)">
+              Structure is the product. Everything else is downstream.
+            </h2>
+          </div>
+
+          <div className="hidden bg-(--border) lg:block" />
+
+          <div>
+            {content.pillars.map((pillar, i) => (
+              <div key={pillar.title} className={`grid gap-4 p-6 sm:grid-cols-[auto_1fr] sm:items-start sm:p-8${i > 0 ? ' border-t border-(--border)' : ''}`}>
+                <div className="flex size-11 items-center justify-center rounded-xl border border-[oklch(from_var(--primary)_l_c_h/0.14)] bg-(--card) text-(--primary)">
                   <CheckCircle2 className="size-4.5" />
                 </div>
-                <CardTitle className="mt-4 text-[1.08rem] leading-tight">{pillar.title}</CardTitle>
-                <CardDescription className="text-sm leading-6">{pillar.description}</CardDescription>
-              </CardHeader>
-            </Card>
-          ))}
-        </div>
-      </section>
-
-      <section className="mt-8 rounded-4xl border border-[rgba(10,25,49,0.08)] bg-white px-6 py-8 shadow-[0_18px_70px_rgba(15,23,42,0.06)] sm:px-8">
-        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-(--primary)">Core thesis</p>
-            <h2 className="mt-4 max-w-[10.5ch] font-(family-name:--font-display) text-[clamp(2.45rem,4.4vw,3.6rem)] leading-[0.94] tracking-[-0.05em] text-(--foreground)">
-              Access to text is not the same thing as access to usable knowledge.
-            </h2>
-          </div>
-
-          <Card className="rounded-[28px] border-[rgba(10,25,49,0.08)] bg-[rgba(247,250,253,0.92)] shadow-none">
-            <CardHeader>
-              <CardTitle className="font-(family-name:--font-display) text-[2rem] leading-tight tracking-[-0.04em]">
-                “The durable asset is the compiled graph, not another summary.”
-              </CardTitle>
-              <CardDescription className="text-base leading-6">
-                SILKLEARN produces a structure leaders can inspect and reuse across onboarding, knowledge transfer, and AI context delivery.
-              </CardDescription>
-            </CardHeader>
-          </Card>
-        </div>
-      </section>
-
-      <section className="mt-8 rounded-4xl border border-[rgba(10,25,49,0.08)] bg-[linear-gradient(180deg,#ffffff_0%,#f6f9fd_100%)] px-6 py-8 shadow-[0_18px_70px_rgba(15,23,42,0.06)] sm:px-8">
-        <div className="max-w-190">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-(--primary)">Rollout modes</p>
-          <h2 className="mt-4 max-w-[10.5ch] font-(family-name:--font-display) text-[clamp(2.45rem,4.4vw,3.6rem)] leading-[0.94] tracking-[-0.05em] text-(--foreground)">
-            Start small, then expand the compiled knowledge base.
-          </h2>
-        </div>
-
-        <div className="mt-8 grid gap-4 lg:grid-cols-3">
-          {rolloutModes.map((mode, index) => (
-            <Card
-              key={mode.title}
-              className={index === 1
-                ? 'rounded-[26px] border-[rgba(31,63,122,0.18)] bg-[linear-gradient(180deg,#1b315a_0%,#25477d_100%)] text-white shadow-[0_24px_90px_rgba(15,23,42,0.16)]'
-                : 'rounded-[26px] border-[rgba(10,25,49,0.08)] bg-white shadow-none'}
-            >
-              <CardHeader>
-                <CardTitle className={index === 1 ? 'text-white' : ''}>{mode.title}</CardTitle>
-                <CardDescription className={index === 1 ? 'leading-6 text-[rgba(255,255,255,0.72)]' : 'text-sm leading-6'}>
-                  {mode.body}
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="grid gap-3 text-sm leading-6">
-                {mode.bullets.map((bullet) => (
-                  <div
-                    key={bullet}
-                    className={index === 1
-                      ? 'rounded-[18px] border border-white/10 bg-white/6 px-4 py-3'
-                      : 'rounded-[18px] border border-[rgba(10,25,49,0.08)] bg-[rgba(247,250,253,0.92)] px-4 py-3'}
-                  >
-                    {bullet}
-                  </div>
-                ))}
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </section>
-
-      <section className="mt-8 rounded-4xl border border-[rgba(10,25,49,0.08)] bg-[linear-gradient(180deg,#162f58_0%,#1d3e74_100%)] px-6 py-8 text-white shadow-[0_24px_90px_rgba(15,23,42,0.18)] sm:px-8">
-        <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[rgba(255,255,255,0.6)]">For structure-first teams</p>
-            <h2 className="mt-4 max-w-[10.5ch] font-(family-name:--font-display) text-[clamp(2.45rem,4.4vw,3.6rem)] leading-[0.94] tracking-[-0.05em] text-white">
-              Scale knowledge transfer without losing review or provenance.
-            </h2>
-            <p className="mt-4 max-w-[60ch] text-base leading-7 text-[rgba(255,255,255,0.76)]">
-              SILKLEARN is designed for teams that need the output to stay grounded in private source material, explicit dependency order, and leader review before rollout.
-            </p>
-          </div>
-
-          <div className="grid gap-3 sm:grid-cols-3">
-            {['Private source material', 'Leader review gates', 'Provenance-backed outputs'].map((item) => (
-              <div key={item} className="rounded-[20px] border border-white/10 bg-white/6 px-4 py-5 text-sm font-semibold text-white">
-                {item}
+                <div>
+                  <h3 className="text-[1.05rem] leading-tight text-(--foreground)">{pillar.title}</h3>
+                  <p className="mt-3 text-sm leading-5 text-(--muted-foreground)">{pillar.description}</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
-      </section>
 
-      <section className="mt-8 rounded-4xl border border-[rgba(10,25,49,0.08)] bg-white px-6 py-8 shadow-[0_18px_70px_rgba(15,23,42,0.06)] sm:px-8">
-        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-(--primary)">FAQs</p>
-            <h2 className="mt-4 max-w-[10.5ch] font-(family-name:--font-display) text-[clamp(2.45rem,4.4vw,3.6rem)] leading-[0.94] tracking-[-0.05em] text-(--foreground)">
+        {/* ── FAQ ── */}
+        <div className="grid border-t border-(--border) lg:grid-cols-[1fr_1px_1.3fr]">
+          <div className="p-6 sm:p-8 lg:p-10">
+            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">Common questions</p>
+            <h2 className="mt-4 max-w-[9ch] font-(family-name:--font-display) text-[clamp(2rem,3.6vw,3.375rem)] leading-none tracking-[-0.02em] text-(--foreground)">
               Core questions, answered directly.
             </h2>
-            <p className="mt-4 max-w-[54ch] text-base leading-7 text-(--muted-foreground)">
-              The reference ends with a large FAQ and a final CTA. SILKLEARN needs the same closing clarity.
-            </p>
           </div>
 
-          <div className="grid gap-3">
-            {content.faq.map((item) => (
-              <Card key={item.question} className="rounded-[22px] border-[rgba(10,25,49,0.08)] bg-[rgba(247,250,253,0.92)] shadow-none">
-                <CardHeader>
-                  <CardTitle className="text-lg leading-6">{item.question}</CardTitle>
-                  <CardDescription className="text-sm leading-6">{item.answer}</CardDescription>
-                </CardHeader>
-              </Card>
+          <div className="hidden bg-(--border) lg:block" />
+
+          <div>
+            {content.faq.map((item, i) => (
+              <div key={item.question} className={`px-6 py-6 sm:px-8${i > 0 ? ' border-t border-(--border)' : ''}`}>
+                <h3 className="text-base font-semibold text-(--foreground)">{item.question}</h3>
+                <p className="mt-3 text-sm leading-7 text-(--muted-foreground)">{item.answer}</p>
+              </div>
             ))}
           </div>
         </div>
-      </section>
 
-      <section
-        className="mt-8 rounded-[36px] border border-[rgba(10,25,49,0.08)] bg-[linear-gradient(180deg,#ffffff_0%,#eef4fb_100%)] px-6 py-8 shadow-[0_20px_80px_rgba(15,23,42,0.08)] sm:px-8 lg:px-10"
-        id="waitlist"
-      >
-        <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-(--primary)">Early access</p>
-            <h2 className="mt-4 max-w-[13ch] font-(family-name:--font-display) text-[clamp(2.8rem,5vw,4.6rem)] leading-[0.92] tracking-[-0.05em] text-(--foreground)">
-              Bring dense internal knowledge into reviewable structure.
+        {/* ── WAITLIST ── */}
+        <div className="grid border-t border-(--border) lg:grid-cols-[1fr_1px_1fr]" id="waitlist">
+          <div className="p-6 sm:p-8 lg:p-10">
+            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">Early access</p>
+            <h2 className="mt-4 max-w-[12ch] font-(family-name:--font-display) text-[clamp(2rem,3.6vw,3.375rem)] leading-none tracking-[-0.02em] text-(--foreground)">
+              See whether your document stack is a fit for early access.
             </h2>
-            <p className="mt-5 max-w-[58ch] text-base leading-7 text-(--muted-foreground)">
-              Early access is for teams testing onboarding flows, knowledge audits, and AI context workflows built from real source material rather than search overhead and document drift.
+            <p className="mt-5 max-w-[56ch] text-base leading-7 text-(--muted-foreground)">
+              Early access is for leaders using private docs for onboarding, operational handoffs, compliance review, or internal AI context. If missing dependency order is slowing the team down, this is what the beta is built for.
             </p>
 
-            <div className="mt-8 grid gap-3 sm:grid-cols-2">
+            <div className="mt-8">
               {[
                 'Roadmaps from private docs',
                 'Dependency-aware onboarding',
                 'Minimum-context AI bundles',
                 'Leader-reviewed rollout artifacts',
               ].map((item) => (
-                <div key={item} className="rounded-[18px] border border-[rgba(10,25,49,0.08)] bg-white px-4 py-3 text-sm font-medium text-(--foreground)">
+                <div key={item} className="border-t border-(--border) py-3 text-sm font-medium text-(--foreground)">
                   {item}
                 </div>
               ))}
             </div>
           </div>
 
-          <WaitlistForm />
+          <div className="hidden bg-(--border) lg:block" />
+
+          <div className="border-t border-(--border) p-6 sm:p-8 lg:border-t-0 lg:p-10">
+            <WaitlistForm />
+          </div>
         </div>
-      </section>
+      </div>
     </>
   );
 }

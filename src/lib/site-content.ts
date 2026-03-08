@@ -27,51 +27,51 @@ export type HomePageContent = {
 };
 
 export const fallbackHomePageContent: HomePageContent = {
-  kicker: 'Knowledge compilation for teams that need correct reasoning, not more raw docs.',
-  headline: 'Compile messy source material into reviewable learning paths and context.',
+  kicker: 'For leaders turning dense internal docs into team-ready knowledge.',
+  headline: 'Turn dense internal docs into reviewable learning paths your team can use.',
   subheadline:
-    'SILKLEARN parses, segments, links, and reconciles dense internal knowledge so teams can see what must be learned first, what depends on what, and what context a human or model actually needs.',
-  primaryCtaLabel: 'Join the waitlist',
+    'SILKLEARN compiles runbooks, onboarding docs, architecture specs, and policies into a dependency-ordered graph so leaders can review what comes first, ship clearer onboarding, and give people or AI the minimum context they actually need.',
+  primaryCtaLabel: 'Request early access',
   primaryCtaHref: '#waitlist',
-  secondaryCtaLabel: 'See how it works',
+  secondaryCtaLabel: 'See how compilation works',
   secondaryCtaHref: '/how-it-works',
   metrics: [
-    { label: 'Category', value: 'Knowledge compilation infrastructure' },
-    { label: 'Core system', value: '5-pass compiler with review' },
-    { label: 'Outputs', value: 'Learning paths, graphs, context bundles' },
+    { label: 'Input', value: 'Runbooks, onboarding docs, specs, policies' },
+    { label: 'Output', value: 'Reviewable graph, learning paths, AI context bundles' },
+    { label: 'Best fit', value: 'Teams where missing context creates expensive mistakes' },
   ],
   pillars: [
     {
-      title: 'Compile usable structure from raw documents',
+      title: 'Make hidden dependency order visible',
       description:
-        'Turn long, assumption-heavy source material into coherent segments with provenance instead of leaving the structure trapped inside pages and experts.',
+        'Turn dense, assumption-heavy documents into a source-backed sequence so teams can see what has to be understood first before rollout or onboarding.',
     },
     {
-      title: 'Deliver minimum sufficient context',
+      title: 'Reuse one compiled structure across teams and tools',
       description:
-        'Expose prerequisite logic so people and models get the right context in the right order instead of a pile of loosely related chunks.',
+        'Use the same reviewed graph to power onboarding, enablement, rollout review, and internal AI context instead of rebuilding logic in every workflow.',
     },
     {
-      title: 'Review compiled outputs before rollout',
+      title: 'Keep leaders in review before anything ships',
       description:
-        'Keep a human in the loop. Leaders inspect the graph, reconcile edge cases, and approve downstream artifacts before they become operational guidance.',
+        'Leaders inspect the graph, reconcile edge cases, and approve downstream outputs before they become team guidance or AI-delivered context.',
     },
   ],
   faq: [
     {
       question: 'Who is SILKLEARN for?',
       answer:
-        'SILKLEARN is for engineering, product, operations, and compliance teams working from dense private knowledge where reasoning mistakes are expensive and manual structuring does not scale.',
+        'SILKLEARN is for engineering, product, operations, and compliance leaders working from dense private docs where onboarding errors, rollout confusion, or missing context are expensive.',
     },
     {
       question: 'What makes this different from RAG or a course builder?',
       answer:
-        'SILKLEARN does more than retrieve similar text or wrap documents in lessons. It compiles source material into dependency-aware, provenance-backed structure that can be reviewed before use.',
+        'RAG retrieves text after someone asks a question, and course builders usually depend on manual lesson design. SILKLEARN compiles prerequisite order from the source itself so teams can review the structure before it drives onboarding or AI.',
     },
     {
       question: 'What does a team actually get from the product?',
       answer:
-        'The durable asset is a compiled knowledge graph. From that, teams can generate learning paths, onboarding flows, context bundles, and other reviewable artifacts grounded in the source material.',
+        'The durable asset is a reviewable knowledge graph plus downstream outputs: dependency-ordered learning paths, onboarding ramps, rollout artifacts, and minimum-context bundles grounded in the source material.',
     },
   ],
 };

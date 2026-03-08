@@ -46,6 +46,10 @@ export default function RootLayout({
           ])}
         </Script>
         {children}
+        <div
+          aria-hidden
+          className="pointer-events-none fixed inset-0 z-[2] bg-[url('/grain.png')] bg-contain bg-repeat opacity-100"
+        />
         <Analytics />
       </body>
     </html>

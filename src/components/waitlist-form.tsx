@@ -65,7 +65,7 @@ export function WaitlistForm() {
 
   return (
     <form
-      className="grid gap-4 rounded-[22px] border border-(--border) bg-(--card-strong) p-6 shadow-[0_18px_44px_rgba(22,47,88,0.08)]"
+      className="grid gap-4  bg-(--card-strong)  "
       onSubmit={handleSubmit}
     >
       <label className="grid gap-2">
@@ -106,11 +106,11 @@ export function WaitlistForm() {
               : 'text-(--muted-foreground)'
         }`}
       >
-        {submissionState.message || 'Private beta access is rolling out in waves.'}
+        {submissionState.message || 'Private beta access rolls out in waves after a quick fit review.'}
       </p>
 
       <p className="text-xs leading-6 text-(--muted-foreground)">
-        Early access is aimed at leaders testing roadmap generation from private docs and dense technical material.
+        Best fit: leaders testing onboarding, handoffs, compliance review, or AI context built from dense private docs.
       </p>
     </form>
   );
