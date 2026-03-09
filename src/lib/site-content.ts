@@ -28,9 +28,9 @@ export type HomePageContent = {
 
 export const fallbackHomePageContent: HomePageContent = {
   kicker: 'For leaders turning dense internal docs into team-ready knowledge.',
-  headline: 'Turn dense internal docs into reviewable learning paths your team can use.',
+  headline: 'Turn internal docs into learning paths.',
   subheadline:
-    'SILKLEARN compiles runbooks, onboarding docs, architecture specs, and policies into a dependency-ordered graph so leaders can review what comes first, ship clearer onboarding, and give people or AI the minimum context they actually need.',
+    'SILKLEARN turns runbooks, onboarding docs, and specs into a reviewable graph leaders can approve and teams can use.',
   primaryCtaLabel: 'Request early access',
   primaryCtaHref: '#waitlist',
   secondaryCtaLabel: 'See how compilation works',
