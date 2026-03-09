@@ -5,8 +5,13 @@ import { Button } from '@/components/ui/button';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
+import {
+  MarketingCtaSection,
+  MarketingHero,
+  MarketingPageFrame,
+  MarketingSplitSection,
+} from '@/components/marketing/page-structure';
 import { PageShell } from '@/components/marketing/page-shell';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { getGuidePage, guidePages } from '@/lib/marketing-content';
 import { buildMetadata } from '@/lib/seo';
 
@@ -46,67 +51,95 @@ export default async function GuideDetailPage({ params }: GuideDetailPageProps) 
 
   return (
     <PageShell>
-      <article className="rounded-4xl border border-[rgba(10,25,49,0.08)] bg-white px-6 py-8 shadow-[0_18px_70px_rgba(15,23,42,0.06)] sm:px-8 lg:px-10">
-        <p className="text-[0.82rem] font-bold uppercase tracking-[0.18em] text-(--primary)">Guide</p>
-        <h1 className="mt-4 max-w-[13ch] font-(family-name:--font-display) text-[clamp(3rem,7vw,5.2rem)] leading-[0.92] tracking-[-0.05em] text-(--foreground) max-sm:max-w-none">
-          {page.title}
-        </h1>
-        <p className="mt-5 max-w-[66ch] text-[1.02rem] leading-7 text-(--muted-foreground)">{page.summary}</p>
-
-        <div className="mt-8 grid gap-5">
-          {page.sections.map((section) => (
-            <section key={section.heading} className="rounded-3xl border border-[rgba(10,25,49,0.08)] bg-[rgba(247,250,253,0.92)] p-6">
-              <h2 className="font-(family-name:--font-display) text-[clamp(1.8rem,4vw,2.6rem)] leading-none tracking-[-0.03em] text-(--foreground)">
-                {section.heading}
-              </h2>
-              <p className="mt-3 max-w-[66ch] text-[1rem] leading-7 text-(--muted-foreground)">{section.body}</p>
-            </section>
-          ))}
-        </div>
-      </article>
-
-      <section className="mt-6 grid gap-5 lg:grid-cols-2">
-        <Card className="rounded-3xl border-[rgba(10,25,49,0.08)] bg-white shadow-none">
-          <CardHeader>
-            <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[rgba(31,63,122,0.08)] text-(--primary)">
-              <BookOpenText className="size-4.5" />
+      <MarketingPageFrame>
+        <MarketingHero
+          description={page.summary}
+          kicker="Guide"
+          rightChildren={
+            <div className="grid gap-3">
+              {page.sections.map((section) => (
+                <div key={section.heading} className="border-b border-(--border) pb-3 last:border-b-0 last:pb-0">
+                  <p className="text-sm font-semibold text-(--foreground)">{section.heading}</p>
+                </div>
+              ))}
             </div>
-            <CardTitle>Related feature</CardTitle>
-          </CardHeader>
-          <CardContent className="text-sm leading-6">
-            <Link className="font-semibold text-(--foreground)" href={page.featureHref}>
-              Continue to the relevant feature page
-            </Link>
-          </CardContent>
-        </Card>
+          }
+          rightEyebrow="What this guide covers"
+          rightTitle="The guide should explain the sequencing logic clearly enough to stand on its own."
+          title={page.title}
+        />
 
-        <Card className="rounded-3xl border-[rgba(10,25,49,0.08)] bg-white shadow-none">
-          <CardHeader>
-            <CardTitle>Related use case</CardTitle>
-          </CardHeader>
-          <CardContent className="text-sm leading-6">
-            <Link className="font-semibold text-(--foreground)" href={page.useCaseHref}>
-              See where this guide applies in practice
-            </Link>
-          </CardContent>
-        </Card>
-      </section>
+        <MarketingSplitSection
+          left={
+            <>
+              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
+                Sections
+              </p>
+              <h2 className="mt-4 max-w-[10ch] font-(family-name:--font-display) text-[clamp(2rem,3.6vw,3.2rem)] leading-none tracking-[-0.02em] text-(--foreground)">
+                Read the argument in sequence, not as isolated tips.
+              </h2>
+            </>
+          }
+          right={
+            <div>
+              {page.sections.map((section, index) => (
+                <section key={section.heading} className={index > 0 ? 'border-t border-(--border) pt-6' : ''}>
+                  <div className="flex items-center gap-3">
+                    <div className="flex size-10 items-center justify-center border border-(--border) text-(--primary)">
+                      <BookOpenText className="size-4.5" />
+                    </div>
+                    <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
+                      Section 0{index + 1}
+                    </p>
+                  </div>
+                  <h2 className="mt-4 text-[1.25rem] leading-tight tracking-[-0.02em] text-(--foreground)">{section.heading}</h2>
+                  <p className="mt-3 max-w-[62ch] text-sm leading-7 text-(--muted-foreground)">{section.body}</p>
+                </section>
+              ))}
+            </div>
+          }
+        />
 
-      <section className="mt-6 rounded-4xl border border-[rgba(10,25,49,0.08)] bg-white px-6 py-8 shadow-[0_18px_70px_rgba(15,23,42,0.06)] sm:px-8">
-        <div className="flex flex-wrap items-center justify-between gap-4">
-          <div>
-            <h2 className="font-(family-name:--font-display) text-[clamp(2rem,4vw,3rem)] leading-[0.95] tracking-[-0.04em] text-(--foreground)">
-              Apply this guide to your own private source base.
-            </h2>
-          </div>
-          <Button asChild size="lg">
-            <Link href="/waitlist">
-              Start with your docs
-              <ArrowRight className="size-4" />
-            </Link>
-          </Button>
-        </div>
-      </section>
+        <MarketingSplitSection
+          left={
+            <>
+              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
+                Related paths
+              </p>
+              <h2 className="mt-4 max-w-[10ch] font-(family-name:--font-display) text-[clamp(2rem,3.6vw,3.2rem)] leading-none tracking-[-0.02em] text-(--foreground)">
+                Move from theory into the feature or workflow where it applies.
+              </h2>
+            </>
+          }
+          right={
+            <div className="grid gap-4 sm:grid-cols-2">
+              <div className="border border-(--border) p-4">
+                <Link className="text-sm font-semibold text-(--foreground)" href={page.featureHref}>
+                  Continue to the relevant feature page
+                </Link>
+              </div>
+              <div className="border border-(--border) p-4">
+                <Link className="text-sm font-semibold text-(--foreground)" href={page.useCaseHref}>
+                  See where this guide applies in practice
+                </Link>
+              </div>
+            </div>
+          }
+        />
+
+        <MarketingCtaSection
+          actions={
+            <Button asChild size="lg">
+              <Link href="/waitlist">
+                Start with your docs
+                <ArrowRight className="size-4" />
+              </Link>
+            </Button>
+          }
+          kicker="Next step"
+          title="Apply this guide to your own private source base."
+        />
+      </MarketingPageFrame>
     </PageShell>
   );
 }

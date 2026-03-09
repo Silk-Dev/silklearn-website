@@ -1,11 +1,16 @@
-import { ArrowRight, BrainCircuit, FileStack, GitBranch, LibraryBig } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 import type { Metadata } from 'next';
 
+import {
+  MarketingCtaSection,
+  MarketingHero,
+  MarketingPageFrame,
+  MarketingSplitSection,
+} from '@/components/marketing/page-structure';
 import { PageShell } from '@/components/marketing/page-shell';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { featurePages, guidePages, useCasePages } from '@/lib/marketing-content';
 import { buildMetadata } from '@/lib/seo';
 
@@ -24,151 +29,149 @@ export const metadata: Metadata = buildMetadata({
 export default function ProductPage() {
   return (
     <PageShell>
-      <section className="grid gap-6 rounded-4xl border border-[rgba(10,25,49,0.08)] bg-white px-6 py-8 shadow-[0_18px_70px_rgba(15,23,42,0.06)] lg:grid-cols-[0.95fr_1.05fr] lg:px-8 lg:py-10">
-        <div>
-        <p className="text-[0.82rem] font-bold uppercase tracking-[0.18em] text-(--primary)">Product</p>
-        <h1 className="mt-4 max-w-[9.75ch] font-(family-name:--font-display) text-[clamp(2.9rem,6.4vw,5rem)] leading-[0.92] tracking-[-0.05em] text-(--foreground) max-sm:max-w-none">
-          SILKLEARN compiles messy knowledge into reviewable outputs.
-        </h1>
-        <p className="mt-5 max-w-[58ch] text-[1.02rem] leading-7 text-(--muted-foreground)">
-          SILKLEARN is knowledge compilation infrastructure for teams that already have the knowledge, but not the usable structure. It parses, segments, links, and reconciles source material into dependency-aware artifacts that leaders can inspect before they are used by teams or AI systems.
-        </p>
-
-        <div className="mt-8 flex flex-wrap gap-3">
-          <Button asChild>
-            <Link href="/waitlist">Join the waitlist</Link>
-          </Button>
-          <Button asChild variant="outline">
-            <Link href="/how-it-works">See how it works</Link>
-          </Button>
-        </div>
-        </div>
-
-        <Card className="rounded-4xl border-[rgba(10,25,49,0.08)] bg-[linear-gradient(180deg,#f8fbff_0%,#eef4fb_100%)] shadow-none">
-          <CardHeader>
-            <CardTitle className="text-lg">What the product changes</CardTitle>
-          </CardHeader>
-          <CardContent className="grid gap-4 sm:grid-cols-2">
-            {[
-              { title: 'Docs become structure', icon: FileStack },
-              { title: 'Assumptions become edges', icon: GitBranch },
-              { title: 'Knowledge becomes paths', icon: LibraryBig },
-              { title: 'Context becomes reusable', icon: BrainCircuit },
-            ].map((item) => {
-              const Icon = item.icon;
-              return (
-                <div key={item.title} className="rounded-3xl border border-[rgba(10,25,49,0.08)] bg-white p-5">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[rgba(31,63,122,0.08)] text-(--primary)">
-                    <Icon className="size-4.5" />
-                  </div>
-                  <p className="mt-4 text-base font-semibold text-(--foreground)">{item.title}</p>
+      <MarketingPageFrame>
+        <MarketingHero
+          actions={
+            <>
+              <Button asChild>
+                <Link href="/waitlist">Request early access</Link>
+              </Button>
+              <Button asChild variant="outline">
+                <Link href="/how-it-works">See how it works</Link>
+              </Button>
+            </>
+          }
+          description="SILKLEARN is knowledge compilation infrastructure for teams that already have the knowledge, but not the usable structure. It parses, segments, links, and reconciles source material into dependency-aware artifacts that leaders can inspect before they are used by teams or AI systems."
+          kicker="Product"
+          rightChildren={
+            <div className="grid gap-3">
+              {[
+                'Docs become structure',
+                'Assumptions become edges',
+                'Knowledge becomes paths',
+                'Context becomes reusable',
+              ].map((item) => (
+                <div key={item} className="border-b border-(--border) pb-3 last:border-b-0 last:pb-0">
+                  <p className="text-sm font-semibold text-(--foreground)">{item}</p>
                 </div>
-              );
-            })}
-          </CardContent>
-        </Card>
-      </section>
+              ))}
+            </div>
+          }
+          rightEyebrow="What the product changes"
+          rightTitle="One compiled structure replaces scattered interpretation across docs, teams, and tools."
+          title="SILKLEARN compiles messy knowledge into reviewable outputs."
+        />
 
-      <section className="mt-8 grid gap-5 lg:grid-cols-3">
-        <Card className="rounded-3xl border-[rgba(10,25,49,0.08)] bg-white shadow-none">
-          <CardHeader>
-            <CardTitle>Input</CardTitle>
-          </CardHeader>
-          <CardContent className="text-sm leading-6 text-(--muted-foreground)">
-            Internal docs, architecture specs, runbooks, policies, onboarding handbooks, PDFs, and operational references your team already uses.
-          </CardContent>
-        </Card>
-
-        <Card className="rounded-3xl border-[rgba(10,25,49,0.08)] bg-white shadow-none">
-          <CardHeader>
-            <CardTitle>Compilation</CardTitle>
-          </CardHeader>
-          <CardContent className="text-sm leading-6 text-(--muted-foreground)">
-            Parse, segment, enrich, link, and reconcile the material into a dependency-aware graph that exposes scope, order, provenance, and contradiction.
-          </CardContent>
-        </Card>
-
-        <Card className="rounded-3xl border-[rgba(31,63,122,0.18)] bg-[linear-gradient(180deg,#1b315a_0%,#25477d_100%)] shadow-[0_20px_80px_rgba(15,23,42,0.16)]">
-          <CardHeader>
-            <CardTitle className="text-white">Outputs</CardTitle>
-          </CardHeader>
-          <CardContent className="text-sm leading-6 text-[rgba(255,255,255,0.72)]">
-            Reviewable learning paths, onboarding flows, knowledge graphs, and context bundles that humans and models can use with less guesswork.
-          </CardContent>
-        </Card>
-      </section>
-
-      <section className="mt-8 grid gap-5 lg:grid-cols-3">
-        <Card className="rounded-3xl border-[rgba(10,25,49,0.08)] bg-[rgba(247,250,253,0.92)] shadow-none lg:col-span-1">
-          <CardHeader>
-            <CardTitle>Features</CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-3 text-sm leading-6 text-(--muted-foreground)">
-            {featurePages.map((page) => (
-              <p key={page.slug}>
-                <Link className="font-semibold text-(--foreground)" href={`/features/${page.slug}`}>
-                  {page.title}
-                </Link>
-                <br />
-                {page.description}
+        <MarketingSplitSection
+          left={
+            <>
+              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
+                Input to output
               </p>
-            ))}
-          </CardContent>
-        </Card>
+              <h2 className="mt-4 max-w-[10ch] font-(family-name:--font-display) text-[clamp(2rem,3.6vw,3.2rem)] leading-none tracking-[-0.02em] text-(--foreground)">
+                The product exists to turn document stacks into something teams can act on.
+              </h2>
+            </>
+          }
+          right={
+            <div className="grid lg:grid-cols-3">
+              {[
+                {
+                  label: 'Input',
+                  value:
+                    'Internal docs, architecture specs, runbooks, policies, onboarding handbooks, PDFs, and operational references your team already uses.',
+                },
+                {
+                  label: 'Compilation',
+                  value:
+                    'Parse, segment, enrich, link, and reconcile the material into a dependency-aware graph that exposes scope, order, provenance, and contradiction.',
+                },
+                {
+                  label: 'Outputs',
+                  value:
+                    'Reviewable learning paths, onboarding flows, knowledge graphs, and context bundles that humans and models can use with less guesswork.',
+                },
+              ].map((item, index) => (
+                <div key={item.label} className={index > 0 ? 'border-t border-(--border) pt-5 lg:border-t-0 lg:border-l lg:pl-6 lg:pt-0' : ''}>
+                  <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">{item.label}</p>
+                  <p className="mt-3 text-sm leading-7 text-(--foreground)">{item.value}</p>
+                </div>
+              ))}
+            </div>
+          }
+        />
 
-        <Card className="rounded-3xl border-[rgba(10,25,49,0.08)] bg-[rgba(247,250,253,0.92)] shadow-none lg:col-span-1">
-          <CardHeader>
-            <CardTitle>Use cases</CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-3 text-sm leading-6 text-(--muted-foreground)">
-            {useCasePages.map((page) => (
-              <p key={page.slug}>
-                <Link className="font-semibold text-(--foreground)" href={`/use-cases/${page.slug}`}>
-                  {page.title}
-                </Link>
-                <br />
-                {page.description}
+        <MarketingSplitSection
+          left={
+            <>
+              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
+                Explore the surface area
               </p>
-            ))}
-          </CardContent>
-        </Card>
+              <h2 className="mt-4 max-w-[11ch] font-(family-name:--font-display) text-[clamp(2rem,3.6vw,3.2rem)] leading-none tracking-[-0.02em] text-(--foreground)">
+                The product story is one system viewed through different operational entry points.
+              </h2>
+            </>
+          }
+          right={
+            <div className="grid lg:grid-cols-3">
+              {[
+                {
+                  label: 'Features',
+                  items: featurePages.map((page) => ({
+                    href: `/features/${page.slug}`,
+                    title: page.title,
+                    description: page.description,
+                  })),
+                },
+                {
+                  label: 'Use cases',
+                  items: useCasePages.map((page) => ({
+                    href: `/use-cases/${page.slug}`,
+                    title: page.title,
+                    description: page.description,
+                  })),
+                },
+                {
+                  label: 'Guides',
+                  items: guidePages.map((page) => ({
+                    href: `/guides/${page.slug}`,
+                    title: page.title,
+                    description: page.description,
+                  })),
+                },
+              ].map((group, index) => (
+                <div key={group.label} className={index > 0 ? 'border-t border-(--border) pt-5 lg:border-t-0 lg:border-l lg:pl-6 lg:pt-0' : ''}>
+                  <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">{group.label}</p>
+                  <div className="mt-4 grid gap-4">
+                    {group.items.map((item) => (
+                      <div key={item.href} className="border-b border-(--border) pb-4 last:border-b-0 last:pb-0">
+                        <Link className="text-sm font-semibold text-(--foreground)" href={item.href}>
+                          {item.title}
+                        </Link>
+                        <p className="mt-2 text-sm leading-6 text-(--muted-foreground)">{item.description}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          }
+        />
 
-        <Card className="rounded-3xl border-[rgba(10,25,49,0.08)] bg-[rgba(247,250,253,0.92)] shadow-none lg:col-span-1">
-          <CardHeader>
-            <CardTitle>Guides</CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-3 text-sm leading-6 text-(--muted-foreground)">
-            {guidePages.map((page) => (
-              <p key={page.slug}>
-                <Link className="font-semibold text-(--foreground)" href={`/guides/${page.slug}`}>
-                  {page.title}
-                </Link>
-                <br />
-                {page.description}
-              </p>
-            ))}
-          </CardContent>
-        </Card>
-      </section>
-
-      <section className="mt-8 rounded-4xl border border-[rgba(10,25,49,0.08)] bg-white px-6 py-8 shadow-[0_18px_70px_rgba(15,23,42,0.06)] sm:px-8">
-        <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-center">
-          <div>
-            <h2 className="max-w-[12ch] font-(family-name:--font-display) text-[clamp(2.2rem,4vw,3.4rem)] leading-[0.95] tracking-[-0.04em] text-(--foreground)">
-              The durable asset is the compiled graph, not another summary.
-            </h2>
-            <p className="mt-4 max-w-[60ch] text-base leading-7 text-(--muted-foreground)">
-              Every output on the product side exists to make that graph inspectable, reusable, and practical for teams working from complex private knowledge.
-            </p>
-          </div>
-          <Button asChild size="lg">
-            <Link href="/waitlist">
-              Request early access
-              <ArrowRight className="size-4" />
-            </Link>
-          </Button>
-        </div>
-      </section>
+        <MarketingCtaSection
+          actions={
+            <Button asChild size="lg">
+              <Link href="/waitlist">
+                Request early access
+                <ArrowRight className="size-4" />
+              </Link>
+            </Button>
+          }
+          description="Every output on the product side exists to make that graph inspectable, reusable, and practical for teams working from complex private knowledge."
+          kicker="Next step"
+          title="The durable asset is the compiled graph, not another summary."
+        />
+      </MarketingPageFrame>
     </PageShell>
   );
 }
