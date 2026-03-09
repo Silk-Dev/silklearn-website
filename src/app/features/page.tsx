@@ -1,12 +1,17 @@
 import { ArrowRight, GitBranch, ShieldCheck } from 'lucide-react';
-import Link from 'next/link';
+
+import { TransitionLink } from '@/components/marketing/page-transition';
 import { Button } from '@/components/ui/button';
 
 import type { Metadata } from 'next';
 
+import {
+  MarketingCtaSection,
+  MarketingHero,
+  MarketingPageFrame,
+  MarketingSplitSection,
+} from '@/components/marketing/page-structure';
 import { PageShell } from '@/components/marketing/page-shell';
-import { AceternityBentoGrid } from '@/components/marketing/aceternity-bento-grid';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { featurePages } from '@/lib/marketing-content';
 import { buildMetadata } from '@/lib/seo';
 
@@ -27,86 +32,81 @@ export const metadata: Metadata = buildMetadata({
 export default function FeaturesPage() {
   return (
     <PageShell>
-      <section className="grid gap-6 rounded-4xl border border-[rgba(10,25,49,0.08)] bg-white px-6 py-8 shadow-[0_18px_70px_rgba(15,23,42,0.06)] lg:grid-cols-[0.9fr_1.1fr] lg:px-8 lg:py-10">
-        <div>
-          <p className="text-[0.82rem] font-bold uppercase tracking-[0.18em] text-(--primary)">Features</p>
-          <h1 className="mt-4 max-w-[9.75ch] font-(family-name:--font-display) text-[clamp(2.9rem,6.4vw,4.9rem)] leading-[0.92] tracking-[-0.05em] text-(--foreground) max-sm:max-w-none">
-            Product capabilities built around real source material.
-          </h1>
-          <p className="mt-5 max-w-[54ch] text-base leading-7 text-(--muted-foreground)">
-            The core capabilities of SILKLEARN exist to make hidden structure visible, reviewable, and reusable downstream.
-          </p>
-          <div className="mt-8 grid gap-3">
-            {featureSignals.map((signal) => (
-              <div key={signal} className="rounded-[18px] border border-[rgba(10,25,49,0.08)] bg-[rgba(247,250,253,0.92)] px-4 py-3 text-sm font-medium text-(--foreground)">
-                {signal}
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <Card className="rounded-4xl border-[rgba(10,25,49,0.08)] bg-[linear-gradient(180deg,#f8fbff_0%,#eef4fb_100%)] shadow-none">
-          <CardHeader>
-            <CardTitle>Feature families</CardTitle>
-          </CardHeader>
-          <CardContent className="grid gap-4 sm:grid-cols-2">
-            {[
-              {
-                title: 'Structure extraction',
-                body: 'Preserve source hierarchy, segment coherent units, and extract concepts before turning anything into a learning artifact.',
-                icon: GitBranch,
-              },
-              {
-                title: 'Leader review',
-                body: 'Keep the compiled graph and downstream outputs visible so teams can inspect decisions before rollout.',
-                icon: ShieldCheck,
-              },
-            ].map((item) => {
-              const Icon = item.icon;
-              return (
-                <div key={item.title} className="rounded-3xl border border-[rgba(10,25,49,0.08)] bg-white p-5">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[rgba(31,63,122,0.08)] text-(--primary)">
-                    <Icon className="size-4.5" />
-                  </div>
-                  <p className="mt-4 text-base font-semibold text-(--foreground)">{item.title}</p>
-                  <p className="mt-2 text-sm leading-6 text-(--muted-foreground)">{item.body}</p>
+      <MarketingPageFrame>
+        <MarketingHero
+          description="The core capabilities of SILKLEARN exist to make hidden structure visible, reviewable, and reusable downstream."
+          kicker="Features"
+          rightChildren={
+            <div className="grid gap-3">
+              {featureSignals.map((signal) => (
+                <div key={signal} className="border-b border-(--border) pb-3 last:border-b-0 last:pb-0 text-sm font-medium text-(--foreground)">
+                  {signal}
                 </div>
-              );
-            })}
-          </CardContent>
-        </Card>
-      </section>
-
-      <section className="mt-8 grid gap-5 lg:grid-cols-2">
-        <AceternityBentoGrid
-          className="lg:col-span-2"
-          items={featurePages.map((page, index) => ({
-            title: page.title,
-            description: page.summary,
-            icon: index === 0 ? GitBranch : ShieldCheck,
-            eyebrow: index === 0 ? 'Feature deep dive' : 'Review layer',
-            bullets: page.bullets,
-            className: index === 0 ? 'md:col-span-4' : 'md:col-span-2',
-            dark: index === 0,
-          }))}
+              ))}
+            </div>
+          }
+          rightEyebrow="Feature families"
+          rightTitle="The product surface stays focused on extracting structure and keeping review visible."
+          title="Product capabilities built around real source material."
         />
-      </section>
 
-      <section className="mt-8 rounded-4xl border border-[rgba(10,25,49,0.08)] bg-white px-6 py-8 shadow-[0_18px_70px_rgba(15,23,42,0.06)] sm:px-8">
-        <div className="flex flex-wrap items-center justify-between gap-4">
-          <div>
-            <h2 className="font-(family-name:--font-display) text-[clamp(2rem,4vw,3rem)] leading-[0.95] tracking-[-0.04em] text-(--foreground)">
-              Start with the feature that unlocks your first workflow.
-            </h2>
-          </div>
-          <Button asChild size="lg">
-            <Link href="/waitlist">
-              Request access
-              <ArrowRight className="size-4" />
-            </Link>
-          </Button>
-        </div>
-      </section>
+        <MarketingSplitSection
+          left={
+            <>
+              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
+                Capabilities
+              </p>
+              <h2 className="mt-4 max-w-[10ch] font-(family-name:--font-display) text-[clamp(2rem,3.6vw,3.2rem)] leading-none tracking-[-0.02em] text-(--foreground)">
+                Each feature exists to make the compiled graph more defensible and useful.
+              </h2>
+            </>
+          }
+          right={
+            <div>
+              {featurePages.map((page, index) => {
+                const Icon = index === 0 ? GitBranch : ShieldCheck;
+
+                return (
+                  <div key={page.slug} className={index > 0 ? 'border-t border-(--border) pt-6' : ''}>
+                    <div className="flex items-center gap-3">
+                      <div className="flex size-10 items-center justify-center border border-(--border) text-(--primary)">
+                        <Icon className="size-4.5" />
+                      </div>
+                      <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
+                        {index === 0 ? 'Structure extraction' : 'Review layer'}
+                      </p>
+                    </div>
+                    <TransitionLink className="mt-4 block text-[1.25rem] leading-tight tracking-[-0.02em] text-(--foreground)" href={`/features/${page.slug}`}>
+                      {page.title}
+                    </TransitionLink>
+                    <p className="mt-3 max-w-[56ch] text-sm leading-5 text-(--muted-foreground)">{page.summary}</p>
+                    <div className="mt-5 grid gap-3 sm:grid-cols-3">
+                      {page.bullets.map((bullet) => (
+                        <div key={bullet} className="border border-(--border) px-4 py-3 text-sm leading-6 text-(--foreground)">
+                          {bullet}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          }
+        />
+
+        <MarketingCtaSection
+          actions={
+            <Button asChild size="lg">
+              <TransitionLink href="/waitlist">
+                Request access
+                <ArrowRight className="size-4" />
+              </TransitionLink>
+            </Button>
+          }
+          kicker="Next step"
+          title="Start with the feature that unlocks your first workflow."
+        />
+      </MarketingPageFrame>
     </PageShell>
   );
 }

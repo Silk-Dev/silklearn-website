@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
+import { TransitionLink } from '@/components/marketing/page-transition';
 import { primaryNavigation } from '@/lib/marketing-content';
 
 export function SiteHeader() {
@@ -43,9 +44,9 @@ export function SiteHeader() {
       {/* Announcement bar */}
       <div className="fixed inset-x-0 top-0 z-50 border-b border-(--border) bg-(--primary) px-4 py-3 text-center text-sm font-medium tracking-[-0.01em] text-(--primary-foreground) sm:px-6">
         <span>Early access for structure-first teams is opening soon.</span>{' '}
-        <Link className="font-semibold underline underline-offset-3" href="/waitlist">
+        <TransitionLink className="font-semibold underline underline-offset-3" href="/waitlist">
           View waitlist
-        </Link>
+        </TransitionLink>
       </div>
 
       {/* Fixed glassmorphic header */}
@@ -60,7 +61,7 @@ export function SiteHeader() {
           {/* Nav bar row */}
           <div className="flex h-16 items-center justify-between border-x border-(--border) px-4 sm:px-6 lg:px-8">
             {/* Logo */}
-            <Link className="flex shrink-0 items-center" href="/">
+            <TransitionLink className="flex shrink-0 items-center" href="/">
               <Image
                 alt="SILKLEARN"
                 className="h-7 w-auto"
@@ -69,25 +70,27 @@ export function SiteHeader() {
                 src="/silklearn/black-tr-full-horizontal.svg"
                 width={788}
               />
-            </Link>
+            </TransitionLink>
 
             {/* Desktop nav — centered */}
             <nav className="hidden items-center gap-1 lg:flex">
               {primaryNavigation.map((item) => (
-                <Link
+                <TransitionLink
                   key={item.href}
                   className="px-4 py-2 text-sm font-medium text-(--muted-foreground) transition-colors hover:text-(--foreground)"
                   href={item.href}
                 >
                   {item.label}
-                </Link>
+                </TransitionLink>
               ))}
             </nav>
 
             {/* Desktop CTAs */}
             <div className="hidden items-center gap-3 lg:flex">
-              <Button asChild size="lg" className="px-6">
-                <Link href="/waitlist">Join waitlist</Link>
+              <Button asChild size="lg" variant='outline' className="px-6">
+                <TransitionLink className="text-white hover:text-white" href="/waitlist">
+                  Join waitlist
+                </TransitionLink>
               </Button>
             </div>
 
@@ -107,25 +110,25 @@ export function SiteHeader() {
             <div className="flex min-h-[calc(100dvh-2.75rem-4rem)] flex-col lg:hidden">
               <nav className="flex flex-col">
                 {primaryNavigation.map((item) => (
-                  <Link
+                  <TransitionLink
                     key={item.href}
                     className="border-t border-(--border) px-4 py-5 text-lg font-medium text-(--foreground) transition-colors hover:bg-[oklch(from_var(--foreground)_l_c_h/0.04)] sm:px-6"
                     href={item.href}
-                    onClick={() => setMobileOpen(false)}
+                    onBeforeNavigate={() => setMobileOpen(false)}
                   >
                     {item.label}
-                  </Link>
+                  </TransitionLink>
                 ))}
               </nav>
 
               <div className="mt-auto grid border-t border-(--border) sm:grid-cols-2">
-                <Link
+                <TransitionLink
                   className="px-4 py-4 text-lg font-medium text-(--foreground) sm:px-6"
                   href="/waitlist"
-                  onClick={() => setMobileOpen(false)}
+                  onBeforeNavigate={() => setMobileOpen(false)}
                 >
                   Join waitlist
-                </Link>
+                </TransitionLink>
                 <Link
                   className="border-t border-(--border) px-4 py-4 text-lg font-medium text-(--foreground) sm:border-l sm:border-t-0 sm:px-6"
                   href="/studio"

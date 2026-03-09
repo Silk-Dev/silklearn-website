@@ -4,6 +4,8 @@ import type { Metadata } from 'next';
 import { Inter, Montserrat } from 'next/font/google';
 import Script from 'next/script';
 
+import { GrainOverlay } from '@/components/marketing/grain-overlay';
+import { LenisProvider } from '@/components/marketing/lenis-provider';
 import { defaultMetadata } from '@/lib/seo';
 import {
   getOrganizationSchema,
@@ -36,7 +38,7 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behavior="smooth">
       <body className={`${displayFont.variable} ${bodyFont.variable}`}>
         <Script id="silklearn-structured-data" type="application/ld+json">
           {JSON.stringify([
@@ -45,12 +47,11 @@ export default function RootLayout({
             getSoftwareApplicationSchema(),
           ])}
         </Script>
-        {children}
-        <div
-          aria-hidden
-          className="pointer-events-none fixed inset-0 z-[2] bg-[url('/grain.png')] bg-contain bg-repeat opacity-100"
-        />
-        <Analytics />
+        <LenisProvider>
+          {children}
+          <GrainOverlay />
+          <Analytics />
+        </LenisProvider>
       </body>
     </html>
   );

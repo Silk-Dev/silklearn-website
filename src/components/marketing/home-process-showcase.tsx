@@ -86,7 +86,7 @@ export function HomeProcessShowcase() {
         <h2 className="mt-4 max-w-[9.5ch] font-(family-name:--font-display) text-[clamp(2.55rem,4.8vw,4rem)] leading-[0.92] tracking-[-0.05em] text-(--foreground)">
           Rebuild the order hidden inside the documents.
         </h2>
-        <p className="mt-4 max-w-[56ch] text-base leading-7 text-(--muted-foreground)">
+        <p className="mt-4 max-w-[56ch] text-base leading-5 text-(--muted-foreground)">
           The workflow follows the same discipline as the reference: a clear left-to-right story with one active system view at a time.
         </p>
 
