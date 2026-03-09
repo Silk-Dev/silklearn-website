@@ -8,6 +8,7 @@ import {
   Sparkles,
 } from 'lucide-react';
 
+import { LinkedNodesGraph } from '@/components/marketing/linked-nodes-graph';
 import { LottiePlaceholder } from '@/components/marketing/lottie-placeholder';
 import { ScrollReveal, StaggerReveal } from '@/components/marketing/scroll-animations';
 import { WaitlistForm } from '@/components/waitlist-form';
@@ -143,8 +144,8 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
           {/* Structural vertical divider — a real 1px column, not an absolute div */}
           <div className="hidden bg-(--border) lg:block" />
 
-          <div className="border-t border-(--border) px-6 py-50 sm:px-8 lg:border-t-0 lg:px-10 lg:py-20">
-           
+          <div className="border-t border-(--border) px-6 py-8 sm:px-8 lg:border-t-0 lg:px-10 lg:py-10">
+            <LinkedNodesGraph />
           </div>
         </div>
 

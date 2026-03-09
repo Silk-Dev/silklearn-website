@@ -88,7 +88,7 @@ export function SiteHeader() {
             {/* Desktop CTAs */}
             <div className="hidden items-center gap-3 lg:flex">
               <Button asChild size="lg" variant='outline' className="px-6">
-                <TransitionLink className="text-white hover:text-white" href="/waitlist">
+                <TransitionLink className=" hover:text-white" href="/waitlist">
                   Join waitlist
                 </TransitionLink>
               </Button>
