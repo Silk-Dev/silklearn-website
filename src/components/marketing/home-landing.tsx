@@ -110,11 +110,47 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
       />
 
       {/* Outer rails — border-left + border-right form the two continuous vertical lines */}
-      <div className="border-x border-(--border)">
+      <div className="border-x border-(--border)  ">
+
+        <div className="grid lg:grid-cols-[1fr_1px_1fr] ">
+          <div className="px-6 py-10 sm:px-8 lg:px-10 lg:py-50">
+            <div className="max-w-125">
+
+              <h1 className=" font-(family-name:--font-display) text-[clamp(2.4rem,3vw,3.375rem)] leading-none tracking-[-0.02em] text-(--foreground)">
+                {content.headline}
+              </h1>
+
+              <div className="mt-2 max-w-[56ch] text-[1.02rem] leading-7 text-(--muted-foreground)">
+                {content.subheadline}
+              </div>
+
+              <div className="mt-6 flex flex-wrap items-center gap-3">
+                <Button asChild size="lg" >
+                  <a href={content.primaryCtaHref}>
+                    {content.primaryCtaLabel}
+                    <ArrowRight className="size-4" />
+                  </a>
+                </Button>
+                <Button asChild size="lg" variant="outline">
+                  <a href={content.secondaryCtaHref}>{content.secondaryCtaLabel}</a>
+                </Button>
+              </div>
+
+              
+            </div>
+          </div>
+
+          {/* Structural vertical divider — a real 1px column, not an absolute div */}
+          <div className="hidden bg-(--border) lg:block" />
+
+          <div className="border-t border-(--border) px-6 py-50 sm:px-8 lg:border-t-0 lg:px-10 lg:py-20">
+           
+          </div>
+        </div>
 
         {/* ── HERO ── grid with 1px structural divider column */}
-        <div className="grid lg:grid-cols-[1fr_1px_1fr]">
-          <div className="px-6 py-14 sm:px-8 lg:px-10 lg:py-20">
+        <div className="grid lg:grid-cols-[1fr_1px_1fr] ">
+          <div className="px-6 py-14 sm:px-8 lg:px-10 lg:py-20 bg-red-100">
             <div className="max-w-125">
               <ScrollReveal delay={0.1} start="top 99%">
               <div className="flex max-w-fit items-center gap-2 rounded-full border border-[oklch(from_var(--primary)_l_c_h/0.18)] bg-[oklch(from_var(--primary)_l_c_h/0.06)] px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--primary)">
