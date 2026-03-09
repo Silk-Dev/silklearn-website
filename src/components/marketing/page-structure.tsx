@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 
+import { ScrollReveal } from '@/components/marketing/scroll-animations';
 import { cn } from '@/lib/utils';
 
 type MarketingPageFrameProps = {
@@ -34,7 +35,7 @@ export function MarketingHero({
 }: MarketingHeroProps) {
   return (
     <section className={cn('grid lg:grid-cols-[1fr_1px_1fr]', className)}>
-      <div className="px-6 py-14 sm:px-8 lg:px-10 lg:py-20">
+      <ScrollReveal className="px-6 py-14 sm:px-8 lg:px-10 lg:py-20" start="top 95%">
         <div className="max-w-130">
           <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
             {kicker}
@@ -48,11 +49,11 @@ export function MarketingHero({
 
           {actions ? <div className="mt-8 flex flex-wrap items-center gap-3">{actions}</div> : null}
         </div>
-      </div>
+      </ScrollReveal>
 
       <div className="hidden bg-(--border) lg:block" />
 
-      <div className="border-t border-(--border) px-6 py-14 sm:px-8 lg:border-t-0 lg:px-10 lg:py-20">
+      <ScrollReveal className="border-t border-(--border) px-6 py-14 sm:px-8 lg:border-t-0 lg:px-10 lg:py-20" delay={0.15} start="top 95%">
         {rightEyebrow ? (
           <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
             {rightEyebrow}
@@ -64,7 +65,7 @@ export function MarketingHero({
           </h2>
         ) : null}
         <div className={cn((rightEyebrow || rightTitle) && 'mt-6')}>{rightChildren}</div>
-      </div>
+      </ScrollReveal>
     </section>
   );
 }
@@ -88,7 +89,7 @@ export function MarketingSplitSection({
 }: MarketingSplitSectionProps) {
   return (
     <section className={cn('grid border-t border-(--border) lg:grid-cols-[1fr_1px_1.3fr]', className)}>
-      <div
+      <ScrollReveal
         className={cn(
           'p-6 sm:p-8 lg:p-10',
           stickyLeft && 'lg:sticky lg:top-28 lg:self-start',
@@ -96,13 +97,13 @@ export function MarketingSplitSection({
         )}
       >
         {left}
-      </div>
+      </ScrollReveal>
 
       <div className="hidden bg-(--border) lg:block" />
 
-      <div className={cn('border-t border-(--border) p-6 sm:p-8 lg:border-t-0 lg:p-10', rightClassName)}>
+      <ScrollReveal className={cn('border-t border-(--border) p-6 sm:p-8 lg:border-t-0 lg:p-10', rightClassName)} delay={0.12}>
         {right}
-      </div>
+      </ScrollReveal>
     </section>
   );
 }
@@ -122,7 +123,7 @@ export function MarketingCtaSection({
 }: MarketingCtaSectionProps) {
   return (
     <section className="grid border-t border-(--border) lg:grid-cols-[1fr_1px_auto]">
-      <div className="p-6 sm:p-8 lg:p-10">
+      <ScrollReveal className="p-6 sm:p-8 lg:p-10">
         <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
           {kicker}
         </p>
@@ -134,13 +135,13 @@ export function MarketingCtaSection({
             {description}
           </p>
         ) : null}
-      </div>
+      </ScrollReveal>
 
       <div className="hidden bg-(--border) lg:block" />
 
-      <div className="border-t border-(--border) p-6 sm:p-8 lg:flex lg:items-center lg:border-t-0 lg:p-10">
+      <ScrollReveal className="border-t border-(--border) p-6 sm:p-8 lg:flex lg:items-center lg:border-t-0 lg:p-10" delay={0.15}>
         {actions}
-      </div>
+      </ScrollReveal>
     </section>
   );
 }
