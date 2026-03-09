@@ -126,7 +126,7 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
                 {content.headline}
               </h1>
 
-              <p className="mt-6 max-w-[56ch] text-[1.02rem] leading-7 text-(--muted-foreground)">
+              <p className="mt-6 max-w-[56ch] text-[1.02rem] leading-5 text-(--muted-foreground)">
                 {content.subheadline}
               </p>
 
@@ -232,7 +232,7 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
                 <div className="p-6 sm:p-8 lg:p-10">
                   <p className="text-xs font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">{mode.eyebrow}</p>
                   <h3 className="mt-3 max-w-[18ch] text-[1.5rem] leading-tight tracking-[-0.02em] text-(--foreground)">{mode.title}</h3>
-                  <p className="mt-3 max-w-[48ch] text-sm leading-7 text-(--muted-foreground)">{mode.body}</p>
+                  <p className="mt-3 max-w-[48ch] text-sm leading-5 text-(--muted-foreground)">{mode.body}</p>
 
                   <div className="mt-8 flex min-h-40 items-center justify-center border border-(--border)">
                     <div className="flex size-14 items-center justify-center rounded-xl border border-[oklch(from_var(--primary)_l_c_h/0.16)] bg-(--card) text-(--primary)">
@@ -260,7 +260,7 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
             <h2 className="mt-4 max-w-[10ch] font-(family-name:--font-display) text-[clamp(2rem,3.6vw,3.375rem)] leading-none tracking-[-0.02em] text-(--foreground)">
               Use one compiled source across onboarding, handoff, and AI.
             </h2>
-            <p className="mt-4 max-w-[42ch] text-base leading-7 text-(--muted-foreground)">
+            <p className="mt-4 max-w-[42ch] text-base leading-5 text-(--muted-foreground)">
               Each operating view shows how dense source material becomes something a team can review, trust, and reuse.
             </p>
 
@@ -270,7 +270,7 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
                 'Make prerequisite logic visible before teams guess.',
                 'Ship outputs that stay tied to the source.',
               ].map((item) => (
-                <div key={item} className="flex items-start gap-3 border-t border-(--border) py-3 text-sm leading-7 text-(--muted-foreground) first:border-t-0 first:pt-0">
+                <div key={item} className="flex items-start gap-3 border-t border-(--border) py-3 text-sm leading-5 text-(--muted-foreground) first:border-t-0 first:pt-0">
                   <ChevronRight className="mt-1 size-4 shrink-0 text-(--primary)" />
                   <span>{item}</span>
                 </div>
@@ -308,7 +308,7 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
                 <div className="border-t border-(--border) p-6 sm:p-8 lg:border-t-0">
                   <p className="text-xs font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">{panel.step}</p>
                   <h3 className="mt-4 max-w-[16ch] text-[1.25rem] leading-tight tracking-[-0.02em] text-(--foreground)">{panel.title}</h3>
-                  <p className="mt-4 text-sm leading-7 text-(--muted-foreground)">{panel.summary}</p>
+                  <p className="mt-4 text-sm leading-5 text-(--muted-foreground)">{panel.summary}</p>
                   <a className="mt-8 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-(--foreground)" href="#waitlist">
                     Learn more
                     <ArrowRight className="size-4" />
@@ -330,7 +330,7 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
               {stageJourney.map((stage) => (
                 <div key={stage.label} className="grid gap-2 border-t border-(--border) py-5 first:border-t-0 first:pt-0 lg:grid-cols-[110px_1fr]">
                   <p className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">{stage.label}</p>
-                  <p className="text-base leading-7 text-(--foreground)">{stage.title}</p>
+                  <p className="text-base leading-5 text-(--foreground)">{stage.title}</p>
                 </div>
               ))}
             </div>
@@ -343,7 +343,7 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
             <h3 className="mt-4 max-w-[16ch] text-[1.25rem] leading-tight tracking-[-0.02em] text-(--foreground)">
               When order is visible, teams ramp faster and handoffs break less often.
             </h3>
-            <p className="mt-4 text-sm leading-7 text-(--muted-foreground)">
+            <p className="mt-4 text-sm leading-5 text-(--muted-foreground)">
               Teams can only reuse internal knowledge safely when the order, provenance, and downstream implications are visible before rollout, onboarding, or AI delivery.
             </p>
             <div className="mt-8">
@@ -401,7 +401,7 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
             {content.faq.map((item, i) => (
               <div key={item.question} className={`px-6 py-6 sm:px-8${i > 0 ? ' border-t border-(--border)' : ''}`}>
                 <h3 className="text-base font-semibold text-(--foreground)">{item.question}</h3>
-                <p className="mt-3 text-sm leading-7 text-(--muted-foreground)">{item.answer}</p>
+                <p className="mt-3 text-sm leading-5 text-(--muted-foreground)">{item.answer}</p>
               </div>
             ))}
           </div>
@@ -414,7 +414,7 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
             <h2 className="mt-4 max-w-[12ch] font-(family-name:--font-display) text-[clamp(2rem,3.6vw,3.375rem)] leading-none tracking-[-0.02em] text-(--foreground)">
               See whether your document stack is a fit for early access.
             </h2>
-            <p className="mt-5 max-w-[56ch] text-base leading-7 text-(--muted-foreground)">
+            <p className="mt-5 max-w-[56ch] text-base leading-5 text-(--muted-foreground)">
               Early access is for leaders using private docs for onboarding, operational handoffs, compliance review, or internal AI context. If missing dependency order is slowing the team down, this is what the beta is built for.
             </p>
 

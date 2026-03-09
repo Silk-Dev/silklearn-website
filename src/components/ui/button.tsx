@@ -10,9 +10,9 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          'bg-(--primary) text-(--primary-foreground) hover:bg-(--primary-muted)',
+          'bg-(--primary) text-white hover:bg-[oklch(from_var(--primary)_calc(l_-_0.1)_c_h)]',
         outline:
-          'border border-(--border) bg-transparent text-(--foreground) hover:bg-(--surface-hover)',
+          'border border-(--primary) bg-transparent text-(--foreground) hover:bg-[oklch(from_var(--primary)_calc(l_-_0.1)_c_h)] hover:text-white',
         secondary:
           'bg-(--card-dark) text-(--card-dark-foreground) hover:bg-(--card-dark-muted)',
       },

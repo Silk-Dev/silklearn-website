@@ -1,5 +1,6 @@
 import { ArrowRight, FileStack, GitBranch, Layers3, ScanSearch, ShieldCheck } from 'lucide-react';
-import Link from 'next/link';
+
+import { TransitionLink } from '@/components/marketing/page-transition';
 
 import type { Metadata } from 'next';
 
@@ -105,7 +106,7 @@ export default function HowItWorksPage() {
                       </p>
                     </div>
                     <h3 className="mt-4 text-[1.25rem] leading-tight tracking-[-0.02em] text-(--foreground)">{step.title}</h3>
-                    <p className="mt-3 text-sm leading-7 text-(--muted-foreground)">{step.body}</p>
+                    <p className="mt-3 text-sm leading-5 text-(--muted-foreground)">{step.body}</p>
                   </div>
                 );
               })}
@@ -122,7 +123,7 @@ export default function HowItWorksPage() {
               <h2 className="mt-4 max-w-[11ch] font-(family-name:--font-display) text-[clamp(2rem,3.6vw,3.2rem)] leading-none tracking-[-0.02em] text-(--foreground)">
                 The system is only useful if leaders can trust what it produces.
               </h2>
-              <p className="mt-4 max-w-[44ch] text-base leading-7 text-(--muted-foreground)">
+              <p className="mt-4 max-w-[44ch] text-base leading-5 text-(--muted-foreground)">
                 That is why the output is designed for inspection, not blind automation. Compilation reduces manual effort, and review keeps the final graph, roadmap, or context bundle grounded in real domain expectations.
               </p>
             </>
@@ -144,18 +145,18 @@ export default function HowItWorksPage() {
                 <h3 className="mt-4 text-[1.25rem] leading-tight tracking-[-0.02em] text-(--foreground)">
                   Review is part of the product, not an afterthought.
                 </h3>
-                <p className="mt-3 text-sm leading-7 text-(--muted-foreground)">
+                <p className="mt-3 text-sm leading-5 text-(--muted-foreground)">
                   The difference from flat retrieval or generic course generation is not just the data model. It is the fact that the compiled structure can be inspected and approved before anyone depends on it.
                 </p>
                 <div className="mt-6 flex flex-wrap gap-3">
                   <Button asChild>
-                    <Link href="/product">
+                    <TransitionLink href="/product">
                       View the product page
                       <ArrowRight className="size-4" />
-                    </Link>
+                    </TransitionLink>
                   </Button>
                   <Button asChild variant="outline">
-                    <Link href="/features/dependency-mapping">Explore dependency mapping</Link>
+                    <TransitionLink href="/features/dependency-mapping">Explore dependency mapping</TransitionLink>
                   </Button>
                 </div>
               </div>

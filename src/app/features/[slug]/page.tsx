@@ -1,5 +1,6 @@
 import { ArrowRight, GitBranch } from 'lucide-react';
-import Link from 'next/link';
+
+import { TransitionLink } from '@/components/marketing/page-transition';
 
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
@@ -56,7 +57,7 @@ export default async function FeatureDetailPage({ params }: FeatureDetailPagePro
           description={page.summary}
           kicker="Feature"
           rightChildren={
-            <div className="border-b border-(--border) pb-3 last:border-b-0 last:pb-0 text-sm leading-7 text-(--foreground)">
+            <div className="border-b border-(--border) pb-3 last:border-b-0 last:pb-0 text-sm leading-5 text-(--foreground)">
               This capability exists to make hidden knowledge structure inspectable and reusable instead of leaving it embedded in long source documents.
             </div>
           }
@@ -88,7 +89,7 @@ export default async function FeatureDetailPage({ params }: FeatureDetailPagePro
                       Capability 0{index + 1}
                     </p>
                   </div>
-                  <p className="mt-4 text-sm leading-7 text-(--foreground)">{bullet}</p>
+                  <p className="mt-4 text-sm leading-5 text-(--foreground)">{bullet}</p>
                 </div>
               ))}
             </div>
@@ -113,14 +114,14 @@ export default async function FeatureDetailPage({ params }: FeatureDetailPagePro
                 { href: page.guideHref, title: 'Supporting guide' },
               ].map((item) => (
                 <div key={item.href} className="border border-(--border) p-4">
-                  <Link className="text-sm font-semibold text-(--foreground)" href={item.href}>
+                  <TransitionLink className="text-sm font-semibold text-(--foreground)" href={item.href}>
                     {item.title}
-                  </Link>
+                  </TransitionLink>
                 </div>
               ))}
               <div className="sm:col-span-2">
                 <Button asChild>
-                  <Link href="/waitlist">Join waitlist</Link>
+                  <TransitionLink href="/waitlist">Join waitlist</TransitionLink>
                 </Button>
               </div>
             </div>
@@ -130,10 +131,10 @@ export default async function FeatureDetailPage({ params }: FeatureDetailPagePro
         <MarketingCtaSection
           actions={
             <Button asChild size="lg">
-              <Link href="/waitlist">
+              <TransitionLink href="/waitlist">
                 Request access
                 <ArrowRight className="size-4" />
-              </Link>
+              </TransitionLink>
             </Button>
           }
           kicker="Next step"

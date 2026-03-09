@@ -42,7 +42,7 @@ export function MarketingHero({
           <h1 className="mt-6 max-w-[11ch] font-(family-name:--font-display) text-[clamp(2.35rem,4.2vw,3.55rem)] leading-none tracking-[-0.02em] text-(--foreground) max-sm:max-w-none">
             {title}
           </h1>
-          <p className="mt-5 max-w-[58ch] text-[1rem] leading-7 text-(--muted-foreground)">
+          <p className="mt-5 max-w-[58ch] text-[1rem] leading-5 text-(--muted-foreground)">
             {description}
           </p>
 
@@ -59,7 +59,7 @@ export function MarketingHero({
           </p>
         ) : null}
         {rightTitle ? (
-          <h2 className="mt-4 max-w-[16ch] text-[1.25rem] leading-tight tracking-[-0.02em] text-(--foreground)">
+          <h2 className="mt-4  text-[1.25rem] leading-tight tracking-[-0.02em] text-(--foreground)">
             {rightTitle}
           </h2>
         ) : null}
@@ -130,7 +130,7 @@ export function MarketingCtaSection({
           {title}
         </h2>
         {description ? (
-          <p className="mt-4 max-w-[56ch] text-base leading-7 text-(--muted-foreground)">
+          <p className="mt-4 max-w-[56ch] text-base leading-5 text-(--muted-foreground)">
             {description}
           </p>
         ) : null}

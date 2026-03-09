@@ -1,5 +1,6 @@
 import { ArrowRight, Network } from 'lucide-react';
-import Link from 'next/link';
+
+import { TransitionLink } from '@/components/marketing/page-transition';
 
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
@@ -56,7 +57,7 @@ export default async function UseCaseDetailPage({ params }: UseCaseDetailPagePro
           description={page.summary}
           kicker="Use case"
           rightChildren={
-            <div className="border-b border-(--border) pb-3 last:border-b-0 last:pb-0 text-sm leading-7 text-(--foreground)">
+            <div className="border-b border-(--border) pb-3 last:border-b-0 last:pb-0 text-sm leading-5 text-(--foreground)">
               This is a strong fit when the knowledge already exists in internal systems, but the onboarding or transfer sequence is still implicit and costly to repeat manually.
             </div>
           }
@@ -88,7 +89,7 @@ export default async function UseCaseDetailPage({ params }: UseCaseDetailPagePro
                       Outcome 0{index + 1}
                     </p>
                   </div>
-                  <p className="mt-4 text-sm leading-7 text-(--foreground)">{outcome}</p>
+                  <p className="mt-4 text-sm leading-5 text-(--foreground)">{outcome}</p>
                 </div>
               ))}
             </div>
@@ -113,14 +114,14 @@ export default async function UseCaseDetailPage({ params }: UseCaseDetailPagePro
                 { href: page.guideHref, title: 'Supporting guide' },
               ].map((item) => (
                 <div key={item.href} className="border border-(--border) p-4">
-                  <Link className="text-sm font-semibold text-(--foreground)" href={item.href}>
+                  <TransitionLink className="text-sm font-semibold text-(--foreground)" href={item.href}>
                     {item.title}
-                  </Link>
+                  </TransitionLink>
                 </div>
               ))}
               <div className="sm:col-span-2">
                 <Button asChild>
-                  <Link href="/waitlist">Talk to us</Link>
+                  <TransitionLink href="/waitlist">Talk to us</TransitionLink>
                 </Button>
               </div>
             </div>
@@ -130,10 +131,10 @@ export default async function UseCaseDetailPage({ params }: UseCaseDetailPagePro
         <MarketingCtaSection
           actions={
             <Button asChild size="lg">
-              <Link href="/waitlist">
+              <TransitionLink href="/waitlist">
                 Talk to us
                 <ArrowRight className="size-4" />
-              </Link>
+              </TransitionLink>
             </Button>
           }
           kicker="Next step"

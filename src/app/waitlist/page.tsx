@@ -52,7 +52,7 @@ export default function WaitlistPage() {
               <h2 className="mt-4 max-w-[10ch] font-(family-name:--font-display) text-[clamp(2rem,3.6vw,3.2rem)] leading-none tracking-[-0.02em] text-(--foreground)">
                 Tell us what document stack you want to compile first.
               </h2>
-              <p className="mt-4 max-w-[44ch] text-base leading-7 text-(--muted-foreground)">
+              <p className="mt-4 max-w-[44ch] text-base leading-5 text-(--muted-foreground)">
                 The beta is best for leaders working from dense internal docs where onboarding, compliance review, operational handoffs, or internal AI delivery still depend on hidden structure.
               </p>
             </>

@@ -1,5 +1,6 @@
 import { ArrowRight, Network } from 'lucide-react';
-import Link from 'next/link';
+
+import { TransitionLink } from '@/components/marketing/page-transition';
 import { Button } from '@/components/ui/button';
 
 import type { Metadata } from 'next';
@@ -66,10 +67,10 @@ export default function UseCasesPage() {
                       Use case {index + 1}
                     </p>
                   </div>
-                  <Link className="mt-4 block text-[1.25rem] leading-tight tracking-[-0.02em] text-(--foreground)" href={`/use-cases/${page.slug}`}>
+                  <TransitionLink className="mt-4 block text-[1.25rem] leading-tight tracking-[-0.02em] text-(--foreground)" href={`/use-cases/${page.slug}`}>
                     {page.title}
-                  </Link>
-                  <p className="mt-3 max-w-[56ch] text-sm leading-7 text-(--muted-foreground)">{page.summary}</p>
+                  </TransitionLink>
+                  <p className="mt-3 max-w-[56ch] text-sm leading-5 text-(--muted-foreground)">{page.summary}</p>
                   <div className="mt-5 grid gap-3 sm:grid-cols-3">
                     {page.outcomes.map((outcome) => (
                       <div key={outcome} className="border border-(--border) px-4 py-3 text-sm leading-6 text-(--foreground)">
@@ -86,10 +87,10 @@ export default function UseCasesPage() {
         <MarketingCtaSection
           actions={
             <Button asChild size="lg">
-              <Link href="/waitlist">
+              <TransitionLink href="/waitlist">
                 Talk to us
                 <ArrowRight className="size-4" />
-              </Link>
+              </TransitionLink>
             </Button>
           }
           kicker="Next step"

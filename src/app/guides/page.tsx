@@ -1,5 +1,6 @@
 import { ArrowRight, BookOpenText } from 'lucide-react';
-import Link from 'next/link';
+
+import { TransitionLink } from '@/components/marketing/page-transition';
 import { Button } from '@/components/ui/button';
 
 import type { Metadata } from 'next';
@@ -66,10 +67,10 @@ export default function GuidesPage() {
                       Guide {index + 1}
                     </p>
                   </div>
-                  <Link className="mt-4 block text-[1.25rem] leading-tight tracking-[-0.02em] text-(--foreground)" href={`/guides/${page.slug}`}>
+                  <TransitionLink className="mt-4 block text-[1.25rem] leading-tight tracking-[-0.02em] text-(--foreground)" href={`/guides/${page.slug}`}>
                     {page.title}
-                  </Link>
-                  <p className="mt-3 max-w-[56ch] text-sm leading-7 text-(--muted-foreground)">{page.summary}</p>
+                  </TransitionLink>
+                  <p className="mt-3 max-w-[56ch] text-sm leading-5 text-(--muted-foreground)">{page.summary}</p>
                 </div>
               ))}
             </div>
@@ -79,10 +80,10 @@ export default function GuidesPage() {
         <MarketingCtaSection
           actions={
             <Button asChild size="lg">
-              <Link href="/waitlist">
+              <TransitionLink href="/waitlist">
                 Start with your docs
                 <ArrowRight className="size-4" />
-              </Link>
+              </TransitionLink>
             </Button>
           }
           kicker="Next step"

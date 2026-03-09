@@ -1,5 +1,6 @@
 import { ArrowRight, BookOpenText } from 'lucide-react';
-import Link from 'next/link';
+
+import { TransitionLink } from '@/components/marketing/page-transition';
 import { Button } from '@/components/ui/button';
 
 import type { Metadata } from 'next';
@@ -93,7 +94,7 @@ export default async function GuideDetailPage({ params }: GuideDetailPageProps) 
                     </p>
                   </div>
                   <h2 className="mt-4 text-[1.25rem] leading-tight tracking-[-0.02em] text-(--foreground)">{section.heading}</h2>
-                  <p className="mt-3 max-w-[62ch] text-sm leading-7 text-(--muted-foreground)">{section.body}</p>
+                  <p className="mt-3 max-w-[62ch] text-sm leading-5 text-(--muted-foreground)">{section.body}</p>
                 </section>
               ))}
             </div>
@@ -114,14 +115,14 @@ export default async function GuideDetailPage({ params }: GuideDetailPageProps) 
           right={
             <div className="grid gap-4 sm:grid-cols-2">
               <div className="border border-(--border) p-4">
-                <Link className="text-sm font-semibold text-(--foreground)" href={page.featureHref}>
+                <TransitionLink className="text-sm font-semibold text-(--foreground)" href={page.featureHref}>
                   Continue to the relevant feature page
-                </Link>
+                </TransitionLink>
               </div>
               <div className="border border-(--border) p-4">
-                <Link className="text-sm font-semibold text-(--foreground)" href={page.useCaseHref}>
+                <TransitionLink className="text-sm font-semibold text-(--foreground)" href={page.useCaseHref}>
                   See where this guide applies in practice
-                </Link>
+                </TransitionLink>
               </div>
             </div>
           }
@@ -130,10 +131,10 @@ export default async function GuideDetailPage({ params }: GuideDetailPageProps) 
         <MarketingCtaSection
           actions={
             <Button asChild size="lg">
-              <Link href="/waitlist">
+              <TransitionLink href="/waitlist">
                 Start with your docs
                 <ArrowRight className="size-4" />
-              </Link>
+              </TransitionLink>
             </Button>
           }
           kicker="Next step"

@@ -1,5 +1,6 @@
 import { ArrowRight } from 'lucide-react';
-import Link from 'next/link';
+
+import { TransitionLink } from '@/components/marketing/page-transition';
 
 import type { Metadata } from 'next';
 
@@ -34,10 +35,10 @@ export default function ProductPage() {
           actions={
             <>
               <Button asChild>
-                <Link href="/waitlist">Request early access</Link>
+                <TransitionLink href="/waitlist">Request early access</TransitionLink>
               </Button>
               <Button asChild variant="outline">
-                <Link href="/how-it-works">See how it works</Link>
+                <TransitionLink href="/how-it-works">See how it works</TransitionLink>
               </Button>
             </>
           }
@@ -94,7 +95,7 @@ export default function ProductPage() {
               ].map((item, index) => (
                 <div key={item.label} className={index > 0 ? 'border-t border-(--border) pt-5 lg:border-t-0 lg:border-l lg:pl-6 lg:pt-0' : ''}>
                   <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">{item.label}</p>
-                  <p className="mt-3 text-sm leading-7 text-(--foreground)">{item.value}</p>
+                  <p className="mt-3 text-sm leading-5 text-(--foreground)">{item.value}</p>
                 </div>
               ))}
             </div>
@@ -145,9 +146,9 @@ export default function ProductPage() {
                   <div className="mt-4 grid gap-4">
                     {group.items.map((item) => (
                       <div key={item.href} className="border-b border-(--border) pb-4 last:border-b-0 last:pb-0">
-                        <Link className="text-sm font-semibold text-(--foreground)" href={item.href}>
+                        <TransitionLink className="text-sm font-semibold text-(--foreground)" href={item.href}>
                           {item.title}
-                        </Link>
+                        </TransitionLink>
                         <p className="mt-2 text-sm leading-6 text-(--muted-foreground)">{item.description}</p>
                       </div>
                     ))}
@@ -161,10 +162,10 @@ export default function ProductPage() {
         <MarketingCtaSection
           actions={
             <Button asChild size="lg">
-              <Link href="/waitlist">
+              <TransitionLink href="/waitlist">
                 Request early access
                 <ArrowRight className="size-4" />
-              </Link>
+              </TransitionLink>
             </Button>
           }
           description="Every output on the product side exists to make that graph inspectable, reusable, and practical for teams working from complex private knowledge."

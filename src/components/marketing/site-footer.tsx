@@ -1,6 +1,6 @@
-import Link from 'next/link';
 import Image from 'next/image';
 
+import { TransitionLink } from '@/components/marketing/page-transition';
 import { primaryNavigation } from '@/lib/marketing-content';
 
 export function SiteFooter() {
@@ -11,7 +11,7 @@ export function SiteFooter() {
       <div className="grid gap-8 py-8 sm:py-10">
         <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-136">
-            <Link className="inline-flex items-center" href="/">
+            <TransitionLink className="inline-flex items-center" href="/">
               <Image
                 alt="SILKLEARN"
                 className="h-auto w-42 sm:w-46"
@@ -19,7 +19,7 @@ export function SiteFooter() {
                 src="/silklearn/black-tr-full-horizontal.svg"
                 width={633}
               />
-            </Link>
+            </TransitionLink>
             <p className="mt-4 max-w-[48ch] text-sm leading-6 text-(--muted-foreground)">
               SILKLEARN compiles dense source material into reviewable learning paths, dependency-aware graphs, and context-efficient outputs for teams working from complex internal knowledge.
             </p>
@@ -27,17 +27,17 @@ export function SiteFooter() {
 
           <div className="flex flex-wrap gap-x-5 gap-y-3 text-sm text-(--muted-foreground) lg:justify-end">
             {primaryNavigation.map((item) => (
-              <Link
+              <TransitionLink
                 key={item.href}
                 className="transition-colors hover:text-(--foreground)"
                 href={item.href}
               >
                 {item.label}
-              </Link>
+              </TransitionLink>
             ))}
-            <Link className="transition-colors hover:text-(--foreground)" href="/waitlist">
+            <TransitionLink className="transition-colors hover:text-(--foreground)" href="/waitlist">
               Waitlist
-            </Link>
+            </TransitionLink>
           </div>
         </div>
 
