@@ -1,331 +1,453 @@
 'use client';
 
-import { useEffect, useRef, type CSSProperties } from 'react';
+import { useEffect, useRef } from 'react';
 import gsap from 'gsap/dist/gsap';
 
-type NodeId = 'source' | 'verify' | 'graph' | 'review' | 'rollout' | 'bundle' | 'handoff';
-type NodeTone = 'primary' | 'accent' | 'ink';
-
-type GraphNode = {
-  id: NodeId;
-  label: string;
-  detail: string;
+type SceneNode = {
+  id: string;
   x: number;
   y: number;
-  labelX: number;
-  labelY: number;
-  labelWidth: number;
-  tone: NodeTone;
+  radius: number;
+  driftX: number;
+  driftY: number;
+  duration: number;
+  delay: number;
+  haloOpacity: number;
+  shellOpacity: number;
+  coreOpacity: number;
+  strokeOpacity: number;
 };
 
-const nodes: GraphNode[] = [
+type Connection = {
+  id: string;
+  from: string;
+  to: string;
+  curveX: number;
+  curveY: number;
+  opacity: number;
+  width: number;
+};
+
+const sceneNodes: SceneNode[] = [
   {
-    id: 'source',
-    label: 'Source intake',
-    detail: 'Private docs loaded',
-    x: 92,
-    y: 152,
-    labelX: 24,
-    labelY: -24,
-    labelWidth: 154,
-    tone: 'accent',
-  },
-  {
-    id: 'verify',
-    label: 'Validation',
-    detail: 'Inputs checked',
-    x: 210,
-    y: 230,
-    labelX: 22,
-    labelY: -26,
-    labelWidth: 136,
-    tone: 'accent',
-  },
-  {
-    id: 'graph',
-    label: 'Dependency graph',
-    detail: 'Order compiled',
-    x: 322,
-    y: 150,
-    labelX: 26,
-    labelY: -56,
-    labelWidth: 160,
-    tone: 'accent',
-  },
-  {
-    id: 'review',
-    label: 'Leader review',
-    detail: 'Conflicts resolved',
-    x: 540,
-    y: 132,
-    labelX: -172,
-    labelY: -24,
-    labelWidth: 150,
-    tone: 'accent',
-  },
-  {
-    id: 'rollout',
-    label: 'Team rollout',
-    detail: 'Paths published',
-    x: 548,
-    y: 302,
-    labelX: -170,
-    labelY: 14,
-    labelWidth: 148,
-    tone: 'accent',
-  },
-  {
-    id: 'bundle',
-    label: 'AI bundle',
-    detail: 'Context packed',
+    id: 'north',
     x: 102,
-    y: 304,
-    labelX: 24,
-    labelY: 10,
-    labelWidth: 142,
-    tone: 'accent',
+    y: 82,
+    radius: 18,
+    driftX: 7,
+    driftY: -8,
+    duration: 5.8,
+    delay: 0.1,
+    haloOpacity: 0.14,
+    shellOpacity: 0.5,
+    coreOpacity: 0.88,
+    strokeOpacity: 0.26,
   },
   {
-    id: 'handoff',
-    label: 'Handoff',
-    detail: 'Ready to share',
-    x: 430,
-    y: 244,
-    labelX: 22,
-    labelY: 10,
-    labelWidth: 134,
-    tone: 'accent',
+    id: 'west',
+    x: 180,
+    y: 162,
+    radius: 26,
+    driftX: -10,
+    driftY: 8,
+    duration: 6.4,
+    delay: 0.2,
+    haloOpacity: 0.16,
+    shellOpacity: 0.56,
+    coreOpacity: 0.9,
+    strokeOpacity: 0.28,
+  },
+  {
+    id: 'lower-west',
+    x: 146,
+    y: 276,
+    radius: 22,
+    driftX: 9,
+    driftY: 10,
+    duration: 7,
+    delay: 0.3,
+    haloOpacity: 0.14,
+    shellOpacity: 0.54,
+    coreOpacity: 0.88,
+    strokeOpacity: 0.26,
+  },
+  {
+    id: 'upper-mid',
+    x: 304,
+    y: 102,
+    radius: 16,
+    driftX: -8,
+    driftY: -6,
+    duration: 5.6,
+    delay: 0.15,
+    haloOpacity: 0.12,
+    shellOpacity: 0.48,
+    coreOpacity: 0.86,
+    strokeOpacity: 0.24,
+  },
+  {
+    id: 'center',
+    x: 352,
+    y: 198,
+    radius: 30,
+    driftX: 12,
+    driftY: -9,
+    duration: 6.8,
+    delay: 0.35,
+    haloOpacity: 0.17,
+    shellOpacity: 0.58,
+    coreOpacity: 0.92,
+    strokeOpacity: 0.3,
+  },
+  {
+    id: 'east',
+    x: 506,
+    y: 122,
+    radius: 20,
+    driftX: -9,
+    driftY: 7,
+    duration: 6.1,
+    delay: 0.25,
+    haloOpacity: 0.13,
+    shellOpacity: 0.5,
+    coreOpacity: 0.88,
+    strokeOpacity: 0.24,
+  },
+  {
+    id: 'anchor',
+    x: 656,
+    y: 398,
+    radius: 250,
+    driftX: -14,
+    driftY: 12,
+    duration: 8.5,
+    delay: 0,
+    haloOpacity: 0.1,
+    shellOpacity: 0.4,
+    coreOpacity: 0.94,
+    strokeOpacity: 0.22,
   },
 ];
 
-const edges = [
-  { id: 'source-verify', from: 'source', to: 'verify' },
-  { id: 'verify-graph', from: 'verify', to: 'graph' },
-  { id: 'graph-review', from: 'graph', to: 'review' },
-  { id: 'graph-handoff', from: 'graph', to: 'handoff' },
-  { id: 'handoff-rollout', from: 'handoff', to: 'rollout' },
-  { id: 'source-bundle', from: 'source', to: 'bundle' },
-  { id: 'bundle-rollout', from: 'bundle', to: 'rollout' },
-] as const;
+const connections: Connection[] = [
+  {
+    id: 'north-west',
+    from: 'north',
+    to: 'west',
+    curveX: -18,
+    curveY: 22,
+    opacity: 0.18,
+    width: 1.2,
+  },
+  {
+    id: 'west-center',
+    from: 'west',
+    to: 'center',
+    curveX: -22,
+    curveY: -28,
+    opacity: 0.2,
+    width: 1.3,
+  },
+  {
+    id: 'lower-west-center',
+    from: 'lower-west',
+    to: 'center',
+    curveX: 10,
+    curveY: 24,
+    opacity: 0.18,
+    width: 1.2,
+  },
+  {
+    id: 'upper-mid-center',
+    from: 'upper-mid',
+    to: 'center',
+    curveX: 8,
+    curveY: -18,
+    opacity: 0.16,
+    width: 1.1,
+  },
+  {
+    id: 'center-east',
+    from: 'center',
+    to: 'east',
+    curveX: 16,
+    curveY: -20,
+    opacity: 0.18,
+    width: 1.2,
+  },
+  {
+    id: 'west-anchor',
+    from: 'west',
+    to: 'anchor',
+    curveX: 42,
+    curveY: -34,
+    opacity: 0.24,
+    width: 1.5,
+  },
+  {
+    id: 'lower-west-anchor',
+    from: 'lower-west',
+    to: 'anchor',
+    curveX: 46,
+    curveY: 20,
+    opacity: 0.22,
+    width: 1.4,
+  },
+  {
+    id: 'center-anchor',
+    from: 'center',
+    to: 'anchor',
+    curveX: 54,
+    curveY: -48,
+    opacity: 0.28,
+    width: 1.6,
+  },
+  {
+    id: 'east-anchor',
+    from: 'east',
+    to: 'anchor',
+    curveX: 38,
+    curveY: -62,
+    opacity: 0.22,
+    width: 1.4,
+  },
+];
 
-const zones = [
-  { id: 'zone-a', cx: 156, cy: 230, rx: 150, ry: 116 },
-  { id: 'zone-b', cx: 324, cy: 188, rx: 176, ry: 118 },
-  { id: 'zone-c', cx: 506, cy: 214, rx: 152, ry: 118 },
-] as const;
+const nodeLookup = Object.fromEntries(sceneNodes.map((node) => [node.id, node])) as Record<string, SceneNode>;
 
-const sparkleDots = [
-  { id: 'spark-1', cx: 60, cy: 60, r: 0.95 },
-  { id: 'spark-2', cx: 180, cy: 100, r: 1.05 },
-  { id: 'spark-3', cx: 260, cy: 60, r: 0.9 },
-  { id: 'spark-4', cx: 340, cy: 140, r: 1.1 },
-  { id: 'spark-5', cx: 420, cy: 100, r: 0.95 },
-  { id: 'spark-6', cx: 500, cy: 140, r: 1.05 },
-  { id: 'spark-7', cx: 580, cy: 100, r: 0.9 },
-  { id: 'spark-8', cx: 100, cy: 300, r: 1.05 },
-  { id: 'spark-9', cx: 220, cy: 340, r: 0.95 },
-  { id: 'spark-10', cx: 340, cy: 300, r: 1.1 },
-  { id: 'spark-11', cx: 460, cy: 340, r: 1 },
-  { id: 'spark-12', cx: 580, cy: 300, r: 0.95 },
-] as const;
+function buildCurve(from: { x: number; y: number }, to: { x: number; y: number }, connection: Connection) {
+  const controlX = (from.x + to.x) / 2 + connection.curveX;
+  const controlY = (from.y + to.y) / 2 + connection.curveY;
 
-const toneStyles: Record<NodeTone, CSSProperties> = {
-  primary: {
-    '--node-core': 'oklch(from var(--background) l c h / 0.98)',
-    '--node-shell': 'oklch(from var(--background) l c h / 0.34)',
-    '--node-shell-outer': 'oklch(from var(--background) l c h / 0.16)',
-    '--node-stroke': 'oklch(from var(--background) l c h / 0.62)',
-    '--node-highlight': 'oklch(from var(--background) l c h / 0.92)',
-  } as CSSProperties,
-  accent: {
-    '--node-core': 'oklch(from var(--background) l c h / 0.98)',
-    '--node-shell': 'oklch(from var(--background) l c h / 0.32)',
-    '--node-shell-outer': 'oklch(from var(--background) l c h / 0.14)',
-    '--node-stroke': 'oklch(from var(--background) l c h / 0.56)',
-    '--node-highlight': 'oklch(from var(--background) l c h / 0.9)',
-  } as CSSProperties,
-  ink: {
-    '--node-core': 'oklch(from var(--background) l c h / 0.96)',
-    '--node-shell': 'oklch(from var(--background) l c h / 0.28)',
-    '--node-shell-outer': 'oklch(from var(--background) l c h / 0.12)',
-    '--node-stroke': 'oklch(from var(--background) l c h / 0.5)',
-    '--node-highlight': 'oklch(from var(--background) l c h / 0.84)',
-  } as CSSProperties,
-};
-
-const nodeLookup = Object.fromEntries(nodes.map((node) => [node.id, node])) as Record<NodeId, GraphNode>;
+  return `M ${from.x} ${from.y} Q ${controlX} ${controlY} ${to.x} ${to.y}`;
+}
 
 export function LinkedNodesGraph() {
-  const nodeRefs = useRef<Record<NodeId, SVGGElement | null>>({
-    source: null,
-    verify: null,
-    graph: null,
-    review: null,
-    rollout: null,
-    bundle: null,
-    handoff: null,
-  });
-  const edgeRefs = useRef<Record<string, SVGLineElement | null>>({});
-  const sparkleRefs = useRef<Record<string, SVGCircleElement | null>>({});
+  const nodeRefs = useRef<Record<string, SVGGElement | null>>({});
+  const connectionRefs = useRef<Record<string, SVGPathElement | null>>({});
 
   useEffect(() => {
+    const anchorNodeId = 'anchor';
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    const updateEdges = () => {
-      edges.forEach((edge) => {
-        const line = edgeRefs.current[edge.id];
-        const fromElement = nodeRefs.current[edge.from];
-        const toElement = nodeRefs.current[edge.to];
+    const getNodePosition = (node: SceneNode) => {
+      const element = nodeRefs.current[node.id];
+      const offsetX = element ? Number(gsap.getProperty(element, 'x')) || 0 : 0;
+      const offsetY = element ? Number(gsap.getProperty(element, 'y')) || 0 : 0;
 
-        if (!line || !fromElement || !toElement) {
+      return {
+        x: node.x + offsetX,
+        y: node.y + offsetY,
+      };
+    };
+
+    const updateConnections = () => {
+      connections.forEach((connection) => {
+        const path = connectionRefs.current[connection.id];
+
+        if (!path) {
           return;
         }
 
-        const fromNode = nodeLookup[edge.from];
-        const toNode = nodeLookup[edge.to];
-        const fromX = Number(gsap.getProperty(fromElement, 'x')) || 0;
-        const fromY = Number(gsap.getProperty(fromElement, 'y')) || 0;
-        const toX = Number(gsap.getProperty(toElement, 'x')) || 0;
-        const toY = Number(gsap.getProperty(toElement, 'y')) || 0;
+        const from = getNodePosition(nodeLookup[connection.from]);
+        const to = getNodePosition(nodeLookup[connection.to]);
 
-        line.setAttribute('x1', String(fromNode.x + fromX));
-        line.setAttribute('y1', String(fromNode.y + fromY));
-        line.setAttribute('x2', String(toNode.x + toX));
-        line.setAttribute('y2', String(toNode.y + toY));
+        path.setAttribute('d', buildCurve(from, to, connection));
       });
     };
 
-    updateEdges();
+    updateConnections();
 
     if (reduceMotion) {
       return;
     }
 
     const context = gsap.context(() => {
-      nodes.forEach((node, index) => {
-        const element = nodeRefs.current[node.id];
+      const anchorElement = nodeRefs.current[anchorNodeId];
+      const secondaryElements = sceneNodes
+        .filter((node) => node.id !== anchorNodeId)
+        .map((node) => nodeRefs.current[node.id])
+        .filter((element): element is SVGGElement => element !== null);
 
-        if (!element) {
+      const startAmbientMotion = () => {
+        sceneNodes.forEach((node, index) => {
+          const element = nodeRefs.current[node.id];
+
+          if (!element) {
+            return;
+          }
+
+          gsap.to(element, {
+            x: node.driftX,
+            y: node.driftY,
+            duration: node.duration,
+            delay: node.delay,
+            repeat: -1,
+            yoyo: true,
+            ease: 'sine.inOut',
+            onUpdate: updateConnections,
+          });
+
+          gsap.to(element, {
+            rotate: index % 2 === 0 ? 1.2 : -1.2,
+            transformOrigin: `${node.x}px ${node.y}px`,
+            duration: node.duration + 1.8,
+            delay: node.delay,
+            repeat: -1,
+            yoyo: true,
+            ease: 'sine.inOut',
+          });
+
+          const shell = element.querySelector<SVGCircleElement>('[data-part="shell"]');
+          const halo = element.querySelector<SVGCircleElement>('[data-part="halo"]');
+          const core = element.querySelector<SVGCircleElement>('[data-part="core"]');
+          const highlight = element.querySelector<SVGCircleElement>('[data-part="highlight"]');
+
+          if (halo) {
+            gsap.to(halo, {
+              attr: { r: node.radius * 1.24 },
+              opacity: node.haloOpacity + 0.05,
+              duration: node.duration - 1.2,
+              delay: node.delay,
+              repeat: -1,
+              yoyo: true,
+              ease: 'sine.inOut',
+            });
+          }
+
+          if (shell) {
+            gsap.to(shell, {
+              attr: { r: node.radius * 0.88 },
+              opacity: Math.min(node.shellOpacity + 0.08, 0.72),
+              duration: node.duration - 1,
+              delay: node.delay,
+              repeat: -1,
+              yoyo: true,
+              ease: 'sine.inOut',
+            });
+          }
+
+          if (core) {
+            gsap.to(core, {
+              attr: { r: node.radius * 0.48 },
+              duration: node.duration - 1.6,
+              delay: node.delay,
+              repeat: -1,
+              yoyo: true,
+              ease: 'sine.inOut',
+            });
+          }
+
+          if (highlight) {
+            gsap.to(highlight, {
+              opacity: 0.62,
+              duration: node.duration - 2,
+              delay: node.delay,
+              repeat: -1,
+              yoyo: true,
+              ease: 'sine.inOut',
+            });
+          }
+        });
+
+        connections.forEach((connection, index) => {
+          const path = connectionRefs.current[connection.id];
+
+          if (!path) {
+            return;
+          }
+
+          gsap.to(path, {
+            opacity: Math.min(connection.opacity + 0.08, 0.34),
+            duration: 3.8 + index * 0.18,
+            repeat: -1,
+            yoyo: true,
+            ease: 'sine.inOut',
+          });
+        });
+      };
+
+      if (anchorElement) {
+        gsap.set(anchorElement, {
+          opacity: 0,
+          scale: 0.72,
+          transformOrigin: `${nodeLookup[anchorNodeId].x}px ${nodeLookup[anchorNodeId].y}px`,
+        });
+      }
+
+      secondaryElements.forEach((element) => {
+        const nodeId = element.dataset.nodeId;
+        const node = nodeId ? nodeLookup[nodeId] : null;
+
+        if (!node) {
           return;
         }
 
-        const offsetX = index % 2 === 0 ? 12 + index * 2 : -14 - index * 2;
-        const offsetY = index % 2 === 0 ? -10 - index : 9 + index;
-
-        gsap.to(element, {
-          x: offsetX,
-          y: offsetY,
-          duration: 5.8 + index * 0.6,
-          repeat: -1,
-          yoyo: true,
-          ease: 'sine.inOut',
-          onUpdate: updateEdges,
-        });
-
-        gsap.to(element, {
-          rotate: index % 2 === 0 ? 1.6 : -1.8,
+        gsap.set(element, {
+          opacity: 0,
+          scale: 0.62,
+          y: 16,
           transformOrigin: `${node.x}px ${node.y}px`,
-          duration: 7.6 + index * 0.5,
-          repeat: -1,
-          yoyo: true,
-          ease: 'sine.inOut',
-        });
-
-        const halo = element.querySelector<SVGCircleElement>('[data-part="halo"]');
-        const core = element.querySelector<SVGCircleElement>('[data-part="core"]');
-        const outerShell = element.querySelector<SVGCircleElement>('[data-part="shell"]');
-        const highlight = element.querySelector<SVGCircleElement>('[data-part="highlight"]');
-
-        if (halo) {
-          gsap.to(halo, {
-            attr: { r: 36 },
-            opacity: 0.68,
-            duration: 4.8 + index * 0.35,
-            repeat: -1,
-            yoyo: true,
-            ease: 'sine.inOut',
-          });
-        }
-
-        if (outerShell) {
-          gsap.to(outerShell, {
-            attr: { r: 24 },
-            opacity: 0.82,
-            duration: 4.2 + index * 0.3,
-            repeat: -1,
-            yoyo: true,
-            ease: 'sine.inOut',
-          });
-        }
-
-        if (core) {
-          gsap.to(core, {
-            attr: { r: 9.6 },
-            duration: 3.8 + index * 0.22,
-            repeat: -1,
-            yoyo: true,
-            ease: 'sine.inOut',
-          });
-        }
-
-        if (highlight) {
-          gsap.to(highlight, {
-            opacity: 0.9,
-            duration: 3.4 + index * 0.2,
-            repeat: -1,
-            yoyo: true,
-            ease: 'sine.inOut',
-          });
-        }
-      });
-
-      edges.forEach((edge, index) => {
-        const line = edgeRefs.current[edge.id];
-
-        if (!line) {
-          return;
-        }
-
-        gsap.to(line, {
-          strokeDashoffset: -34,
-          duration: 4.6 + index * 0.3,
-          repeat: -1,
-          ease: 'none',
-        });
-
-        gsap.to(line, {
-          opacity: 0.6,
-          duration: 3.4 + index * 0.2,
-          repeat: -1,
-          yoyo: true,
-          ease: 'sine.inOut',
         });
       });
 
-      sparkleDots.forEach((sparkle, index) => {
-        const element = sparkleRefs.current[sparkle.id];
+      connections.forEach((connection) => {
+        const path = connectionRefs.current[connection.id];
 
-        if (!element) {
+        if (!path) {
           return;
         }
 
-        gsap.to(element, {
+        const pathLength = path.getTotalLength();
+
+        gsap.set(path, {
+          opacity: 0,
+          strokeDasharray: pathLength,
+          strokeDashoffset: pathLength,
+        });
+      });
+
+      const revealTimeline = gsap.timeline({
+        defaults: { ease: 'power3.out' },
+        delay: 1,
+        onComplete: startAmbientMotion,
+      });
+
+      if (anchorElement) {
+        revealTimeline.to(anchorElement, {
           opacity: 1,
-          duration: 1.6 + (index % 4) * 0.22,
-          repeat: -1,
-          yoyo: true,
-          delay: index * 0.12,
-          ease: 'sine.inOut',
+          scale: 1,
+          duration: 0.95,
         });
+        revealTimeline.to({}, { duration: 0.45 });
+      }
 
-        gsap.to(element, {
-          attr: { r: sparkle.r + 0.55 },
-          duration: 1.9 + (index % 3) * 0.2,
-          repeat: -1,
-          yoyo: true,
-          delay: index * 0.08,
-          ease: 'sine.inOut',
+      if (secondaryElements.length > 0) {
+        revealTimeline.to(secondaryElements, {
+          opacity: 1,
+          scale: 1,
+          y: 0,
+          duration: 0.52,
+          stagger: 0.08,
         });
+        revealTimeline.to({}, { duration: 0.35 });
+      }
+
+      connections.forEach((connection) => {
+        const path = connectionRefs.current[connection.id];
+
+        if (!path) {
+          return;
+        }
+
+        revealTimeline.to(
+          path,
+          {
+            opacity: connection.opacity,
+            strokeDashoffset: 0,
+            duration: 0.42,
+          },
+        );
       });
     });
 
@@ -335,136 +457,105 @@ export function LinkedNodesGraph() {
   }, []);
 
   return (
-    <div className="relative min-h-[30rem] overflow-hidden">
-
+    <div className="relative min-h-[30rem] w-full overflow-hidden lg:h-full">
       <svg
         aria-hidden="true"
-        className="relative block h-[30rem] w-full"
+        className="relative block h-[30rem] w-full lg:h-full"
         preserveAspectRatio="xMidYMid meet"
         viewBox="0 0 640 380"
       >
         <defs>
-          <filter id="linked-zone-blur">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="24" />
+          <radialGradient id="linked-node-core" cx="35%" cy="30%" r="70%">
+            <stop offset="0%" stopColor="oklch(from var(--background) l c h / 0.995)" />
+            <stop offset="48%" stopColor="oklch(from var(--background) l c h / 0.965)" />
+            <stop offset="100%" stopColor="oklch(from var(--background) l c h / 0.93)" />
+          </radialGradient>
+          <radialGradient id="linked-node-shell" cx="36%" cy="32%" r="74%">
+            <stop offset="0%" stopColor="oklch(from var(--background) l c h / 0.56)" />
+            <stop offset="56%" stopColor="oklch(from var(--background) l c h / 0.3)" />
+            <stop offset="100%" stopColor="oklch(from var(--foreground) l c h / 0.06)" />
+          </radialGradient>
+          <radialGradient id="linked-node-halo" cx="50%" cy="50%" r="70%">
+            <stop offset="0%" stopColor="oklch(from var(--background) l c h / 0.16)" />
+            <stop offset="100%" stopColor="oklch(from var(--background) l c h / 0)" />
+          </radialGradient>
+          <filter id="linked-node-softness" x="-40%" y="-40%" width="180%" height="180%">
+            <feGaussianBlur stdDeviation="18" />
           </filter>
-          <pattern
-            id="linked-dot-grid"
-            width="40"
-            height="40"
-            patternUnits="userSpaceOnUse"
-            x="0"
-            y="0"
-          >
-            <circle
-              cx="20"
-              cy="20"
-              r="1.45"
-              fill="oklch(from var(--background) l c h / 0.96)"
-            />
-          </pattern>
         </defs>
 
-        <rect
-          x="0"
-          y="0"
-          width="640"
-          height="380"
-          fill="url(#linked-dot-grid)"
-          opacity="0.62"
-        />
-
-        {sparkleDots.map((sparkle) => (
-          <circle
-            key={sparkle.id}
-            ref={(element) => {
-              sparkleRefs.current[sparkle.id] = element;
-            }}
-            cx={sparkle.cx}
-            cy={sparkle.cy}
-            fill="oklch(from var(--background) l c h / 0.98)"
-            opacity="0.38"
-            r={sparkle.r}
-          />
-        ))}
-
-        {zones.map((zone) => (
-          <ellipse
-            key={zone.id}
-            cx={zone.cx}
-            cy={zone.cy}
-            fill="oklch(from var(--foreground) l c h / 0.02)"
-            filter="url(#linked-zone-blur)"
-            rx={zone.rx}
-            ry={zone.ry}
-          />
-        ))}
-
-        {edges.map((edge) => {
-          const fromNode = nodeLookup[edge.from];
-          const toNode = nodeLookup[edge.to];
+        {connections.map((connection) => {
+          const from = nodeLookup[connection.from];
+          const to = nodeLookup[connection.to];
 
           return (
-            <line
-              key={edge.id}
+            <path
+              key={connection.id}
               ref={(element) => {
-                edgeRefs.current[edge.id] = element;
+                connectionRefs.current[connection.id] = element;
               }}
-              className=""
-              opacity="0.22"
-              stroke="oklch(from var(--background) l c h / 0.92)"
+              d={buildCurve(from, to, connection)}
+              fill="none"
+              opacity={connection.opacity}
+              stroke="oklch(from var(--primary) l c h / 0.24)"
               strokeLinecap="round"
-              strokeWidth="1.5"
-              x1={fromNode.x}
-              x2={toNode.x}
-              y1={fromNode.y}
-              y2={toNode.y}
+              strokeWidth={connection.width}
             />
           );
         })}
 
-        {nodes.map((node) => (
-          <g
-            key={node.id}
-            ref={(element) => {
-              nodeRefs.current[node.id] = element;
-            }}
-            style={toneStyles[node.tone]}
-          >
-            <circle
-              cx={node.x}
-              cy={node.y}
-              data-part="halo"
-              fill="var(--node-shell-outer)"
-              opacity="0.42"
-              r="32"
-            />
-            <circle
-              cx={node.x}
-              cy={node.y}
-              data-part="shell"
-              fill="var(--node-shell)"
-              opacity="0.82"
-              r="21"
-              stroke="var(--node-stroke)"
-              strokeWidth="1"
-            />
-            <circle
-              cx={node.x}
-              cy={node.y}
-              data-part="core"
-              fill="var(--node-core)"
-              r="8.2"
-            />
-            <circle
-              cx={node.x - 6}
-              cy={node.y - 6}
-              data-part="highlight"
-              fill="var(--node-highlight)"
-              opacity="0.46"
-              r="2.6"
-            />
-          </g>
-        ))}
+        {sceneNodes.map((node) => {
+          const highlightRadius = node.id === 'anchor' ? node.radius * 0.14 : node.radius * 0.2;
+          const highlightOffset = node.id === 'anchor' ? node.radius * 0.24 : node.radius * 0.3;
+
+          return (
+            <g
+              key={node.id}
+              data-node-id={node.id}
+              ref={(element) => {
+                nodeRefs.current[node.id] = element;
+              }}
+            >
+              <circle
+                cx={node.x}
+                cy={node.y}
+                data-part="halo"
+                fill="url(#linked-node-halo)"
+                filter="url(#linked-node-softness)"
+                opacity={node.haloOpacity}
+                r={node.radius * 1.14}
+              />
+              <circle
+                cx={node.x}
+                cy={node.y}
+                data-part="shell"
+                fill="url(#linked-node-shell)"
+                opacity={node.shellOpacity}
+                r={node.radius * 0.82}
+                stroke="oklch(from var(--foreground) l c h / 0.08)"
+                strokeWidth={node.radius > 100 ? 1.5 : 1}
+              />
+              <circle
+                cx={node.x}
+                cy={node.y}
+                data-part="core"
+                fill="url(#linked-node-core)"
+                opacity={node.coreOpacity}
+                r={node.radius * 0.44}
+                stroke={`oklch(from var(--foreground) l c h / ${node.strokeOpacity})`}
+                strokeWidth={node.radius > 100 ? 1.25 : 0.9}
+              />
+              <circle
+                cx={node.x - highlightOffset}
+                cy={node.y - highlightOffset}
+                data-part="highlight"
+                fill="oklch(from var(--background) l c h / 0.62)"
+                opacity={0.42}
+                r={highlightRadius}
+              />
+            </g>
+          );
+        })}
       </svg>
     </div>
   );
