@@ -39,7 +39,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-scroll-behavior="smooth">
-      <body className={`${displayFont.variable} ${bodyFont.variable}`}>
+      <body suppressHydrationWarning className={`${displayFont.variable} ${bodyFont.variable}`}>
         <Script id="silklearn-structured-data" type="application/ld+json">
           {JSON.stringify([
             getOrganizationSchema(),

@@ -30,9 +30,23 @@ type Connection = {
 
 const sceneNodes: SceneNode[] = [
   {
+    id: 'top-north',
+    x: 170,
+    y: 0,
+    radius: 18,
+    driftX: 7,
+    driftY: -8,
+    duration: 5.8,
+    delay: 0.1,
+    haloOpacity: 0.14,
+    shellOpacity: 0.5,
+    coreOpacity: 0.88,
+    strokeOpacity: 0.26,
+  },
+  {
     id: 'north',
-    x: 102,
-    y: 82,
+    x: 88,
+    y: 62,
     radius: 18,
     driftX: 7,
     driftY: -8,
@@ -45,8 +59,8 @@ const sceneNodes: SceneNode[] = [
   },
   {
     id: 'west',
-    x: 180,
-    y: 162,
+    x: 110,
+    y: 210,
     radius: 26,
     driftX: -10,
     driftY: 8,
@@ -59,8 +73,8 @@ const sceneNodes: SceneNode[] = [
   },
   {
     id: 'lower-west',
-    x: 146,
-    y: 276,
+    x: 116,
+    y: 314,
     radius: 22,
     driftX: 9,
     driftY: 10,
@@ -73,8 +87,8 @@ const sceneNodes: SceneNode[] = [
   },
   {
     id: 'upper-mid',
-    x: 304,
-    y: 102,
+    x: 230,
+    y: 70,
     radius: 16,
     driftX: -8,
     driftY: -6,
@@ -87,8 +101,8 @@ const sceneNodes: SceneNode[] = [
   },
   {
     id: 'center',
-    x: 352,
-    y: 198,
+    x: 210,
+    y: 160,
     radius: 30,
     driftX: 12,
     driftY: -9,
@@ -101,8 +115,8 @@ const sceneNodes: SceneNode[] = [
   },
   {
     id: 'east',
-    x: 506,
-    y: 122,
+    x: 340,
+    y: 50,
     radius: 20,
     driftX: -9,
     driftY: 7,
@@ -117,7 +131,7 @@ const sceneNodes: SceneNode[] = [
     id: 'anchor',
     x: 656,
     y: 398,
-    radius: 250,
+    radius: 500,
     driftX: -14,
     driftY: 12,
     duration: 8.5,
@@ -131,11 +145,20 @@ const sceneNodes: SceneNode[] = [
 
 const connections: Connection[] = [
   {
+    id: 'top-north-east',
+    from: 'east',
+    to: 'top-north',
+    curveX: -20,
+    curveY: -24,
+    opacity: 0.18,
+    width: 1.2,
+  },
+  {
     id: 'north-west',
     from: 'north',
     to: 'west',
-    curveX: -18,
-    curveY: 22,
+    curveX: -20,
+    curveY: 24,
     opacity: 0.18,
     width: 1.2,
   },
@@ -143,8 +166,8 @@ const connections: Connection[] = [
     id: 'west-center',
     from: 'west',
     to: 'center',
-    curveX: -22,
-    curveY: -28,
+    curveX: -12,
+    curveY: -24,
     opacity: 0.2,
     width: 1.3,
   },
@@ -152,7 +175,7 @@ const connections: Connection[] = [
     id: 'lower-west-center',
     from: 'lower-west',
     to: 'center',
-    curveX: 10,
+    curveX: 4,
     curveY: 24,
     opacity: 0.18,
     width: 1.2,
@@ -161,7 +184,7 @@ const connections: Connection[] = [
     id: 'upper-mid-center',
     from: 'upper-mid',
     to: 'center',
-    curveX: 8,
+    curveX: 4,
     curveY: -18,
     opacity: 0.16,
     width: 1.1,
@@ -170,8 +193,8 @@ const connections: Connection[] = [
     id: 'center-east',
     from: 'center',
     to: 'east',
-    curveX: 16,
-    curveY: -20,
+    curveX: 22,
+    curveY: -28,
     opacity: 0.18,
     width: 1.2,
   },
@@ -179,8 +202,8 @@ const connections: Connection[] = [
     id: 'west-anchor',
     from: 'west',
     to: 'anchor',
-    curveX: 42,
-    curveY: -34,
+    curveX: 30,
+    curveY: -20,
     opacity: 0.24,
     width: 1.5,
   },
@@ -188,8 +211,8 @@ const connections: Connection[] = [
     id: 'lower-west-anchor',
     from: 'lower-west',
     to: 'anchor',
-    curveX: 46,
-    curveY: 20,
+    curveX: 34,
+    curveY: 24,
     opacity: 0.22,
     width: 1.4,
   },
@@ -197,8 +220,8 @@ const connections: Connection[] = [
     id: 'center-anchor',
     from: 'center',
     to: 'anchor',
-    curveX: 54,
-    curveY: -48,
+    curveX: 56,
+    curveY: -40,
     opacity: 0.28,
     width: 1.6,
   },
@@ -206,8 +229,8 @@ const connections: Connection[] = [
     id: 'east-anchor',
     from: 'east',
     to: 'anchor',
-    curveX: 38,
-    curveY: -62,
+    curveX: 30,
+    curveY: -52,
     opacity: 0.22,
     width: 1.4,
   },
@@ -465,20 +488,9 @@ export function LinkedNodesGraph() {
         viewBox="0 0 640 380"
       >
         <defs>
-          <radialGradient id="linked-node-core" cx="35%" cy="30%" r="70%">
-            <stop offset="0%" stopColor="oklch(from var(--background) l c h / 0.995)" />
-            <stop offset="48%" stopColor="oklch(from var(--background) l c h / 0.965)" />
-            <stop offset="100%" stopColor="oklch(from var(--background) l c h / 0.93)" />
-          </radialGradient>
-          <radialGradient id="linked-node-shell" cx="36%" cy="32%" r="74%">
-            <stop offset="0%" stopColor="oklch(from var(--background) l c h / 0.56)" />
-            <stop offset="56%" stopColor="oklch(from var(--background) l c h / 0.3)" />
-            <stop offset="100%" stopColor="oklch(from var(--foreground) l c h / 0.06)" />
-          </radialGradient>
-          <radialGradient id="linked-node-halo" cx="50%" cy="50%" r="70%">
-            <stop offset="0%" stopColor="oklch(from var(--background) l c h / 0.16)" />
-            <stop offset="100%" stopColor="oklch(from var(--background) l c h / 0)" />
-          </radialGradient>
+          
+          
+          
           <filter id="linked-node-softness" x="-40%" y="-40%" width="180%" height="180%">
             <feGaussianBlur stdDeviation="18" />
           </filter>
@@ -539,19 +551,11 @@ export function LinkedNodesGraph() {
                 cx={node.x}
                 cy={node.y}
                 data-part="core"
-                fill="url(#linked-node-core)"
+                fill="var(--body-background)"
                 opacity={node.coreOpacity}
                 r={node.radius * 0.44}
                 stroke={`oklch(from var(--foreground) l c h / ${node.strokeOpacity})`}
                 strokeWidth={node.radius > 100 ? 1.25 : 0.9}
-              />
-              <circle
-                cx={node.x - highlightOffset}
-                cy={node.y - highlightOffset}
-                data-part="highlight"
-                fill="oklch(from var(--background) l c h / 0.62)"
-                opacity={0.42}
-                r={highlightRadius}
               />
             </g>
           );
