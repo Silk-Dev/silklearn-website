@@ -450,7 +450,7 @@ export function LinkedNodesGraph() {
           opacity: 1,
           scale: 1,
           y: 0,
-          duration: 0.52,
+          duration: 2,
           stagger: 0.08,
         });
         revealTimeline.to({}, { duration: 0.35 });
