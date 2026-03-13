@@ -149,117 +149,10 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
           </div>
         </div>
 
-        {/* ── HERO ── grid with 1px structural divider column */}
-        <div className="grid lg:grid-cols-[1fr_1px_1fr] ">
-          <div className="px-6 py-14 sm:px-8 lg:px-10 lg:py-20 bg-red-100">
-            <div className="max-w-125">
-              <ScrollReveal delay={0.1} start="top 99%">
-              <div className="flex max-w-fit items-center gap-2 rounded-full border border-[oklch(from_var(--primary)_l_c_h/0.18)] bg-[oklch(from_var(--primary)_l_c_h/0.06)] px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--primary)">
-                <Sparkles className="size-3.5" />
-                {content.kicker}
-              </div>
-              </ScrollReveal>
 
-              <ScrollReveal delay={0.25} start="top 99%">
-              <h1 className="mt-10 max-w-[9.5ch] font-(family-name:--font-display) text-[clamp(2.4rem,4.2vw,3.375rem)] leading-none tracking-[-0.02em] text-(--foreground)">
-                {content.headline}
-              </h1>
-              </ScrollReveal>
-
-              <ScrollReveal delay={0.4} start="top 99%">
-              <p className="mt-6 max-w-[56ch] text-[1.02rem] leading-5 text-(--muted-foreground)">
-                {content.subheadline}
-              </p>
-              </ScrollReveal>
-
-              <ScrollReveal delay={0.55} start="top 99%">
-              <div className="mt-8 flex flex-wrap items-center gap-3">
-                <Button asChild size="lg">
-                  <a href={content.primaryCtaHref}>
-                    {content.primaryCtaLabel}
-                    <ArrowRight className="size-4" />
-                  </a>
-                </Button>
-                <Button asChild size="lg" variant="outline">
-                  <a href={content.secondaryCtaHref}>{content.secondaryCtaLabel}</a>
-                </Button>
-              </div>
-
-              </ScrollReveal>
-
-              {!isSanityConfigured && (
-                <div className="mt-8 flex items-center gap-2 text-sm text-(--muted-foreground)">
-                  <BadgeCheck className="size-4 text-(--primary)" />
-                  <span>Using fallback marketing content until Sanity is configured.</span>
-                </div>
-              )}
-            </div>
-          </div>
-
-          {/* Structural vertical divider — a real 1px column, not an absolute div */}
-          <div className="hidden bg-(--border) lg:block" />
-
-          <div className="border-t border-(--border) px-6 py-14 sm:px-8 lg:border-t-0 lg:px-10 lg:py-20">
-            <div className="flex items-center justify-between text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
-              <span>From raw docs to usable output</span>
-              <span>Live preview</span>
-            </div>
-
-            <div className="mt-6 grid lg:grid-cols-[0.86fr_1px_1.14fr]">
-              <div className="py-5">
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">Source stack</p>
-                <div className="mt-5 grid gap-3">
-                  {[
-                    'Security architecture spec.pdf',
-                    'Internal onboarding handbook.md',
-                    'Support escalation runbook.docx',
-                    'Product system glossary.export',
-                  ].map((item) => (
-                    <div key={item} className="flex items-center justify-between border-b border-(--border) px-1 pb-3 last:border-b-0 last:pb-0">
-                      <span className="text-sm font-medium text-(--foreground)">{item}</span>
-                      <FileStack className="size-4 text-(--primary)" />
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="hidden bg-(--border) lg:block" />
-
-              <div className="border-t border-(--border) py-5 lg:border-t-0 lg:pl-6">
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">Output layer</p>
-                <div className="mt-5 grid gap-3">
-                  {content.metrics.map((metric) => (
-                    <div key={metric.label} className="border-b border-(--border) pb-3 last:border-b-0 last:pb-0">
-                      <p className="text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-(--muted-foreground)">{metric.label}</p>
-                      <p className="mt-1 text-sm leading-6 text-(--foreground)">{metric.value}</p>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="mt-5 grid gap-3">
-                  {['Reviewable graph', 'Learning path outputs', 'AI context bundles'].map((item) => (
-                    <div key={item} className="border-b border-(--border) pb-3 last:border-b-0 last:pb-0">
-                      <p className="text-sm font-semibold text-(--foreground)">{item}</p>
-                      <p className="mt-1 text-sm leading-6 text-(--muted-foreground)">Grounded in provenance and ready for review.</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* ── TRUST MARKS ── horizontal rule via border-top, items divided by border */}
-        <StaggerReveal className="grid border-t border-(--border) sm:grid-cols-2 lg:grid-cols-6" stagger={0.06}>
-          {trustMarks.map((mark, i) => (
-            <div key={mark} className={`px-5 py-5 text-sm font-semibold text-(--foreground)${i > 0 ? ' border-t sm:border-t-0 sm:border-l border-(--border)' : ''}`}>
-              {mark}
-            </div>
-          ))}
-        </StaggerReveal>
 
         {/* ── SOLUTIONS ── centered header then 2-col grid */}
-        <div className="border-t border-(--border) px-6 py-12 sm:px-8 lg:px-10 lg:py-16">
+        <div className="border-t border-(--border) px-6 py-12 sm:px-8 lg:px-10 lg:pt-50 lg:pb-30">
           <ScrollReveal className="mx-auto max-w-140 text-center">
             <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">SILKLEARN solutions</p>
             <h2 className="mt-4 font-(family-name:--font-display) text-[clamp(2rem,3.6vw,3.375rem)] leading-none tracking-[-0.02em] text-(--foreground)">
@@ -268,18 +161,21 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
           </ScrollReveal>
         </div>
 
-        <div className="grid border-t border-(--border) lg:grid-cols-[1fr_1px_1fr]">
+        <div className="grid  lg:grid-cols-[1fr_1px_1fr]">
           {operatingModes.map((mode, i) => {
             return (
               <Fragment key={mode.title}>
                 {i > 0 && <div className="bg-(--border) max-lg:h-px" />}
-                <ScrollReveal className="p-6 sm:p-8 lg:p-10">
-                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">{mode.eyebrow}</p>
-                  <h3 className="mt-3 max-w-[18ch] text-[1.5rem] leading-tight tracking-[-0.02em] text-(--foreground)">{mode.title}</h3>
-                  <p className="mt-3 max-w-[48ch] text-sm leading-5 text-(--muted-foreground)">{mode.body}</p>
+                <ScrollReveal className="flex h-full flex-col p-6 sm:p-8 lg:p-10">
+                  <div>
+                    <h3 className="text-[1.5rem] leading-tight tracking-[-0.02em] text-(--foreground)">{mode.eyebrow}</h3>
+                    <p className="mt-3 max-w-[48ch] text-sm leading-5 text-(--muted-foreground)">
+                      {mode.title}. {mode.body}
+                    </p>
+                  </div>
 
                   <LottiePlaceholder
-                    className="mt-8"
+                    className="mt-auto pt-8"
                     description={mode.eyebrow === 'Compile'
                       ? 'Animated diagram: raw document pages (PDF, MD, DOCX) feed into a funnel that outputs a structured dependency graph with nodes and directed edges. Nodes light up in sequence to show prerequisite order being discovered.'
                       : 'Animated diagram: a single compiled graph branches into three output lanes — an onboarding path, a review queue, and an AI context bundle. Each lane pulses to show reuse from one source structure.'}
@@ -287,13 +183,6 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
                     label={`Lottie · ${mode.eyebrow}`}
                   />
 
-                  <div className="mt-4">
-                    {mode.metrics.map((metric) => (
-                      <div key={metric} className="border-t border-(--border) py-3 text-sm font-medium text-(--foreground)">
-                        {metric}
-                      </div>
-                    ))}
-                  </div>
                 </ScrollReveal>
               </Fragment>
             );
@@ -302,14 +191,8 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
 
         {/* ── IN ACTION ── left rail + stacked cards, Rollups pattern */}
         <div className="grid border-t border-(--border) lg:grid-cols-[1fr_1px_2fr]">
-          <ScrollReveal className="p-6 sm:p-8 lg:p-10 lg:sticky lg:top-28 lg:self-start">
-            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">SILKLEARN in action</p>
-            <h2 className="mt-4 max-w-[10ch] font-(family-name:--font-display) text-[clamp(2rem,3.6vw,3.375rem)] leading-none tracking-[-0.02em] text-(--foreground)">
-              Use one compiled source across onboarding, handoff, and AI.
-            </h2>
-            <p className="mt-4 max-w-[42ch] text-base leading-5 text-(--muted-foreground)">
-              Each operating view shows how dense source material becomes something a team can review, trust, and reuse.
-            </p>
+          <ScrollReveal className="p-6 sm:p-8 lg:py-50 lg:sticky lg:top-28 lg:self-start">
+            
 
             <div className="mt-8">
               {[
