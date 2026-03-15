@@ -6,6 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {
   ArrowRight,
   CheckCircle2,
+  ChevronDown,
 } from 'lucide-react';
 
 import { LinkedNodesGraph } from '@/components/marketing/linked-nodes-graph';
@@ -355,6 +356,7 @@ function StageJourneyCurve() {
 
 export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
   const [activeActionPanel, setActiveActionPanel] = useState(0);
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
   const actionPanelRefs = useRef<Array<HTMLDivElement | null>>([]);
 
   useEffect(() => {
@@ -434,7 +436,7 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
           {/* Structural vertical divider — a real 1px column, not an absolute div */}
           <div className="hidden bg-(--border) lg:block" />
 
-          <div className="border-t border-(--border) lg:flex lg:items-end lg:border-t-0">
+          <div className="hidden border-t border-(--border) sm:block lg:flex lg:items-end lg:border-t-0">
             <LinkedNodesGraph />
           </div>
         </div>
@@ -482,7 +484,7 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
 
         {/* ── IN ACTION ── left rail + stacked cards, Rollups pattern */}
         <div className="grid border-t border-(--border) lg:grid-cols-[1fr_1px_2fr] pt-50">
-          <ScrollReveal className="p-6 sm:p-8 lg:py-48 lg:sticky lg:top-28 lg:self-start">
+          <ScrollReveal className="hidden p-6 sm:p-8 lg:block lg:py-48 lg:sticky lg:top-28 lg:self-start">
             
 
             <div className="mt-8">
@@ -504,7 +506,7 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
           <div className="hidden  lg:block" />
             
             <div>
-              <div className="border-b border-(--border)  pb-20 ">
+              <div className="border-b border-(--border) px-6 pt-6 pb-20 sm:px-8 sm:pt-8 lg:px-10">
                 <h2 className="text-[2.5rem] leading-tight tracking-[-0.02em] text-(--foreground)">
                   Silklearn in action
                 </h2>
@@ -522,17 +524,18 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
                   >
                     <div className={`grid lg:grid-cols-[1.3fr_1px_1fr]${i > 0 ? ' border-t border-(--border)' : ''}`}>
                       {/* Illustration / data side */}
-                      <div className="p-6 sm:p-8">
+                      <div className="flex items-center p-6 sm:p-8 lg:p-10">
                       
                           <LottiePlaceholder
                             animationSrc={panel.src}
-                            className="mb-5"
+                            animationClassName="h-full w-full max-h-full max-w-full"
+                            className="w-full"
                             description={panel.step === 'Step 01'
                               ? 'Animated stack of documents fanning out with file-type badges, then being drawn into a scanning beam that highlights headings and structure.'
                               : panel.step === 'Step 02'
                                 ? 'Animated dependency graph building itself: nodes appear one by one, then directed edges draw between them showing prerequisite order. Cross-document links highlight in a different color.'
                                 : 'Animated split view: a compiled graph on the left emits three output artifacts to the right — a learning path, a review checklist, and a context bundle — each sliding into place.'}
-                            height="h-28"
+                            height="h-44 sm:h-48"
                             label={`Lottie · ${panel.step}`}
                           />
                           
@@ -642,8 +645,30 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
           <StaggerReveal stagger={0.1}>
             {content.faq.map((item, i) => (
               <div key={item.question} className={`px-6 py-6 sm:px-8${i > 0 ? ' border-t border-(--border)' : ''}`}>
-                <h3 className="text-base font-semibold text-(--foreground)">{item.question}</h3>
-                <p className="mt-3 text-sm leading-5 text-(--muted-foreground)">{item.answer}</p>
+                <button
+                  aria-controls={`faq-panel-${i}`}
+                  aria-expanded={openFaqIndex === i}
+                  className="group flex w-full items-start justify-between gap-4 text-left transition-colors duration-200"
+                  onClick={() => setOpenFaqIndex((currentIndex) => (currentIndex === i ? null : i))}
+                  type="button"
+                >
+                  <h3 className="text-base font-semibold text-(--foreground) transition-colors duration-200 group-hover:text-(--primary)">
+                    {item.question}
+                  </h3>
+                  <ChevronDown
+                    className={`mt-0.5 size-4 shrink-0 text-(--muted-foreground) transition-[transform,color] duration-300 ${openFaqIndex === i ? 'rotate-180 text-(--foreground)' : ''}`}
+                  />
+                </button>
+                <div
+                  className={`grid overflow-hidden transition-[grid-template-rows] duration-300 ease-out ${openFaqIndex === i ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}
+                  id={`faq-panel-${i}`}
+                >
+                  <div
+                    className={`overflow-hidden pr-8 transition-[opacity,transform,padding] duration-300 ease-out ${openFaqIndex === i ? 'pt-3 opacity-100 translate-y-0' : 'pt-0 opacity-0 -translate-y-1'}`}
+                  >
+                    <p className="text-sm leading-5 text-(--muted-foreground)">{item.answer}</p>
+                  </div>
+                </div>
               </div>
             ))}
           </StaggerReveal>

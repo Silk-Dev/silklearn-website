@@ -12,7 +12,35 @@ import { primaryNavigation } from '@/lib/marketing-content';
 
 export function SiteHeader() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [announcementHeight, setAnnouncementHeight] = useState(44);
+  const announcementRef = useRef<HTMLDivElement | null>(null);
   const scrollPositionRef = useRef(0);
+
+  useEffect(() => {
+    const element = announcementRef.current;
+
+    if (!element) {
+      return;
+    }
+
+    const updateAnnouncementHeight = () => {
+      setAnnouncementHeight(element.getBoundingClientRect().height);
+    };
+
+    updateAnnouncementHeight();
+
+    const resizeObserver = new ResizeObserver(() => {
+      updateAnnouncementHeight();
+    });
+
+    resizeObserver.observe(element);
+    window.addEventListener('resize', updateAnnouncementHeight);
+
+    return () => {
+      resizeObserver.disconnect();
+      window.removeEventListener('resize', updateAnnouncementHeight);
+    };
+  }, []);
 
   useEffect(() => {
     if (typeof document === 'undefined') return;
@@ -42,7 +70,10 @@ export function SiteHeader() {
   return (
     <>
       {/* Announcement bar */}
-      <div className="fixed inset-x-0 top-0 z-50 border-b border-(--border) bg-(--primary) px-4 py-3 text-center text-sm font-medium tracking-[-0.01em] text-(--primary-foreground) sm:px-6">
+      <div
+        ref={announcementRef}
+        className="fixed inset-x-0 top-0 z-50 border-b border-(--border) bg-(--primary) px-4 py-3 text-center text-sm font-medium tracking-[-0.01em] text-(--primary-foreground) sm:px-6"
+      >
         <span>Early access for structure-first teams is opening soon.</span>{' '}
         <TransitionLink className="font-semibold underline underline-offset-3" href="/waitlist">
           View waitlist
@@ -51,7 +82,8 @@ export function SiteHeader() {
 
       {/* Fixed glassmorphic header */}
       <header
-        className={`fixed inset-x-0 top-[2.75rem] border-b border-(--border) z-40 backdrop-blur-[10px] ${
+        style={{ top: announcementHeight }}
+        className={`fixed inset-x-0 border-b border-(--border) z-40 backdrop-blur-[10px] ${
           mobileOpen
             ? 'bottom-0 overflow-y-auto bg-(--background)'
             : 'bg-[oklch(from_var(--background)_l_c_h/0.25)]'
@@ -107,7 +139,10 @@ export function SiteHeader() {
 
           {/* Mobile menu — stays inside border-x rails, fills remaining viewport */}
           {mobileOpen && (
-            <div className="flex min-h-[calc(100dvh-2.75rem-4rem)] flex-col lg:hidden">
+            <div
+              className="flex flex-col lg:hidden"
+              style={{ minHeight: `calc(100dvh - ${announcementHeight + 64}px)` }}
+            >
               <nav className="flex flex-col">
                 {primaryNavigation.map((item) => (
                   <TransitionLink
@@ -143,7 +178,7 @@ export function SiteHeader() {
       </header>
 
       {/* Spacer for fixed header + announcement bar */}
-      <div aria-hidden className="h-[6.75rem]" />
+      <div aria-hidden style={{ height: announcementHeight + 64 }} />
     </>
   );
 }

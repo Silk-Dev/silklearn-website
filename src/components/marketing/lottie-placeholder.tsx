@@ -284,9 +284,9 @@ export function LottiePlaceholder({
   }, [animationData, animationSrc]);
 
   return (
-    <div>
+    <div className={className}>
       {resolvedAnimationData ? (
-        <div className=" flex w-full flex-1 items-center justify-center">
+        <div className={`flex ${height} w-full items-center justify-center overflow-hidden`}>
           <Lottie
             animationData={resolvedAnimationData}
             autoplay
@@ -297,7 +297,7 @@ export function LottiePlaceholder({
       ) :(
       <div
         aria-hidden
-        className={`flex ${height} flex-col border border-dashed border-[oklch(from_var(--primary)_l_c_h/0.22)] bg-[oklch(from_var(--primary)_l_c_h/0.03)] px-6 ${isStepOneAnimation ? 'justify-start pt-4 text-left' : 'items-center justify-center text-center'} ${className ?? ''}`}
+        className={`flex ${height} flex-col border border-dashed border-[oklch(from_var(--primary)_l_c_h/0.22)] bg-[oklch(from_var(--primary)_l_c_h/0.03)] px-6 ${isStepOneAnimation ? 'justify-start pt-4 text-left' : 'items-center justify-center text-center'}`}
       >
         <p className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-(--primary)">
           {label}
