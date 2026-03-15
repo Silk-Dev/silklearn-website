@@ -45,6 +45,7 @@ const operatingModes = [
 const actionPanels = [
   {
     step: 'Step 01',
+    src: '/silklearn/animations/step-01-document-scan.json',
     title: 'Start with the real document stack, not a rewritten summary',
     summary: 'Document boundaries stay visible so leaders can see what was actually compiled, what remains unresolved, and what still needs human review.',
     rows: [
@@ -56,6 +57,7 @@ const actionPanels = [
   },
   {
     step: 'Step 02',
+    src: '/silklearn/animations/step-02.json',
     title: 'Surface the dependency order before a rollout depends on it',
     summary: 'The graph makes hidden prerequisite logic visible before onboarding, handoff, or internal AI depends on it being correct.',
     rows: [
@@ -67,6 +69,7 @@ const actionPanels = [
   },
   {
     step: 'Step 03',
+    src: '/silklearn/animations/step-03.json',
     title: 'Ship outputs teams can actually use',
     summary: 'Teams publish onboarding ramps, review queues, and minimum-context bundles from the same compiled structure instead of rebuilding from scratch.',
     rows: [
@@ -469,6 +472,7 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
                       <div className="p-6 sm:p-8">
                       
                           <LottiePlaceholder
+                            animationSrc={panel.src}
                             className="mb-5"
                             description={panel.step === 'Step 01'
                               ? 'Animated stack of documents fanning out with file-type badges, then being drawn into a scanning beam that highlights headings and structure.'
@@ -569,16 +573,18 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
           </StaggerReveal>
         </div>
 
-        {/* ── FAQ ── */}
-        <div className="grid border-t border-(--border) lg:grid-cols-[1fr_1px_1.3fr]">
-          <ScrollReveal className="p-6 sm:p-8 lg:p-10">
+        <div className="grid border-t border-(--border) ">
+          <ScrollReveal className="p-6 sm:p-8 lg:p-10 lg:pt-50">
             <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">Common questions</p>
-            <h2 className="mt-4 max-w-[9ch] font-(family-name:--font-display) text-[clamp(2rem,3.6vw,3.375rem)] leading-none tracking-[-0.02em] text-(--foreground)">
+            <h2 className="mt-4  font-(family-name:--font-display) text-[clamp(2rem,3.6vw,3.375rem)] leading-none tracking-[-0.02em] text-(--foreground)">
               Core questions, answered directly.
             </h2>
           </ScrollReveal>
+        </div>
+        {/* ── FAQ ── */}
+        <div className="grid  lg:grid-cols-[0.3fr_1fr] lg:pt-20 lg:pb-30">
+          <div></div>
 
-          <div className="hidden bg-(--border) lg:block" />
 
           <StaggerReveal stagger={0.1}>
             {content.faq.map((item, i) => (
@@ -601,18 +607,7 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
               Early access is for leaders using private docs for onboarding, operational handoffs, compliance review, or internal AI context. If missing dependency order is slowing the team down, this is what the beta is built for.
             </p>
 
-            <div className="mt-8">
-              {[
-                'Roadmaps from private docs',
-                'Dependency-aware onboarding',
-                'Minimum-context AI bundles',
-                'Leader-reviewed rollout artifacts',
-              ].map((item) => (
-                <div key={item} className="border-t border-(--border) py-3 text-sm font-medium text-(--foreground)">
-                  {item}
-                </div>
-              ))}
-            </div>
+           
           </ScrollReveal>
 
           <div className="hidden bg-(--border) lg:block" />
