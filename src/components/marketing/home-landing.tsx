@@ -135,6 +135,13 @@ const stageJourney: StageJourneyStage[] = [
 ];
 
 const stageJourneyCurvePath = 'M -210 407 C 98 36 819 89 1100 75';
+const stageJourneyDefaultViewportWidth = 1188;
+const stageJourneyDefaultOffsetX = (stageJourneyDefaultViewportWidth - 960) / 2;
+const stageJourneyCardOffsetX = -64;
+const stageJourneyViewBox = {
+  width: 960,
+  height: 460,
+};
 
 type HomeLandingProps = {
   content: HomePageContent;
@@ -143,6 +150,44 @@ type HomeLandingProps = {
 
 function StageJourneyCurve() {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const [cardLayout, setCardLayout] = useState({
+    scale: 1,
+    offsetX: stageJourneyDefaultOffsetX,
+    offsetY: 0,
+  });
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+
+    const updateCardScale = () => {
+      const width = section.clientWidth;
+      const height = section.clientHeight;
+      if (!width || !height) return;
+
+      const scale = Math.min(width / stageJourneyViewBox.width, height / stageJourneyViewBox.height, 1);
+      const renderedWidth = stageJourneyViewBox.width * scale;
+      const renderedHeight = stageJourneyViewBox.height * scale;
+
+      setCardLayout({
+        scale,
+        offsetX: (width - renderedWidth) / 2,
+        offsetY: (height - renderedHeight) / 2,
+      });
+    };
+
+    updateCardScale();
+
+    const resizeObserver = new ResizeObserver(() => {
+      updateCardScale();
+    });
+
+    resizeObserver.observe(section);
+
+    return () => {
+      resizeObserver.disconnect();
+    };
+  }, []);
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -248,10 +293,10 @@ function StageJourneyCurve() {
             aria-hidden="true"
             className="absolute inset-0 h-full w-full"
             fill="none"
-            viewBox="0 0 960 460"
+            viewBox={`0 0 ${stageJourneyViewBox.width} ${stageJourneyViewBox.height}`}
           >
             <defs>
-              <linearGradient id="stage-journey-curve-gradient" x1="0" x2="960" y1="0" y2="0" gradientUnits="userSpaceOnUse">
+              <linearGradient id="stage-journey-curve-gradient" x1="0" x2={stageJourneyViewBox.width} y1="0" y2="0" gradientUnits="userSpaceOnUse">
                 <stop offset="0%" stopColor="var(--primary)" stopOpacity="1" />
                 <stop offset="75%" stopColor="var(--primary)" stopOpacity="1" />
                 <stop offset="90%" stopColor="var(--primary)" stopOpacity="0.28" />
@@ -287,8 +332,13 @@ function StageJourneyCurve() {
             <article
               key={stage.label}
               data-stage-card
-              className="absolute w-[224px]  p-4"
-              style={{ left: `${stage.card.x}px`, top: `${stage.card.y}px` }}
+              className="absolute w-[224px] p-4"
+              style={{
+                left: `${cardLayout.offsetX + (stage.card.x - stageJourneyDefaultOffsetX + stageJourneyCardOffsetX) * cardLayout.scale}px`,
+                top: `${cardLayout.offsetY + stage.card.y * cardLayout.scale}px`,
+                transform: `scale(${cardLayout.scale})`,
+                transformOrigin: 'top left',
+              }}
             >
               <p className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">{stage.label}</p>
               <h3 className="mt-3 text-[1.02rem] font-medium leading-5 text-(--foreground)">{stage.title}</h3>
