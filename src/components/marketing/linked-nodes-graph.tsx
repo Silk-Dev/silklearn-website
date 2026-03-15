@@ -432,7 +432,7 @@ export function LinkedNodesGraph() {
 
       const revealTimeline = gsap.timeline({
         defaults: { ease: 'power3.out' },
-        delay: 1,
+        delay: 0.3,
         onComplete: startAmbientMotion,
       });
 
@@ -442,7 +442,7 @@ export function LinkedNodesGraph() {
           scale: 1,
           duration: 0.95,
         });
-        revealTimeline.to({}, { duration: 0.45 });
+        revealTimeline.to({}, { duration: 0.15 });
       }
 
       if (secondaryElements.length > 0) {
@@ -450,8 +450,8 @@ export function LinkedNodesGraph() {
           opacity: 1,
           scale: 1,
           y: 0,
-          duration: 2,
-          stagger: 0.08,
+          duration: 1.2,
+          stagger: 0.04,
         });
         revealTimeline.to({}, { duration: 0.35 });
       }
