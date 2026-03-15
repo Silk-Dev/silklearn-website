@@ -651,12 +651,12 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
 
         {/* ── WAITLIST ── */}
         <div className="grid border-t border-(--border) lg:grid-cols-[1fr_1px_1fr]" id="waitlist">
-          <ScrollReveal className="p-6 sm:p-8 lg:p-10">
+          <ScrollReveal className="grid content-start gap-2 px-8 py-15 ">
             <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">Early access</p>
-            <h2 className="mt-4 max-w-[12ch] font-(family-name:--font-display) text-[clamp(2rem,3.6vw,3.375rem)] leading-none tracking-[-0.02em] text-(--foreground)">
+            <h2 className="max-w-[12ch] font-(family-name:--font-display) text-[clamp(2rem,3.6vw,3.375rem)] leading-none tracking-[-0.02em] text-(--foreground)">
               See whether your document stack is a fit for early access.
             </h2>
-            <p className="mt-5 max-w-[56ch] text-base leading-5 text-(--muted-foreground)">
+            <p className="max-w-[56ch] text-base leading-5 text-(--muted-foreground)">
               Early access is for leaders using private docs for onboarding, operational handoffs, compliance review, or internal AI context. If missing dependency order is slowing the team down, this is what the beta is built for.
             </p>
 
@@ -665,7 +665,7 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
 
           <div className="hidden bg-(--border) lg:block" />
 
-          <ScrollReveal className="border-t border-(--border) p-6 sm:p-8 lg:border-t-0 lg:p-10">
+          <ScrollReveal className="border-t border-(--border) px-8 py-15 lg:border-t-0 ">
             <WaitlistForm />
           </ScrollReveal>
         </div>

@@ -381,7 +381,7 @@ export function LinkedNodesGraph() {
           }
 
           gsap.to(path, {
-            opacity: Math.min(connection.opacity + 0.08, 0.34),
+            opacity: Math.min(connection.opacity + 0.1, 0.46),
             duration: 3.8 + index * 0.18,
             repeat: -1,
             yoyo: true,
@@ -509,9 +509,11 @@ export function LinkedNodesGraph() {
               d={buildCurve(from, to, connection)}
               fill="none"
               opacity={connection.opacity}
-              stroke="oklch(from var(--primary) l c h / 0.24)"
+              stroke="oklch(from var(--primary) l c h / 0.82)"
               strokeLinecap="round"
+              strokeLinejoin="round"
               strokeWidth={connection.width}
+              vectorEffect="non-scaling-stroke"
             />
           );
         })}
