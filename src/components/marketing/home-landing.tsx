@@ -31,12 +31,14 @@ const operatingModes = [
   {
     title: 'Make prerequisite order obvious before teams make mistakes',
     body: 'Turn architecture docs, onboarding notes, and runbooks into a reviewed sequence so teams stop guessing what comes first.',
+    animationSrc: '/silklearn/animations/compile-docs-to-graph.json',
     eyebrow: 'Compile',
     metrics: ['See what must be learned first', 'Keep every step tied to source'],
   },
   {
     title: 'Reuse one compiled graph across onboarding, rollout, and AI',
     body: 'Build one reviewed structure that feeds onboarding, rollout review, and AI context delivery without rebuilding the logic each time.',
+    animationSrc: '/silklearn/animations/graph_to_lanes.json',
     eyebrow: 'Consolidate',
     metrics: ['One structure, multiple outputs', 'Leader-approved context bundles'],
   },
@@ -463,6 +465,7 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
                   </div>
 
                   <LottiePlaceholder
+                    animationSrc={mode.animationSrc}
                     className="mt-auto pt-8"
                     description={mode.eyebrow === 'Compile'
                       ? 'Animated diagram: raw document pages (PDF, MD, DOCX) feed into a funnel that outputs a structured dependency graph with nodes and directed edges. Nodes light up in sequence to show prerequisite order being discovered.'
