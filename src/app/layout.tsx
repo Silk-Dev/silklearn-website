@@ -14,6 +14,7 @@ import {
   getWebsiteSchema,
 } from '@/lib/structured-data';
 import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import './globals.css';
 
@@ -52,6 +53,7 @@ export default function RootLayout({
           {children}
           <GrainOverlay />
           <Analytics />
+          <SpeedInsights />
           <MarketingAnalytics />
         </LenisProvider>
       </body>
