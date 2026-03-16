@@ -6,6 +6,7 @@ import Script from 'next/script';
 
 import { MarketingAnalytics } from '@/components/marketing/analytics';
 import { GrainOverlay } from '@/components/marketing/grain-overlay';
+import { IntercomProvider } from '@/components/marketing/intercom-provider';
 import { LenisProvider } from '@/components/marketing/lenis-provider';
 import { defaultMetadata } from '@/lib/seo';
 import {
@@ -55,6 +56,7 @@ export default function RootLayout({
           <Analytics />
           <SpeedInsights />
           <MarketingAnalytics />
+          <IntercomProvider />
         </LenisProvider>
       </body>
     </html>
