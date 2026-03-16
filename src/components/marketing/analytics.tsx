@@ -1,0 +1,71 @@
+'use client';
+
+import Script from 'next/script';
+
+const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+const posthogKey = process.env.NEXT_PUBLIC_POSTHOG_KEY;
+const posthogHost = process.env.NEXT_PUBLIC_POSTHOG_HOST ?? 'https://us.i.posthog.com';
+const intercomAppId = process.env.NEXT_PUBLIC_INTERCOM_APP_ID;
+
+export function MarketingAnalytics() {
+  return (
+    <>
+      {gaId ? (
+        <>
+          <Script src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} strategy="afterInteractive" />
+          <Script id="google-analytics" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${gaId}', {
+                page_path: window.location.pathname,
+              });
+            `}
+          </Script>
+        </>
+      ) : null}
+
+      {posthogKey ? (
+        <Script id="posthog" strategy="afterInteractive">
+          {`
+            !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split('.');2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement('script')).type='text/javascript',p.async=!0,p.src=s.api_host.replace('.i.posthog.com','-assets.i.posthog.com')+'/static/array.js',(r=t.getElementsByTagName('script')[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a='posthog',u.people=u.people||[],u.toString=function(t){var e='posthog';return'posthog'!==a&&(e+='.'+a),t||(e+=' (stub)'),e},u.people.toString=function(){return u.toString(1)+'.people (stub)'},o='init capture register register_once unregister identify alias group set_config reset opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing start_batch_senders stop_batch_senders captureException onFeatureFlags reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures onSessionId'.split(' '),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+            posthog.init('${posthogKey}', {
+              api_host: '${posthogHost}',
+              person_profiles: 'identified_only'
+            });
+          `}
+        </Script>
+      ) : null}
+
+      {intercomAppId ? (
+        <>
+          <Script id="intercom-settings" strategy="afterInteractive">
+            {`
+              window.intercomSettings = {
+                app_id: '${intercomAppId}'
+              };
+            `}
+          </Script>
+          <Script id="intercom" strategy="afterInteractive">
+            {`
+              (function(){
+                var w=window;var ic=w.Intercom;
+                if(typeof ic==='function'){ic('reattach_activator');ic('update',w.intercomSettings);}else{
+                  var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;
+                  var l=function(){
+                    var s=d.createElement('script');s.type='text/javascript';s.async=true;
+                    s.src='https://widget.intercom.io/widget/${intercomAppId}';
+                    var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);
+                  };
+                  if(document.readyState==='complete'){l();}
+                  else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}
+                }
+              })();
+            `}
+          </Script>
+        </>
+      ) : null}
+    </>
+  );
+}
