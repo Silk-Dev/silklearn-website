@@ -25,7 +25,7 @@ export function SiteFooter() {
             </p>
           </div>
 
-          <div className="flex flex-wrap gap-x-5 gap-y-3 text-sm text-(--muted-foreground) lg:justify-end">
+          <div className="flex max-w-120 flex-wrap gap-x-5 gap-y-3 text-sm text-(--muted-foreground) lg:justify-end">
             {primaryNavigation.map((item) => (
               <TransitionLink
                 key={item.href}
@@ -37,6 +37,15 @@ export function SiteFooter() {
             ))}
             <TransitionLink className="transition-colors hover:text-(--foreground)" href="/waitlist">
               Waitlist
+            </TransitionLink>
+            <TransitionLink className="transition-colors hover:text-(--foreground)" href="/privacy">
+              Privacy
+            </TransitionLink>
+            <TransitionLink className="transition-colors hover:text-(--foreground)" href="/terms">
+              Terms
+            </TransitionLink>
+            <TransitionLink className="transition-colors hover:text-(--foreground)" href="/eula">
+              EULA
             </TransitionLink>
           </div>
         </div>
