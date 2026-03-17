@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 
 import { ensureWaitlistTable, getSql, isDatabaseConfigured } from '@/lib/postgres';
+import { submitWaitlistSignup } from '@/lib/waitlist';
 
 export const runtime = 'nodejs';
 
@@ -9,50 +10,30 @@ type WaitlistPayload = {
   email?: string;
 };
 
-const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
 export async function POST(request: Request) {
   const body = (await request.json()) as WaitlistPayload;
-  const email = body.email?.trim().toLowerCase();
-  const companyName = body.companyName?.trim() || null;
 
-  if (!email || !emailPattern.test(email)) {
-    return NextResponse.json(
-      { message: 'Enter a valid email address.' },
-      { status: 400 },
-    );
-  }
+  const result = await submitWaitlistSignup(
+    body,
+    {
+      ensureTable: ensureWaitlistTable,
+      async insert(email, companyName) {
+        const sql = getSql();
+        const inserted = await sql`
+          insert into waitlist_signups (email, company_name)
+          values (${email}, ${companyName})
+          on conflict (email) do nothing
+          returning id
+        `;
 
-  if (!isDatabaseConfigured()) {
-    return NextResponse.json(
-      {
-        message:
-          'DATABASE_URL is not configured. Start Postgres and add your env file before collecting waitlist entries.',
+        return inserted.length === 0 ? 'duplicate' : 'inserted';
       },
-      { status: 503 },
-    );
-  }
+    },
+    isDatabaseConfigured(),
+  );
 
-  try {
-    await ensureWaitlistTable();
-
-    const sql = getSql();
-    const inserted = await sql`
-      insert into waitlist_signups (email, company_name)
-      values (${email}, ${companyName})
-      on conflict (email) do nothing
-      returning id
-    `;
-
-    if (inserted.length === 0) {
-      return NextResponse.json({ message: 'That email is already on the waitlist.' });
-    }
-
-    return NextResponse.json({ message: 'You are on the waitlist.' }, { status: 201 });
-  } catch {
-    return NextResponse.json(
-      { message: 'Postgres is reachable, but the waitlist write failed.' },
-      { status: 500 },
-    );
-  }
+  return NextResponse.json(
+    { message: result.message },
+    { status: result.status },
+  );
 }

@@ -14,7 +14,9 @@
     "audit:site": "pnpm exec unlighthouse-ci --site http://localhost:3000 --root . --sitemaps http://localhost:3000/sitemap.xml --mobile --throttle --samples 2 --no-cache --disable-dynamic-sampling --exclude-urls '/studio/.*' --output-path .tmp/unlighthouse",
     "audit:site:desktop": "pnpm exec unlighthouse-ci --site http://localhost:3000 --root . --sitemaps http://localhost:3000/sitemap.xml --desktop --throttle --samples 2 --no-cache --disable-dynamic-sampling --exclude-urls '/studio/.*' --output-path .tmp/unlighthouse-desktop",
     "db:up": "docker compose up -d",
-    "db:down": "docker compose down"
+    "db:down": "docker compose down",
+    "test:waitlist": "tsx --test tests/waitlist.test.ts",
+    "test:e2e:waitlist": "node tests/e2e/waitlist-e2e.mjs"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",
@@ -42,7 +44,9 @@
     "@unlighthouse/cli": "^0.17.7",
     "eslint": "^9.38.0",
     "eslint-config-next": "^16.0.0",
+    "playwright": "^1.58.2",
     "tailwindcss": "^4.1.8",
+    "tsx": "^4.21.0",
     "typescript": "^5.9.3"
   }
 }
