@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from 'react';
 
-import Link from 'next/link';
 import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 
@@ -156,21 +155,14 @@ export function SiteHeader() {
                 ))}
               </nav>
 
-              <div className="mt-auto grid border-t border-(--border) sm:grid-cols-2">
+              <div className="mt-auto border-t border-(--border)">
                 <TransitionLink
-                  className="px-4 py-4 text-lg font-medium text-(--foreground) sm:px-6"
+                  className="block px-4 py-4 text-lg font-medium text-(--foreground) sm:px-6"
                   href="/waitlist"
                   onBeforeNavigate={() => setMobileOpen(false)}
                 >
                   Join waitlist
                 </TransitionLink>
-                <Link
-                  className="border-t border-(--border) px-4 py-4 text-lg font-medium text-(--foreground) sm:border-l sm:border-t-0 sm:px-6"
-                  href="/studio"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  Studio
-                </Link>
               </div>
             </div>
           )}
