@@ -31,11 +31,11 @@ type Connection = {
 const sceneNodes: SceneNode[] = [
   {
     id: 'top-north',
-    x: 170,
-    y: 0,
+    x: 152,
+    y: 84,
     radius: 18,
-    driftX: 7,
-    driftY: -8,
+    driftX: 6,
+    driftY: -7,
     duration: 5.8,
     delay: 0.1,
     haloOpacity: 0.14,
@@ -45,13 +45,13 @@ const sceneNodes: SceneNode[] = [
   },
   {
     id: 'north',
-    x: 88,
-    y: 62,
-    radius: 18,
-    driftX: 7,
-    driftY: -8,
-    duration: 5.8,
-    delay: 0.1,
+    x: 234,
+    y: 74,
+    radius: 20,
+    driftX: 8,
+    driftY: -6,
+    duration: 5.9,
+    delay: 0.12,
     haloOpacity: 0.14,
     shellOpacity: 0.5,
     coreOpacity: 0.88,
@@ -59,12 +59,12 @@ const sceneNodes: SceneNode[] = [
   },
   {
     id: 'west',
-    x: 110,
-    y: 210,
-    radius: 26,
-    driftX: -10,
-    driftY: 8,
-    duration: 6.4,
+    x: 126,
+    y: 192,
+    radius: 24,
+    driftX: -9,
+    driftY: 7,
+    duration: 6.2,
     delay: 0.2,
     haloOpacity: 0.16,
     shellOpacity: 0.56,
@@ -72,26 +72,26 @@ const sceneNodes: SceneNode[] = [
     strokeOpacity: 0.28,
   },
   {
-    id: 'lower-west',
-    x: 116,
-    y: 314,
-    radius: 22,
-    driftX: 9,
-    driftY: 10,
-    duration: 7,
+    id: 'center',
+    x: 214,
+    y: 176,
+    radius: 28,
+    driftX: 10,
+    driftY: -8,
+    duration: 6.6,
     delay: 0.3,
-    haloOpacity: 0.14,
-    shellOpacity: 0.54,
-    coreOpacity: 0.88,
-    strokeOpacity: 0.26,
+    haloOpacity: 0.17,
+    shellOpacity: 0.58,
+    coreOpacity: 0.92,
+    strokeOpacity: 0.3,
   },
   {
     id: 'upper-mid',
-    x: 230,
-    y: 70,
-    radius: 16,
-    driftX: -8,
-    driftY: -6,
+    x: 300,
+    y: 118,
+    radius: 17,
+    driftX: -7,
+    driftY: -5,
     duration: 5.6,
     delay: 0.15,
     haloOpacity: 0.12,
@@ -100,26 +100,26 @@ const sceneNodes: SceneNode[] = [
     strokeOpacity: 0.24,
   },
   {
-    id: 'center',
-    x: 210,
-    y: 160,
-    radius: 30,
-    driftX: 12,
-    driftY: -9,
-    duration: 6.8,
-    delay: 0.35,
-    haloOpacity: 0.17,
-    shellOpacity: 0.58,
-    coreOpacity: 0.92,
-    strokeOpacity: 0.3,
+    id: 'upper-east',
+    x: 334,
+    y: 168,
+    radius: 14,
+    driftX: -6,
+    driftY: -4,
+    duration: 5.4,
+    delay: 0.18,
+    haloOpacity: 0.11,
+    shellOpacity: 0.46,
+    coreOpacity: 0.84,
+    strokeOpacity: 0.22,
   },
   {
     id: 'east',
-    x: 340,
-    y: 50,
+    x: 306,
+    y: 226,
     radius: 20,
-    driftX: -9,
-    driftY: 7,
+    driftX: -8,
+    driftY: 6,
     duration: 6.1,
     delay: 0.25,
     haloOpacity: 0.13,
@@ -128,111 +128,148 @@ const sceneNodes: SceneNode[] = [
     strokeOpacity: 0.24,
   },
   {
-    id: 'anchor',
-    x: 656,
-    y: 398,
-    radius: 500,
-    driftX: -14,
-    driftY: 12,
-    duration: 8.5,
-    delay: 0,
-    haloOpacity: 0.1,
-    shellOpacity: 0.4,
-    coreOpacity: 0.94,
+    id: 'lower-east',
+    x: 284,
+    y: 282,
+    radius: 16,
+    driftX: -7,
+    driftY: 5,
+    duration: 5.7,
+    delay: 0.28,
+    haloOpacity: 0.12,
+    shellOpacity: 0.47,
+    coreOpacity: 0.85,
+    strokeOpacity: 0.23,
+  },
+  {
+    id: 'lower-west',
+    x: 178,
+    y: 274,
+    radius: 22,
+    driftX: 8,
+    driftY: 9,
+    duration: 6.8,
+    delay: 0.35,
+    haloOpacity: 0.14,
+    shellOpacity: 0.54,
+    coreOpacity: 0.88,
+    strokeOpacity: 0.26,
+  },
+  {
+    id: 'south-mid',
+    x: 236,
+    y: 304,
+    radius: 15,
+    driftX: 6,
+    driftY: 7,
+    duration: 5.9,
+    delay: 0.32,
+    haloOpacity: 0.11,
+    shellOpacity: 0.45,
+    coreOpacity: 0.84,
     strokeOpacity: 0.22,
   },
 ];
 
 const connections: Connection[] = [
   {
-    id: 'top-north-east',
-    from: 'east',
-    to: 'top-north',
-    curveX: -20,
-    curveY: -24,
-    opacity: 0.18,
-    width: 1.2,
+    id: 'top-north-to-center',
+    from: 'top-north',
+    to: 'center',
+    curveX: -26,
+    curveY: -4,
+    opacity: 0.17,
+    width: 1.1,
   },
   {
-    id: 'north-west',
+    id: 'north-to-upper-mid',
     from: 'north',
-    to: 'west',
-    curveX: -20,
-    curveY: 24,
-    opacity: 0.18,
-    width: 1.2,
+    to: 'upper-mid',
+    curveX: 22,
+    curveY: -18,
+    opacity: 0.17,
+    width: 1.15,
   },
   {
-    id: 'west-center',
+    id: 'north-to-center',
+    from: 'north',
+    to: 'center',
+    curveX: -18,
+    curveY: 14,
+    opacity: 0.17,
+    width: 1.1,
+  },
+  {
+    id: 'upper-mid-to-upper-east',
+    from: 'upper-mid',
+    to: 'upper-east',
+    curveX: 18,
+    curveY: -10,
+    opacity: 0.15,
+    width: 1.05,
+  },
+  {
+    id: 'west-to-center',
     from: 'west',
     to: 'center',
-    curveX: -12,
-    curveY: -24,
+    curveX: -22,
+    curveY: -12,
     opacity: 0.2,
     width: 1.3,
   },
   {
-    id: 'lower-west-center',
-    from: 'lower-west',
-    to: 'center',
-    curveX: 4,
-    curveY: 24,
-    opacity: 0.18,
-    width: 1.2,
-  },
-  {
-    id: 'upper-mid-center',
-    from: 'upper-mid',
-    to: 'center',
-    curveX: 4,
-    curveY: -18,
-    opacity: 0.16,
-    width: 1.1,
-  },
-  {
-    id: 'center-east',
+    id: 'center-to-east',
     from: 'center',
     to: 'east',
-    curveX: 22,
-    curveY: -28,
+    curveX: 26,
+    curveY: -8,
     opacity: 0.18,
     width: 1.2,
   },
   {
-    id: 'west-anchor',
-    from: 'west',
-    to: 'anchor',
-    curveX: 30,
-    curveY: -20,
-    opacity: 0.24,
-    width: 1.5,
-  },
-  {
-    id: 'lower-west-anchor',
-    from: 'lower-west',
-    to: 'anchor',
-    curveX: 34,
-    curveY: 24,
-    opacity: 0.22,
-    width: 1.4,
-  },
-  {
-    id: 'center-anchor',
-    from: 'center',
-    to: 'anchor',
-    curveX: 56,
-    curveY: -40,
-    opacity: 0.28,
-    width: 1.6,
-  },
-  {
-    id: 'east-anchor',
+    id: 'east-to-upper-east',
     from: 'east',
-    to: 'anchor',
-    curveX: 30,
-    curveY: -52,
-    opacity: 0.22,
-    width: 1.4,
+    to: 'upper-east',
+    curveX: 20,
+    curveY: -18,
+    opacity: 0.16,
+    width: 1.08,
+  },
+  {
+    id: 'center-to-lower-west',
+    from: 'center',
+    to: 'lower-west',
+    curveX: -8,
+    curveY: 26,
+    opacity: 0.15,
+    width: 1.05,
+  },
+  {
+    id: 'east-to-lower-east',
+    from: 'east',
+    to: 'lower-east',
+    curveX: 14,
+    curveY: 20,
+    opacity: 0.16,
+    width: 1.08,
+  },
+  {
+    id: 'lower-west-to-south-mid',
+    from: 'lower-west',
+    to: 'south-mid',
+    curveX: 0,
+    curveY: 18,
+    opacity: 0.15,
+    width: 1.05,
+  },
+  {
+    id: 'south-mid-to-lower-east',
+    from: 'south-mid',
+    to: 'lower-east',
+    curveX: 2,
+    curveY: 18,
+    opacity: 0.16,
+    width: 1.08,
   },
 ];
 
@@ -245,12 +282,11 @@ function buildCurve(from: { x: number; y: number }, to: { x: number; y: number }
   return `M ${from.x} ${from.y} Q ${controlX} ${controlY} ${to.x} ${to.y}`;
 }
 
-export function LinkedNodesGraph() {
+export function ProductLinkedNodesGraph() {
   const nodeRefs = useRef<Record<string, SVGGElement | null>>({});
   const connectionRefs = useRef<Record<string, SVGPathElement | null>>({});
 
   useEffect(() => {
-    const anchorNodeId = 'anchor';
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     const getNodePosition = (node: SceneNode) => {
@@ -286,9 +322,7 @@ export function LinkedNodesGraph() {
     }
 
     const context = gsap.context(() => {
-      const anchorElement = nodeRefs.current[anchorNodeId];
       const secondaryElements = sceneNodes
-        .filter((node) => node.id !== anchorNodeId)
         .map((node) => nodeRefs.current[node.id])
         .filter((element): element is SVGGElement => element !== null);
 
@@ -390,14 +424,6 @@ export function LinkedNodesGraph() {
         });
       };
 
-      if (anchorElement) {
-        gsap.set(anchorElement, {
-          opacity: 0,
-          scale: 0.72,
-          transformOrigin: `${nodeLookup[anchorNodeId].x}px ${nodeLookup[anchorNodeId].y}px`,
-        });
-      }
-
       secondaryElements.forEach((element) => {
         const nodeId = element.dataset.nodeId;
         const node = nodeId ? nodeLookup[nodeId] : null;
@@ -438,15 +464,6 @@ export function LinkedNodesGraph() {
         },
       });
 
-      if (anchorElement) {
-        revealTimeline.to(anchorElement, {
-          opacity: 1,
-          scale: 1,
-          duration: 0.95,
-        });
-        revealTimeline.to({}, { duration: 0.15 });
-      }
-
       if (secondaryElements.length > 0) {
         revealTimeline.to(secondaryElements, {
           opacity: 1,
@@ -479,18 +496,25 @@ export function LinkedNodesGraph() {
   }, []);
 
   return (
-    <div className="relative min-h-[30rem] w-full overflow-hidden lg:h-full">
+    <div className="relative h-full w-full overflow-hidden">
       <svg
         aria-hidden="true"
-        className="relative block h-[30rem] w-full lg:h-full"
+        className="relative block h-full w-full"
         preserveAspectRatio="xMidYMid meet"
-        viewBox="0 0 640 380"
+        viewBox="48 0 320 340"
       >
         <defs>
-          
-          
-          
-          <filter id="linked-node-softness" x="-40%" y="-40%" width="180%" height="180%">
+          <radialGradient id="product-linked-node-halo" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="oklch(from var(--primary) l c h / 0.24)" />
+            <stop offset="70%" stopColor="oklch(from var(--primary) l c h / 0.12)" />
+            <stop offset="100%" stopColor="oklch(from var(--primary) l c h / 0)" />
+          </radialGradient>
+          <radialGradient id="product-linked-node-shell" cx="34%" cy="30%" r="78%">
+            <stop offset="0%" stopColor="oklch(from var(--primary) l c h / 0.2)" />
+            <stop offset="58%" stopColor="oklch(from var(--primary) l c h / 0.11)" />
+            <stop offset="100%" stopColor="oklch(from var(--primary) l c h / 0.06)" />
+          </radialGradient>
+          <filter id="product-linked-node-softness" x="-40%" y="-40%" width="180%" height="180%">
             <feGaussianBlur stdDeviation="18" />
           </filter>
         </defs>
@@ -518,9 +542,6 @@ export function LinkedNodesGraph() {
         })}
 
         {sceneNodes.map((node) => {
-          const highlightRadius = node.id === 'anchor' ? node.radius * 0.14 : node.radius * 0.2;
-          const highlightOffset = node.id === 'anchor' ? node.radius * 0.24 : node.radius * 0.3;
-
           return (
             <g
               key={node.id}
@@ -533,8 +554,8 @@ export function LinkedNodesGraph() {
                 cx={node.x}
                 cy={node.y}
                 data-part="halo"
-                fill="url(#linked-node-halo)"
-                filter="url(#linked-node-softness)"
+                fill="url(#product-linked-node-halo)"
+                filter="url(#product-linked-node-softness)"
                 opacity={node.haloOpacity}
                 r={node.radius * 1.14}
               />
@@ -542,7 +563,7 @@ export function LinkedNodesGraph() {
                 cx={node.x}
                 cy={node.y}
                 data-part="shell"
-                fill="url(#linked-node-shell)"
+                fill="url(#product-linked-node-shell)"
                 opacity={node.shellOpacity}
                 r={node.radius * 0.82}
                 stroke="oklch(from var(--foreground) l c h / 0.08)"

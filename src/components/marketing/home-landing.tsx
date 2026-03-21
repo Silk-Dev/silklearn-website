@@ -481,44 +481,7 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
           ))}
         </div>
 
-        {/* ── SOLUTIONS ── centered header then 2-col grid */}
-        {/* <div className="border-t border-(--border) px-6 py-12 sm:px-8 lg:px-10 lg:pt-50 lg:pb-30">
-          <ScrollReveal className="mx-auto max-w-140 text-center">
-            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">SILKLEARN solutions</p>
-            <h2 className="mt-4 font-(family-name:--font-display) text-[clamp(2rem,3.6vw,3.375rem)] leading-none tracking-[-0.02em] text-(--foreground)">
-              Two ways teams use SILKLEARN to reduce guesswork.
-            </h2>
-          </ScrollReveal>
-        </div> */}
-
-        {/* <div className="grid  lg:grid-cols-[1fr_1px_1fr]">
-          {operatingModes.map((mode, i) => {
-            return (
-              <Fragment key={mode.title}>
-                {i > 0 && <div className="bg-(--border) max-lg:h-px" />}
-                <ScrollReveal className="flex h-full flex-col p-6 sm:p-8 lg:p-10">
-                  <div>
-                    <h3 className="text-[1.5rem] leading-tight tracking-[-0.02em] text-(--foreground)">{mode.eyebrow}</h3>
-                    <p className="mt-3 max-w-[48ch] text-sm leading-5 text-(--muted-foreground)">
-                      {mode.title}. {mode.body}
-                    </p>
-                  </div>
-
-                  <LottiePlaceholder
-                    animationSrc={mode.animationSrc}
-                    className="mt-auto pt-8"
-                    description={mode.eyebrow === 'Compile'
-                      ? 'Animated diagram: raw document pages (PDF, MD, DOCX) feed into a funnel that outputs a structured dependency graph with nodes and directed edges. Nodes light up in sequence to show prerequisite order being discovered.'
-                      : 'Animated diagram: a single compiled graph branches into three output lanes — an onboarding path, a review queue, and an AI context bundle. Each lane pulses to show reuse from one source structure.'}
-                    height="h-48"
-                    label={`Lottie · ${mode.eyebrow}`}
-                  />
-
-                </ScrollReveal>
-              </Fragment>
-            );
-          })}
-        </div> */}
+      
 
         {/* ── IN ACTION ── left rail + stacked cards, Rollups pattern */}
         <div className="grid border-t border-(--border) lg:grid-cols-[1fr_1px_2fr] pt-40">
@@ -563,7 +526,7 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
                       <div className="flex items-center p-6 sm:p-8 lg:p-10">
                       
                           <LottiePlaceholder
-                            animationSrc={panel.src}
+                            animationSrc="/silklearn/animations/file.json"
                             animationClassName="h-full w-full max-h-full max-w-full"
                             className="w-full"
                             description={panel.step === 'Step 01'
