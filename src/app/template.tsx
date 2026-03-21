@@ -7,8 +7,8 @@ import { animatePageIn } from '@/components/marketing/page-transition/animations
 
 const PAGE_ROUTES: Record<string, string> = {
   '/': 'SILKLEARN',
-  '/product': 'Product',
-  '/how-it-works': 'How It Works',
+  '/product': 'How It Works',
+  '/for-whom': 'For Whom',
   '/features': 'Features',
   '/use-cases': 'Use Cases',
   '/guides': 'Guides',

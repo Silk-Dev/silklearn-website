@@ -11,12 +11,22 @@ type SubmissionState = {
   message: string;
 };
 
+type WaitlistFormProps = {
+  submitLabel?: string;
+  idleMessage?: string;
+  fitNote?: string | null;
+};
+
 const idleState: SubmissionState = {
   kind: 'idle',
   message: '',
 };
 
-export function WaitlistForm() {
+export function WaitlistForm({
+  submitLabel = 'Request early access',
+  idleMessage = 'Private beta access. No spam. We review every application.',
+  fitNote = 'Best fit: leaders testing onboarding, handoffs, compliance review, or AI context built from dense private docs.',
+}: WaitlistFormProps) {
   const [email, setEmail] = useState('');
   const [companyName, setCompanyName] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -94,7 +104,7 @@ export function WaitlistForm() {
       </label>
 
       <Button disabled={isSubmitting} type="submit">
-        {isSubmitting ? 'Saving...' : 'Request early access'}
+        {isSubmitting ? 'Saving...' : submitLabel}
       </Button>
 
       <p
@@ -106,12 +116,10 @@ export function WaitlistForm() {
               : 'text-(--muted-foreground)'
         }`}
       >
-        {submissionState.message || 'Private beta access. No spam. We review every application.'}
+        {submissionState.message || idleMessage}
       </p>
 
-      <p className="text-xs leading-6 text-(--muted-foreground)">
-        Best fit: leaders testing onboarding, handoffs, compliance review, or AI context built from dense private docs.
-      </p>
+      {fitNote ? <p className="text-xs leading-6 text-(--muted-foreground)">{fitNote}</p> : null}
     </form>
   );
 }

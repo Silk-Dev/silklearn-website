@@ -65,7 +65,7 @@ export const fallbackHomePageContent: HomePageContent = {
   primaryCtaLabel: 'Request early access',
   primaryCtaHref: '#waitlist',
   secondaryCtaLabel: 'See how compilation works',
-  secondaryCtaHref: '/how-it-works',
+  secondaryCtaHref: '/product',
   metrics: [
     { label: 'Input', value: 'Runbooks, onboarding docs, specs, policies' },
     { label: 'Output', value: 'Reviewable graph, learning paths, AI context bundles' },
