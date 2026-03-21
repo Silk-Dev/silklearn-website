@@ -526,7 +526,7 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
                       <div className="flex items-center p-6 sm:p-8 lg:p-10">
                       
                           <LottiePlaceholder
-                            animationSrc="/silklearn/animations/file.json"
+                            animationSrc={panel.src}
                             animationClassName="h-full w-full max-h-full max-w-full"
                             className="w-full"
                             description={panel.step === 'Step 01'
