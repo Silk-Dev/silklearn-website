@@ -106,7 +106,7 @@ export function WaitlistForm() {
               : 'text-(--muted-foreground)'
         }`}
       >
-        {submissionState.message || 'Private beta access rolls out in waves after a quick fit review.'}
+        {submissionState.message || 'Private beta access. No spam. We review every application.'}
       </p>
 
       <p className="text-xs leading-6 text-(--muted-foreground)">

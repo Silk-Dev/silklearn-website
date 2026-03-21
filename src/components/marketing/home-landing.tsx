@@ -45,42 +45,57 @@ const operatingModes = [
   },
 ];
 
+const painBlocks = [
+  {
+    quote: 'Why does everyone ask the same onboarding questions?',
+    answer: 'Because the docs do not show what order they should be read.',
+  },
+  {
+    quote: 'Our rollout failed because someone missed a dependency.',
+    answer: 'Because the prerequisite logic was buried in docs nobody knew were connected.',
+  },
+  {
+    quote: 'We built the internal AI assistant but it gives wrong answers.',
+    answer: 'Because the knowledge it pulls from has no structure and no prerequisite order.',
+  },
+];
+
 const actionPanels = [
   {
     step: 'Step 01',
     src: '/silklearn/animations/step-01-document-scan.json',
-    title: 'Start with the real document stack, not a rewritten summary',
-    summary: 'Document boundaries stay visible so leaders can see what was actually compiled, what remains unresolved, and what still needs human review.',
+    title: 'Drop in your docs, exactly as they are.',
+    summary: 'SILKLEARN reads your runbooks, architecture docs, and onboarding notes. It extracts prerequisite order and cross-document dependencies — without rewriting anything.',
     rows: [
       'Architecture spec.pdf',
       'Support escalation runbook.docx',
       'Internal onboarding handbook.md',
     ],
-    note: 'Source provenance preserved',
+    note: 'Compile',
   },
   {
     step: 'Step 02',
     src: '/silklearn/animations/step-02.json',
-    title: 'Surface the dependency order before a rollout depends on it',
-    summary: 'The graph makes hidden prerequisite logic visible before onboarding, handoff, or internal AI depends on it being correct.',
+    title: 'Inspect and approve the structure.',
+    summary: 'The compiled graph lands in a review interface. Leaders accept edges, flag gaps, and reconcile conflicts before anything ships to the team. Full audit trail included.',
     rows: [
       'Auth model -> Access policy',
       'Access policy -> Incident recovery',
       'Incident recovery -> Escalation workflow',
     ],
-    note: 'Cross-document links reviewed',
+    note: 'Review',
   },
   {
     step: 'Step 03',
     src: '/silklearn/animations/step-03.json',
-    title: 'Ship outputs teams can actually use',
-    summary: 'Teams publish onboarding ramps, review queues, and minimum-context bundles from the same compiled structure instead of rebuilding from scratch.',
+    title: 'Publish outputs teams can actually use.',
+    summary: 'From one reviewed graph: a prerequisite-ordered learning path, a rollout checklist, a compliance review queue, and a minimum-context AI bundle. Update the graph and all outputs refresh.',
     rows: [
       'Engineering onboarding path',
       'Support agent context bundle',
       'Leader review queue',
     ],
-    note: 'Outputs stay reviewable',
+    note: 'Ship',
   },
 ];
 
@@ -443,17 +458,40 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
 
 
 
+        <div className="border-t border-(--border)">
+          {painBlocks.map((item, index) => (
+            <div
+              key={item.quote}
+              className={`grid lg:min-h-[12.5rem] lg:grid-cols-[1.15fr_0.85fr] ${index > 0 ? 'border-t border-(--border)' : ''}`}
+            >
+              <ScrollReveal className="px-6 py-9 sm:px-8 lg:flex lg:items-center lg:px-10 lg:py-12">
+                <blockquote className="max-w-[22ch] font-(family-name:--font-display) text-[clamp(1.6rem,2.1vw,2.25rem)] leading-[1.02] tracking-[-0.03em] text-(--foreground)">
+                  &ldquo;{item.quote}&rdquo;
+                </blockquote>
+              </ScrollReveal>
+
+              <ScrollReveal className=" px-6 py-9 sm:px-8 lg:flex lg:items-center lg:px-10 lg:py-12">
+                <div className="max-w-[30rem]">
+                  <p className="text-[0.98rem] leading-7 text-(--foreground)">
+                    {item.answer}
+                  </p>
+                </div>
+              </ScrollReveal>
+            </div>
+          ))}
+        </div>
+
         {/* ── SOLUTIONS ── centered header then 2-col grid */}
-        <div className="border-t border-(--border) px-6 py-12 sm:px-8 lg:px-10 lg:pt-50 lg:pb-30">
+        {/* <div className="border-t border-(--border) px-6 py-12 sm:px-8 lg:px-10 lg:pt-50 lg:pb-30">
           <ScrollReveal className="mx-auto max-w-140 text-center">
             <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">SILKLEARN solutions</p>
             <h2 className="mt-4 font-(family-name:--font-display) text-[clamp(2rem,3.6vw,3.375rem)] leading-none tracking-[-0.02em] text-(--foreground)">
               Two ways teams use SILKLEARN to reduce guesswork.
             </h2>
           </ScrollReveal>
-        </div>
+        </div> */}
 
-        <div className="grid  lg:grid-cols-[1fr_1px_1fr]">
+        {/* <div className="grid  lg:grid-cols-[1fr_1px_1fr]">
           {operatingModes.map((mode, i) => {
             return (
               <Fragment key={mode.title}>
@@ -480,7 +518,7 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
               </Fragment>
             );
           })}
-        </div>
+        </div> */}
 
         {/* ── IN ACTION ── left rail + stacked cards, Rollups pattern */}
         <div className="grid border-t border-(--border) lg:grid-cols-[1fr_1px_2fr] pt-50">
@@ -508,11 +546,9 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
             <div>
               <div className="border-b border-(--border) px-6 pt-6 pb-20 sm:px-8 sm:pt-8 lg:px-10">
                 <h2 className="text-[2.5rem] leading-tight tracking-[-0.02em] text-(--foreground)">
-                  Silklearn in action
+                  Three steps from document stack to team-ready output.
                 </h2>
-                <p className="mt-3 max-w-[42ch] text-sm leading-5 text-(--muted-foreground)">
-                  Three common situations in which companies use SILKLEARN. Don&apos;t see your use case? There are many more. Contact us.
-                </p>
+                
               </div>
               <div className='border-l border-t border-(--border)'>
                 {actionPanels.map((panel, i) => (
@@ -605,10 +641,10 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
           
         {/* ── CORE PILLARS ── */}
         <div className="grid border-t border-(--border) lg:grid-cols-[1fr_1px_1.3fr]">
-          <ScrollReveal className="p-6 sm:p-8 lg:p-10">
+          <ScrollReveal className="p-6 sm:p-8 lg:flex lg:h-full lg:flex-col lg:justify-center lg:p-10">
             <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">Core pillars</p>
-            <h2 className="mt-4 max-w-[10ch] font-(family-name:--font-display) text-[clamp(2rem,3.6vw,3.375rem)] leading-none tracking-[-0.02em] text-(--foreground)">
-              Structure is the product. Everything else is downstream.
+            <h2 className="mt-4 max-w-[12ch] font-(family-name:--font-display) text-[clamp(2rem,3.6vw,3.375rem)] leading-none tracking-[-0.02em] text-(--foreground)">
+              Two ways teams use SILKLEARN to stop losing time to guesswork.
             </h2>
           </ScrollReveal>
 
@@ -682,7 +718,7 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
               See whether your document stack is a fit for early access.
             </h2>
             <p className="max-w-[56ch] text-base leading-5 text-(--muted-foreground)">
-              Early access is for leaders using private docs for onboarding, operational handoffs, compliance review, or internal AI context. If missing dependency order is slowing the team down, this is what the beta is built for.
+              Early access rolls out in waves after a quick fit review. Best fit: engineering, ops, and compliance leaders working from dense internal docs.
             </p>
 
            

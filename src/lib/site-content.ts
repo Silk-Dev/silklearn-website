@@ -61,7 +61,7 @@ export const fallbackHomePageContent: HomePageContent = {
   kicker: 'For leaders turning dense internal docs into team-ready knowledge.',
   headline: 'Turn internal docs into learning paths.',
   subheadline:
-    'SILKLEARN turns runbooks, onboarding docs, and specs into a reviewable graph leaders can approve and teams can use.',
+    'SILKLEARN compiles runbooks, onboarding docs, and specs into a dependency-ordered, leader-reviewed knowledge graph so teams stop guessing what comes first.',
   primaryCtaLabel: 'Request early access',
   primaryCtaHref: '#waitlist',
   secondaryCtaLabel: 'See how compilation works',
@@ -73,19 +73,24 @@ export const fallbackHomePageContent: HomePageContent = {
   ],
   pillars: [
     {
-      title: 'Make hidden dependency order visible',
+      title: 'Onboarding',
       description:
-        'Turn dense, assumption-heavy documents into a source-backed sequence so teams can see what has to be understood first before rollout or onboarding.',
+        'Cut engineer ramp time without rewriting a single doc. Compile your existing runbooks into a sequence that makes sense from day one.',
     },
     {
-      title: 'Reuse one compiled structure across teams and tools',
+      title: 'Rollout',
       description:
-        'Use the same reviewed graph to power onboarding, enablement, rollout review, and internal AI context instead of rebuilding logic in every workflow.',
+        'Ship rollouts where teams actually understand what comes first. Surface dependency logic before a handoff depends on it.',
     },
     {
-      title: 'Keep leaders in review before anything ships',
+      title: 'AI Context',
       description:
-        'Leaders inspect the graph, reconcile edge cases, and approve downstream outputs before they become team guidance or AI-delivered context.',
+        'Give your internal AI assistant structured context, not a RAG guess. Every output is grounded in a leader-reviewed source.',
+    },
+    {
+      title: 'Compliance',
+      description:
+        'Generate a reviewable audit trail from your source documents — reviewer names, timestamps, and source links included.',
     },
   ],
   faq: [
