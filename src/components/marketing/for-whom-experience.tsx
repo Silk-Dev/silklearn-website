@@ -59,6 +59,9 @@ export function ForWhomExperience({ personas }: ForWhomExperienceProps) {
   const handleTabSelect = (id: string) => {
     setSelectedId(id);
     window.history.replaceState(null, '', `#${id}`);
+    window.requestAnimationFrame(() => {
+      scrollToSecondaryMenu();
+    });
   };
 
   return (
