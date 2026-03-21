@@ -521,7 +521,7 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
         </div> */}
 
         {/* ── IN ACTION ── left rail + stacked cards, Rollups pattern */}
-        <div className="grid border-t border-(--border) lg:grid-cols-[1fr_1px_2fr] pt-50">
+        <div className="grid border-t border-(--border) lg:grid-cols-[1fr_1px_2fr] pt-40">
           <ScrollReveal className="hidden p-6 sm:p-8 lg:block lg:py-48 lg:sticky lg:top-28 lg:self-start">
             
 
