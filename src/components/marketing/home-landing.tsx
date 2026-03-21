@@ -48,15 +48,15 @@ const operatingModes = [
 const painBlocks = [
   {
     quote: 'Why does everyone ask the same onboarding questions?',
-    answer: 'Because the docs do not show what order they should be read.',
+    answer: 'Because the docs don\'t show what order to read them in.',
   },
   {
-    quote: 'Our rollout failed because someone missed a dependency.',
-    answer: 'Because the prerequisite logic was buried in docs nobody knew were connected.',
+    quote: 'Our rollout failed because someone missed a step.',
+    answer: 'Because the prerequisite logic was buried across docs nobody connected.',
   },
   {
-    quote: 'We built the internal AI assistant but it gives wrong answers.',
-    answer: 'Because the knowledge it pulls from has no structure and no prerequisite order.',
+    quote: 'Our internal AI gives wrong answers.',
+    answer: 'Because the context it receives has no structure or order.',
   },
 ];
 
@@ -65,7 +65,7 @@ const actionPanels = [
     step: 'Step 01',
     src: '/silklearn/animations/step-01-document-scan.json',
     title: 'Drop in your docs, exactly as they are.',
-    summary: 'SILKLEARN reads your runbooks, architecture docs, and onboarding notes. It extracts prerequisite order and cross-document dependencies — without rewriting anything.',
+    summary: 'PDF, Markdown, DOCX, Notion, Confluence. No reformatting needed.',
     rows: [
       'Architecture spec.pdf',
       'Support escalation runbook.docx',
@@ -76,8 +76,8 @@ const actionPanels = [
   {
     step: 'Step 02',
     src: '/silklearn/animations/step-02.json',
-    title: 'Inspect and approve the structure.',
-    summary: 'The compiled graph lands in a review interface. Leaders accept edges, flag gaps, and reconcile conflicts before anything ships to the team. Full audit trail included.',
+    title: 'See the structure. Approve it before it ships.',
+    summary: 'Leaders inspect every connection and sign off. Audit trail built automatically.',
     rows: [
       'Auth model -> Access policy',
       'Access policy -> Incident recovery',
@@ -88,8 +88,8 @@ const actionPanels = [
   {
     step: 'Step 03',
     src: '/silklearn/animations/step-03.json',
-    title: 'Publish outputs teams can actually use.',
-    summary: 'From one reviewed graph: a prerequisite-ordered learning path, a rollout checklist, a compliance review queue, and a minimum-context AI bundle. Update the graph and all outputs refresh.',
+    title: 'Publish a path teams can use from day one.',
+    summary: 'Learning path, rollout checklist, compliance queue, or AI context bundle — from one reviewed source.',
     rows: [
       'Engineering onboarding path',
       'Support agent context bundle',
@@ -119,33 +119,33 @@ type StageJourneyStage = {
 
 const stageJourney: StageJourneyStage[] = [
   {
-    label: 'Stage A',
-    title: 'Compile the source stack',
-    description: 'Turn dense internal documents into a starting map teams can understand before they improvise.',
+    label: 'Engineering onboarding',
+    title: 'Cut ramp time without rewriting a single doc.',
+    description: 'Compile your existing runbooks into a sequence that makes sense from day one.',
     point: { x: -100, y: 305 },
     connector: { x: -100, y: 400 },
     card: { x: 124, y: 300 },
   },
   {
-    label: 'Stage B',
-    title: 'Expose hidden prerequisite order',
-    description: 'Make dependency logic visible before onboarding, rollout, or a cross-team handoff depends on it.',
+    label: 'Rollout readiness',
+    title: 'Ship rollouts where teams know what comes first.',
+    description: 'Surface dependency logic before a handoff depends on it being right.',
     point: { x: 180, y: 168 },
     connector: { x: 180, y: 263 },
     card: { x: 404, y: 163 },
   },
   {
-    label: 'Stage C',
-    title: 'Reuse the graph across teams',
-    description: 'Feed onboarding, operational review, and internal AI context from one reviewed structure.',
+    label: 'Internal AI context',
+    title: 'Give your AI structured context, not a RAG guess.',
+    description: 'Every output is grounded in a leader-reviewed, prerequisite-ordered source.',
     point: { x: 460, y: 107 },
     connector: { x: 460, y: 202 },
     card: { x: 684, y: 102 },
   },
   {
-    label: 'Stage D',
-    title: 'Standardize transfer without losing review',
-    description: 'Keep outputs consistent, traceable, and leader-reviewable as more teams reuse the same logic.',
+    label: 'Compliance review',
+    title: 'A reviewable audit trail from your actual docs.',
+    description: 'Reviewer names, timestamps, and source links - built as you review.',
     point: { x: 740, y: 85 },
     connector: { x: 740, y: 180 },
     card: { x: 964, y: 80 },
@@ -584,7 +584,7 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
                 When order is visible, teams ramp faster and handoffs break less often.
               </h3>
               <p className="mt-4 text-sm leading-5 text-(--muted-foreground)">
-                Teams can only reuse internal knowledge safely when the order, provenance, and downstream implications are visible before rollout, onboarding, or AI delivery.
+                Teams can only reuse internal knowledge safely when the order, source, and impact are clear before rollout, onboarding, or AI delivery.
               </p>
 
               <div className="mt-6">
@@ -601,32 +601,6 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
         </div>
 
 
-          
-        {/* ── CORE PILLARS ── */}
-        <div className="grid border-t border-(--border) lg:grid-cols-[1fr_1px_1.3fr]">
-          <ScrollReveal className="p-6 sm:p-8 lg:flex lg:h-full lg:flex-col lg:justify-center lg:p-10">
-            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">Core pillars</p>
-            <h2 className="mt-4 max-w-[12ch] font-(family-name:--font-display) text-[clamp(2rem,3.6vw,3.375rem)] leading-none tracking-[-0.02em] text-(--foreground)">
-              Two ways teams use SILKLEARN to stop losing time to guesswork.
-            </h2>
-          </ScrollReveal>
-
-          <div className="hidden bg-(--border) lg:block" />
-
-          <StaggerReveal stagger={0.1}>
-            {content.pillars.map((pillar, i) => (
-              <div key={pillar.title} className={`grid gap-4 p-6 sm:grid-cols-[auto_1fr] sm:items-start sm:p-8${i > 0 ? ' border-t border-(--border)' : ''}`}>
-                <div className="flex size-11 items-center justify-center rounded-xl border border-[oklch(from_var(--primary)_l_c_h/0.14)] bg-(--card) text-(--primary)">
-                  <CheckCircle2 className="size-4.5" />
-                </div>
-                <div>
-                  <h3 className="text-[1.05rem] leading-tight text-(--foreground)">{pillar.title}</h3>
-                  <p className="mt-3 text-sm leading-5 text-(--muted-foreground)">{pillar.description}</p>
-                </div>
-              </div>
-            ))}
-          </StaggerReveal>
-        </div>
 
         <div className="grid border-t border-(--border) ">
           <ScrollReveal className="p-6 sm:p-8 lg:p-10 lg:pt-50">
@@ -647,7 +621,7 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
                 <button
                   aria-controls={`faq-panel-${i}`}
                   aria-expanded={openFaqIndex === i}
-                  className="group flex w-full items-start justify-between gap-4 text-left transition-colors duration-200"
+                  className="group flex w-full cursor-pointer items-start justify-between gap-4 text-left transition-colors duration-200"
                   onClick={() => setOpenFaqIndex((currentIndex) => (currentIndex === i ? null : i))}
                   type="button"
                 >

@@ -59,9 +59,9 @@ export type MarketingPost = {
 
 export const fallbackHomePageContent: HomePageContent = {
   kicker: 'For leaders turning dense internal docs into team-ready knowledge.',
-  headline: 'Turn internal docs into learning paths.',
+  headline: 'Your docs, organized into a path your team can actually follow.',
   subheadline:
-    'SILKLEARN compiles runbooks, onboarding docs, and specs into a dependency-ordered, leader-reviewed knowledge graph so teams stop guessing what comes first.',
+    'Drop in your runbooks, specs, and onboarding notes. SILKLEARN puts them in the right order — and lets leaders approve the structure before anyone follows it.',
   primaryCtaLabel: 'Request early access',
   primaryCtaHref: '#waitlist',
   secondaryCtaLabel: 'See how compilation works',
