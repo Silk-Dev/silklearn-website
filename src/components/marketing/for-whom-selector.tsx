@@ -35,8 +35,8 @@ export function ForWhomSelector({ personas, selectedId = null, onSelect }: ForWh
         <button
           key={persona.id}
           aria-pressed={selectedId === persona.id}
-          className={`grid h-full w-full grid-rows-[1fr_auto] cursor-pointer border border-(--border)  text-center shadow-sm transition-all duration-150 hover:shadow-md hover:border-(--primary) hover:bg-[oklch(0.95_0.01_247.84)] dark:hover:bg-[oklch(0.2686_0_0)] ${
-            selectedId === persona.id ? 'border-(--border)  shadow-md' : ''
+          className={`grid h-full w-full grid-rows-[1fr_auto] cursor-pointer  text-center shadow-sm transition-all duration-150 hover:shadow-md hover:border-(--primary) hover:bg-[oklch(0.95_0.01_247.84)] dark:hover:bg-[oklch(0.2686_0_0)] ${
+            selectedId === persona.id ? '  shadow-md' : ''
           }`}
           onClick={() => handleSelect(persona.id)}
           type="button"
