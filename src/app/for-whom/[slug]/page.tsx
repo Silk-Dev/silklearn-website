@@ -27,7 +27,7 @@ export default function ForWhomPersonaPage() {
 						   <div className="hidden bg-(--border) lg:block h-full col-span-1" />
 						   {/* Sticky Lottie only on large screens, normal flow on mobile */}
 						   <div className="col-span-1 flex justify-center lg:block">
-							   <div className="lg:sticky lg:top-10 py-25">
+							   <div className="lg:sticky lg:top-20 py-25">
 								<LottiePlaceholder
 									animationSrc={persona.animationSrc}
 									animationClassName="h-full w-full max-h-80 max-w-80"
