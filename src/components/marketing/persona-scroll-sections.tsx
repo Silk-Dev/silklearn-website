@@ -96,7 +96,7 @@ export function PersonaScrollSections({ persona }: PersonaScrollSectionsProps) {
   }, [persona.id]);
 
   const nodePositions = Array.from({ length: sectionCount }, (_, index) =>
-    sectionCount === 1 ? 0 : (index / (sectionCount - 1)) * 100
+    Number(sectionCount) === 1 ? 0 : (index / (Number(sectionCount) - 1)) * 100
   );
 
   return (
