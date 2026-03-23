@@ -2,6 +2,40 @@ import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  async redirects() {
+    return [
+      {
+        source: '/for-whom',
+        destination: '/use-cases',
+        permanent: false,
+      },
+      {
+        source: '/pricing',
+        destination: '/waitlist',
+        permanent: false,
+      },
+      {
+        source: '/vision',
+        destination: '/product',
+        permanent: false,
+      },
+      {
+        source: '/deep-dive',
+        destination: '/how-it-works',
+        permanent: false,
+      },
+      {
+        source: '/paper',
+        destination: '/how-it-works',
+        permanent: false,
+      },
+      {
+        source: '/talk-to-us',
+        destination: '/waitlist',
+        permanent: false,
+      },
+    ];
+  },
   async headers() {
     const isDevelopment = process.env.NODE_ENV === 'development';
 

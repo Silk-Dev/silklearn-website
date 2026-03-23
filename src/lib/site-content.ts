@@ -58,56 +58,51 @@ export type MarketingPost = {
 };
 
 export const fallbackHomePageContent: HomePageContent = {
-  kicker: 'For leaders turning dense internal docs into team-ready knowledge.',
-  headline: 'Your docs, organized into a path your team can actually follow.',
+  kicker: 'For teams that work from big docs.',
+  headline: 'Turn long docs into a clear path your team can follow.',
   subheadline:
-    'Drop in your runbooks, specs, and onboarding notes. SILKLEARN puts them in the right order — and lets leaders approve the structure before anyone follows it.',
+    'SILKLEARN reads your docs, puts the steps in order, and shows leaders what to approve before people or AI use it.',
   primaryCtaLabel: 'Request early access',
   primaryCtaHref: '#waitlist',
-  secondaryCtaLabel: 'See how compilation works',
-  secondaryCtaHref: '/product',
+  secondaryCtaLabel: 'See how it works',
+  secondaryCtaHref: '/how-it-works',
   metrics: [
-    { label: 'Input', value: 'Runbooks, onboarding docs, specs, policies' },
-    { label: 'Output', value: 'Reviewable graph, learning paths, AI context bundles' },
-    { label: 'Best fit', value: 'Teams where missing context creates expensive mistakes' },
+    { label: 'Start with', value: 'PDFs, specs, SOPs, handbooks, and notes you already have' },
+    { label: 'Get back', value: 'A clear path, a map of key links, and reviewed context for AI' },
+    { label: 'Best for', value: 'Teams that lose time when steps are out of order' },
   ],
   pillars: [
     {
-      title: 'Onboarding',
+      title: 'Show what comes first',
       description:
-        'Cut engineer ramp time without rewriting a single doc. Compile your existing runbooks into a sequence that makes sense from day one.',
+        'SILKLEARN puts your docs in the right order, so people can see what they need to learn first.',
     },
     {
-      title: 'Rollout',
+      title: 'Use one approved source',
       description:
-        'Ship rollouts where teams actually understand what comes first. Surface dependency logic before a handoff depends on it.',
+        'Your team, your rollout, and your AI can all use the same reviewed structure.',
     },
     {
-      title: 'AI Context',
+      title: 'Keep leaders in control',
       description:
-        'Give your internal AI assistant structured context, not a RAG guess. Every output is grounded in a leader-reviewed source.',
-    },
-    {
-      title: 'Compliance',
-      description:
-        'Generate a reviewable audit trail from your source documents — reviewer names, timestamps, and source links included.',
+        'Leaders can check the path, fix mistakes, and approve it before anyone uses it.',
     },
   ],
   faq: [
     {
       question: 'Who is SILKLEARN for?',
       answer:
-        'SILKLEARN is for engineering, product, operations, and compliance leaders working from dense private docs where onboarding errors, rollout confusion, or missing context are expensive.',
+        'It is for teams with a lot of docs. It helps leaders turn those docs into a path people can follow.',
     },
     {
-      question: 'What makes this different from RAG or a course builder?',
+      question: 'How is this different from RAG, search, or a course builder?',
       answer:
-        'RAG retrieves text after someone asks a question, and course builders usually depend on manual lesson design. SILKLEARN compiles prerequisite order from the source itself so teams can review the structure before it drives onboarding or AI.',
+        'Search helps after a question. Course tools need manual setup. SILKLEARN starts with your docs and builds the order for you.',
     },
     {
-      question: 'What does a team actually get from the product?',
+      question: 'What does a team actually get?',
       answer:
-        'The durable asset is a reviewable knowledge graph plus downstream outputs: dependency-ordered learning paths, onboarding ramps, rollout artifacts, and minimum-context bundles grounded in the source material.',
+        'Your team gets a clear learning path, a map of what connects, and a reviewed context pack for AI.',
     },
   ],
 };

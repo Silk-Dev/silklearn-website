@@ -86,7 +86,7 @@
     oklch(from var(--shadow-color) l c h / 0.25);
   --tracking-normal: 0em;
   --spacing: 0.25rem;
-  --body-background: #E5E9EE;
+  --body-background: rgb(59, 130, 246);
 }
 
 .dark {
