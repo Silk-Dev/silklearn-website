@@ -1,18 +1,12 @@
 import type { Metadata } from 'next';
 
-import { ArrowRight } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import { notFound } from 'next/navigation';
 
 import { PortableTextRenderer } from '@/components/marketing/portable-text';
 import { TransitionLink } from '@/components/marketing/page-transition';
-import {
-  MarketingCtaSection,
-  MarketingHero,
-  MarketingPageFrame,
-  MarketingSplitSection,
-} from '@/components/marketing/page-structure';
+import { MarketingPageFrame } from '@/components/marketing/page-structure';
 import { PageShell } from '@/components/marketing/page-shell';
-import { Button } from '@/components/ui/button';
 import { getPostBySlug, getPostsByCategory } from '@/lib/sanity';
 import { buildMetadata } from '@/lib/seo';
 
@@ -43,59 +37,66 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const post = await getPostBySlug('blog', slug);
   if (!post) notFound();
 
+  const formattedDate = new Date(post.publishedAt).toLocaleDateString('en-US', {
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric',
+  });
+
   return (
     <PageShell>
       <MarketingPageFrame>
-        <MarketingHero
-          kicker={post.eyebrow || 'Blog'}
-          title={post.title}
-          description={post.excerpt}
-          rightEyebrow="Published"
-          rightTitle={new Date(post.publishedAt).toLocaleDateString('en-US', {
-            month: 'long',
-            day: 'numeric',
-            year: 'numeric',
-          })}
-          rightChildren={
-            <div className="grid gap-3">
-              <div className="border border-(--border) px-4 py-3 text-sm text-(--foreground)">
-                Author: {post.author || 'SILKLEARN'}
-              </div>
-              <div className="border border-(--border) px-4 py-3 text-sm text-(--foreground)">
-                Category: Blog
-              </div>
-            </div>
-          }
-        />
+        <div className="mx-auto max-w-4xl px-6 py-16 sm:py-24">
+          <TransitionLink
+            href="/blog"
+            className="inline-flex items-center gap-1.5 text-sm text-(--muted-foreground) transition-colors duration-150 hover:text-(--foreground)"
+          >
+            <ArrowLeft className="size-3.5" />
+            Blog
+          </TransitionLink>
 
-        <MarketingSplitSection
-          left={
-            <>
-              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
-                Article
-              </p>
-              <h2 className="mt-4 max-w-[10ch] font-(family-name:--font-display) text-[clamp(2rem,3.6vw,3.2rem)] leading-none tracking-[-0.02em] text-(--foreground)">
-                Read the argument in sequence.
-              </h2>
-            </>
-          }
-          right={<PortableTextRenderer blocks={post.body} />}
-        />
+          <div className="mt-10 grid gap-12 md:grid-cols-[200px_1fr]">
+            <aside className="text-sm text-(--muted-foreground)">
+              <div className="mb-6">
+                <p className="text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-(--muted-foreground)">
+                  Written by
+                </p>
+                <p className="mt-1 text-(--foreground)">{post.author || 'SILKLEARN'}</p>
+              </div>
+              <div>
+                <p className="text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-(--muted-foreground)">
+                  Published
+                </p>
+                <p className="mt-1 text-(--foreground)">{formattedDate}</p>
+              </div>
+            </aside>
 
-        <MarketingCtaSection
-          kicker="Explore more"
-          title="Keep reading, then bring your own source base."
-          actions={
-            <div className="flex flex-wrap gap-3">
-              <Button asChild size="lg">
-                <TransitionLink href="/blog">
-                  Back to blog
-                  <ArrowRight className="size-4" />
-                </TransitionLink>
-              </Button>
-            </div>
-          }
-        />
+            <article>
+              <h1 className="font-(family-name:--font-display) text-3xl tracking-[-0.02em] text-(--foreground) sm:text-4xl">
+                {post.title}
+              </h1>
+              {post.excerpt ? (
+                <p className="mt-4 max-w-[58ch] text-base leading-7 text-(--muted-foreground)">
+                  {post.excerpt}
+                </p>
+              ) : null}
+
+              <div className="mt-10 border-t border-(--border) pt-10">
+                <PortableTextRenderer blocks={post.body} />
+              </div>
+            </article>
+          </div>
+
+          <div className="mt-16 border-t border-(--border) pt-8">
+            <TransitionLink
+              href="/blog"
+              className="inline-flex items-center gap-1.5 text-sm text-(--muted-foreground) transition-colors duration-150 hover:text-(--foreground)"
+            >
+              <ArrowLeft className="size-3.5" />
+              Back to Blog
+            </TransitionLink>
+          </div>
+        </div>
       </MarketingPageFrame>
     </PageShell>
   );
