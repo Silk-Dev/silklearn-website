@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 
-import { featurePages, guidePages, useCasePages } from '@/lib/marketing-content';
+import { featurePages, useCasePages } from '@/lib/marketing-content';
 import { absoluteUrl } from '@/lib/seo';
 import { getPostsByCategory } from '@/lib/sanity';
 
@@ -12,19 +12,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     '/for-whom',
     '/features',
     '/use-cases',
-    '/guides',
     '/blog',
-    '/news',
     '/privacy',
     '/terms',
     '/eula',
     '/waitlist',
   ];
 
-  const [blogPosts, newsPosts] = await Promise.all([
-    getPostsByCategory('blog'),
-    getPostsByCategory('news'),
-  ]);
+  const blogPosts = await getPostsByCategory('blog');
 
   return [
     ...staticRoutes.map((route) => ({
@@ -45,20 +40,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'monthly' as const,
       priority: 0.75,
     })),
-    ...guidePages.map((page) => ({
-      url: absoluteUrl(`/guides/${page.slug}`),
-      lastModified: now,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    })),
     ...blogPosts.map((post) => ({
       url: absoluteUrl(`/blog/${post.slug}`),
-      lastModified: new Date(post.publishedAt),
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    })),
-    ...newsPosts.map((post) => ({
-      url: absoluteUrl(`/news/${post.slug}`),
       lastModified: new Date(post.publishedAt),
       changeFrequency: 'monthly' as const,
       priority: 0.7,

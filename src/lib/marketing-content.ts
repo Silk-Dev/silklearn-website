@@ -41,9 +41,7 @@ export const primaryNavigation: NavItem[] = [
   { href: '/for-whom', label: 'For Whom' },
   { href: '/features', label: 'Features' },
   { href: '/use-cases', label: 'Use cases' },
-  { href: '/guides', label: 'Guides' },
   { href: '/blog', label: 'Blog' },
-  { href: '/news', label: 'News' },
 ];
 
 export const featurePages: FeaturePage[] = [
@@ -60,7 +58,7 @@ export const featurePages: FeaturePage[] = [
       'Produces a graph that can power roadmaps, briefings, and context bundles',
     ],
     useCaseHref: '/use-cases/engineering-onboarding',
-    guideHref: '/guides/how-to-turn-docs-into-learning-paths',
+    guideHref: '/blog',
   },
   {
     slug: 'leader-review',
@@ -75,7 +73,7 @@ export const featurePages: FeaturePage[] = [
       'Build trust with a visible path from source documents to final artifact',
     ],
     useCaseHref: '/use-cases/internal-docs-training',
-    guideHref: '/guides/dependency-ordered-learning-for-teams',
+    guideHref: '/blog',
   },
 ];
 
@@ -93,7 +91,7 @@ export const useCasePages: UseCasePage[] = [
       'Give leads a reviewable map of prerequisite knowledge and hidden assumptions',
     ],
     featureHref: '/features/dependency-mapping',
-    guideHref: '/guides/how-to-turn-docs-into-learning-paths',
+    guideHref: '/blog',
   },
   {
     slug: 'internal-docs-training',
@@ -108,7 +106,7 @@ export const useCasePages: UseCasePage[] = [
       'Create a stable compiled asset leaders can refine over time',
     ],
     featureHref: '/features/leader-review',
-    guideHref: '/guides/dependency-ordered-learning-for-teams',
+    guideHref: '/blog',
   },
 ];
 
