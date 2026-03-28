@@ -16,7 +16,7 @@ export const isSanityConfigured = Boolean(projectId && dataset);
 const sanityClient = createClient({
   projectId: projectId ?? 'placeholder',
   dataset: dataset ?? 'production',
-  apiVersion: '2026-03-16',
+  apiVersion: '2026-03-27',
   useCdn: true,
 });
 

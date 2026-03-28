@@ -81,7 +81,7 @@ const nextConfig: NextConfig = {
 
     return [
       {
-        source: '/(.*)',
+        source: '/((?!studio).*)',
         headers: [
           {
             key: 'Content-Security-Policy',
