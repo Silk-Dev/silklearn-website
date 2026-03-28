@@ -7,7 +7,7 @@ import { PortableTextRenderer } from '@/components/marketing/portable-text';
 import { TransitionLink } from '@/components/marketing/page-transition';
 import { MarketingPageFrame } from '@/components/marketing/page-structure';
 import { PageShell } from '@/components/marketing/page-shell';
-import { getPostBySlug, getPostsByCategory } from '@/lib/sanity';
+import { getAllPosts, getPostBySlug } from '@/lib/sanity';
 import { buildMetadata } from '@/lib/seo';
 
 type BlogPostPageProps = {
@@ -15,13 +15,13 @@ type BlogPostPageProps = {
 };
 
 export async function generateStaticParams() {
-  const posts = await getPostsByCategory('blog');
+  const posts = await getAllPosts();
   return posts.map((post) => ({ slug: post.slug }));
 }
 
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const post = await getPostBySlug('blog', slug);
+  const post = await getPostBySlug(slug);
   if (!post) return {};
 
   return buildMetadata({
@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params;
-  const post = await getPostBySlug('blog', slug);
+  const post = await getPostBySlug(slug);
   if (!post) notFound();
 
   const formattedDate = new Date(post.publishedAt).toLocaleDateString('en-US', {
@@ -63,12 +63,29 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 </p>
                 <p className="mt-1 text-(--foreground)">{post.author || 'SILKLEARN'}</p>
               </div>
-              <div>
+              <div className="mb-6">
                 <p className="text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-(--muted-foreground)">
                   Published
                 </p>
                 <p className="mt-1 text-(--foreground)">{formattedDate}</p>
               </div>
+              {post.tags && post.tags.length > 0 && (
+                <div>
+                  <p className="text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-(--muted-foreground)">
+                    Tags
+                  </p>
+                  <div className="mt-1 flex flex-wrap gap-1.5">
+                    {post.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="text-xs text-(--foreground)"
+                      >
+                        {tag.charAt(0).toUpperCase() + tag.slice(1)}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
             </aside>
 
             <article>

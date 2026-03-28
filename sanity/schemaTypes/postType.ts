@@ -33,6 +33,20 @@ export const postType = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
+      name: 'tags',
+      title: 'Tags',
+      type: 'array',
+      of: [{type: 'string'}],
+      options: {
+        list: [
+          {title: 'Product', value: 'product'},
+          {title: 'Engineering', value: 'engineering'},
+          {title: 'Research', value: 'research'},
+          {title: 'Company', value: 'company'},
+        ],
+      },
+    }),
+    defineField({
       name: 'eyebrow',
       title: 'Eyebrow',
       type: 'string',
