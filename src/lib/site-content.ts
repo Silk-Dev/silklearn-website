@@ -43,7 +43,7 @@ export type PortableTextCallout = {
   body?: string;
 };
 
-export type MarketingPostCategory = 'blog' | 'news';
+export type MarketingPostCategory = 'blog';
 
 export type MarketingPost = {
   title: string;
@@ -141,39 +141,6 @@ export const fallbackPosts: MarketingPost[] = [
           {
             _type: 'span',
             text: 'That is why the website should eventually support essays, product notes, and deeper articulation of the synthesis/canvas thesis through Sanity-backed publishing.',
-          },
-        ],
-      },
-    ],
-  },
-  {
-    title: 'Synthesis canvas is now the center of the multi-source workflow',
-    slug: 'synthesis-canvas-center-of-workflow',
-    category: 'news',
-    eyebrow: 'News',
-    excerpt:
-      'The marketing site should be able to publish product updates around the canvas, roadmap composition, and future Challenge mode work.',
-    publishedAt: '2026-03-16T12:00:00.000Z',
-    author: 'SILKLEARN',
-    featured: false,
-    body: [
-      {
-        _type: 'block',
-        style: 'normal',
-        children: [
-          {
-            _type: 'span',
-            text: 'The synthesis canvas reframes SILKLEARN from a one-shot generator into a persistent knowledge workspace where leaders can compose, challenge, and evolve structured artifacts over time.',
-          },
-        ],
-      },
-      {
-        _type: 'block',
-        style: 'normal',
-        children: [
-          {
-            _type: 'span',
-            text: 'Adding blog and news support through Sanity gives the marketing site a better place to tell that story than hard-coded pages alone.',
           },
         ],
       },

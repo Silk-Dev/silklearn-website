@@ -34,6 +34,26 @@ const nextConfig: NextConfig = {
         destination: '/waitlist',
         permanent: false,
       },
+      {
+        source: '/news',
+        destination: '/blog',
+        permanent: false,
+      },
+      {
+        source: '/news/:path*',
+        destination: '/blog',
+        permanent: false,
+      },
+      {
+        source: '/guides',
+        destination: '/blog',
+        permanent: false,
+      },
+      {
+        source: '/guides/:path*',
+        destination: '/blog',
+        permanent: false,
+      },
     ];
   },
   async headers() {
