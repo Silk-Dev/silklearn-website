@@ -64,6 +64,13 @@ export const postType = defineType({
       rows: 3,
     }),
     defineField({
+      name: 'description',
+      title: 'Description',
+      type: 'string',
+      description: 'Short description shown on blog cards (max 180 characters)',
+      validation: (rule) => rule.max(180),
+    }),
+    defineField({
       name: 'featured',
       title: 'Featured',
       type: 'boolean',
@@ -73,6 +80,21 @@ export const postType = defineType({
       name: 'publishedAt',
       type: 'datetime',
       validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'mainImage',
+      title: 'Main Image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+      fields: [
+        {
+          name: 'alt',
+          type: 'string',
+          title: 'Alt text',
+        },
+      ],
     }),
     defineField({
       name: 'body',

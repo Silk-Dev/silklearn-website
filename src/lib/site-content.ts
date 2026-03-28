@@ -51,10 +51,19 @@ export type MarketingPost = {
   category: MarketingPostCategory;
   eyebrow?: string;
   excerpt: string;
+  description?: string;
   publishedAt: string;
   author?: string;
   featured?: boolean;
   tags?: string[];
+  mainImage?: {
+    asset: {
+      _ref: string;
+      _type: string;
+      url?: string;
+    };
+    alt?: string;
+  };
   body: Array<PortableTextBlock | PortableTextCallout>;
 };
 

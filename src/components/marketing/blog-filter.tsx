@@ -16,10 +16,23 @@ function capitalize(str: string): string {
 
 function formatDate(dateString: string): string {
   return new Date(dateString).toLocaleDateString('en-US', {
-    month: 'short',
+    month: 'long',
     day: 'numeric',
     year: 'numeric',
   });
+}
+
+function estimateReadTime(body: Record<string, unknown>[]): string {
+  if (!body || !Array.isArray(body)) return '3 min read';
+  const text = (body as Record<string, unknown>[])
+    .filter((b) => b._type === 'block')
+    .map((b) =>
+      ((b.children as Record<string, string>[]) || []).map((c) => c.text || '').join('')
+    )
+    .join(' ');
+  const words = text.split(/\s+/).length;
+  const minutes = Math.max(1, Math.ceil(words / 250));
+  return `${minutes} min read`;
 }
 
 export function BlogFilter({ posts, tags }: BlogFilterProps) {
@@ -59,32 +72,44 @@ export function BlogFilter({ posts, tags }: BlogFilterProps) {
         ))}
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
-        {filtered.map((post) => (
-          <article key={post.slug}>
-            <TransitionLink href={`/blog/${post.slug}`} className="group block">
-              <h2 className="font-(family-name:--font-display) text-lg tracking-[-0.01em] text-(--foreground) group-hover:text-(--primary) transition-colors duration-150">
-                {post.title}
-              </h2>
-              {post.excerpt && (
-                <p className="mt-2 text-sm leading-6 text-(--muted-foreground) line-clamp-2">
-                  {post.excerpt}
-                </p>
-              )}
-              <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-(--muted-foreground)">
-                <span>{post.author || 'SILKLEARN'}</span>
-                <span className="text-(--border)">·</span>
-                <time>{formatDate(post.publishedAt)}</time>
-                {post.tags?.[0] && (
-                  <>
-                    <span className="text-(--border)">·</span>
-                    <span>{capitalize(post.tags[0])}</span>
-                  </>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8">
+        {filtered.map((post) => {
+          const imageUrl = post.mainImage?.asset?.url;
+
+          return (
+            <article key={post.slug} className="border-b border-(--border) pb-8">
+              <TransitionLink href={`/blog/${post.slug}`} className="group flex gap-4">
+                {imageUrl && (
+                  <img
+                    src={imageUrl}
+                    alt={post.mainImage?.alt || post.title}
+                    className="w-[120px] min-w-[120px] h-[120px] object-cover rounded-sm"
+                  />
                 )}
-              </div>
-            </TransitionLink>
-          </article>
-        ))}
+                <div className="min-w-0 flex-1">
+                  <h2 className="font-(family-name:--font-display) text-base tracking-[-0.01em] text-(--foreground) group-hover:text-(--primary) transition-colors duration-150 line-clamp-2">
+                    {post.title}
+                  </h2>
+                  <p className="mt-1.5 text-[13px] leading-5 text-(--muted-foreground) line-clamp-2">
+                    {post.description || post.excerpt}
+                  </p>
+                  <div className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-(--muted-foreground)">
+                    <span>{post.author || 'SILKLEARN'}</span>
+                    <span className="text-(--border)">·</span>
+                    <time>{formatDate(post.publishedAt)}</time>
+                  </div>
+                  <div className="mt-1 flex items-center gap-x-2 text-xs text-(--muted-foreground)">
+                    {post.tags?.[0] && (
+                      <span>{capitalize(post.tags[0])}</span>
+                    )}
+                    <span className="text-(--border)">·</span>
+                    <span>{estimateReadTime(post.body)}</span>
+                  </div>
+                </div>
+              </TransitionLink>
+            </article>
+          );
+        })}
       </div>
     </>
   );

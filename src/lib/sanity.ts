@@ -39,10 +39,12 @@ const allPostsQuery = `*[_type == "post"] | order(publishedAt desc){
   category,
   eyebrow,
   excerpt,
+  description,
   publishedAt,
   author,
   featured,
   tags,
+  "mainImage": mainImage{asset->{url}, alt},
   body
 }`;
 
@@ -52,10 +54,12 @@ const postsByCategoryQuery = `*[_type == "post" && category == $category] | orde
   category,
   eyebrow,
   excerpt,
+  description,
   publishedAt,
   author,
   featured,
   tags,
+  "mainImage": mainImage{asset->{url}, alt},
   body
 }`;
 
@@ -65,10 +69,12 @@ const postBySlugQuery = `*[_type == "post" && slug.current == $slug][0]{
   category,
   eyebrow,
   excerpt,
+  description,
   publishedAt,
   author,
   featured,
   tags,
+  "mainImage": mainImage{asset->{url}, alt},
   body
 }`;
 

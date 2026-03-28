@@ -22,9 +22,9 @@ export default async function BlogListPage() {
   return (
     <PageShell>
       <MarketingPageFrame>
-        <div className="mx-auto max-w-5xl px-6 py-16 sm:py-24">
+        <div className="px-4 sm:px-12 lg:px-20 py-16 sm:py-24">
           <p className="text-sm text-(--muted-foreground)">Blog</p>
-          <h1 className="mt-3 font-(family-name:--font-display) text-4xl sm:text-5xl tracking-tight text-(--foreground)">
+          <h1 className="mt-2 font-(family-name:--font-display) text-3xl sm:text-[2.75rem] sm:leading-[1.15] tracking-tight text-(--foreground) max-w-[18ch]">
             Essays and thinking on structured knowledge
           </h1>
 
