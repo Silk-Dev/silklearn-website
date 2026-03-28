@@ -2,7 +2,6 @@
   "name": "silklearn-website",
   "version": "0.1.0",
   "private": true,
-  "packageManager": "pnpm@10.24.0",
   "engines": {
     "node": ">=22 <26"
   },
@@ -11,8 +10,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "audit:site": "pnpm exec unlighthouse-ci --site http://localhost:3000 --root . --sitemaps http://localhost:3000/sitemap.xml --mobile --throttle --samples 2 --no-cache --disable-dynamic-sampling --exclude-urls '/studio/.*' --output-path .tmp/unlighthouse",
-    "audit:site:desktop": "pnpm exec unlighthouse-ci --site http://localhost:3000 --root . --sitemaps http://localhost:3000/sitemap.xml --desktop --throttle --samples 2 --no-cache --disable-dynamic-sampling --exclude-urls '/studio/.*' --output-path .tmp/unlighthouse-desktop",
+    "audit:site": "unlighthouse-ci --site http://localhost:3000 --root . --sitemaps http://localhost:3000/sitemap.xml --mobile --throttle --samples 2 --no-cache --disable-dynamic-sampling --exclude-urls '/studio/.*' --output-path .tmp/unlighthouse",
+    "audit:site:desktop": "unlighthouse-ci --site http://localhost:3000 --root . --sitemaps http://localhost:3000/sitemap.xml --desktop --throttle --samples 2 --no-cache --disable-dynamic-sampling --exclude-urls '/studio/.*' --output-path .tmp/unlighthouse-desktop",
     "db:up": "docker compose up -d",
     "db:down": "docker compose down",
     "test:waitlist": "tsx --test tests/waitlist.test.ts",

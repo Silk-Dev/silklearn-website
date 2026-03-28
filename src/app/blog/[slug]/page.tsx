@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 import { ArrowLeft } from 'lucide-react';
-import { notFound } from 'next/navigation';
+import { redirect } from 'next/navigation';
 
 import { PortableTextRenderer } from '@/components/marketing/portable-text';
 import { TransitionLink } from '@/components/marketing/page-transition';
@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params;
   const post = await getPostBySlug(slug);
-  if (!post) notFound();
+  if (!post) redirect('/blog');
 
   const formattedDate = new Date(post.publishedAt).toLocaleDateString('en-US', {
     month: 'long',
@@ -54,6 +54,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             <ArrowLeft className="size-3.5" />
             Blog
           </TransitionLink>
+
+          {post.mainImage?.asset?.url && (
+            <img
+              src={post.mainImage.asset.url}
+              alt={post.mainImage.alt || post.title}
+              className="mt-8 w-full max-h-[400px] object-cover rounded-sm"
+            />
+          )}
 
           <div className="mt-10 grid gap-12 md:grid-cols-[200px_1fr]">
             <aside className="text-sm text-(--muted-foreground)">
