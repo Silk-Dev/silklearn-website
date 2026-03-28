@@ -1,13 +1,14 @@
 import type { Metadata } from 'next';
 
 import { ArrowLeft } from 'lucide-react';
+import Image from 'next/image';
 import { redirect } from 'next/navigation';
 
 import { PortableTextRenderer } from '@/components/marketing/portable-text';
 import { TransitionLink } from '@/components/marketing/page-transition';
 import { MarketingPageFrame } from '@/components/marketing/page-structure';
 import { PageShell } from '@/components/marketing/page-shell';
-import { getAllPosts, getPostBySlug } from '@/lib/sanity';
+import { getAllPosts, getPostBySlug, sanityImageUrl } from '@/lib/sanity';
 import { buildMetadata } from '@/lib/seo';
 
 type BlogPostPageProps = {
@@ -56,10 +57,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </TransitionLink>
 
           {post.mainImage?.asset?.url && (
-            <img
-              src={post.mainImage.asset.url}
+            <Image
+              src={sanityImageUrl(post.mainImage.asset.url, 1200, 630)}
               alt={post.mainImage.alt || post.title}
-              className="mt-8 w-full max-h-[400px] object-cover rounded-sm"
+              width={1200}
+              height={630}
+              priority
+              className="mt-8 w-full object-cover rounded-sm"
             />
           )}
 
