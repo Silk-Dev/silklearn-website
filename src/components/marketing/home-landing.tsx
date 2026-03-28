@@ -161,6 +161,90 @@ const stageJourneyViewBox = {
   height: 460,
 };
 
+function PainBlockIcon({ index }: { index: number }) {
+  return (
+    <svg
+      aria-hidden="true"
+      className="size-8 text-(--muted-foreground) opacity-40"
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={1.5}
+      viewBox="0 0 24 24"
+    >
+      {index === 0 && (
+        <>
+          <path d="M1 4v6h6" />
+          <path d="M23 20v-6h-6" />
+          <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15" />
+        </>
+      )}
+      {index === 1 && (
+        <>
+          <path d="M15 7h3a5 5 0 0 1 0 10h-3" />
+          <path d="M9 17H6a5 5 0 0 1 0-10h3" />
+        </>
+      )}
+      {index === 2 && (
+        <>
+          <polyline points="16 3 21 3 21 8" />
+          <line x1="4" y1="20" x2="21" y2="3" />
+          <polyline points="21 16 21 21 16 21" />
+          <line x1="15" y1="15" x2="21" y2="21" />
+          <line x1="4" y1="4" x2="9" y2="9" />
+        </>
+      )}
+    </svg>
+  );
+}
+
+function StageJourneyIcon({ index }: { index: number }) {
+  return (
+    <svg
+      aria-hidden="true"
+      className="size-4 shrink-0 text-(--muted-foreground)"
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      viewBox="0 0 24 24"
+    >
+      {index === 0 && (
+        <>
+          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+          <circle cx="9" cy="7" r="4" />
+          <path d="M19 8l3 3-3 3" />
+          <line x1="16" y1="11" x2="22" y2="11" />
+        </>
+      )}
+      {index === 1 && (
+        <>
+          <path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2" />
+          <rect x="9" y="3" width="6" height="4" rx="1" />
+          <path d="M9 14l2 2 4-4" />
+        </>
+      )}
+      {index === 2 && (
+        <>
+          <circle cx="12" cy="12" r="3" />
+          <line x1="12" y1="2" x2="12" y2="9" />
+          <line x1="12" y1="15" x2="12" y2="22" />
+          <line x1="2" y1="12" x2="9" y2="12" />
+          <line x1="15" y1="12" x2="22" y2="12" />
+        </>
+      )}
+      {index === 3 && (
+        <>
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          <path d="M9 12l2 2 4-4" />
+        </>
+      )}
+    </svg>
+  );
+}
+
 type HomeLandingProps = {
   content: HomePageContent;
   isSanityConfigured: boolean;
@@ -296,9 +380,12 @@ function StageJourneyCurve() {
   return (
     <>
       <div className="mt-10 grid gap-4 lg:hidden">
-        {stageJourney.map((stage) => (
+        {stageJourney.map((stage, stageIndex) => (
           <div key={stage.label} className="border border-(--border) p-5">
-            <p className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">{stage.label}</p>
+            <div className="flex items-center gap-2">
+              <StageJourneyIcon index={stageIndex} />
+              <p className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">{stage.label}</p>
+            </div>
             <h3 className="mt-3 text-base font-medium leading-5 text-(--foreground)">{stage.title}</h3>
             <p className="mt-2 text-sm leading-5 text-(--muted-foreground)">{stage.description}</p>
           </div>
@@ -346,7 +433,7 @@ function StageJourneyCurve() {
             ))}
           </svg>
 
-          {stageJourney.map((stage) => (
+          {stageJourney.map((stage, stageIndex) => (
             <article
               key={stage.label}
               data-stage-card
@@ -358,7 +445,10 @@ function StageJourneyCurve() {
                 transformOrigin: 'top left',
               }}
             >
-              <p className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">{stage.label}</p>
+              <div className="flex items-center gap-1.5">
+                <StageJourneyIcon index={stageIndex} />
+                <p className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">{stage.label}</p>
+              </div>
               <h3 className="mt-3 text-[1.02rem] font-medium leading-5 text-(--foreground)">{stage.title}</h3>
               <p className="mt-2 text-sm leading-5 text-(--muted-foreground)">{stage.description}</p>
             </article>
@@ -465,9 +555,12 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
               className={`grid lg:min-h-[12.5rem] lg:grid-cols-[1.15fr_0.85fr] ${index > 0 ? 'border-t border-(--border)' : ''}`}
             >
               <ScrollReveal className="px-6 py-9 sm:px-8 lg:flex lg:items-center lg:px-10 lg:py-12">
-                <blockquote className="max-w-[22ch] font-(family-name:--font-display) text-[clamp(1.6rem,2.1vw,2.25rem)] leading-[1.02] tracking-[-0.03em] text-(--foreground)">
-                  &ldquo;{item.quote}&rdquo;
-                </blockquote>
+                <div>
+                  <PainBlockIcon index={index} />
+                  <blockquote className="mt-3 max-w-[22ch] font-(family-name:--font-display) text-[clamp(1.6rem,2.1vw,2.25rem)] leading-[1.02] tracking-[-0.03em] text-(--foreground)">
+                    &ldquo;{item.quote}&rdquo;
+                  </blockquote>
+                </div>
               </ScrollReveal>
 
               <ScrollReveal className=" px-6 py-9 sm:px-8 lg:flex lg:items-center lg:px-10 lg:py-12">

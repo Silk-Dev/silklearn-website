@@ -1,4 +1,19 @@
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import {
+  AlertTriangle,
+  ArrowRight,
+  BrainCircuit,
+  Eye,
+  FileStack,
+  GitFork,
+  History,
+  Link2,
+  ListChecks,
+  Plug,
+  RefreshCw,
+  Route,
+  ShieldCheck,
+} from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 
 import { TransitionLink } from '@/components/marketing/page-transition';
 import { ProductHeroGraph } from '../../components/marketing/product-hero-graph';
@@ -16,6 +31,7 @@ type ProductSummaryItem = {
   title: string;
   copy: string;
   detail?: string;
+  icon: LucideIcon;
 };
 
 const productSummary: ProductSummaryItem[] = [
@@ -24,24 +40,28 @@ const productSummary: ProductSummaryItem[] = [
     title: 'Learning path',
     copy:
       'A prerequisite-ordered sequence your engineers follow from day one. Not a pile of docs - an actual order.',
+    icon: Route,
   },
   {
     label: 'Output 2',
     title: 'Rollout checklist',
     copy:
       'Steps in dependency order. Teams see what must be done first - before a handoff depends on it.',
+    icon: ListChecks,
   },
   {
     label: 'Output 3',
     title: 'Compliance review queue',
     copy:
       'Flagged items with source links, reviewer names, and timestamps. Ready to export for an audit.',
+    icon: ShieldCheck,
   },
   {
     label: 'Output 4',
     title: 'AI context bundle',
     copy:
       'Structured context for your internal AI assistant - in the right order, from reviewed source. Not a retrieval guess.',
+    icon: BrainCircuit,
   },
 ];
 
@@ -50,41 +70,49 @@ const productFeatureCards = [
     label: '01',
     title: 'Works with your existing docs',
     copy: 'PDF, MD, DOCX, Notion, Confluence. No reformatting.',
+    icon: FileStack,
   },
   {
     label: '02',
     title: 'Finds the order your docs already imply',
     copy: "Extracts the prerequisite structure. Doesn't invent it.",
+    icon: GitFork,
   },
   {
     label: '03',
     title: 'Leaders review before anything ships',
     copy: 'Visual graph. Accept, reject, or flag every connection.',
+    icon: Eye,
   },
   {
     label: '04',
     title: 'Audit trail built automatically',
     copy: 'Timestamps and reviewer names logged as you review.',
+    icon: History,
   },
   {
     label: '05',
     title: 'Surfaces contradictions between docs',
     copy: 'When two docs disagree, a conflict flag appears. You decide.',
+    icon: AlertTriangle,
   },
   {
     label: '06',
     title: 'Every output linked to source',
     copy: 'Every item traces back to the exact doc section it came from.',
+    icon: Link2,
   },
   {
     label: '07',
     title: 'Integrations',
     copy: 'Notion · Confluence · Drive · GitHub · Slack · API (beta)',
+    icon: Plug,
   },
   {
     label: '08',
     title: 'Update and re-publish',
     copy: 'Docs change? Re-compile, review the delta, republish. Done.',
+    icon: RefreshCw,
   },
 ] as const;
 
@@ -155,7 +183,7 @@ export default function ProductPage() {
                 className={`grid gap-4 p-6 sm:grid-cols-[auto_1fr] sm:items-start sm:p-8 ${index > 0 ? 'border-t border-(--border)' : ''}`}
               >
                 <div className="flex size-11 items-center justify-center rounded-xl border border-[oklch(from_var(--primary)_l_c_h/0.14)] bg-(--card) text-(--primary)">
-                  <CheckCircle2 className="size-4.5" />
+                  <item.icon className="size-4.5" />
                 </div>
                 <div>
                   <h3 className="text-[1.05rem] leading-tight text-(--foreground)">{item.title}</h3>
@@ -186,9 +214,12 @@ export default function ProductPage() {
               key={card.label}
               className={`px-6 py-8 sm:px-8 lg:px-10 lg:py-10 ${index > 0 ? 'border-t border-(--border)' : ''} ${index % 2 === 1 ? 'lg:border-l' : ''} ${index < 2 ? 'lg:border-t-0' : ''}`}
             >
-              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
-                {card.label}
-              </p>
+              <div className="flex items-center gap-2.5">
+                <card.icon className="size-4 text-(--muted-foreground)" />
+                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
+                  {card.label}
+                </p>
+              </div>
               <h3 className="mt-3 max-w-[22ch] text-[1.15rem] leading-tight tracking-[-0.02em] text-(--foreground)">
                 {card.title}
               </h3>
