@@ -8,6 +8,26 @@ import {
   type MarketingPostCategory,
 } from '@/lib/site-content';
 
+/**
+ * Append Sanity CDN image transform parameters to a raw asset URL.
+ * Returns the original URL unchanged if it doesn't point to cdn.sanity.io.
+ */
+export function sanityImageUrl(
+  url: string,
+  width: number,
+  height: number,
+  options?: { quality?: number; fit?: string; format?: string },
+): string {
+  if (!url || !url.includes('cdn.sanity.io')) return url;
+
+  const q = options?.quality ?? 80;
+  const fit = options?.fit ?? 'crop';
+  const fm = options?.format ?? 'webp';
+
+  const base = url.split('?')[0];
+  return `${base}?w=${width}&h=${height}&fm=${fm}&fit=${fit}&q=${q}`;
+}
+
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET;
 

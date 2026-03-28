@@ -1,8 +1,10 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 
 import { TransitionLink } from '@/components/marketing/page-transition';
+import { sanityImageUrl } from '@/lib/sanity';
 import type { MarketingPost } from '@/lib/site-content';
 
 type BlogFilterProps = {
@@ -80,10 +82,12 @@ export function BlogFilter({ posts, tags }: BlogFilterProps) {
             <article key={post.slug} className="border-b border-(--border) pb-8">
               <TransitionLink href={`/blog/${post.slug}`} className="group flex gap-4">
                 {imageUrl && (
-                  <img
-                    src={imageUrl}
+                  <Image
+                    src={sanityImageUrl(imageUrl, 240, 240)}
                     alt={post.mainImage?.alt || post.title}
-                    className="w-[120px] min-w-[120px] h-[120px] object-cover rounded-sm"
+                    width={120}
+                    height={120}
+                    className="min-w-[120px] object-cover rounded-sm"
                   />
                 )}
                 <div className="min-w-0 flex-1">
