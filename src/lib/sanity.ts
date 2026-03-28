@@ -33,6 +33,19 @@ const homePageQuery = `*[_type == "homePage"][0]{
   faq[]{question, answer}
 }`;
 
+const allPostsQuery = `*[_type == "post"] | order(publishedAt desc){
+  title,
+  "slug": slug.current,
+  category,
+  eyebrow,
+  excerpt,
+  publishedAt,
+  author,
+  featured,
+  tags,
+  body
+}`;
+
 const postsByCategoryQuery = `*[_type == "post" && category == $category] | order(publishedAt desc){
   title,
   "slug": slug.current,
@@ -42,10 +55,11 @@ const postsByCategoryQuery = `*[_type == "post" && category == $category] | orde
   publishedAt,
   author,
   featured,
+  tags,
   body
 }`;
 
-const postBySlugQuery = `*[_type == "post" && category == $category && slug.current == $slug][0]{
+const postBySlugQuery = `*[_type == "post" && slug.current == $slug][0]{
   title,
   "slug": slug.current,
   category,
@@ -54,6 +68,7 @@ const postBySlugQuery = `*[_type == "post" && category == $category && slug.curr
   publishedAt,
   author,
   featured,
+  tags,
   body
 }`;
 
@@ -104,6 +119,24 @@ export async function getHomePageContent(): Promise<HomePageContent> {
   }
 }
 
+export async function getAllPosts(): Promise<MarketingPost[]> {
+  if (!isSanityConfigured) {
+    return fallbackPosts;
+  }
+
+  try {
+    const content = await sanityClient.fetch<MarketingPost[] | null>(allPostsQuery);
+
+    if (!content || content.length === 0) {
+      return fallbackPosts;
+    }
+
+    return content;
+  } catch {
+    return fallbackPosts;
+  }
+}
+
 export async function getPostsByCategory(
   category: MarketingPostCategory,
 ): Promise<MarketingPost[]> {
@@ -122,19 +155,13 @@ export async function getPostsByCategory(
   }
 }
 
-export async function getPostBySlug(
-  category: MarketingPostCategory,
-  slug: string,
-): Promise<MarketingPost | null> {
+export async function getPostBySlug(slug: string): Promise<MarketingPost | null> {
   if (!isSanityConfigured) {
-    return (
-      fallbackPosts.find((post) => post.category === category && post.slug === slug) ?? null
-    );
+    return fallbackPosts.find((post) => post.slug === slug) ?? null;
   }
 
   try {
     const content = await sanityClient.fetch<MarketingPost | null>(postBySlugQuery, {
-      category,
       slug,
     });
 
@@ -144,6 +171,6 @@ export async function getPostBySlug(
 
     return content;
   } catch {
-    return fallbackPosts.find((post) => post.category === category && post.slug === slug) ?? null;
+    return fallbackPosts.find((post) => post.slug === slug) ?? null;
   }
 }

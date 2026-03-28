@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 
 import { featurePages, useCasePages } from '@/lib/marketing-content';
 import { absoluteUrl } from '@/lib/seo';
-import { getPostsByCategory } from '@/lib/sanity';
+import { getAllPosts } from '@/lib/sanity';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
@@ -19,7 +19,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     '/waitlist',
   ];
 
-  const blogPosts = await getPostsByCategory('blog');
+  const blogPosts = await getAllPosts();
 
   return [
     ...staticRoutes.map((route) => ({

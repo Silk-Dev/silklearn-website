@@ -54,6 +54,7 @@ export type MarketingPost = {
   publishedAt: string;
   author?: string;
   featured?: boolean;
+  tags?: string[];
   body: Array<PortableTextBlock | PortableTextCallout>;
 };
 
@@ -113,6 +114,7 @@ export const fallbackPosts: MarketingPost[] = [
     slug: 'why-knowledge-compilation-matters',
     category: 'blog',
     eyebrow: 'Blog',
+    tags: ['research'],
     excerpt:
       'SILKLEARN is strongest when it acts as structure-first knowledge infrastructure, not a thin layer over retrieval or generic summarization.',
     publishedAt: '2026-03-16T09:00:00.000Z',
