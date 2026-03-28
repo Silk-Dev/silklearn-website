@@ -2,15 +2,20 @@
 "use client";
 import { useParams } from "next/navigation";
 
+import dynamic from 'next/dynamic';
+
 import { personas } from '@/lib/marketing-personas';
 
 import { PageShell } from '@/components/marketing/page-shell';
 import { MarketingPageFrame, MarketingCtaSection } from '@/components/marketing/page-structure';
 import { LottiePlaceholder } from '@/components/marketing/lottie-placeholder';
-import { PersonaScrollSections } from '@/components/marketing/persona-scroll-sections';
 import { Button } from '@/components/ui/button';
 import { TransitionLink } from '@/components/marketing/page-transition';
 import { ArrowRight } from 'lucide-react';
+
+const PersonaScrollSections = dynamic(
+  () => import('@/components/marketing/persona-scroll-sections').then(mod => mod.PersonaScrollSections),
+);
 
 export default function ForWhomPersonaPage() {
 	const params = useParams();

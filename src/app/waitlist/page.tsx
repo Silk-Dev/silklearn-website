@@ -1,13 +1,18 @@
 import type { Metadata } from 'next';
 
+import dynamic from 'next/dynamic';
+
 import {
   MarketingHero,
   MarketingPageFrame,
   MarketingSplitSection,
 } from '@/components/marketing/page-structure';
 import { PageShell } from '@/components/marketing/page-shell';
-import { WaitlistForm } from '@/components/waitlist-form';
 import { buildMetadata } from '@/lib/seo';
+
+const WaitlistForm = dynamic(
+  () => import('@/components/waitlist-form').then(mod => mod.WaitlistForm),
+);
 
 export const metadata: Metadata = buildMetadata({
   title: 'Waitlist',
