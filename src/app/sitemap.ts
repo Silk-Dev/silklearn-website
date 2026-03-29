@@ -10,7 +10,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticRoutes = [
     '/',
     '/product',
-    '/for-whom',
+    '/for-teams',
     '/features',
     '/use-cases',
     '/blog',
@@ -42,7 +42,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.75,
     })),
     ...personas.map((persona) => ({
-      url: absoluteUrl(`/for-whom/${persona.id}`),
+      url: absoluteUrl(`/for-teams/${persona.id}`),
       lastModified: now,
       changeFrequency: 'monthly' as const,
       priority: 0.75,

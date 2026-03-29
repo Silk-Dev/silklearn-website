@@ -38,7 +38,7 @@ export type GuidePage = {
 
 export const primaryNavigation: NavItem[] = [
   { href: '/product', label: 'How it works' },
-  { href: '/for-whom', label: 'For Whom' },
+  { href: '/for-teams', label: 'For Teams' },
   { href: '/features', label: 'Features' },
   { href: '/use-cases', label: 'Use cases' },
   { href: '/blog', label: 'Blog' },

@@ -48,7 +48,7 @@ export function ForWhomExperience({ personas }: ForWhomExperienceProps) {
   };
 
   const handleTopSelect = (id: string) => {
-    window.location.href = `/for-whom/${id}`;
+    window.location.href = `/for-teams/${id}`;
   };
 
   const handleTabSelect = (id: string) => {

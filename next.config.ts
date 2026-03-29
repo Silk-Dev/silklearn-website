@@ -15,8 +15,13 @@ const nextConfig: NextConfig = {
     return [
       {
         source: '/for-whom',
-        destination: '/use-cases',
-        permanent: false,
+        destination: '/for-teams',
+        permanent: true,
+      },
+      {
+        source: '/for-whom/:path*',
+        destination: '/for-teams/:path*',
+        permanent: true,
       },
       {
         source: '/pricing',

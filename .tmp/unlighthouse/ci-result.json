@@ -1,0 +1,154 @@
+[
+  {
+    "path": "/",
+    "score": 0.97,
+    "performance": 0.94,
+    "accessibility": 0.96,
+    "best-practices": 0.96,
+    "seo": 1
+  },
+  {
+    "path": "/blog",
+    "score": 0.97,
+    "performance": 0.97,
+    "accessibility": 0.95,
+    "best-practices": 0.96,
+    "seo": 1
+  },
+  {
+    "path": "/blog/leaders-lose-control-when-knowledge-stays-implicit",
+    "score": 0.96,
+    "performance": 0.94,
+    "accessibility": 0.95,
+    "best-practices": 0.96,
+    "seo": 1
+  },
+  {
+    "path": "/blog/retrieval-is-not-enough-structure-beats-search",
+    "score": 0.98,
+    "performance": 1,
+    "accessibility": 0.95,
+    "best-practices": 0.96,
+    "seo": 1
+  },
+  {
+    "path": "/blog/silklearn-opening-early-access",
+    "score": 0.96,
+    "performance": 0.92,
+    "accessibility": 0.95,
+    "best-practices": 0.96,
+    "seo": 1
+  },
+  {
+    "path": "/blog/what-dependency-ordered-learning-paths-look-like",
+    "score": 0.98,
+    "performance": 1,
+    "accessibility": 0.95,
+    "best-practices": 0.96,
+    "seo": 1
+  },
+  {
+    "path": "/blog/why-most-teams-have-an-order-problem",
+    "score": 0.98,
+    "performance": 1,
+    "accessibility": 0.95,
+    "best-practices": 0.96,
+    "seo": 1
+  },
+  {
+    "path": "/eula",
+    "score": 0.97,
+    "performance": 0.94,
+    "accessibility": 0.96,
+    "best-practices": 0.96,
+    "seo": 1
+  },
+  {
+    "path": "/features",
+    "score": 0.98,
+    "performance": 1,
+    "accessibility": 0.95,
+    "best-practices": 0.96,
+    "seo": 1
+  },
+  {
+    "path": "/features/dependency-mapping",
+    "score": 0.98,
+    "performance": 1,
+    "accessibility": 0.95,
+    "best-practices": 0.96,
+    "seo": 1
+  },
+  {
+    "path": "/features/leader-review",
+    "score": 0.98,
+    "performance": 1,
+    "accessibility": 0.95,
+    "best-practices": 0.96,
+    "seo": 1
+  },
+  {
+    "path": "/for-whom",
+    "score": 0.98,
+    "performance": 0.99,
+    "accessibility": 0.95,
+    "best-practices": 0.96,
+    "seo": 1
+  },
+  {
+    "path": "/privacy",
+    "score": 0.98,
+    "performance": 1,
+    "accessibility": 0.96,
+    "best-practices": 0.96,
+    "seo": 1
+  },
+  {
+    "path": "/product",
+    "score": 0.98,
+    "performance": 0.99,
+    "accessibility": 0.95,
+    "best-practices": 0.96,
+    "seo": 1
+  },
+  {
+    "path": "/terms",
+    "score": 0.98,
+    "performance": 1,
+    "accessibility": 0.96,
+    "best-practices": 0.96,
+    "seo": 1
+  },
+  {
+    "path": "/use-cases",
+    "score": 0.96,
+    "performance": 0.94,
+    "accessibility": 0.95,
+    "best-practices": 0.96,
+    "seo": 1
+  },
+  {
+    "path": "/use-cases/engineering-onboarding",
+    "score": 0.97,
+    "performance": 0.97,
+    "accessibility": 0.95,
+    "best-practices": 0.96,
+    "seo": 1
+  },
+  {
+    "path": "/use-cases/internal-docs-training",
+    "score": 0.98,
+    "performance": 1,
+    "accessibility": 0.95,
+    "best-practices": 0.96,
+    "seo": 1
+  },
+  {
+    "path": "/waitlist",
+    "score": 0.98,
+    "performance": 1,
+    "accessibility": 0.96,
+    "best-practices": 0.96,
+    "seo": 1
+  }
+]
