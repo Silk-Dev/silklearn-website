@@ -16,6 +16,7 @@ import {
 import type { LucideIcon } from 'lucide-react';
 
 import { TransitionLink } from '@/components/marketing/page-transition';
+import { FloatingCta } from '@/components/marketing/floating-cta';
 import { ProductHeroGraph } from './product-hero-graph';
 import { ProductScrollSections } from './product-scroll-sections';
 
@@ -251,6 +252,7 @@ export default function ProductPage() {
           </div>
         </section>
       </MarketingPageFrame>
+      <FloatingCta />
     </PageShell>
   );
 }

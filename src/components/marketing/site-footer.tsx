@@ -1,7 +1,7 @@
 "use client";
 
 import Image from 'next/image';
-import { ArrowUp } from 'lucide-react';
+import { ArrowUp, ShieldCheck } from 'lucide-react';
 
 import { TransitionLink } from '@/components/marketing/page-transition';
 import { primaryNavigation } from '@/lib/marketing-content';
@@ -25,6 +25,15 @@ export function SiteFooter() {
             </TransitionLink>
             <p className="mt-4 max-w-[48ch] text-sm leading-6 text-(--muted-foreground)">
               SILKLEARN compiles dense source material into reviewable learning paths, dependency-aware graphs, and context-efficient outputs for teams working from complex internal knowledge.
+            </p>
+            <p className="mt-2 text-sm text-(--muted-foreground)">
+              Questions?{' '}
+              <a
+                href="mailto:hello@silklearn.io"
+                className="underline underline-offset-3 transition-colors hover:text-(--foreground)"
+              >
+                hello@silklearn.io
+              </a>
             </p>
           </div>
 
@@ -77,6 +86,19 @@ export function SiteFooter() {
               </a>
             </div>
           </div>
+        </div>
+
+        <div className="flex flex-wrap gap-x-6 gap-y-2 pb-4 text-sm text-(--muted-foreground)">
+          {[
+            'Privacy-first analytics',
+            'GDPR ready',
+            'Your data never leaves your team',
+          ].map((item) => (
+            <div key={item} className="flex items-center gap-1.5">
+              <ShieldCheck className="size-3.5 shrink-0 text-(--primary)" />
+              <span>{item}</span>
+            </div>
+          ))}
         </div>
 
         <div className="flex flex-col gap-3 border-t border-(--border) pt-4 text-sm text-(--muted-foreground) sm:flex-row sm:items-center sm:justify-between">

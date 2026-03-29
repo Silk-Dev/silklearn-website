@@ -3,6 +3,8 @@
 import type { FormEvent } from 'react';
 import { useState } from 'react';
 
+import { CheckCircle2 } from 'lucide-react';
+
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 
@@ -103,7 +105,7 @@ export function WaitlistForm({
         />
       </label>
 
-      <Button className="inline-flex items-center justify-center gap-2" disabled={isSubmitting} type="submit">
+      <Button className="cta-pulse inline-flex items-center justify-center gap-2" disabled={isSubmitting} type="submit">
         {isSubmitting ? (
           <>
             <svg className="animate-spin size-4" viewBox="0 0 24 24" fill="none">
@@ -117,17 +119,32 @@ export function WaitlistForm({
         )}
       </Button>
 
-      <p
-        className={`min-h-6 text-sm ${
-          submissionState.kind === 'success'
-            ? 'text-(--success)'
-            : submissionState.kind === 'error'
+      {submissionState.kind === 'success' ? (
+        <div className="rounded-sm border border-(--primary) bg-[oklch(from_var(--primary)_l_c_h/0.05)] p-6">
+          <div className="flex items-start gap-3">
+            <CheckCircle2 className="mt-0.5 size-5 shrink-0 text-(--primary)" />
+            <div>
+              <p className="font-semibold text-(--foreground)">You&apos;re on the list!</p>
+              <p className="mt-1 text-sm text-(--muted-foreground)">
+                We review every application within 2 business days. Expect a personal email from our team.
+              </p>
+              <p className="mt-3 text-xs text-(--muted-foreground)">
+                💡 Teams with dense internal docs and recurring onboarding challenges get prioritized.
+              </p>
+            </div>
+          </div>
+        </div>
+      ) : (
+        <p
+          className={`min-h-6 text-sm ${
+            submissionState.kind === 'error'
               ? 'text-(--warning)'
               : 'text-(--muted-foreground)'
-        }`}
-      >
-        {submissionState.message || idleMessage}
-      </p>
+          }`}
+        >
+          {submissionState.message || idleMessage}
+        </p>
+      )}
 
       {fitNote ? <p className="text-xs leading-6 text-(--muted-foreground)">{fitNote}</p> : null}
     </form>

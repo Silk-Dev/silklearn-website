@@ -279,3 +279,16 @@ code {
   will-change: opacity, transform;
   transform: translateZ(0);
 }
+
+@keyframes cta-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 oklch(from var(--primary) l c h / 0.35);
+  }
+  55% {
+    box-shadow: 0 0 0 8px oklch(from var(--primary) l c h / 0);
+  }
+}
+
+.cta-pulse {
+  animation: cta-glow 2.8s ease-in-out infinite;
+}

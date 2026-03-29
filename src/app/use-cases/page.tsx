@@ -1,6 +1,7 @@
 import { ArrowRight, Network } from 'lucide-react';
 
 import { TransitionLink } from '@/components/marketing/page-transition';
+import { FloatingCta } from '@/components/marketing/floating-cta';
 import { Button } from '@/components/ui/button';
 
 import type { Metadata } from 'next';
@@ -97,6 +98,7 @@ export default function UseCasesPage() {
           title="Pick one workflow and compile it end to end."
         />
       </MarketingPageFrame>
+      <FloatingCta />
     </PageShell>
   );
 }

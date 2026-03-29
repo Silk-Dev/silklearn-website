@@ -534,6 +534,19 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
                 </Button>
               </div>
 
+              <div className="mt-6 flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:gap-x-6 sm:gap-y-2">
+                {[
+                  'Any doc format — PDF, Markdown, Notion, Confluence',
+                  'Leader review and approval built in',
+                  'AI-ready context bundles included',
+                ].map((item) => (
+                  <div key={item} className="flex items-center gap-2">
+                    <CheckCircle2 className="size-3.5 shrink-0 text-(--primary)" />
+                    <span className="text-sm text-(--muted-foreground)">{item}</span>
+                  </div>
+                ))}
+              </div>
+
               
             </div>
           </div>
