@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next';
 
 import { featurePages, useCasePages } from '@/lib/marketing-content';
+import { personas } from '@/lib/marketing-personas';
 import { absoluteUrl } from '@/lib/seo';
 import { getAllPosts } from '@/lib/sanity';
 
@@ -36,6 +37,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })),
     ...useCasePages.map((page) => ({
       url: absoluteUrl(`/use-cases/${page.slug}`),
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.75,
+    })),
+    ...personas.map((persona) => ({
+      url: absoluteUrl(`/for-whom/${persona.id}`),
       lastModified: now,
       changeFrequency: 'monthly' as const,
       priority: 0.75,

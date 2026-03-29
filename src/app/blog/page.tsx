@@ -5,7 +5,7 @@ import { getAllPosts } from '@/lib/sanity';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
-  title: 'Blog',
+  title: 'Blog — Essays on Structured Knowledge',
   description:
     'Longer-form essays and thinking from SILKLEARN on knowledge compilation, synthesis, learning paths, and structured reasoning.',
   path: '/blog',

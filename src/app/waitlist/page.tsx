@@ -15,7 +15,7 @@ const WaitlistForm = dynamic(
 );
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Waitlist',
+  title: 'Join the Early Access Waitlist',
   description:
     'Join the SILKLEARN waitlist if your team works from dense source material and wants reviewable learning paths, dependency graphs, and context bundles.',
   path: '/waitlist',

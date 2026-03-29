@@ -22,7 +22,7 @@ const featureSignals = [
 ];
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Features',
+  title: 'Features & Capabilities',
   description:
     'Explore SILKLEARN features for dependency mapping, leader review, and turning source documents into structured learning paths.',
   path: '/features',

@@ -9,7 +9,8 @@ import { TransitionLink } from '@/components/marketing/page-transition';
 import { MarketingPageFrame } from '@/components/marketing/page-structure';
 import { PageShell } from '@/components/marketing/page-shell';
 import { getAllPosts, getPostBySlug, sanityImageUrl } from '@/lib/sanity';
-import { buildMetadata } from '@/lib/seo';
+import { absoluteUrl, buildMetadata } from '@/lib/seo';
+import { getArticleSchema } from '@/lib/structured-data';
 
 type BlogPostPageProps = {
   params: Promise<{ slug: string }>;
@@ -46,6 +47,22 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   return (
     <PageShell>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            getArticleSchema({
+              title: post.title,
+              description: post.excerpt,
+              url: absoluteUrl(`/blog/${post.slug}`),
+              datePublished: post.publishedAt,
+              ...(post.mainImage?.asset?.url && {
+                imageUrl: sanityImageUrl(post.mainImage.asset.url, 1200, 630),
+              }),
+            })
+          ),
+        }}
+      />
       <MarketingPageFrame>
         <div className="mx-auto max-w-4xl px-6 py-16 sm:py-24">
           <TransitionLink

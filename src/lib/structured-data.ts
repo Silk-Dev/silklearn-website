@@ -64,3 +64,43 @@ export function getFaqPageSchema(faq: SiteFaq[]) {
     })),
   };
 }
+
+export function getArticleSchema({
+  title,
+  description,
+  url,
+  datePublished,
+  dateModified,
+  imageUrl,
+}: {
+  title: string;
+  description: string;
+  url: string;
+  datePublished: string;
+  dateModified?: string;
+  imageUrl?: string;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: title,
+    description,
+    url,
+    datePublished,
+    ...(dateModified && { dateModified }),
+    ...(imageUrl && { image: imageUrl }),
+    author: {
+      '@type': 'Organization',
+      name: siteMetadata.siteName,
+      url: absoluteUrl('/'),
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: siteMetadata.siteName,
+      logo: {
+        '@type': 'ImageObject',
+        url: absoluteUrl('/silklearn/black-tr-text.svg'),
+      },
+    },
+  };
+}
