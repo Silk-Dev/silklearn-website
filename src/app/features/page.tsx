@@ -56,7 +56,7 @@ export default function FeaturesPage() {
               <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
                 Capabilities
               </p>
-              <h2 className="mt-4 max-w-[10ch] font-(family-name:--font-display) text-(--text-display-lg) leading-none tracking-[-0.02em] text-(--foreground)">
+              <h2 className="mt-4 max-w-[10ch] font-(family-name:--font-display) text-display-lg leading-none tracking-[-0.02em] text-(--foreground)">
                 Each feature exists to make the compiled graph more defensible and useful.
               </h2>
             </>

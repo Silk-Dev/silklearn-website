@@ -72,7 +72,7 @@ export default async function FeatureDetailPage({ params }: FeatureDetailPagePro
               <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
                 What it does
               </p>
-              <h2 className="mt-4 max-w-[10ch] font-(family-name:--font-display) text-(--text-display-lg) leading-none tracking-[-0.02em] text-(--foreground)">
+              <h2 className="mt-4 max-w-[10ch] font-(family-name:--font-display) text-display-lg leading-none tracking-[-0.02em] text-(--foreground)">
                 This feature turns hidden assumptions into something teams can inspect.
               </h2>
             </>
@@ -102,7 +102,7 @@ export default async function FeatureDetailPage({ params }: FeatureDetailPagePro
               <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
                 Related paths
               </p>
-              <h2 className="mt-4 max-w-[10ch] font-(family-name:--font-display) text-(--text-display-lg) leading-none tracking-[-0.02em] text-(--foreground)">
+              <h2 className="mt-4 max-w-[10ch] font-(family-name:--font-display) text-display-lg leading-none tracking-[-0.02em] text-(--foreground)">
                 See where this capability becomes operationally useful.
               </h2>
             </>

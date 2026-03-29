@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+@theme {
+  --text-display-xl: clamp(2.35rem, 3.2vw, 3.7rem);
+  --text-display-lg: clamp(2rem, 3.6vw, 3.375rem);
+  --text-display-md: clamp(1.85rem, 3vw, 2.75rem);
+  --text-display-sm: clamp(1.35rem, 2.2vw, 1.85rem);
+}
+
 :root {
   --black: #000;
   --white: #fff;
@@ -88,11 +95,6 @@
   --spacing: 0.25rem;
   --body-background: rgb(59, 130, 246);
 
-  /* Typography scale */
-  --text-display-xl: clamp(2.35rem, 3.2vw, 3.7rem);
-  --text-display-lg: clamp(2rem, 3.6vw, 3.375rem);
-  --text-display-md: clamp(1.85rem, 3vw, 2.75rem);
-  --text-display-sm: clamp(1.35rem, 2.2vw, 1.85rem);
 }
 
 .dark {

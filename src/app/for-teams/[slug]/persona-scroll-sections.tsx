@@ -141,7 +141,7 @@ export function PersonaScrollSections({ persona }: PersonaScrollSectionsProps) {
             className={`px-6 py-10 sm:px-8 lg:px-10 lg:py-20 min-h-[220px] lg:min-h-[280px] ${index > 0 ? "border-t border-(--border)" : ""}`}
           >
             <ScrollReveal start="top 92%">
-              <h2 className="mt-4 max-w-[28ch] font-(family-name:--font-display) text-(--text-display-sm) leading-tight tracking-[-0.01em] text-(--foreground)">{section.title}</h2>
+              <h2 className="mt-4 max-w-[28ch] font-(family-name:--font-display) text-display-sm leading-tight tracking-[-0.01em] text-(--foreground)">{section.title}</h2>
               <p className="mt-5 max-w-[66ch] text-[1rem] leading-7 text-(--foreground)">{section.copy}</p>
             </ScrollReveal>
           </article>

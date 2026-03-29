@@ -72,7 +72,7 @@ export default async function UseCaseDetailPage({ params }: UseCaseDetailPagePro
               <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
                 Expected outcomes
               </p>
-              <h2 className="mt-4 max-w-[10ch] font-(family-name:--font-display) text-(--text-display-lg) leading-none tracking-[-0.02em] text-(--foreground)">
+              <h2 className="mt-4 max-w-[10ch] font-(family-name:--font-display) text-display-lg leading-none tracking-[-0.02em] text-(--foreground)">
                 The value shows up when teams stop relearning the same system by trial and error.
               </h2>
             </>
@@ -102,7 +102,7 @@ export default async function UseCaseDetailPage({ params }: UseCaseDetailPagePro
               <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
                 Related paths
               </p>
-              <h2 className="mt-4 max-w-[10ch] font-(family-name:--font-display) text-(--text-display-lg) leading-none tracking-[-0.02em] text-(--foreground)">
+              <h2 className="mt-4 max-w-[10ch] font-(family-name:--font-display) text-display-lg leading-none tracking-[-0.02em] text-(--foreground)">
                 Move from this workflow into the feature or guide that supports it.
               </h2>
             </>

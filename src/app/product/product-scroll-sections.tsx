@@ -142,7 +142,7 @@ export function ProductScrollSections() {
                 {section.label}
               </p>
 
-              <h2 className="mt-4 max-w-[18ch] font-(family-name:--font-display) text-(--text-display-md) leading-none tracking-[-0.02em] text-(--foreground)">
+              <h2 className="mt-4 max-w-[18ch] font-(family-name:--font-display) text-display-md leading-none tracking-[-0.02em] text-(--foreground)">
                 {section.title}
               </h2>
 

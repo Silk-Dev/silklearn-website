@@ -50,7 +50,7 @@ export default function UseCasesPage() {
               <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
                 Workflow fit
               </p>
-              <h2 className="mt-4 max-w-[10ch] font-(family-name:--font-display) text-(--text-display-lg) leading-none tracking-[-0.02em] text-(--foreground)">
+              <h2 className="mt-4 max-w-[10ch] font-(family-name:--font-display) text-display-lg leading-none tracking-[-0.02em] text-(--foreground)">
                 Start with the workflow where missing context already hurts the team.
               </h2>
             </>
