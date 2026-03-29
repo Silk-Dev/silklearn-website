@@ -10,6 +10,7 @@ import { schemaTypes } from './sanity/schemaTypes'
 export default defineConfig({
   name: 'silklearn',
   title: 'SILKLEARN',
+  basePath: '/studio',
   projectId,
   dataset,
   plugins: [structureTool(), visionTool({ defaultApiVersion: apiVersion })],
