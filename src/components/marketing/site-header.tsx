@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from 'react';
 
+import { usePathname } from 'next/navigation';
+
 import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 
@@ -10,6 +12,7 @@ import { TransitionLink } from '@/components/marketing/page-transition';
 import { primaryNavigation } from '@/lib/marketing-content';
 
 export function SiteHeader() {
+  const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [announcementHeight, setAnnouncementHeight] = useState(44);
   const announcementRef = useRef<HTMLDivElement | null>(null);
@@ -75,7 +78,7 @@ export function SiteHeader() {
       >
         <span>Early access for structure-first teams is opening soon.</span>{' '}
         <TransitionLink className="font-semibold underline underline-offset-3" href="/waitlist">
-          View waitlist
+          Join the waitlist
         </TransitionLink>
       </div>
 
@@ -105,22 +108,29 @@ export function SiteHeader() {
 
             {/* Desktop nav — centered */}
             <nav className="hidden items-center gap-1 lg:flex">
-              {primaryNavigation.map((item) => (
-                <TransitionLink
-                  key={item.href}
-                  className="px-4 py-2 text-sm font-medium text-(--muted-foreground) transition-colors hover:text-(--foreground)"
-                  href={item.href}
-                >
-                  {item.label}
-                </TransitionLink>
-              ))}
+              {primaryNavigation.map((item) => {
+                const isActive = pathname.startsWith(item.href);
+                return (
+                  <TransitionLink
+                    key={item.href}
+                    className={`relative px-4 py-2 text-sm font-medium transition-colors hover:text-(--foreground) ${
+                      isActive
+                        ? 'text-(--foreground) after:absolute after:bottom-1 after:left-1/2 after:size-1 after:-translate-x-1/2 after:rounded-full after:bg-(--foreground)'
+                        : 'text-(--muted-foreground)'
+                    }`}
+                    href={item.href}
+                  >
+                    {item.label}
+                  </TransitionLink>
+                );
+              })}
             </nav>
 
             {/* Desktop CTAs */}
             <div className="hidden items-center gap-3 lg:flex">
               <Button asChild size="lg" variant='outline' className="px-6">
                 <TransitionLink className=" hover:text-white" href="/waitlist">
-                  Join waitlist
+                  Join the waitlist
                 </TransitionLink>
               </Button>
             </div>
@@ -143,16 +153,21 @@ export function SiteHeader() {
               style={{ minHeight: `calc(100dvh - ${announcementHeight + 64}px)` }}
             >
               <nav className="flex flex-col">
-                {primaryNavigation.map((item) => (
-                  <TransitionLink
-                    key={item.href}
-                    className="border-t border-(--border) px-4 py-5 text-lg font-medium text-(--foreground) transition-colors hover:bg-[oklch(from_var(--foreground)_l_c_h/0.04)] sm:px-6"
-                    href={item.href}
-                    onBeforeNavigate={() => setMobileOpen(false)}
-                  >
-                    {item.label}
-                  </TransitionLink>
-                ))}
+                {primaryNavigation.map((item) => {
+                  const isActive = pathname.startsWith(item.href);
+                  return (
+                    <TransitionLink
+                      key={item.href}
+                      className={`border-t border-(--border) px-4 py-5 text-lg font-medium transition-colors hover:bg-[oklch(from_var(--foreground)_l_c_h/0.04)] sm:px-6 ${
+                        isActive ? 'text-(--foreground)' : 'text-(--muted-foreground)'
+                      }`}
+                      href={item.href}
+                      onBeforeNavigate={() => setMobileOpen(false)}
+                    >
+                      {item.label}
+                    </TransitionLink>
+                  );
+                })}
               </nav>
 
               <div className="mt-auto border-t border-(--border)">
@@ -161,7 +176,7 @@ export function SiteHeader() {
                   href="/waitlist"
                   onBeforeNavigate={() => setMobileOpen(false)}
                 >
-                  Join waitlist
+                  Join the waitlist
                 </TransitionLink>
               </div>
             </div>

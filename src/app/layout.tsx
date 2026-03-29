@@ -7,6 +7,7 @@ import Script from 'next/script';
 import dynamic from 'next/dynamic';
 
 import { LenisProvider } from '@/components/marketing/lenis-provider';
+import { CookieConsent } from '@/components/marketing/cookie-consent';
 
 const GrainOverlay = dynamic(() => import('@/components/marketing/grain-overlay').then((m) => m.GrainOverlay));
 const IntercomProvider = dynamic(() => import('@/components/marketing/intercom-provider').then((m) => m.IntercomProvider));
@@ -61,6 +62,7 @@ export default function RootLayout({
           <IntercomProvider />
           <MarketingAnalytics />
         </LenisProvider>
+        <CookieConsent />
       </body>
     </html>
   );

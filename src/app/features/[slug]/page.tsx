@@ -121,7 +121,7 @@ export default async function FeatureDetailPage({ params }: FeatureDetailPagePro
               ))}
               <div className="sm:col-span-2">
                 <Button asChild>
-                  <TransitionLink href="/waitlist">Join waitlist</TransitionLink>
+                  <TransitionLink href="/waitlist">Join the waitlist</TransitionLink>
                 </Button>
               </div>
             </div>

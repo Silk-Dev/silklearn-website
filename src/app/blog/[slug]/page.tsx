@@ -8,6 +8,7 @@ import { PortableTextRenderer } from '../portable-text';
 import { TransitionLink } from '@/components/marketing/page-transition';
 import { MarketingPageFrame } from '@/components/marketing/page-structure';
 import { PageShell } from '@/components/marketing/page-shell';
+import { Button } from '@/components/ui/button';
 import { getAllPosts, getPostBySlug, sanityImageUrl } from '@/lib/sanity';
 import { absoluteUrl, buildMetadata } from '@/lib/seo';
 import { getArticleSchema } from '@/lib/structured-data';
@@ -133,14 +134,30 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </article>
           </div>
 
-          <div className="mt-16 border-t border-(--border) pt-8">
-            <TransitionLink
-              href="/blog"
-              className="inline-flex items-center gap-1.5 text-sm text-(--muted-foreground) transition-colors duration-150 hover:text-(--foreground)"
-            >
-              <ArrowLeft className="size-3.5" />
-              Back to Blog
-            </TransitionLink>
+          <div className="mt-16 border-t border-(--border) pt-12">
+            <div className="rounded-sm border border-(--border) bg-[oklch(from_var(--foreground)_l_c_h/0.03)] px-8 py-10">
+              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">Early access</p>
+              <h2 className="mt-2 font-(family-name:--font-display) text-2xl tracking-[-0.02em] text-(--foreground) sm:text-3xl">
+                Start compiling your knowledge.
+              </h2>
+              <p className="mt-3 max-w-[52ch] text-base leading-7 text-(--muted-foreground)">
+                SILKLEARN turns complex source material into reviewable learning paths your team can actually follow.
+              </p>
+              <div className="mt-6">
+                <Button asChild size="lg">
+                  <TransitionLink href="/waitlist">Join the waitlist</TransitionLink>
+                </Button>
+              </div>
+            </div>
+            <div className="mt-8">
+              <TransitionLink
+                href="/blog"
+                className="inline-flex items-center gap-1.5 text-sm text-(--muted-foreground) transition-colors duration-150 hover:text-(--foreground)"
+              >
+                <ArrowLeft className="size-3.5" />
+                Back to Blog
+              </TransitionLink>
+            </div>
           </div>
         </div>
       </MarketingPageFrame>
