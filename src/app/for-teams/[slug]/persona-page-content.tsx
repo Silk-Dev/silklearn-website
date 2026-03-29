@@ -1,20 +1,16 @@
-"use client";
+'use client';
 
-import dynamic from "next/dynamic";
-import type { personas } from "@/lib/marketing-personas";
-import { PageShell } from "@/components/marketing/page-shell";
-import {
-  MarketingPageFrame,
-  MarketingCtaSection,
-} from "@/components/marketing/page-structure";
-import { LottiePlaceholder } from "@/components/marketing/lottie-placeholder";
-import { Button } from "@/components/ui/button";
-import { TransitionLink } from "@/components/marketing/page-transition";
-import { ArrowRight } from "lucide-react";
+import dynamic from 'next/dynamic';
+import type { personas } from '@/lib/marketing-personas';
+import { MarketingCtaSection } from '@/components/marketing/page-structure';
+import { LottiePlaceholder } from '@/components/marketing/lottie-placeholder';
+import { Button } from '@/components/ui/button';
+import { TransitionLink } from '@/components/marketing/page-transition';
+import { ArrowRight } from 'lucide-react';
 
 const PersonaScrollSections = dynamic(
   () =>
-    import("./persona-scroll-sections").then(
+    import('./persona-scroll-sections').then(
       (mod) => mod.PersonaScrollSections
     ),
 );
@@ -23,9 +19,8 @@ type Persona = (typeof personas)[number];
 
 export function PersonaPageContent({ persona }: { persona: Persona }) {
   return (
-    <PageShell>
-      <MarketingPageFrame>
-        <div className="grid grid-cols-1 gap-y-12 lg:grid-cols-[1.2fr_1px_1fr]">
+    <>
+      <div className="grid grid-cols-1 gap-y-12 lg:grid-cols-[1.2fr_1px_1fr]">
           <div className="col-span-1">
             <PersonaScrollSections persona={persona} />
           </div>
@@ -59,7 +54,6 @@ export function PersonaPageContent({ persona }: { persona: Persona }) {
           kicker="Next step"
           title="See whether your document stack is a fit for early access."
         />
-      </MarketingPageFrame>
-    </PageShell>
+    </>
   );
 }

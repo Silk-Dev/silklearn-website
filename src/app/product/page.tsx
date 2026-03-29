@@ -139,7 +139,7 @@ export default function ProductPage() {
                 <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
                   THE PRODUCT
                 </p>
-                <h1 className="mt-6 max-w-[15ch] font-(family-name:--font-display) text-[clamp(2.35rem,3.2vw,3.7rem)] leading-none tracking-[-0.02em] text-(--foreground)">
+                <h1 className="mt-6 max-w-[15ch] font-(family-name:--font-display) text-(--text-display-xl) leading-none tracking-[-0.02em] text-(--foreground)">
                   Your docs, organized into a path your team can actually follow.
                 </h1>
                 <p className="mt-5 max-w-[50ch] text-[1.03rem] leading-7 text-(--muted-foreground)">
@@ -168,7 +168,7 @@ export default function ProductPage() {
 
         <section className="grid border-b border-(--border) lg:grid-cols-[1fr_1px_1.3fr]">
           <div className="p-6 sm:p-8 lg:flex lg:h-full lg:flex-col lg:justify-center lg:p-10">
-            <h2 className="max-w-[13ch] font-(family-name:--font-display) text-[clamp(2rem,3.6vw,3.375rem)] leading-none tracking-[-0.02em] text-(--foreground)">
+            <h2 className="max-w-[13ch] font-(family-name:--font-display) text-(--text-display-lg) leading-none tracking-[-0.02em] text-(--foreground)">
               What you get out of one reviewed graph.
             </h2>
             
@@ -202,7 +202,7 @@ export default function ProductPage() {
             <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
               Capabilities
             </p>
-            <h2 className="mt-4 font-(family-name:--font-display) text-[clamp(2rem,3.6vw,3.375rem)] leading-none tracking-[-0.02em] text-(--foreground)">
+            <h2 className="mt-4 font-(family-name:--font-display) text-(--text-display-lg) leading-none tracking-[-0.02em] text-(--foreground)">
               Core capabilities, laid out directly.
             </h2>
           </div>
@@ -231,7 +231,7 @@ export default function ProductPage() {
         <section className="grid lg:grid-cols-[1fr_1px_auto]">
           <div className="p-6 sm:p-8 lg:p-10 lg:py-14">
             
-            <h2 className="mt-4 max-w-[12ch] font-(family-name:--font-display) text-[clamp(2rem,3.6vw,3.25rem)] leading-none tracking-[-0.02em] text-(--foreground)">
+            <h2 className="mt-4 max-w-[12ch] font-(family-name:--font-display) text-(--text-display-lg) leading-none tracking-[-0.02em] text-(--foreground)">
               Ready to see what's inside your document stack?
             </h2>
           </div>

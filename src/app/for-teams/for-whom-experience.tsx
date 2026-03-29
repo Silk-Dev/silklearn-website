@@ -68,7 +68,7 @@ export function ForWhomExperience({ personas }: ForWhomExperienceProps) {
               <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
                 For whom
               </p>
-              <h1 className="mt-6 max-w-[14ch] font-(family-name:--font-display) text-[clamp(2.35rem,3.2vw,3.7rem)] leading-none tracking-[-0.02em] text-(--foreground)">
+              <h1 className="mt-6 max-w-[14ch] font-(family-name:--font-display) text-(--text-display-xl) leading-none tracking-[-0.02em] text-(--foreground)">
                 Built for teams where missing context creates expensive mistakes.
               </h1>
               <p className="mt-5 max-w-[58ch] text-[1.03rem] leading-7 text-(--muted-foreground)">

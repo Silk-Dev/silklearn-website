@@ -54,7 +54,7 @@ export default function WaitlistPage() {
               <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
                 Request access
               </p>
-              <h2 className="mt-4 max-w-[10ch] font-(family-name:--font-display) text-[clamp(2rem,3.6vw,3.2rem)] leading-none tracking-[-0.02em] text-(--foreground)">
+              <h2 className="mt-4 max-w-[10ch] font-(family-name:--font-display) text-(--text-display-lg) leading-none tracking-[-0.02em] text-(--foreground)">
                 Tell us what document stack you want to compile first.
               </h2>
               <p className="mt-4 max-w-[44ch] text-base leading-5 text-(--muted-foreground)">

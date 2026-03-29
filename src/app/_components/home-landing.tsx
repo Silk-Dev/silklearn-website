@@ -514,7 +514,7 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
           <div className="px-6 py-10 sm:px-8 lg:px-10 lg:py-50">
             <div className="max-w-125">
 
-              <h1 className=" font-(family-name:--font-display) text-[clamp(2.4rem,3vw,3.375rem)] leading-none tracking-[-0.02em] text-(--foreground)">
+              <h1 className=" font-(family-name:--font-display) text-(--text-display-xl) leading-none tracking-[-0.02em] text-(--foreground)">
                 {content.headline}
               </h1>
 
@@ -557,7 +557,7 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
               <ScrollReveal className="px-6 py-9 sm:px-8 lg:flex lg:items-center lg:px-10 lg:py-12">
                 <div>
                   <PainBlockIcon index={index} />
-                  <blockquote className="mt-3 max-w-[22ch] font-(family-name:--font-display) text-[clamp(1.6rem,2.1vw,2.25rem)] leading-[1.02] tracking-[-0.03em] text-(--foreground)">
+                  <blockquote className="mt-3 max-w-[22ch] font-(family-name:--font-display) text-(--text-display-md) leading-[1.02] tracking-[-0.03em] text-(--foreground)">
                     &ldquo;{item.quote}&rdquo;
                   </blockquote>
                 </div>
@@ -663,7 +663,7 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
         <div className="grid border-t border-(--border) ">
           <div className="p-6 sm:p-8 lg:p-10 lg:pt-50 lg:mb-35">
             <ScrollReveal>
-            <h2 className=" font-(family-name:--font-display) text-[clamp(2rem,3.6vw,3.375rem)] leading-none tracking-[-0.02em] text-(--foreground)">
+            <h2 className=" font-(family-name:--font-display) text-(--text-display-lg) leading-none tracking-[-0.02em] text-(--foreground)">
               Built for teams where missing context creates expensive mistakes.
             </h2>
             </ScrollReveal>
@@ -698,7 +698,7 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
         <div className="grid border-t border-(--border) ">
           <ScrollReveal className="p-6 sm:p-8 lg:p-10 lg:pt-50">
             <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">Common questions</p>
-            <h2 className="mt-4  font-(family-name:--font-display) text-[clamp(2rem,3.6vw,3.375rem)] leading-none tracking-[-0.02em] text-(--foreground)">
+            <h2 className="mt-4  font-(family-name:--font-display) text-(--text-display-lg) leading-none tracking-[-0.02em] text-(--foreground)">
               Core questions, answered directly.
             </h2>
           </ScrollReveal>
@@ -744,7 +744,7 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
         <div className="grid border-t border-(--border) lg:grid-cols-[1fr_1px_1fr]" id="waitlist">
           <ScrollReveal className="grid content-start gap-2 px-8 py-15 ">
             <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">Early access</p>
-            <h2 className="max-w-[12ch] font-(family-name:--font-display) text-[clamp(2rem,3.6vw,3.375rem)] leading-none tracking-[-0.02em] text-(--foreground)">
+            <h2 className="max-w-[12ch] font-(family-name:--font-display) text-(--text-display-lg) leading-none tracking-[-0.02em] text-(--foreground)">
               See whether your document stack is a fit for early access.
             </h2>
             <p className="max-w-[56ch] text-base leading-5 text-(--muted-foreground)">

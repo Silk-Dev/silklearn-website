@@ -1,8 +1,10 @@
+import dynamic from 'next/dynamic';
 import { MarketingPageFrame } from '@/components/marketing/page-structure';
 import { PageShell } from '@/components/marketing/page-shell';
-import { BlogFilter } from './blog-filter';
 import { getAllPosts } from '@/lib/sanity';
 import { buildMetadata } from '@/lib/seo';
+
+const BlogFilter = dynamic(() => import('./blog-filter').then(m => m.BlogFilter));
 
 export const metadata = buildMetadata({
   title: 'Blog — Essays on Structured Knowledge',
@@ -22,7 +24,7 @@ export default async function BlogListPage() {
   return (
     <PageShell>
       <MarketingPageFrame>
-        <div className="px-4 sm:px-12 lg:px-20 py-16 sm:py-24">
+        <div className="px-6 sm:px-8 lg:px-10 py-14 sm:py-20">
           <p className="text-sm text-(--muted-foreground)">Blog</p>
           <h1 className="mt-2 font-(family-name:--font-display) text-3xl sm:text-[2.75rem] sm:leading-[1.15] tracking-tight text-(--foreground) max-w-[18ch]">
             Essays and thinking on structured knowledge

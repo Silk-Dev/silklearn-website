@@ -66,7 +66,7 @@ export function LegalPage({ document, kicker }: LegalPageProps) {
               <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
                 Legal summary
               </p>
-              <h2 className="mt-4 max-w-[11ch] font-(family-name:--font-display) text-[clamp(2rem,3.6vw,3.2rem)] leading-none tracking-[-0.02em] text-(--foreground)">
+              <h2 className="mt-4 max-w-[11ch] font-(family-name:--font-display) text-(--text-display-lg) leading-none tracking-[-0.02em] text-(--foreground)">
                 Structured, readable legal foundations for the product and site.
               </h2>
               <div className="mt-6 flex items-center gap-3 border border-(--border) p-4 text-sm text-(--foreground)">

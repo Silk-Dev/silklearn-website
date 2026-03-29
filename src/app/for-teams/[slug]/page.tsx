@@ -1,8 +1,10 @@
-import type { Metadata } from "next";
-import { notFound } from "next/navigation";
-import { personas } from "@/lib/marketing-personas";
-import { buildMetadata } from "@/lib/seo";
-import { PersonaPageContent } from "./persona-page-content";
+import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
+import { personas } from '@/lib/marketing-personas';
+import { buildMetadata } from '@/lib/seo';
+import { PageShell } from '@/components/marketing/page-shell';
+import { MarketingPageFrame } from '@/components/marketing/page-structure';
+import { PersonaPageContent } from './persona-page-content';
 
 export async function generateMetadata({
   params,
@@ -34,5 +36,11 @@ export default async function ForWhomPersonaPage({
   const persona = personas.find((p) => p.id === slug);
   if (!persona) notFound();
 
-  return <PersonaPageContent persona={persona} />;
+  return (
+    <PageShell>
+      <MarketingPageFrame>
+        <PersonaPageContent persona={persona} />
+      </MarketingPageFrame>
+    </PageShell>
+  );
 }
