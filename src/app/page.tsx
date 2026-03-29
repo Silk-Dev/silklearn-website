@@ -1,4 +1,4 @@
-import { HomeLanding } from '@/components/marketing/home-landing';
+import { HomeLanding } from './_components/home-landing';
 import { PageShell } from '@/components/marketing/page-shell';
 import { getHomePageContent, isSanityConfigured } from '@/lib/sanity';
 

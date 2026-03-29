@@ -1,6 +1,6 @@
 import { MarketingPageFrame } from '@/components/marketing/page-structure';
 import { PageShell } from '@/components/marketing/page-shell';
-import { BlogFilter } from '@/components/marketing/blog-filter';
+import { BlogFilter } from './blog-filter';
 import { getAllPosts } from '@/lib/sanity';
 import { buildMetadata } from '@/lib/seo';
 

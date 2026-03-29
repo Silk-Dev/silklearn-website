@@ -14,7 +14,7 @@ import { ArrowRight } from "lucide-react";
 
 const PersonaScrollSections = dynamic(
   () =>
-    import("@/components/marketing/persona-scroll-sections").then(
+    import("./persona-scroll-sections").then(
       (mod) => mod.PersonaScrollSections
     ),
 );

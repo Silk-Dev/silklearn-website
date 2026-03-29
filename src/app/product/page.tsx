@@ -16,8 +16,8 @@ import {
 import type { LucideIcon } from 'lucide-react';
 
 import { TransitionLink } from '@/components/marketing/page-transition';
-import { ProductHeroGraph } from '../../components/marketing/product-hero-graph';
-import { ProductScrollSections } from '../../components/marketing/product-scroll-sections';
+import { ProductHeroGraph } from './product-hero-graph';
+import { ProductScrollSections } from './product-scroll-sections';
 
 import type { Metadata } from 'next';
 

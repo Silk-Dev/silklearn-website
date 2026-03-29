@@ -4,7 +4,7 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap/dist/gsap';
 
 import { LottiePlaceholder } from '@/components/marketing/lottie-placeholder';
-import { ProductLinkedNodesGraph } from '@/components/marketing/product-linked-nodes-graph';
+import { ProductLinkedNodesGraph } from './product-linked-nodes-graph';
 
 const incomingFlowLinks = [
   { id: 'incoming-top', path: 'M 356 126 L 458 126 C 470 126 472 130 472 143 L 472 173 C 472 183 476 187 486 187 L 560 187' },

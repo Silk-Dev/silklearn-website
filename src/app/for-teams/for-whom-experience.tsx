@@ -2,9 +2,9 @@
 
 import { useRef, useState } from 'react';
 
-import { ForWhomSelector } from '@/components/marketing/for-whom-selector';
+import { ForWhomSelector } from './for-whom-selector';
 import { MarketingSplitSection } from '@/components/marketing/page-structure';
-import { LottiePlaceholder } from './lottie-placeholder';
+import { LottiePlaceholder } from '@/components/marketing/lottie-placeholder';
 
 type PersonaOutcome = {
   label: string;

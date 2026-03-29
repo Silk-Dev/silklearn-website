@@ -9,7 +9,7 @@ import {
   ChevronDown,
 } from 'lucide-react';
 
-import { LinkedNodesGraph } from '@/components/marketing/linked-nodes-graph';
+import { LinkedNodesGraph } from './linked-nodes-graph';
 import { LottiePlaceholder } from '@/components/marketing/lottie-placeholder';
 import { ScrollReveal, StaggerReveal } from '@/components/marketing/scroll-animations';
 import { WaitlistForm } from '@/components/waitlist-form';

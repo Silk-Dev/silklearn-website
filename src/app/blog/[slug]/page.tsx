@@ -4,7 +4,7 @@ import { ArrowLeft } from 'lucide-react';
 import Image from 'next/image';
 import { redirect } from 'next/navigation';
 
-import { PortableTextRenderer } from '@/components/marketing/portable-text';
+import { PortableTextRenderer } from '../portable-text';
 import { TransitionLink } from '@/components/marketing/page-transition';
 import { MarketingPageFrame } from '@/components/marketing/page-structure';
 import { PageShell } from '@/components/marketing/page-shell';

@@ -1,6 +1,6 @@
 import { ArrowRight } from 'lucide-react';
 
-import { ForWhomExperience } from '@/components/marketing/for-whom-experience';
+import { ForWhomExperience } from './for-whom-experience';
 import { TransitionLink } from '@/components/marketing/page-transition';
 
 import type { Metadata } from 'next';
