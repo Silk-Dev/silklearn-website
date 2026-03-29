@@ -42,6 +42,13 @@ export function ScrollReveal({
     const el = ref.current;
     if (!el) return;
 
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) {
+      const targets = stagger > 0 ? Array.from(el.children) : [el];
+      gsap.set(targets, { opacity: 1, y: 0, filter: 'none' });
+      return;
+    }
+
     const targets = stagger > 0 ? Array.from(el.children) : [el];
 
     gsap.set(targets, {
@@ -119,6 +126,9 @@ export function Parallax({ children, className, distance = 40 }: ParallaxProps) 
     const el = ref.current;
     if (!el) return;
 
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) return;
+
     const tween = gsap.fromTo(
       el,
       { y: distance },
@@ -164,6 +174,12 @@ export function Counter({ target, suffix = '', prefix = '', className, duration 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) {
+      el.textContent = `${prefix}${target}${suffix}`;
+      return;
+    }
 
     const obj = { val: 0 };
     const tween = gsap.to(obj, {

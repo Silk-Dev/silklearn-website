@@ -115,14 +115,12 @@ export function PersonaScrollSections({ persona }: PersonaScrollSectionsProps) {
                   style={{ top: `${position}%` }}
                 >
                   <div className="relative flex size-6 items-center justify-center">
-                    {isCurrent ? (
-                      <div className="absolute inset-[-6px] rounded-full border border-[oklch(from_var(--primary)_l_c_h/0.28)] animate-ping" />
-                    ) : null}
+                    {null}
                     <div
-                      className={`relative z-10 flex size-6 items-center justify-center rounded-full border transition-[border-color,background-color,box-shadow] duration-200 ${isActive ? "border-[oklch(from_var(--primary)_l_c_h/0.35)] bg-[oklch(from_var(--primary)_l_c_h/0.12)] shadow-[0_0_0_4px_oklch(from_var(--primary)_l_c_h/0.08)]" : "border-[oklch(from_var(--foreground)_l_c_h/0.14)] bg-(--background)"}`}
+                      className={`relative z-10 flex size-6 items-center justify-center rounded-full border transition-[border-color,background-color,box-shadow] duration-200 ease-out ${isActive ? "border-[oklch(from_var(--primary)_l_c_h/0.35)] bg-[oklch(from_var(--primary)_l_c_h/0.12)] shadow-[0_0_0_4px_oklch(from_var(--primary)_l_c_h/0.08)]" : "border-[oklch(from_var(--foreground)_l_c_h/0.14)] bg-(--background)"}`}
                     >
                       <div
-                        className={`size-2 rounded-full transition-colors duration-200 ${isActive ? "bg-(--primary)" : "bg-[oklch(from_var(--foreground)_l_c_h/0.22)]"}`}
+                        className={`size-2 rounded-full transition-colors duration-200 ease-out ${isActive ? "bg-(--primary)" : "bg-[oklch(from_var(--foreground)_l_c_h/0.22)]"}`}
                       />
                     </div>
                   </div>

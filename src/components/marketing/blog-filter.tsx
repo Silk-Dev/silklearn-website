@@ -50,7 +50,7 @@ export function BlogFilter({ posts, tags }: BlogFilterProps) {
         <button
           type="button"
           onClick={() => setActiveTag(null)}
-          className={`text-xs uppercase tracking-wide px-3 py-2 rounded border transition-colors duration-150 cursor-pointer ${
+          className={`text-xs uppercase tracking-wide px-3 py-2 rounded border transition-[color,background-color,border-color,transform] duration-150 ease-out active:scale-[0.97] cursor-pointer ${
             activeTag === null
               ? 'bg-(--foreground) text-(--background) border-(--foreground)'
               : 'bg-transparent text-(--muted-foreground) border-(--border) hover:border-(--foreground) hover:text-(--foreground)'
@@ -63,7 +63,7 @@ export function BlogFilter({ posts, tags }: BlogFilterProps) {
             key={tag}
             type="button"
             onClick={() => setActiveTag(tag)}
-            className={`text-xs uppercase tracking-wide px-3 py-2 rounded border transition-colors duration-150 cursor-pointer ${
+            className={`text-xs uppercase tracking-wide px-3 py-2 rounded border transition-[color,background-color,border-color,transform] duration-150 ease-out active:scale-[0.97] cursor-pointer ${
               activeTag === tag
                 ? 'bg-(--foreground) text-(--background) border-(--foreground)'
                 : 'bg-transparent text-(--muted-foreground) border-(--border) hover:border-(--foreground) hover:text-(--foreground)'

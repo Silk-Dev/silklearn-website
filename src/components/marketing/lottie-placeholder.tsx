@@ -228,6 +228,14 @@ function StepOneDocumentScanAnimation() {
             opacity: 1;
           }
         }
+
+        @media (prefers-reduced-motion: reduce) {
+          .doc-pdf, .doc-docx, .doc-md,
+          .scan-heading, .scan-line,
+          .scanner-beam {
+            animation: none !important;
+          }
+        }
       `}</style>
     </div>
   );
