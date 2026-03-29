@@ -44,10 +44,11 @@ export function LegalPage({ document, kicker }: LegalPageProps) {
           rightTitle={`Effective ${document.effectiveDate}`}
           rightChildren={
             <div className="grid gap-3">
-              <div className="border border-(--border) p-4 text-sm leading-6 text-(--muted-foreground)">
-                {document.reviewNotice ||
-                  'This legal page is provided for operational clarity and should be reviewed before broad production use.'}
-              </div>
+              {document.reviewNotice ? (
+                <div className="border border-(--border) p-4 text-sm leading-6 text-(--muted-foreground)">
+                  {document.reviewNotice}
+                </div>
+              ) : null}
               <div className="grid gap-3 sm:grid-cols-1">
                 {document.summaryItems.map((item) => (
                   <div key={item} className="border border-(--border) px-4 py-3 text-sm font-medium text-(--foreground)">
@@ -70,7 +71,7 @@ export function LegalPage({ document, kicker }: LegalPageProps) {
               </h2>
               <div className="mt-6 flex items-center gap-3 border border-(--border) p-4 text-sm text-(--foreground)">
                 <ShieldCheck className="size-4.5 text-(--primary)" />
-                Subject to final legal review before production launch.
+                Governed by the laws of Portugal.
               </div>
             </>
           }
