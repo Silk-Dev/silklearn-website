@@ -4,14 +4,6 @@ import type { Metadata } from 'next';
 import { Inter, Montserrat } from 'next/font/google';
 import Script from 'next/script';
 
-import dynamic from 'next/dynamic';
-
-import { LenisProvider } from '@/components/marketing/lenis-provider';
-import { CookieConsent } from '@/components/marketing/cookie-consent';
-
-const GrainOverlay = dynamic(() => import('@/components/marketing/grain-overlay').then((m) => m.GrainOverlay));
-const IntercomProvider = dynamic(() => import('@/components/marketing/intercom-provider').then((m) => m.IntercomProvider));
-const MarketingAnalytics = dynamic(() => import('@/components/marketing/analytics').then((m) => m.MarketingAnalytics));
 import { defaultMetadata } from '@/lib/seo';
 import {
   getOrganizationSchema,
@@ -54,15 +46,9 @@ export default function RootLayout({
             getSoftwareApplicationSchema(),
           ])}
         </Script>
-        <LenisProvider>
-          {children}
-          <Analytics />
-          <SpeedInsights />
-          <GrainOverlay />
-          <IntercomProvider />
-          <MarketingAnalytics />
-        </LenisProvider>
-        <CookieConsent />
+        {children}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
