@@ -2,7 +2,7 @@
 
 > SILKLEARN is knowledge compilation infrastructure for teams working from dense source material. It produces reviewable learning paths, dependency graphs, and context bundles from messy internal knowledge.
 
-Canonical Origin: https://silklearn.io
+Canonical Origin: https://www.silklearn.io
 
 ## Table of Contents
 
@@ -55,19 +55,19 @@ description: SILKLEARN is knowledge compilation infrastructure for teams working
 
 SILKLEARN
 
-Early access for structure-first teams is opening soon. [View waitlist](https://silklearn.io/waitlist)
+Early access for structure-first teams is opening soon. [View waitlist](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog)
 
-[Join waitlist](https://silklearn.io/waitlist)
+[Join waitlist](https://www.silklearn.io/waitlist)
 
 # Turn dense internal docs into a reviewed order your team can use.
 
 SILKLEARN surfaces the dependency order hidden across your source material, lets leaders review it, and turns it into team-ready outputs for onboarding, rollout, and AI.
 
-[Request early access](#waitlist) [See how the structure works](https://silklearn.io/product)
+[Request early access](#waitlist) [See how the structure works](https://www.silklearn.io/product)
 
 > “ Why does everyone ask the same onboarding questions? ”
 
@@ -211,11 +211,11 @@ Private beta access. No spam. We review every application.
 
 Best fit: leaders testing onboarding, handoffs, compliance review, or AI context built from dense private docs.
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
 SILKLEARN compiles dense source material into reviewable learning paths, dependency-aware graphs, and context-efficient outputs for teams working from complex internal knowledge.
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog) [Waitlist](https://silklearn.io/waitlist) [Privacy](https://silklearn.io/privacy) [Terms](https://silklearn.io/terms) [EULA](https://silklearn.io/eula)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog) [Waitlist](https://www.silklearn.io/waitlist) [Privacy](https://www.silklearn.io/privacy) [Terms](https://www.silklearn.io/terms) [EULA](https://www.silklearn.io/eula)
 
 SILKLEARNStructure-first knowledge compilation
 
@@ -225,25 +225,25 @@ SILKLEARNStructure-first knowledge compilation
 
 ---
 title: SILKLEARN | Compile Source Material Into Reviewable Learning Paths
-url: https://silklearn.io
+url: https://www.silklearn.io
 description: SILKLEARN is knowledge compilation infrastructure for teams working from dense source material. It produces reviewable learning paths, dependency graphs, and context bundles from messy internal knowledge.
 ---
 
 SILKLEARN
 
-Early access for structure-first teams is opening soon. [View waitlist](https://silklearn.io/waitlist)
+Early access for structure-first teams is opening soon. [View waitlist](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog)
 
-[Join waitlist](https://silklearn.io/waitlist)
+[Join waitlist](https://www.silklearn.io/waitlist)
 
 # Turn dense internal docs into a reviewed order your team can use.
 
 SILKLEARN surfaces the dependency order hidden across your source material, lets leaders review it, and turns it into team-ready outputs for onboarding, rollout, and AI.
 
-[Request early access](#waitlist) [See how the structure works](https://silklearn.io/product)
+[Request early access](#waitlist) [See how the structure works](https://www.silklearn.io/product)
 
 > “ Why does everyone ask the same onboarding questions? ”
 
@@ -387,11 +387,11 @@ Private beta access. No spam. We review every application.
 
 Best fit: leaders testing onboarding, handoffs, compliance review, or AI context built from dense private docs.
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
 SILKLEARN compiles dense source material into reviewable learning paths, dependency-aware graphs, and context-efficient outputs for teams working from complex internal knowledge.
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog) [Waitlist](https://silklearn.io/waitlist) [Privacy](https://silklearn.io/privacy) [Terms](https://silklearn.io/terms) [EULA](https://silklearn.io/eula)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog) [Waitlist](https://www.silklearn.io/waitlist) [Privacy](https://www.silklearn.io/privacy) [Terms](https://www.silklearn.io/terms) [EULA](https://www.silklearn.io/eula)
 
 SILKLEARNStructure-first knowledge compilation
 
@@ -406,15 +406,15 @@ description: SILKLEARN is opening early access to teams that turn dense internal
 keywords: silklearn is opening early access to structure-first teams,silklearn blog
 ---
 
-Early access for structure-first teams is opening soon. [View waitlist](https://silklearn.io/waitlist)
+Early access for structure-first teams is opening soon. [View waitlist](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog)
 
-[Join waitlist](https://silklearn.io/waitlist)
+[Join waitlist](https://www.silklearn.io/waitlist)
 
-[Blog](https://silklearn.io/blog)![Abstract graph of interconnected learning concepts representing dependency-ordered learning paths](https://silklearn.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fcohk0sn4%2Fproduction%2F52ff8391eac2465051f67caa469a2c612a9701bd-1408x768.jpg%3Fw%3D1200%26h%3D630%26fm%3Dwebp%26fit%3Dcrop%26q%3D80&w=3840&q=75)
+[Blog](https://www.silklearn.io/blog)![Abstract graph of interconnected learning concepts representing dependency-ordered learning paths](https://www.silklearn.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fcohk0sn4%2Fproduction%2F52ff8391eac2465051f67caa469a2c612a9701bd-1408x768.jpg%3Fw%3D1200%26h%3D630%26fm%3Dwebp%26fit%3Dcrop%26q%3D80&w=3840&q=75)
 
 Written by
 
@@ -450,13 +450,13 @@ We're not opening access because we think the product is finished. We're opening
 
 Early access is not a demo or a sandbox. You get the working product.
 
-[Back to Blog](https://silklearn.io/blog)
+[Back to Blog](https://www.silklearn.io/blog)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
 SILKLEARN compiles dense source material into reviewable learning paths, dependency-aware graphs, and context-efficient outputs for teams working from complex internal knowledge.
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog) [Waitlist](https://silklearn.io/waitlist) [Privacy](https://silklearn.io/privacy) [Terms](https://silklearn.io/terms) [EULA](https://silklearn.io/eula)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog) [Waitlist](https://www.silklearn.io/waitlist) [Privacy](https://www.silklearn.io/privacy) [Terms](https://www.silklearn.io/terms) [EULA](https://www.silklearn.io/eula)
 
 SILKLEARNStructure-first knowledge compilation
 
@@ -471,15 +471,15 @@ description: RAG finds documents but not their dependencies. SILKLEARN makes kno
 keywords: retrieval is not enough — why structure beats search for internal knowledge,silklearn blog
 ---
 
-Early access for structure-first teams is opening soon. [View waitlist](https://silklearn.io/waitlist)
+Early access for structure-first teams is opening soon. [View waitlist](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog)
 
-[Join waitlist](https://silklearn.io/waitlist)
+[Join waitlist](https://www.silklearn.io/waitlist)
 
-[Blog](https://silklearn.io/blog)![Retrieval Is Not Enough — Why Structure Beats Search for Internal Knowledge](https://silklearn.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fcohk0sn4%2Fproduction%2F1b0bdde9cdd5cd93b4652b0a6608793d44ef496c-1408x768.jpg%3Fw%3D1200%26h%3D630%26fm%3Dwebp%26fit%3Dcrop%26q%3D80&w=3840&q=75)
+[Blog](https://www.silklearn.io/blog)![Retrieval Is Not Enough — Why Structure Beats Search for Internal Knowledge](https://www.silklearn.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fcohk0sn4%2Fproduction%2F1b0bdde9cdd5cd93b4652b0a6608793d44ef496c-1408x768.jpg%3Fw%3D1200%26h%3D630%26fm%3Dwebp%26fit%3Dcrop%26q%3D80&w=3840&q=75)
 
 Written by
 
@@ -573,13 +573,13 @@ The organizations that get this right will be the ones that invest in making the
 
 Retrieval gets you to the document. Structure gets you to the truth.
 
-[Back to Blog](https://silklearn.io/blog)
+[Back to Blog](https://www.silklearn.io/blog)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
 SILKLEARN compiles dense source material into reviewable learning paths, dependency-aware graphs, and context-efficient outputs for teams working from complex internal knowledge.
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog) [Waitlist](https://silklearn.io/waitlist) [Privacy](https://silklearn.io/privacy) [Terms](https://silklearn.io/terms) [EULA](https://silklearn.io/eula)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog) [Waitlist](https://www.silklearn.io/waitlist) [Privacy](https://www.silklearn.io/privacy) [Terms](https://www.silklearn.io/terms) [EULA](https://www.silklearn.io/eula)
 
 SILKLEARNStructure-first knowledge compilation
 
@@ -596,13 +596,13 @@ keywords: operational knowledge transfer from internal documentation,internal do
 
 Use Cases
 
-Early access for structure-first teams is opening soon. [View waitlist](https://silklearn.io/waitlist)
+Early access for structure-first teams is opening soon. [View waitlist](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog)
 
-[Join waitlist](https://silklearn.io/waitlist)
+[Join waitlist](https://www.silklearn.io/waitlist)
 
 Use case
 
@@ -636,23 +636,23 @@ Related paths
 
 ## Move from this workflow into the feature or guide that supports it.
 
-[Relevant feature](https://silklearn.io/features/leader-review)
+[Relevant feature](https://www.silklearn.io/features/leader-review)
 
-[Supporting guide](https://silklearn.io/blog)
+[Supporting guide](https://www.silklearn.io/blog)
 
-[Talk to us](https://silklearn.io/waitlist)
+[Talk to us](https://www.silklearn.io/waitlist)
 
 Next step
 
 ## Start with one team-critical transfer problem.
 
-[Talk to us](https://silklearn.io/waitlist)
+[Talk to us](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
 SILKLEARN compiles dense source material into reviewable learning paths, dependency-aware graphs, and context-efficient outputs for teams working from complex internal knowledge.
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog) [Waitlist](https://silklearn.io/waitlist) [Privacy](https://silklearn.io/privacy) [Terms](https://silklearn.io/terms) [EULA](https://silklearn.io/eula)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog) [Waitlist](https://www.silklearn.io/waitlist) [Privacy](https://www.silklearn.io/privacy) [Terms](https://www.silklearn.io/terms) [EULA](https://www.silklearn.io/eula)
 
 SILKLEARNStructure-first knowledge compilation
 
@@ -669,13 +669,13 @@ keywords: review compiled outputs before rollout,team learning paths,source mate
 
 Features
 
-Early access for structure-first teams is opening soon. [View waitlist](https://silklearn.io/waitlist)
+Early access for structure-first teams is opening soon. [View waitlist](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog)
 
-[Join waitlist](https://silklearn.io/waitlist)
+[Join waitlist](https://www.silklearn.io/waitlist)
 
 Feature
 
@@ -709,23 +709,23 @@ Related paths
 
 ## See where this capability becomes operationally useful.
 
-[Relevant use case](https://silklearn.io/use-cases/internal-docs-training)
+[Relevant use case](https://www.silklearn.io/use-cases/internal-docs-training)
 
-[Supporting guide](https://silklearn.io/blog)
+[Supporting guide](https://www.silklearn.io/blog)
 
-[Join waitlist](https://silklearn.io/waitlist)
+[Join waitlist](https://www.silklearn.io/waitlist)
 
 Next step
 
 ## Use this capability to make the graph more defensible.
 
-[Request access](https://silklearn.io/waitlist)
+[Request access](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
 SILKLEARN compiles dense source material into reviewable learning paths, dependency-aware graphs, and context-efficient outputs for teams working from complex internal knowledge.
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog) [Waitlist](https://silklearn.io/waitlist) [Privacy](https://silklearn.io/privacy) [Terms](https://silklearn.io/terms) [EULA](https://silklearn.io/eula)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog) [Waitlist](https://www.silklearn.io/waitlist) [Privacy](https://www.silklearn.io/privacy) [Terms](https://www.silklearn.io/terms) [EULA](https://www.silklearn.io/eula)
 
 SILKLEARNStructure-first knowledge compilation
 
@@ -742,13 +742,13 @@ keywords: engineering onboarding software,internal docs training,team enablement
 
 Use Cases
 
-Early access for structure-first teams is opening soon. [View waitlist](https://silklearn.io/waitlist)
+Early access for structure-first teams is opening soon. [View waitlist](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog)
 
-[Join waitlist](https://silklearn.io/waitlist)
+[Join waitlist](https://www.silklearn.io/waitlist)
 
 Use cases
 
@@ -774,7 +774,7 @@ Workflow fit
 
 Use case 1
 
-[Engineering Onboarding From Internal Systems Knowledge](https://silklearn.io/use-cases/engineering-onboarding)
+[Engineering Onboarding From Internal Systems Knowledge](https://www.silklearn.io/use-cases/engineering-onboarding)
 
 Instead of asking senior engineers to repeatedly explain the same system from scratch, SILKLEARN compiles the order directly from the documentation and related sources.
 
@@ -786,7 +786,7 @@ Give leads a reviewable map of prerequisite knowledge and hidden assumptions
 
 Use case 2
 
-[Operational Knowledge Transfer From Internal Documentation](https://silklearn.io/use-cases/internal-docs-training)
+[Operational Knowledge Transfer From Internal Documentation](https://www.silklearn.io/use-cases/internal-docs-training)
 
 SILKLEARN is useful when the knowledge is already in the docs, but the dependency order, hidden assumptions, and contradictions are fragmented across multiple sources.
 
@@ -800,13 +800,13 @@ Next step
 
 ## Pick one workflow and compile it end to end.
 
-[Talk to us](https://silklearn.io/waitlist)
+[Talk to us](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
 SILKLEARN compiles dense source material into reviewable learning paths, dependency-aware graphs, and context-efficient outputs for teams working from complex internal knowledge.
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog) [Waitlist](https://silklearn.io/waitlist) [Privacy](https://silklearn.io/privacy) [Terms](https://silklearn.io/terms) [EULA](https://silklearn.io/eula)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog) [Waitlist](https://www.silklearn.io/waitlist) [Privacy](https://www.silklearn.io/privacy) [Terms](https://www.silklearn.io/terms) [EULA](https://www.silklearn.io/eula)
 
 SILKLEARNStructure-first knowledge compilation
 
@@ -821,15 +821,15 @@ description: When onboarding lives in senior engineers' heads, leaders can't aud
 keywords: how leaders lose control of onboarding when knowledge stays implicit,silklearn blog
 ---
 
-Early access for structure-first teams is opening soon. [View waitlist](https://silklearn.io/waitlist)
+Early access for structure-first teams is opening soon. [View waitlist](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog)
 
-[Join waitlist](https://silklearn.io/waitlist)
+[Join waitlist](https://www.silklearn.io/waitlist)
 
-[Blog](https://silklearn.io/blog)![How Leaders Lose Control of Onboarding When Knowledge Stays Implicit](https://silklearn.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fcohk0sn4%2Fproduction%2Fad4e478ccbc132eba4e3aab4a5f1e2b2ae8422b1-1408x768.jpg%3Fw%3D1200%26h%3D630%26fm%3Dwebp%26fit%3Dcrop%26q%3D80&w=3840&q=75)
+[Blog](https://www.silklearn.io/blog)![How Leaders Lose Control of Onboarding When Knowledge Stays Implicit](https://www.silklearn.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fcohk0sn4%2Fproduction%2Fad4e478ccbc132eba4e3aab4a5f1e2b2ae8422b1-1408x768.jpg%3Fw%3D1200%26h%3D630%26fm%3Dwebp%26fit%3Dcrop%26q%3D80&w=3840&q=75)
 
 Written by
 
@@ -867,13 +867,13 @@ The problem with shadowing-as-onboarding is that the knowledge transfer is entir
 
 This is tribal knowledge operating as your official onboarding strategy, and it has real costs.
 
-[Back to Blog](https://silklearn.io/blog)
+[Back to Blog](https://www.silklearn.io/blog)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
 SILKLEARN compiles dense source material into reviewable learning paths, dependency-aware graphs, and context-efficient outputs for teams working from complex internal knowledge.
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog) [Waitlist](https://silklearn.io/waitlist) [Privacy](https://silklearn.io/privacy) [Terms](https://silklearn.io/terms) [EULA](https://silklearn.io/eula)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog) [Waitlist](https://www.silklearn.io/waitlist) [Privacy](https://www.silklearn.io/privacy) [Terms](https://www.silklearn.io/terms) [EULA](https://www.silklearn.io/eula)
 
 SILKLEARNStructure-first knowledge compilation
 
@@ -888,13 +888,13 @@ description: Longer-form essays and thinking from SILKLEARN on knowledge compila
 keywords: silklearn blog,knowledge compilation blog,structured reasoning
 ---
 
-Early access for structure-first teams is opening soon. [View waitlist](https://silklearn.io/waitlist)
+Early access for structure-first teams is opening soon. [View waitlist](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog)
 
-[Join waitlist](https://silklearn.io/waitlist)
+[Join waitlist](https://www.silklearn.io/waitlist)
 
 Blog
 
@@ -910,21 +910,21 @@ Engineering
 
 Research
 
-[![Abstract graph of interconnected learning concepts representing dependency-ordered learning paths](https://silklearn.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fcohk0sn4%2Fproduction%2F52ff8391eac2465051f67caa469a2c612a9701bd-1408x768.jpg%3Fw%3D240%26h%3D240%26fm%3Dwebp%26fit%3Dcrop%26q%3D80&w=256&q=75)<h2>SILKLEARN Is Opening Early Access to Structure-First Teams</h2>We're opening early access for teams that manage complex internal knowledge and want structured, reviewable learning paths.SILKLEARN·March 28, 2026Company·1 min read](https://silklearn.io/blog/silklearn-opening-early-access)
+[![Abstract graph of interconnected learning concepts representing dependency-ordered learning paths](https://www.silklearn.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fcohk0sn4%2Fproduction%2F52ff8391eac2465051f67caa469a2c612a9701bd-1408x768.jpg%3Fw%3D240%26h%3D240%26fm%3Dwebp%26fit%3Dcrop%26q%3D80&w=256&q=75)<h2>SILKLEARN Is Opening Early Access to Structure-First Teams</h2>We're opening early access for teams that manage complex internal knowledge and want structured, reviewable learning paths.SILKLEARN·March 28, 2026Company·1 min read](https://www.silklearn.io/blog/silklearn-opening-early-access)
 
-[![Why Most Teams Have an Order Problem, Not a Documentation Problem](https://silklearn.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fcohk0sn4%2Fproduction%2F580c8caafc68985b0086810aed71e890b9f66ad0-1408x768.jpg%3Fw%3D240%26h%3D240%26fm%3Dwebp%26fit%3Dcrop%26q%3D80&w=256&q=75)<h2>Why Most Teams Have an Order Problem, Not a Documentation Problem</h2>Teams don't lack docs — they lack visible order through them. The real bottleneck is dependency structure locked in experts' heads.SILKLEARN·March 28, 2026Product·5 min read](https://silklearn.io/blog/why-most-teams-have-an-order-problem)
+[![Why Most Teams Have an Order Problem, Not a Documentation Problem](https://www.silklearn.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fcohk0sn4%2Fproduction%2F580c8caafc68985b0086810aed71e890b9f66ad0-1408x768.jpg%3Fw%3D240%26h%3D240%26fm%3Dwebp%26fit%3Dcrop%26q%3D80&w=256&q=75)<h2>Why Most Teams Have an Order Problem, Not a Documentation Problem</h2>Teams don't lack docs — they lack visible order through them. The real bottleneck is dependency structure locked in experts' heads.SILKLEARN·March 28, 2026Product·5 min read](https://www.silklearn.io/blog/why-most-teams-have-an-order-problem)
 
-[![What Dependency-Ordered Learning Paths Actually Look Like](https://silklearn.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fcohk0sn4%2Fproduction%2F610203538690dfc186fe686358bfedb100b625e6-1408x768.jpg%3Fw%3D240%26h%3D240%26fm%3Dwebp%26fit%3Dcrop%26q%3D80&w=256&q=75)<h2>What Dependency-Ordered Learning Paths Actually Look Like</h2>Source material goes in, a dependency-ordered learning path comes out. Here's what the structure actually looks like.SILKLEARN·March 26, 2026Product·5 min read](https://silklearn.io/blog/what-dependency-ordered-learning-paths-look-like)
+[![What Dependency-Ordered Learning Paths Actually Look Like](https://www.silklearn.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fcohk0sn4%2Fproduction%2F610203538690dfc186fe686358bfedb100b625e6-1408x768.jpg%3Fw%3D240%26h%3D240%26fm%3Dwebp%26fit%3Dcrop%26q%3D80&w=256&q=75)<h2>What Dependency-Ordered Learning Paths Actually Look Like</h2>Source material goes in, a dependency-ordered learning path comes out. Here's what the structure actually looks like.SILKLEARN·March 26, 2026Product·5 min read](https://www.silklearn.io/blog/what-dependency-ordered-learning-paths-look-like)
 
-[![Retrieval Is Not Enough — Why Structure Beats Search for Internal Knowledge](https://silklearn.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fcohk0sn4%2Fproduction%2F1b0bdde9cdd5cd93b4652b0a6608793d44ef496c-1408x768.jpg%3Fw%3D240%26h%3D240%26fm%3Dwebp%26fit%3Dcrop%26q%3D80&w=256&q=75)<h2>Retrieval Is Not Enough — Why Structure Beats Search for Internal Knowledge</h2>RAG finds documents fast but misses their dependencies. Why reviewable structure matters more than search for internal knowledge.SILKLEARN·March 24, 2026Research·6 min read](https://silklearn.io/blog/retrieval-is-not-enough-structure-beats-search)
+[![Retrieval Is Not Enough — Why Structure Beats Search for Internal Knowledge](https://www.silklearn.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fcohk0sn4%2Fproduction%2F1b0bdde9cdd5cd93b4652b0a6608793d44ef496c-1408x768.jpg%3Fw%3D240%26h%3D240%26fm%3Dwebp%26fit%3Dcrop%26q%3D80&w=256&q=75)<h2>Retrieval Is Not Enough — Why Structure Beats Search for Internal Knowledge</h2>RAG finds documents fast but misses their dependencies. Why reviewable structure matters more than search for internal knowledge.SILKLEARN·March 24, 2026Research·6 min read](https://www.silklearn.io/blog/retrieval-is-not-enough-structure-beats-search)
 
-[![How Leaders Lose Control of Onboarding When Knowledge Stays Implicit](https://silklearn.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fcohk0sn4%2Fproduction%2Fad4e478ccbc132eba4e3aab4a5f1e2b2ae8422b1-1408x768.jpg%3Fw%3D240%26h%3D240%26fm%3Dwebp%26fit%3Dcrop%26q%3D80&w=256&q=75)<h2>How Leaders Lose Control of Onboarding When Knowledge Stays Implicit</h2>When onboarding lives in senior engineers' heads, leaders can't audit, measure, or improve it. Tribal knowledge doesn't scale.SILKLEARN·March 22, 2026Product·2 min read](https://silklearn.io/blog/leaders-lose-control-when-knowledge-stays-implicit)
+[![How Leaders Lose Control of Onboarding When Knowledge Stays Implicit](https://www.silklearn.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fcohk0sn4%2Fproduction%2Fad4e478ccbc132eba4e3aab4a5f1e2b2ae8422b1-1408x768.jpg%3Fw%3D240%26h%3D240%26fm%3Dwebp%26fit%3Dcrop%26q%3D80&w=256&q=75)<h2>How Leaders Lose Control of Onboarding When Knowledge Stays Implicit</h2>When onboarding lives in senior engineers' heads, leaders can't audit, measure, or improve it. Tribal knowledge doesn't scale.SILKLEARN·March 22, 2026Product·2 min read](https://www.silklearn.io/blog/leaders-lose-control-when-knowledge-stays-implicit)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
 SILKLEARN compiles dense source material into reviewable learning paths, dependency-aware graphs, and context-efficient outputs for teams working from complex internal knowledge.
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog) [Waitlist](https://silklearn.io/waitlist) [Privacy](https://silklearn.io/privacy) [Terms](https://silklearn.io/terms) [EULA](https://silklearn.io/eula)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog) [Waitlist](https://www.silklearn.io/waitlist) [Privacy](https://www.silklearn.io/privacy) [Terms](https://www.silklearn.io/terms) [EULA](https://www.silklearn.io/eula)
 
 SILKLEARNStructure-first knowledge compilation
 
@@ -941,13 +941,13 @@ keywords: compile dependency order from source material,team learning paths,sour
 
 Features
 
-Early access for structure-first teams is opening soon. [View waitlist](https://silklearn.io/waitlist)
+Early access for structure-first teams is opening soon. [View waitlist](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog)
 
-[Join waitlist](https://silklearn.io/waitlist)
+[Join waitlist](https://www.silklearn.io/waitlist)
 
 Feature
 
@@ -981,23 +981,23 @@ Related paths
 
 ## See where this capability becomes operationally useful.
 
-[Relevant use case](https://silklearn.io/use-cases/engineering-onboarding)
+[Relevant use case](https://www.silklearn.io/use-cases/engineering-onboarding)
 
-[Supporting guide](https://silklearn.io/blog)
+[Supporting guide](https://www.silklearn.io/blog)
 
-[Join waitlist](https://silklearn.io/waitlist)
+[Join waitlist](https://www.silklearn.io/waitlist)
 
 Next step
 
 ## Use this capability to make the graph more defensible.
 
-[Request access](https://silklearn.io/waitlist)
+[Request access](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
 SILKLEARN compiles dense source material into reviewable learning paths, dependency-aware graphs, and context-efficient outputs for teams working from complex internal knowledge.
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog) [Waitlist](https://silklearn.io/waitlist) [Privacy](https://silklearn.io/privacy) [Terms](https://silklearn.io/terms) [EULA](https://silklearn.io/eula)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog) [Waitlist](https://www.silklearn.io/waitlist) [Privacy](https://www.silklearn.io/privacy) [Terms](https://www.silklearn.io/terms) [EULA](https://www.silklearn.io/eula)
 
 SILKLEARNStructure-first knowledge compilation
 
@@ -1014,13 +1014,13 @@ keywords: knowledge compilation infrastructure,docs to learning paths,reviewable
 
 How It Works
 
-Early access for structure-first teams is opening soon. [View waitlist](https://silklearn.io/waitlist)
+Early access for structure-first teams is opening soon. [View waitlist](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog)
 
-[Join waitlist](https://silklearn.io/waitlist)
+[Join waitlist](https://www.silklearn.io/waitlist)
 
 THE PRODUCT
 
@@ -1028,7 +1028,7 @@ THE PRODUCT
 
 Not a course builder. Not a RAG pipeline. SILKLEARN reads what you already have and turns it into a structured, leader-approved path — in the right order, from day one.
 
-[Request Early Access](https://silklearn.io/waitlist)
+[Request Early Access](https://www.silklearn.io/waitlist)
 
 Lottie · File
 
@@ -1222,13 +1222,13 @@ Docs change? Re-compile, review the delta, republish. Done.
 
 ## Ready to see what's inside your document stack?
 
-[Request Early Access](https://silklearn.io/waitlist) [Or book a 20-minute walkthrough with the team](https://silklearn.io/waitlist)
+[Request Early Access](https://www.silklearn.io/waitlist) [Or book a 20-minute walkthrough with the team](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
 SILKLEARN compiles dense source material into reviewable learning paths, dependency-aware graphs, and context-efficient outputs for teams working from complex internal knowledge.
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog) [Waitlist](https://silklearn.io/waitlist) [Privacy](https://silklearn.io/privacy) [Terms](https://silklearn.io/terms) [EULA](https://silklearn.io/eula)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog) [Waitlist](https://www.silklearn.io/waitlist) [Privacy](https://www.silklearn.io/privacy) [Terms](https://www.silklearn.io/terms) [EULA](https://www.silklearn.io/eula)
 
 SILKLEARNStructure-first knowledge compilation
 
@@ -1243,15 +1243,15 @@ description: Teams don't lack documentation—they lack visible order through it
 keywords: why most teams have an order problem, not a documentation problem,silklearn blog
 ---
 
-Early access for structure-first teams is opening soon. [View waitlist](https://silklearn.io/waitlist)
+Early access for structure-first teams is opening soon. [View waitlist](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog)
 
-[Join waitlist](https://silklearn.io/waitlist)
+[Join waitlist](https://www.silklearn.io/waitlist)
 
-[Blog](https://silklearn.io/blog)![Why Most Teams Have an Order Problem, Not a Documentation Problem](https://silklearn.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fcohk0sn4%2Fproduction%2F580c8caafc68985b0086810aed71e890b9f66ad0-1408x768.jpg%3Fw%3D1200%26h%3D630%26fm%3Dwebp%26fit%3Dcrop%26q%3D80&w=3840&q=75)
+[Blog](https://www.silklearn.io/blog)![Why Most Teams Have an Order Problem, Not a Documentation Problem](https://www.silklearn.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fcohk0sn4%2Fproduction%2F580c8caafc68985b0086810aed71e890b9f66ad0-1408x768.jpg%3Fw%3D1200%26h%3D630%26fm%3Dwebp%26fit%3Dcrop%26q%3D80&w=3840&q=75)
 
 Written by
 
@@ -1339,13 +1339,13 @@ Teams that struggle with knowledge transfer almost never have a writing problem.
 
 Making that sequence explicit, durable, and navigable is the difference between a documentation system that technically contains the answers and one that actually transfers knowledge. The order was always the hard part. It just wasn't visible until now.
 
-[Back to Blog](https://silklearn.io/blog)
+[Back to Blog](https://www.silklearn.io/blog)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
 SILKLEARN compiles dense source material into reviewable learning paths, dependency-aware graphs, and context-efficient outputs for teams working from complex internal knowledge.
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog) [Waitlist](https://silklearn.io/waitlist) [Privacy](https://silklearn.io/privacy) [Terms](https://silklearn.io/terms) [EULA](https://silklearn.io/eula)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog) [Waitlist](https://www.silklearn.io/waitlist) [Privacy](https://www.silklearn.io/privacy) [Terms](https://www.silklearn.io/terms) [EULA](https://www.silklearn.io/eula)
 
 SILKLEARNStructure-first knowledge compilation
 
@@ -1360,13 +1360,13 @@ description: The terms governing access to the SILKLEARN website, platform, and 
 keywords: terms of service,silklearn legal,legal information
 ---
 
-Early access for structure-first teams is opening soon. [View waitlist](https://silklearn.io/waitlist)
+Early access for structure-first teams is opening soon. [View waitlist](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog)
 
-[Join waitlist](https://silklearn.io/waitlist)
+[Join waitlist](https://www.silklearn.io/waitlist)
 
 Terms
 
@@ -1513,11 +1513,11 @@ These Terms, together with the Privacy Policy and EULA, constitute the entire ag
 
 For questions about these Terms, contact us at support@silklearn.io.
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
 SILKLEARN compiles dense source material into reviewable learning paths, dependency-aware graphs, and context-efficient outputs for teams working from complex internal knowledge.
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog) [Waitlist](https://silklearn.io/waitlist) [Privacy](https://silklearn.io/privacy) [Terms](https://silklearn.io/terms) [EULA](https://silklearn.io/eula)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog) [Waitlist](https://www.silklearn.io/waitlist) [Privacy](https://www.silklearn.io/privacy) [Terms](https://www.silklearn.io/terms) [EULA](https://www.silklearn.io/eula)
 
 SILKLEARNStructure-first knowledge compilation
 
@@ -1532,13 +1532,13 @@ description: The license terms governing your use of the SILKLEARN application, 
 keywords: end user license agreement,silklearn legal,legal information
 ---
 
-Early access for structure-first teams is opening soon. [View waitlist](https://silklearn.io/waitlist)
+Early access for structure-first teams is opening soon. [View waitlist](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog)
 
-[Join waitlist](https://silklearn.io/waitlist)
+[Join waitlist](https://www.silklearn.io/waitlist)
 
 EULA
 
@@ -1658,11 +1658,11 @@ If any provision of this Agreement is found to be unenforceable, the remaining p
 
 For questions about this Agreement, contact us at support@silklearn.io.
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
 SILKLEARN compiles dense source material into reviewable learning paths, dependency-aware graphs, and context-efficient outputs for teams working from complex internal knowledge.
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog) [Waitlist](https://silklearn.io/waitlist) [Privacy](https://silklearn.io/privacy) [Terms](https://silklearn.io/terms) [EULA](https://silklearn.io/eula)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog) [Waitlist](https://www.silklearn.io/waitlist) [Privacy](https://www.silklearn.io/privacy) [Terms](https://www.silklearn.io/terms) [EULA](https://www.silklearn.io/eula)
 
 SILKLEARNStructure-first knowledge compilation
 
@@ -1679,13 +1679,13 @@ keywords: SILKLEARN features,dependency mapping software,leader review workflow
 
 Features
 
-Early access for structure-first teams is opening soon. [View waitlist](https://silklearn.io/waitlist)
+Early access for structure-first teams is opening soon. [View waitlist](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog)
 
-[Join waitlist](https://silklearn.io/waitlist)
+[Join waitlist](https://www.silklearn.io/waitlist)
 
 Features
 
@@ -1709,7 +1709,7 @@ Capabilities
 
 Structure extraction
 
-[Compile Dependency Order From Source Material](https://silklearn.io/features/dependency-mapping)
+[Compile Dependency Order From Source Material](https://www.silklearn.io/features/dependency-mapping)
 
 SILKLEARN turns hidden assumptions into explicit edges so teams can see what must come first, what unlocks the next concept, and where review is still required.
 
@@ -1721,7 +1721,7 @@ Produces a graph that can power roadmaps, briefings, and context bundles
 
 Review layer
 
-[Review Compiled Outputs Before Rollout](https://silklearn.io/features/leader-review)
+[Review Compiled Outputs Before Rollout](https://www.silklearn.io/features/leader-review)
 
 SILKLEARN does not ask leaders to trust a black box. It gives them a reviewable graph with provenance, dependency logic, and visible downstream implications.
 
@@ -1735,13 +1735,13 @@ Next step
 
 ## Start with the feature that unlocks your first workflow.
 
-[Request access](https://silklearn.io/waitlist)
+[Request access](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
 SILKLEARN compiles dense source material into reviewable learning paths, dependency-aware graphs, and context-efficient outputs for teams working from complex internal knowledge.
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog) [Waitlist](https://silklearn.io/waitlist) [Privacy](https://silklearn.io/privacy) [Terms](https://silklearn.io/terms) [EULA](https://silklearn.io/eula)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog) [Waitlist](https://www.silklearn.io/waitlist) [Privacy](https://www.silklearn.io/privacy) [Terms](https://www.silklearn.io/terms) [EULA](https://www.silklearn.io/eula)
 
 SILKLEARNStructure-first knowledge compilation
 
@@ -1758,13 +1758,13 @@ keywords: engineering onboarding from internal systems knowledge,internal docs o
 
 Use Cases
 
-Early access for structure-first teams is opening soon. [View waitlist](https://silklearn.io/waitlist)
+Early access for structure-first teams is opening soon. [View waitlist](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog)
 
-[Join waitlist](https://silklearn.io/waitlist)
+[Join waitlist](https://www.silklearn.io/waitlist)
 
 Use case
 
@@ -1798,23 +1798,23 @@ Related paths
 
 ## Move from this workflow into the feature or guide that supports it.
 
-[Relevant feature](https://silklearn.io/features/dependency-mapping)
+[Relevant feature](https://www.silklearn.io/features/dependency-mapping)
 
-[Supporting guide](https://silklearn.io/blog)
+[Supporting guide](https://www.silklearn.io/blog)
 
-[Talk to us](https://silklearn.io/waitlist)
+[Talk to us](https://www.silklearn.io/waitlist)
 
 Next step
 
 ## Start with one team-critical transfer problem.
 
-[Talk to us](https://silklearn.io/waitlist)
+[Talk to us](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
 SILKLEARN compiles dense source material into reviewable learning paths, dependency-aware graphs, and context-efficient outputs for teams working from complex internal knowledge.
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog) [Waitlist](https://silklearn.io/waitlist) [Privacy](https://silklearn.io/privacy) [Terms](https://silklearn.io/terms) [EULA](https://silklearn.io/eula)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog) [Waitlist](https://www.silklearn.io/waitlist) [Privacy](https://www.silklearn.io/privacy) [Terms](https://www.silklearn.io/terms) [EULA](https://www.silklearn.io/eula)
 
 SILKLEARNStructure-first knowledge compilation
 
@@ -1829,13 +1829,13 @@ description: How SILKLEARN collects, uses, stores, and protects personal data wh
 keywords: privacy policy,silklearn legal,legal information
 ---
 
-Early access for structure-first teams is opening soon. [View waitlist](https://silklearn.io/waitlist)
+Early access for structure-first teams is opening soon. [View waitlist](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog)
 
-[Join waitlist](https://silklearn.io/waitlist)
+[Join waitlist](https://www.silklearn.io/waitlist)
 
 Privacy
 
@@ -1962,11 +1962,11 @@ Continued use of the service after changes take effect constitutes acceptance of
 
 For any privacy-related questions, requests, or complaints, contact us at privacy@silklearn.io. We will acknowledge your request within 5 business days and respond substantively within 30 days.
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
 SILKLEARN compiles dense source material into reviewable learning paths, dependency-aware graphs, and context-efficient outputs for teams working from complex internal knowledge.
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog) [Waitlist](https://silklearn.io/waitlist) [Privacy](https://silklearn.io/privacy) [Terms](https://silklearn.io/terms) [EULA](https://silklearn.io/eula)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog) [Waitlist](https://www.silklearn.io/waitlist) [Privacy](https://www.silklearn.io/privacy) [Terms](https://www.silklearn.io/terms) [EULA](https://www.silklearn.io/eula)
 
 SILKLEARNStructure-first knowledge compilation
 
@@ -1983,13 +1983,13 @@ keywords: engineering onboarding software,internal docs training,team enablement
 
 Use Cases
 
-Early access for structure-first teams is opening soon. [View waitlist](https://silklearn.io/waitlist)
+Early access for structure-first teams is opening soon. [View waitlist](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog)
 
-[Join waitlist](https://silklearn.io/waitlist)
+[Join waitlist](https://www.silklearn.io/waitlist)
 
 Use cases
 
@@ -2015,7 +2015,7 @@ Workflow fit
 
 Use case 1
 
-[Engineering Onboarding From Internal Systems Knowledge](https://silklearn.io/use-cases/engineering-onboarding)
+[Engineering Onboarding From Internal Systems Knowledge](https://www.silklearn.io/use-cases/engineering-onboarding)
 
 Instead of asking senior engineers to repeatedly explain the same system from scratch, SILKLEARN compiles the order directly from the documentation and related sources.
 
@@ -2027,7 +2027,7 @@ Give leads a reviewable map of prerequisite knowledge and hidden assumptions
 
 Use case 2
 
-[Operational Knowledge Transfer From Internal Documentation](https://silklearn.io/use-cases/internal-docs-training)
+[Operational Knowledge Transfer From Internal Documentation](https://www.silklearn.io/use-cases/internal-docs-training)
 
 SILKLEARN is useful when the knowledge is already in the docs, but the dependency order, hidden assumptions, and contradictions are fragmented across multiple sources.
 
@@ -2041,13 +2041,13 @@ Next step
 
 ## Pick one workflow and compile it end to end.
 
-[Talk to us](https://silklearn.io/waitlist)
+[Talk to us](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
 SILKLEARN compiles dense source material into reviewable learning paths, dependency-aware graphs, and context-efficient outputs for teams working from complex internal knowledge.
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog) [Waitlist](https://silklearn.io/waitlist) [Privacy](https://silklearn.io/privacy) [Terms](https://silklearn.io/terms) [EULA](https://silklearn.io/eula)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog) [Waitlist](https://www.silklearn.io/waitlist) [Privacy](https://www.silklearn.io/privacy) [Terms](https://www.silklearn.io/terms) [EULA](https://www.silklearn.io/eula)
 
 SILKLEARNStructure-first knowledge compilation
 
@@ -2064,13 +2064,13 @@ keywords: SILKLEARN waitlist,knowledge compilation beta,reviewable learning path
 
 Waitlist
 
-Early access for structure-first teams is opening soon. [View waitlist](https://silklearn.io/waitlist)
+Early access for structure-first teams is opening soon. [View waitlist](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog)
 
-[Join waitlist](https://silklearn.io/waitlist)
+[Join waitlist](https://www.silklearn.io/waitlist)
 
 Waitlist
 
@@ -2102,11 +2102,11 @@ Private beta access. No spam. We review every application.
 
 Best fit: leaders testing onboarding, handoffs, compliance review, or AI context built from dense private docs.
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
 SILKLEARN compiles dense source material into reviewable learning paths, dependency-aware graphs, and context-efficient outputs for teams working from complex internal knowledge.
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog) [Waitlist](https://silklearn.io/waitlist) [Privacy](https://silklearn.io/privacy) [Terms](https://silklearn.io/terms) [EULA](https://silklearn.io/eula)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog) [Waitlist](https://www.silklearn.io/waitlist) [Privacy](https://www.silklearn.io/privacy) [Terms](https://www.silklearn.io/terms) [EULA](https://www.silklearn.io/eula)
 
 SILKLEARNStructure-first knowledge compilation
 
@@ -2121,15 +2121,15 @@ description: SILKLEARN turns source material into dependency-ordered learning pa
 keywords: what dependency-ordered learning paths actually look like,silklearn blog
 ---
 
-Early access for structure-first teams is opening soon. [View waitlist](https://silklearn.io/waitlist)
+Early access for structure-first teams is opening soon. [View waitlist](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog)
 
-[Join waitlist](https://silklearn.io/waitlist)
+[Join waitlist](https://www.silklearn.io/waitlist)
 
-[Blog](https://silklearn.io/blog)![What Dependency-Ordered Learning Paths Actually Look Like](https://silklearn.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fcohk0sn4%2Fproduction%2F610203538690dfc186fe686358bfedb100b625e6-1408x768.jpg%3Fw%3D1200%26h%3D630%26fm%3Dwebp%26fit%3Dcrop%26q%3D80&w=3840&q=75)
+[Blog](https://www.silklearn.io/blog)![What Dependency-Ordered Learning Paths Actually Look Like](https://www.silklearn.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fcohk0sn4%2Fproduction%2F610203538690dfc186fe686358bfedb100b625e6-1408x768.jpg%3Fw%3D1200%26h%3D630%26fm%3Dwebp%26fit%3Dcrop%26q%3D80&w=3840&q=75)
 
 Written by
 
@@ -2339,13 +2339,13 @@ The leader approves or adjusts the path.
 
 The learner follows it — no backtracking, no guessing, no 60-page documents labeled "start here."
 
-[Back to Blog](https://silklearn.io/blog)
+[Back to Blog](https://www.silklearn.io/blog)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
 SILKLEARN compiles dense source material into reviewable learning paths, dependency-aware graphs, and context-efficient outputs for teams working from complex internal knowledge.
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog) [Waitlist](https://silklearn.io/waitlist) [Privacy](https://silklearn.io/privacy) [Terms](https://silklearn.io/terms) [EULA](https://silklearn.io/eula)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog) [Waitlist](https://www.silklearn.io/waitlist) [Privacy](https://www.silklearn.io/privacy) [Terms](https://www.silklearn.io/terms) [EULA](https://www.silklearn.io/eula)
 
 SILKLEARNStructure-first knowledge compilation
 
@@ -2355,20 +2355,20 @@ SILKLEARNStructure-first knowledge compilation
 
 ---
 title: Waitlist | SILKLEARN
-url: https://silklearn.io/waitlist
+url: https://www.silklearn.io/waitlist
 description: Join the SILKLEARN waitlist if your team works from dense source material and wants reviewable learning paths, dependency graphs, and context bundles.
 keywords: SILKLEARN waitlist,knowledge compilation beta,reviewable learning path software
 ---
 
 Waitlist
 
-Early access for structure-first teams is opening soon. [View waitlist](https://silklearn.io/waitlist)
+Early access for structure-first teams is opening soon. [View waitlist](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog)
 
-[Join waitlist](https://silklearn.io/waitlist)
+[Join waitlist](https://www.silklearn.io/waitlist)
 
 Waitlist
 
@@ -2400,11 +2400,11 @@ Private beta access. No spam. We review every application.
 
 Best fit: leaders testing onboarding, handoffs, compliance review, or AI context built from dense private docs.
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
 SILKLEARN compiles dense source material into reviewable learning paths, dependency-aware graphs, and context-efficient outputs for teams working from complex internal knowledge.
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog) [Waitlist](https://silklearn.io/waitlist) [Privacy](https://silklearn.io/privacy) [Terms](https://silklearn.io/terms) [EULA](https://silklearn.io/eula)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog) [Waitlist](https://www.silklearn.io/waitlist) [Privacy](https://www.silklearn.io/privacy) [Terms](https://www.silklearn.io/terms) [EULA](https://www.silklearn.io/eula)
 
 SILKLEARNStructure-first knowledge compilation
 
@@ -2414,18 +2414,18 @@ SILKLEARNStructure-first knowledge compilation
 
 ---
 title: End User License Agreement | SILKLEARN
-url: https://silklearn.io/eula
+url: https://www.silklearn.io/eula
 description: The license terms governing your use of the SILKLEARN application, including software access, content processing, output ownership, and usage restrictions.
 keywords: end user license agreement,silklearn legal,legal information
 ---
 
-Early access for structure-first teams is opening soon. [View waitlist](https://silklearn.io/waitlist)
+Early access for structure-first teams is opening soon. [View waitlist](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog)
 
-[Join waitlist](https://silklearn.io/waitlist)
+[Join waitlist](https://www.silklearn.io/waitlist)
 
 EULA
 
@@ -2545,11 +2545,11 @@ If any provision of this Agreement is found to be unenforceable, the remaining p
 
 For questions about this Agreement, contact us at support@silklearn.io.
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
 SILKLEARN compiles dense source material into reviewable learning paths, dependency-aware graphs, and context-efficient outputs for teams working from complex internal knowledge.
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog) [Waitlist](https://silklearn.io/waitlist) [Privacy](https://silklearn.io/privacy) [Terms](https://silklearn.io/terms) [EULA](https://silklearn.io/eula)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog) [Waitlist](https://www.silklearn.io/waitlist) [Privacy](https://www.silklearn.io/privacy) [Terms](https://www.silklearn.io/terms) [EULA](https://www.silklearn.io/eula)
 
 SILKLEARNStructure-first knowledge compilation
 
@@ -2559,20 +2559,20 @@ SILKLEARNStructure-first knowledge compilation
 
 ---
 title: Use Cases | SILKLEARN
-url: https://silklearn.io/use-cases
+url: https://www.silklearn.io/use-cases
 description: See how SILKLEARN is used for engineering onboarding, internal docs training, and other dense knowledge rollout workflows.
 keywords: engineering onboarding software,internal docs training,team enablement use cases
 ---
 
 Use Cases
 
-Early access for structure-first teams is opening soon. [View waitlist](https://silklearn.io/waitlist)
+Early access for structure-first teams is opening soon. [View waitlist](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog)
 
-[Join waitlist](https://silklearn.io/waitlist)
+[Join waitlist](https://www.silklearn.io/waitlist)
 
 Use cases
 
@@ -2598,7 +2598,7 @@ Workflow fit
 
 Use case 1
 
-[Engineering Onboarding From Internal Systems Knowledge](https://silklearn.io/use-cases/engineering-onboarding)
+[Engineering Onboarding From Internal Systems Knowledge](https://www.silklearn.io/use-cases/engineering-onboarding)
 
 Instead of asking senior engineers to repeatedly explain the same system from scratch, SILKLEARN compiles the order directly from the documentation and related sources.
 
@@ -2610,7 +2610,7 @@ Give leads a reviewable map of prerequisite knowledge and hidden assumptions
 
 Use case 2
 
-[Operational Knowledge Transfer From Internal Documentation](https://silklearn.io/use-cases/internal-docs-training)
+[Operational Knowledge Transfer From Internal Documentation](https://www.silklearn.io/use-cases/internal-docs-training)
 
 SILKLEARN is useful when the knowledge is already in the docs, but the dependency order, hidden assumptions, and contradictions are fragmented across multiple sources.
 
@@ -2624,13 +2624,13 @@ Next step
 
 ## Pick one workflow and compile it end to end.
 
-[Talk to us](https://silklearn.io/waitlist)
+[Talk to us](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
 SILKLEARN compiles dense source material into reviewable learning paths, dependency-aware graphs, and context-efficient outputs for teams working from complex internal knowledge.
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog) [Waitlist](https://silklearn.io/waitlist) [Privacy](https://silklearn.io/privacy) [Terms](https://silklearn.io/terms) [EULA](https://silklearn.io/eula)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog) [Waitlist](https://www.silklearn.io/waitlist) [Privacy](https://www.silklearn.io/privacy) [Terms](https://www.silklearn.io/terms) [EULA](https://www.silklearn.io/eula)
 
 SILKLEARNStructure-first knowledge compilation
 
@@ -2640,18 +2640,18 @@ SILKLEARNStructure-first knowledge compilation
 
 ---
 title: Terms of Service | SILKLEARN
-url: https://silklearn.io/terms
+url: https://www.silklearn.io/terms
 description: The terms governing access to the SILKLEARN website, platform, and services — including account use, payment, intellectual property, and liability.
 keywords: terms of service,silklearn legal,legal information
 ---
 
-Early access for structure-first teams is opening soon. [View waitlist](https://silklearn.io/waitlist)
+Early access for structure-first teams is opening soon. [View waitlist](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog)
 
-[Join waitlist](https://silklearn.io/waitlist)
+[Join waitlist](https://www.silklearn.io/waitlist)
 
 Terms
 
@@ -2798,11 +2798,11 @@ These Terms, together with the Privacy Policy and EULA, constitute the entire ag
 
 For questions about these Terms, contact us at support@silklearn.io.
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
 SILKLEARN compiles dense source material into reviewable learning paths, dependency-aware graphs, and context-efficient outputs for teams working from complex internal knowledge.
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog) [Waitlist](https://silklearn.io/waitlist) [Privacy](https://silklearn.io/privacy) [Terms](https://silklearn.io/terms) [EULA](https://silklearn.io/eula)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog) [Waitlist](https://www.silklearn.io/waitlist) [Privacy](https://www.silklearn.io/privacy) [Terms](https://www.silklearn.io/terms) [EULA](https://www.silklearn.io/eula)
 
 SILKLEARNStructure-first knowledge compilation
 
@@ -2812,18 +2812,18 @@ SILKLEARNStructure-first knowledge compilation
 
 ---
 title: Blog | SILKLEARN
-url: https://silklearn.io/blog
+url: https://www.silklearn.io/blog
 description: Longer-form essays and thinking from SILKLEARN on knowledge compilation, synthesis, learning paths, and structured reasoning.
 keywords: silklearn blog,knowledge compilation blog,structured reasoning
 ---
 
-Early access for structure-first teams is opening soon. [View waitlist](https://silklearn.io/waitlist)
+Early access for structure-first teams is opening soon. [View waitlist](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog)
 
-[Join waitlist](https://silklearn.io/waitlist)
+[Join waitlist](https://www.silklearn.io/waitlist)
 
 Blog
 
@@ -2839,21 +2839,21 @@ Engineering
 
 Research
 
-[![Abstract graph of interconnected learning concepts representing dependency-ordered learning paths](https://silklearn.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fcohk0sn4%2Fproduction%2F52ff8391eac2465051f67caa469a2c612a9701bd-1408x768.jpg%3Fw%3D240%26h%3D240%26fm%3Dwebp%26fit%3Dcrop%26q%3D80&w=256&q=75)<h2>SILKLEARN Is Opening Early Access to Structure-First Teams</h2>We're opening early access for teams that manage complex internal knowledge and want structured, reviewable learning paths.SILKLEARN·March 28, 2026Company·1 min read](https://silklearn.io/blog/silklearn-opening-early-access)
+[![Abstract graph of interconnected learning concepts representing dependency-ordered learning paths](https://www.silklearn.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fcohk0sn4%2Fproduction%2F52ff8391eac2465051f67caa469a2c612a9701bd-1408x768.jpg%3Fw%3D240%26h%3D240%26fm%3Dwebp%26fit%3Dcrop%26q%3D80&w=256&q=75)<h2>SILKLEARN Is Opening Early Access to Structure-First Teams</h2>We're opening early access for teams that manage complex internal knowledge and want structured, reviewable learning paths.SILKLEARN·March 28, 2026Company·1 min read](https://www.silklearn.io/blog/silklearn-opening-early-access)
 
-[![Why Most Teams Have an Order Problem, Not a Documentation Problem](https://silklearn.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fcohk0sn4%2Fproduction%2F580c8caafc68985b0086810aed71e890b9f66ad0-1408x768.jpg%3Fw%3D240%26h%3D240%26fm%3Dwebp%26fit%3Dcrop%26q%3D80&w=256&q=75)<h2>Why Most Teams Have an Order Problem, Not a Documentation Problem</h2>Teams don't lack docs — they lack visible order through them. The real bottleneck is dependency structure locked in experts' heads.SILKLEARN·March 28, 2026Product·5 min read](https://silklearn.io/blog/why-most-teams-have-an-order-problem)
+[![Why Most Teams Have an Order Problem, Not a Documentation Problem](https://www.silklearn.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fcohk0sn4%2Fproduction%2F580c8caafc68985b0086810aed71e890b9f66ad0-1408x768.jpg%3Fw%3D240%26h%3D240%26fm%3Dwebp%26fit%3Dcrop%26q%3D80&w=256&q=75)<h2>Why Most Teams Have an Order Problem, Not a Documentation Problem</h2>Teams don't lack docs — they lack visible order through them. The real bottleneck is dependency structure locked in experts' heads.SILKLEARN·March 28, 2026Product·5 min read](https://www.silklearn.io/blog/why-most-teams-have-an-order-problem)
 
-[![What Dependency-Ordered Learning Paths Actually Look Like](https://silklearn.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fcohk0sn4%2Fproduction%2F610203538690dfc186fe686358bfedb100b625e6-1408x768.jpg%3Fw%3D240%26h%3D240%26fm%3Dwebp%26fit%3Dcrop%26q%3D80&w=256&q=75)<h2>What Dependency-Ordered Learning Paths Actually Look Like</h2>Source material goes in, a dependency-ordered learning path comes out. Here's what the structure actually looks like.SILKLEARN·March 26, 2026Product·5 min read](https://silklearn.io/blog/what-dependency-ordered-learning-paths-look-like)
+[![What Dependency-Ordered Learning Paths Actually Look Like](https://www.silklearn.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fcohk0sn4%2Fproduction%2F610203538690dfc186fe686358bfedb100b625e6-1408x768.jpg%3Fw%3D240%26h%3D240%26fm%3Dwebp%26fit%3Dcrop%26q%3D80&w=256&q=75)<h2>What Dependency-Ordered Learning Paths Actually Look Like</h2>Source material goes in, a dependency-ordered learning path comes out. Here's what the structure actually looks like.SILKLEARN·March 26, 2026Product·5 min read](https://www.silklearn.io/blog/what-dependency-ordered-learning-paths-look-like)
 
-[![Retrieval Is Not Enough — Why Structure Beats Search for Internal Knowledge](https://silklearn.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fcohk0sn4%2Fproduction%2F1b0bdde9cdd5cd93b4652b0a6608793d44ef496c-1408x768.jpg%3Fw%3D240%26h%3D240%26fm%3Dwebp%26fit%3Dcrop%26q%3D80&w=256&q=75)<h2>Retrieval Is Not Enough — Why Structure Beats Search for Internal Knowledge</h2>RAG finds documents fast but misses their dependencies. Why reviewable structure matters more than search for internal knowledge.SILKLEARN·March 24, 2026Research·6 min read](https://silklearn.io/blog/retrieval-is-not-enough-structure-beats-search)
+[![Retrieval Is Not Enough — Why Structure Beats Search for Internal Knowledge](https://www.silklearn.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fcohk0sn4%2Fproduction%2F1b0bdde9cdd5cd93b4652b0a6608793d44ef496c-1408x768.jpg%3Fw%3D240%26h%3D240%26fm%3Dwebp%26fit%3Dcrop%26q%3D80&w=256&q=75)<h2>Retrieval Is Not Enough — Why Structure Beats Search for Internal Knowledge</h2>RAG finds documents fast but misses their dependencies. Why reviewable structure matters more than search for internal knowledge.SILKLEARN·March 24, 2026Research·6 min read](https://www.silklearn.io/blog/retrieval-is-not-enough-structure-beats-search)
 
-[![How Leaders Lose Control of Onboarding When Knowledge Stays Implicit](https://silklearn.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fcohk0sn4%2Fproduction%2Fad4e478ccbc132eba4e3aab4a5f1e2b2ae8422b1-1408x768.jpg%3Fw%3D240%26h%3D240%26fm%3Dwebp%26fit%3Dcrop%26q%3D80&w=256&q=75)<h2>How Leaders Lose Control of Onboarding When Knowledge Stays Implicit</h2>When onboarding lives in senior engineers' heads, leaders can't audit, measure, or improve it. Tribal knowledge doesn't scale.SILKLEARN·March 22, 2026Product·2 min read](https://silklearn.io/blog/leaders-lose-control-when-knowledge-stays-implicit)
+[![How Leaders Lose Control of Onboarding When Knowledge Stays Implicit](https://www.silklearn.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fcohk0sn4%2Fproduction%2Fad4e478ccbc132eba4e3aab4a5f1e2b2ae8422b1-1408x768.jpg%3Fw%3D240%26h%3D240%26fm%3Dwebp%26fit%3Dcrop%26q%3D80&w=256&q=75)<h2>How Leaders Lose Control of Onboarding When Knowledge Stays Implicit</h2>When onboarding lives in senior engineers' heads, leaders can't audit, measure, or improve it. Tribal knowledge doesn't scale.SILKLEARN·March 22, 2026Product·2 min read](https://www.silklearn.io/blog/leaders-lose-control-when-knowledge-stays-implicit)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
 SILKLEARN compiles dense source material into reviewable learning paths, dependency-aware graphs, and context-efficient outputs for teams working from complex internal knowledge.
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog) [Waitlist](https://silklearn.io/waitlist) [Privacy](https://silklearn.io/privacy) [Terms](https://silklearn.io/terms) [EULA](https://silklearn.io/eula)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog) [Waitlist](https://www.silklearn.io/waitlist) [Privacy](https://www.silklearn.io/privacy) [Terms](https://www.silklearn.io/terms) [EULA](https://www.silklearn.io/eula)
 
 SILKLEARNStructure-first knowledge compilation
 
@@ -2863,18 +2863,18 @@ SILKLEARNStructure-first knowledge compilation
 
 ---
 title: Privacy Policy | SILKLEARN
-url: https://silklearn.io/privacy
+url: https://www.silklearn.io/privacy
 description: How SILKLEARN collects, uses, stores, and protects personal data when you visit our website, join the waitlist, use our product, or communicate with us.
 keywords: privacy policy,silklearn legal,legal information
 ---
 
-Early access for structure-first teams is opening soon. [View waitlist](https://silklearn.io/waitlist)
+Early access for structure-first teams is opening soon. [View waitlist](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog)
 
-[Join waitlist](https://silklearn.io/waitlist)
+[Join waitlist](https://www.silklearn.io/waitlist)
 
 Privacy
 
@@ -3001,11 +3001,11 @@ Continued use of the service after changes take effect constitutes acceptance of
 
 For any privacy-related questions, requests, or complaints, contact us at privacy@silklearn.io. We will acknowledge your request within 5 business days and respond substantively within 30 days.
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
 SILKLEARN compiles dense source material into reviewable learning paths, dependency-aware graphs, and context-efficient outputs for teams working from complex internal knowledge.
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog) [Waitlist](https://silklearn.io/waitlist) [Privacy](https://silklearn.io/privacy) [Terms](https://silklearn.io/terms) [EULA](https://silklearn.io/eula)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog) [Waitlist](https://www.silklearn.io/waitlist) [Privacy](https://www.silklearn.io/privacy) [Terms](https://www.silklearn.io/terms) [EULA](https://www.silklearn.io/eula)
 
 SILKLEARNStructure-first knowledge compilation
 
@@ -3015,20 +3015,20 @@ SILKLEARNStructure-first knowledge compilation
 
 ---
 title: Use Cases | SILKLEARN
-url: https://silklearn.io/for-whom
+url: https://www.silklearn.io/for-whom
 description: See how SILKLEARN is used for engineering onboarding, internal docs training, and other dense knowledge rollout workflows.
 keywords: engineering onboarding software,internal docs training,team enablement use cases
 ---
 
 Use Cases
 
-Early access for structure-first teams is opening soon. [View waitlist](https://silklearn.io/waitlist)
+Early access for structure-first teams is opening soon. [View waitlist](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog)
 
-[Join waitlist](https://silklearn.io/waitlist)
+[Join waitlist](https://www.silklearn.io/waitlist)
 
 Use cases
 
@@ -3054,7 +3054,7 @@ Workflow fit
 
 Use case 1
 
-[Engineering Onboarding From Internal Systems Knowledge](https://silklearn.io/use-cases/engineering-onboarding)
+[Engineering Onboarding From Internal Systems Knowledge](https://www.silklearn.io/use-cases/engineering-onboarding)
 
 Instead of asking senior engineers to repeatedly explain the same system from scratch, SILKLEARN compiles the order directly from the documentation and related sources.
 
@@ -3066,7 +3066,7 @@ Give leads a reviewable map of prerequisite knowledge and hidden assumptions
 
 Use case 2
 
-[Operational Knowledge Transfer From Internal Documentation](https://silklearn.io/use-cases/internal-docs-training)
+[Operational Knowledge Transfer From Internal Documentation](https://www.silklearn.io/use-cases/internal-docs-training)
 
 SILKLEARN is useful when the knowledge is already in the docs, but the dependency order, hidden assumptions, and contradictions are fragmented across multiple sources.
 
@@ -3080,13 +3080,13 @@ Next step
 
 ## Pick one workflow and compile it end to end.
 
-[Talk to us](https://silklearn.io/waitlist)
+[Talk to us](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
 SILKLEARN compiles dense source material into reviewable learning paths, dependency-aware graphs, and context-efficient outputs for teams working from complex internal knowledge.
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog) [Waitlist](https://silklearn.io/waitlist) [Privacy](https://silklearn.io/privacy) [Terms](https://silklearn.io/terms) [EULA](https://silklearn.io/eula)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog) [Waitlist](https://www.silklearn.io/waitlist) [Privacy](https://www.silklearn.io/privacy) [Terms](https://www.silklearn.io/terms) [EULA](https://www.silklearn.io/eula)
 
 SILKLEARNStructure-first knowledge compilation
 
@@ -3096,20 +3096,20 @@ SILKLEARNStructure-first knowledge compilation
 
 ---
 title: Features | SILKLEARN
-url: https://silklearn.io/features
+url: https://www.silklearn.io/features
 description: Explore SILKLEARN features for dependency mapping, leader review, and turning source documents into structured learning paths.
 keywords: SILKLEARN features,dependency mapping software,leader review workflow
 ---
 
 Features
 
-Early access for structure-first teams is opening soon. [View waitlist](https://silklearn.io/waitlist)
+Early access for structure-first teams is opening soon. [View waitlist](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog)
 
-[Join waitlist](https://silklearn.io/waitlist)
+[Join waitlist](https://www.silklearn.io/waitlist)
 
 Features
 
@@ -3133,7 +3133,7 @@ Capabilities
 
 Structure extraction
 
-[Compile Dependency Order From Source Material](https://silklearn.io/features/dependency-mapping)
+[Compile Dependency Order From Source Material](https://www.silklearn.io/features/dependency-mapping)
 
 SILKLEARN turns hidden assumptions into explicit edges so teams can see what must come first, what unlocks the next concept, and where review is still required.
 
@@ -3145,7 +3145,7 @@ Produces a graph that can power roadmaps, briefings, and context bundles
 
 Review layer
 
-[Review Compiled Outputs Before Rollout](https://silklearn.io/features/leader-review)
+[Review Compiled Outputs Before Rollout](https://www.silklearn.io/features/leader-review)
 
 SILKLEARN does not ask leaders to trust a black box. It gives them a reviewable graph with provenance, dependency logic, and visible downstream implications.
 
@@ -3159,13 +3159,13 @@ Next step
 
 ## Start with the feature that unlocks your first workflow.
 
-[Request access](https://silklearn.io/waitlist)
+[Request access](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
 SILKLEARN compiles dense source material into reviewable learning paths, dependency-aware graphs, and context-efficient outputs for teams working from complex internal knowledge.
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog) [Waitlist](https://silklearn.io/waitlist) [Privacy](https://silklearn.io/privacy) [Terms](https://silklearn.io/terms) [EULA](https://silklearn.io/eula)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog) [Waitlist](https://www.silklearn.io/waitlist) [Privacy](https://www.silklearn.io/privacy) [Terms](https://www.silklearn.io/terms) [EULA](https://www.silklearn.io/eula)
 
 SILKLEARNStructure-first knowledge compilation
 
@@ -3175,20 +3175,20 @@ SILKLEARNStructure-first knowledge compilation
 
 ---
 title: Product | SILKLEARN
-url: https://silklearn.io/product
+url: https://www.silklearn.io/product
 description: Go deeper on how SILKLEARN compiles document stacks into reviewable graphs, approval workflows, and reusable outputs for onboarding, rollout, AI, and compliance.
 keywords: knowledge compilation infrastructure,docs to learning paths,reviewable context bundles
 ---
 
 How It Works
 
-Early access for structure-first teams is opening soon. [View waitlist](https://silklearn.io/waitlist)
+Early access for structure-first teams is opening soon. [View waitlist](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog)
 
-[Join waitlist](https://silklearn.io/waitlist)
+[Join waitlist](https://www.silklearn.io/waitlist)
 
 THE PRODUCT
 
@@ -3196,7 +3196,7 @@ THE PRODUCT
 
 Not a course builder. Not a RAG pipeline. SILKLEARN reads what you already have and turns it into a structured, leader-approved path — in the right order, from day one.
 
-[Request Early Access](https://silklearn.io/waitlist)
+[Request Early Access](https://www.silklearn.io/waitlist)
 
 Lottie · File
 
@@ -3390,13 +3390,13 @@ Docs change? Re-compile, review the delta, republish. Done.
 
 ## Ready to see what's inside your document stack?
 
-[Request Early Access](https://silklearn.io/waitlist) [Or book a 20-minute walkthrough with the team](https://silklearn.io/waitlist)
+[Request Early Access](https://www.silklearn.io/waitlist) [Or book a 20-minute walkthrough with the team](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
 SILKLEARN compiles dense source material into reviewable learning paths, dependency-aware graphs, and context-efficient outputs for teams working from complex internal knowledge.
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog) [Waitlist](https://silklearn.io/waitlist) [Privacy](https://silklearn.io/privacy) [Terms](https://silklearn.io/terms) [EULA](https://silklearn.io/eula)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog) [Waitlist](https://www.silklearn.io/waitlist) [Privacy](https://www.silklearn.io/privacy) [Terms](https://www.silklearn.io/terms) [EULA](https://www.silklearn.io/eula)
 
 SILKLEARNStructure-first knowledge compilation
 
@@ -3406,20 +3406,20 @@ SILKLEARNStructure-first knowledge compilation
 
 ---
 title: Engineering Onboarding From Internal Systems Knowledge | SILKLEARN
-url: https://silklearn.io/use-cases/engineering-onboarding
+url: https://www.silklearn.io/use-cases/engineering-onboarding
 description: Turn architecture docs, runbooks, and technical standards into a dependency-aware onboarding path for engineers.
 keywords: engineering onboarding from internal systems knowledge,internal docs onboarding,team knowledge transfer
 ---
 
 Use Cases
 
-Early access for structure-first teams is opening soon. [View waitlist](https://silklearn.io/waitlist)
+Early access for structure-first teams is opening soon. [View waitlist](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog)
 
-[Join waitlist](https://silklearn.io/waitlist)
+[Join waitlist](https://www.silklearn.io/waitlist)
 
 Use case
 
@@ -3453,23 +3453,23 @@ Related paths
 
 ## Move from this workflow into the feature or guide that supports it.
 
-[Relevant feature](https://silklearn.io/features/dependency-mapping)
+[Relevant feature](https://www.silklearn.io/features/dependency-mapping)
 
-[Supporting guide](https://silklearn.io/blog)
+[Supporting guide](https://www.silklearn.io/blog)
 
-[Talk to us](https://silklearn.io/waitlist)
+[Talk to us](https://www.silklearn.io/waitlist)
 
 Next step
 
 ## Start with one team-critical transfer problem.
 
-[Talk to us](https://silklearn.io/waitlist)
+[Talk to us](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
 SILKLEARN compiles dense source material into reviewable learning paths, dependency-aware graphs, and context-efficient outputs for teams working from complex internal knowledge.
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog) [Waitlist](https://silklearn.io/waitlist) [Privacy](https://silklearn.io/privacy) [Terms](https://silklearn.io/terms) [EULA](https://silklearn.io/eula)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog) [Waitlist](https://www.silklearn.io/waitlist) [Privacy](https://www.silklearn.io/privacy) [Terms](https://www.silklearn.io/terms) [EULA](https://www.silklearn.io/eula)
 
 SILKLEARNStructure-first knowledge compilation
 
@@ -3479,20 +3479,20 @@ SILKLEARNStructure-first knowledge compilation
 
 ---
 title: Operational Knowledge Transfer From Internal Documentation | SILKLEARN
-url: https://silklearn.io/use-cases/internal-docs-training
+url: https://www.silklearn.io/use-cases/internal-docs-training
 description: Convert dense internal documentation into structured, reviewable guidance without rewriting everything as a course.
 keywords: operational knowledge transfer from internal documentation,internal docs onboarding,team knowledge transfer
 ---
 
 Use Cases
 
-Early access for structure-first teams is opening soon. [View waitlist](https://silklearn.io/waitlist)
+Early access for structure-first teams is opening soon. [View waitlist](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog)
 
-[Join waitlist](https://silklearn.io/waitlist)
+[Join waitlist](https://www.silklearn.io/waitlist)
 
 Use case
 
@@ -3526,23 +3526,23 @@ Related paths
 
 ## Move from this workflow into the feature or guide that supports it.
 
-[Relevant feature](https://silklearn.io/features/leader-review)
+[Relevant feature](https://www.silklearn.io/features/leader-review)
 
-[Supporting guide](https://silklearn.io/blog)
+[Supporting guide](https://www.silklearn.io/blog)
 
-[Talk to us](https://silklearn.io/waitlist)
+[Talk to us](https://www.silklearn.io/waitlist)
 
 Next step
 
 ## Start with one team-critical transfer problem.
 
-[Talk to us](https://silklearn.io/waitlist)
+[Talk to us](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
 SILKLEARN compiles dense source material into reviewable learning paths, dependency-aware graphs, and context-efficient outputs for teams working from complex internal knowledge.
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog) [Waitlist](https://silklearn.io/waitlist) [Privacy](https://silklearn.io/privacy) [Terms](https://silklearn.io/terms) [EULA](https://silklearn.io/eula)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog) [Waitlist](https://www.silklearn.io/waitlist) [Privacy](https://www.silklearn.io/privacy) [Terms](https://www.silklearn.io/terms) [EULA](https://www.silklearn.io/eula)
 
 SILKLEARNStructure-first knowledge compilation
 
@@ -3552,20 +3552,20 @@ SILKLEARNStructure-first knowledge compilation
 
 ---
 title: SILKLEARN Is Opening Early Access to Structure-First Teams | SILKLEARN
-url: https://silklearn.io/blog/silklearn-opening-early-access
+url: https://www.silklearn.io/blog/silklearn-opening-early-access
 description: SILKLEARN is opening early access to teams that turn dense internal knowledge into dependency-ordered learning paths. Source material in, structured training out.
 keywords: silklearn is opening early access to structure-first teams,silklearn blog
 ---
 
-Early access for structure-first teams is opening soon. [View waitlist](https://silklearn.io/waitlist)
+Early access for structure-first teams is opening soon. [View waitlist](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog)
 
-[Join waitlist](https://silklearn.io/waitlist)
+[Join waitlist](https://www.silklearn.io/waitlist)
 
-[Blog](https://silklearn.io/blog)![Abstract graph of interconnected learning concepts representing dependency-ordered learning paths](https://silklearn.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fcohk0sn4%2Fproduction%2F52ff8391eac2465051f67caa469a2c612a9701bd-1408x768.jpg%3Fw%3D1200%26h%3D630%26fm%3Dwebp%26fit%3Dcrop%26q%3D80&w=3840&q=75)
+[Blog](https://www.silklearn.io/blog)![Abstract graph of interconnected learning concepts representing dependency-ordered learning paths](https://www.silklearn.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fcohk0sn4%2Fproduction%2F52ff8391eac2465051f67caa469a2c612a9701bd-1408x768.jpg%3Fw%3D1200%26h%3D630%26fm%3Dwebp%26fit%3Dcrop%26q%3D80&w=3840&q=75)
 
 Written by
 
@@ -3601,13 +3601,13 @@ We're not opening access because we think the product is finished. We're opening
 
 Early access is not a demo or a sandbox. You get the working product.
 
-[Back to Blog](https://silklearn.io/blog)
+[Back to Blog](https://www.silklearn.io/blog)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
 SILKLEARN compiles dense source material into reviewable learning paths, dependency-aware graphs, and context-efficient outputs for teams working from complex internal knowledge.
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog) [Waitlist](https://silklearn.io/waitlist) [Privacy](https://silklearn.io/privacy) [Terms](https://silklearn.io/terms) [EULA](https://silklearn.io/eula)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog) [Waitlist](https://www.silklearn.io/waitlist) [Privacy](https://www.silklearn.io/privacy) [Terms](https://www.silklearn.io/terms) [EULA](https://www.silklearn.io/eula)
 
 SILKLEARNStructure-first knowledge compilation
 
@@ -3617,20 +3617,20 @@ SILKLEARNStructure-first knowledge compilation
 
 ---
 title: How Leaders Lose Control of Onboarding When Knowledge Stays Implicit | SILKLEARN
-url: https://silklearn.io/blog/leaders-lose-control-when-knowledge-stays-implicit
+url: https://www.silklearn.io/blog/leaders-lose-control-when-knowledge-stays-implicit
 description: When onboarding lives in senior engineers' heads, leaders can't audit, measure, or improve it. Making the learning path explicit turns tribal knowledge into infrastructure.
 keywords: how leaders lose control of onboarding when knowledge stays implicit,silklearn blog
 ---
 
-Early access for structure-first teams is opening soon. [View waitlist](https://silklearn.io/waitlist)
+Early access for structure-first teams is opening soon. [View waitlist](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog)
 
-[Join waitlist](https://silklearn.io/waitlist)
+[Join waitlist](https://www.silklearn.io/waitlist)
 
-[Blog](https://silklearn.io/blog)![How Leaders Lose Control of Onboarding When Knowledge Stays Implicit](https://silklearn.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fcohk0sn4%2Fproduction%2Fad4e478ccbc132eba4e3aab4a5f1e2b2ae8422b1-1408x768.jpg%3Fw%3D1200%26h%3D630%26fm%3Dwebp%26fit%3Dcrop%26q%3D80&w=3840&q=75)
+[Blog](https://www.silklearn.io/blog)![How Leaders Lose Control of Onboarding When Knowledge Stays Implicit](https://www.silklearn.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fcohk0sn4%2Fproduction%2Fad4e478ccbc132eba4e3aab4a5f1e2b2ae8422b1-1408x768.jpg%3Fw%3D1200%26h%3D630%26fm%3Dwebp%26fit%3Dcrop%26q%3D80&w=3840&q=75)
 
 Written by
 
@@ -3668,13 +3668,13 @@ The problem with shadowing-as-onboarding is that the knowledge transfer is entir
 
 This is tribal knowledge operating as your official onboarding strategy, and it has real costs.
 
-[Back to Blog](https://silklearn.io/blog)
+[Back to Blog](https://www.silklearn.io/blog)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
 SILKLEARN compiles dense source material into reviewable learning paths, dependency-aware graphs, and context-efficient outputs for teams working from complex internal knowledge.
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog) [Waitlist](https://silklearn.io/waitlist) [Privacy](https://silklearn.io/privacy) [Terms](https://silklearn.io/terms) [EULA](https://silklearn.io/eula)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog) [Waitlist](https://www.silklearn.io/waitlist) [Privacy](https://www.silklearn.io/privacy) [Terms](https://www.silklearn.io/terms) [EULA](https://www.silklearn.io/eula)
 
 SILKLEARNStructure-first knowledge compilation
 
@@ -3684,20 +3684,20 @@ SILKLEARNStructure-first knowledge compilation
 
 ---
 title: Compile Dependency Order From Source Material | SILKLEARN
-url: https://silklearn.io/features/dependency-mapping
+url: https://www.silklearn.io/features/dependency-mapping
 description: Expose prerequisite structure across dense documents so teams and AI systems receive knowledge in a defensible order.
 keywords: compile dependency order from source material,team learning paths,source material training
 ---
 
 Features
 
-Early access for structure-first teams is opening soon. [View waitlist](https://silklearn.io/waitlist)
+Early access for structure-first teams is opening soon. [View waitlist](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog)
 
-[Join waitlist](https://silklearn.io/waitlist)
+[Join waitlist](https://www.silklearn.io/waitlist)
 
 Feature
 
@@ -3731,23 +3731,23 @@ Related paths
 
 ## See where this capability becomes operationally useful.
 
-[Relevant use case](https://silklearn.io/use-cases/engineering-onboarding)
+[Relevant use case](https://www.silklearn.io/use-cases/engineering-onboarding)
 
-[Supporting guide](https://silklearn.io/blog)
+[Supporting guide](https://www.silklearn.io/blog)
 
-[Join waitlist](https://silklearn.io/waitlist)
+[Join waitlist](https://www.silklearn.io/waitlist)
 
 Next step
 
 ## Use this capability to make the graph more defensible.
 
-[Request access](https://silklearn.io/waitlist)
+[Request access](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
 SILKLEARN compiles dense source material into reviewable learning paths, dependency-aware graphs, and context-efficient outputs for teams working from complex internal knowledge.
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog) [Waitlist](https://silklearn.io/waitlist) [Privacy](https://silklearn.io/privacy) [Terms](https://silklearn.io/terms) [EULA](https://silklearn.io/eula)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog) [Waitlist](https://www.silklearn.io/waitlist) [Privacy](https://www.silklearn.io/privacy) [Terms](https://www.silklearn.io/terms) [EULA](https://www.silklearn.io/eula)
 
 SILKLEARNStructure-first knowledge compilation
 
@@ -3757,20 +3757,20 @@ SILKLEARNStructure-first knowledge compilation
 
 ---
 title: Retrieval Is Not Enough — Why Structure Beats Search for Internal Knowledge | SILKLEARN
-url: https://silklearn.io/blog/retrieval-is-not-enough-structure-beats-search
+url: https://www.silklearn.io/blog/retrieval-is-not-enough-structure-beats-search
 description: RAG finds documents but not their dependencies. SILKLEARN makes knowledge structure explicit and reviewable before any AI layer consumes it.
 keywords: retrieval is not enough — why structure beats search for internal knowledge,silklearn blog
 ---
 
-Early access for structure-first teams is opening soon. [View waitlist](https://silklearn.io/waitlist)
+Early access for structure-first teams is opening soon. [View waitlist](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog)
 
-[Join waitlist](https://silklearn.io/waitlist)
+[Join waitlist](https://www.silklearn.io/waitlist)
 
-[Blog](https://silklearn.io/blog)![Retrieval Is Not Enough — Why Structure Beats Search for Internal Knowledge](https://silklearn.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fcohk0sn4%2Fproduction%2F1b0bdde9cdd5cd93b4652b0a6608793d44ef496c-1408x768.jpg%3Fw%3D1200%26h%3D630%26fm%3Dwebp%26fit%3Dcrop%26q%3D80&w=3840&q=75)
+[Blog](https://www.silklearn.io/blog)![Retrieval Is Not Enough — Why Structure Beats Search for Internal Knowledge](https://www.silklearn.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fcohk0sn4%2Fproduction%2F1b0bdde9cdd5cd93b4652b0a6608793d44ef496c-1408x768.jpg%3Fw%3D1200%26h%3D630%26fm%3Dwebp%26fit%3Dcrop%26q%3D80&w=3840&q=75)
 
 Written by
 
@@ -3864,13 +3864,13 @@ The organizations that get this right will be the ones that invest in making the
 
 Retrieval gets you to the document. Structure gets you to the truth.
 
-[Back to Blog](https://silklearn.io/blog)
+[Back to Blog](https://www.silklearn.io/blog)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
 SILKLEARN compiles dense source material into reviewable learning paths, dependency-aware graphs, and context-efficient outputs for teams working from complex internal knowledge.
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog) [Waitlist](https://silklearn.io/waitlist) [Privacy](https://silklearn.io/privacy) [Terms](https://silklearn.io/terms) [EULA](https://silklearn.io/eula)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog) [Waitlist](https://www.silklearn.io/waitlist) [Privacy](https://www.silklearn.io/privacy) [Terms](https://www.silklearn.io/terms) [EULA](https://www.silklearn.io/eula)
 
 SILKLEARNStructure-first knowledge compilation
 
@@ -3880,20 +3880,20 @@ SILKLEARNStructure-first knowledge compilation
 
 ---
 title: Review Compiled Outputs Before Rollout | SILKLEARN
-url: https://silklearn.io/features/leader-review
+url: https://www.silklearn.io/features/leader-review
 description: Keep humans in the loop so compiled outputs can be inspected, corrected, and trusted before they affect team execution.
 keywords: review compiled outputs before rollout,team learning paths,source material training
 ---
 
 Features
 
-Early access for structure-first teams is opening soon. [View waitlist](https://silklearn.io/waitlist)
+Early access for structure-first teams is opening soon. [View waitlist](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog)
 
-[Join waitlist](https://silklearn.io/waitlist)
+[Join waitlist](https://www.silklearn.io/waitlist)
 
 Feature
 
@@ -3927,23 +3927,23 @@ Related paths
 
 ## See where this capability becomes operationally useful.
 
-[Relevant use case](https://silklearn.io/use-cases/internal-docs-training)
+[Relevant use case](https://www.silklearn.io/use-cases/internal-docs-training)
 
-[Supporting guide](https://silklearn.io/blog)
+[Supporting guide](https://www.silklearn.io/blog)
 
-[Join waitlist](https://silklearn.io/waitlist)
+[Join waitlist](https://www.silklearn.io/waitlist)
 
 Next step
 
 ## Use this capability to make the graph more defensible.
 
-[Request access](https://silklearn.io/waitlist)
+[Request access](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
 SILKLEARN compiles dense source material into reviewable learning paths, dependency-aware graphs, and context-efficient outputs for teams working from complex internal knowledge.
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog) [Waitlist](https://silklearn.io/waitlist) [Privacy](https://silklearn.io/privacy) [Terms](https://silklearn.io/terms) [EULA](https://silklearn.io/eula)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog) [Waitlist](https://www.silklearn.io/waitlist) [Privacy](https://www.silklearn.io/privacy) [Terms](https://www.silklearn.io/terms) [EULA](https://www.silklearn.io/eula)
 
 SILKLEARNStructure-first knowledge compilation
 
@@ -3953,20 +3953,20 @@ SILKLEARNStructure-first knowledge compilation
 
 ---
 title: What Dependency-Ordered Learning Paths Actually Look Like | SILKLEARN
-url: https://silklearn.io/blog/what-dependency-ordered-learning-paths-look-like
+url: https://www.silklearn.io/blog/what-dependency-ordered-learning-paths-look-like
 description: SILKLEARN turns source material into dependency-ordered learning paths — structured graphs where every concept appears after its prerequisites, reviewable by leaders before use.
 keywords: what dependency-ordered learning paths actually look like,silklearn blog
 ---
 
-Early access for structure-first teams is opening soon. [View waitlist](https://silklearn.io/waitlist)
+Early access for structure-first teams is opening soon. [View waitlist](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog)
 
-[Join waitlist](https://silklearn.io/waitlist)
+[Join waitlist](https://www.silklearn.io/waitlist)
 
-[Blog](https://silklearn.io/blog)![What Dependency-Ordered Learning Paths Actually Look Like](https://silklearn.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fcohk0sn4%2Fproduction%2F610203538690dfc186fe686358bfedb100b625e6-1408x768.jpg%3Fw%3D1200%26h%3D630%26fm%3Dwebp%26fit%3Dcrop%26q%3D80&w=3840&q=75)
+[Blog](https://www.silklearn.io/blog)![What Dependency-Ordered Learning Paths Actually Look Like](https://www.silklearn.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fcohk0sn4%2Fproduction%2F610203538690dfc186fe686358bfedb100b625e6-1408x768.jpg%3Fw%3D1200%26h%3D630%26fm%3Dwebp%26fit%3Dcrop%26q%3D80&w=3840&q=75)
 
 Written by
 
@@ -4176,13 +4176,13 @@ The leader approves or adjusts the path.
 
 The learner follows it — no backtracking, no guessing, no 60-page documents labeled "start here."
 
-[Back to Blog](https://silklearn.io/blog)
+[Back to Blog](https://www.silklearn.io/blog)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
 SILKLEARN compiles dense source material into reviewable learning paths, dependency-aware graphs, and context-efficient outputs for teams working from complex internal knowledge.
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog) [Waitlist](https://silklearn.io/waitlist) [Privacy](https://silklearn.io/privacy) [Terms](https://silklearn.io/terms) [EULA](https://silklearn.io/eula)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog) [Waitlist](https://www.silklearn.io/waitlist) [Privacy](https://www.silklearn.io/privacy) [Terms](https://www.silklearn.io/terms) [EULA](https://www.silklearn.io/eula)
 
 SILKLEARNStructure-first knowledge compilation
 
@@ -4192,20 +4192,20 @@ SILKLEARNStructure-first knowledge compilation
 
 ---
 title: Why Most Teams Have an Order Problem, Not a Documentation Problem | SILKLEARN
-url: https://silklearn.io/blog/why-most-teams-have-an-order-problem
+url: https://www.silklearn.io/blog/why-most-teams-have-an-order-problem
 description: Teams don't lack documentation—they lack visible order through it. The real bottleneck is the dependency structure locked in experts' heads.
 keywords: why most teams have an order problem, not a documentation problem,silklearn blog
 ---
 
-Early access for structure-first teams is opening soon. [View waitlist](https://silklearn.io/waitlist)
+Early access for structure-first teams is opening soon. [View waitlist](https://www.silklearn.io/waitlist)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog)
 
-[Join waitlist](https://silklearn.io/waitlist)
+[Join waitlist](https://www.silklearn.io/waitlist)
 
-[Blog](https://silklearn.io/blog)![Why Most Teams Have an Order Problem, Not a Documentation Problem](https://silklearn.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fcohk0sn4%2Fproduction%2F580c8caafc68985b0086810aed71e890b9f66ad0-1408x768.jpg%3Fw%3D1200%26h%3D630%26fm%3Dwebp%26fit%3Dcrop%26q%3D80&w=3840&q=75)
+[Blog](https://www.silklearn.io/blog)![Why Most Teams Have an Order Problem, Not a Documentation Problem](https://www.silklearn.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fcohk0sn4%2Fproduction%2F580c8caafc68985b0086810aed71e890b9f66ad0-1408x768.jpg%3Fw%3D1200%26h%3D630%26fm%3Dwebp%26fit%3Dcrop%26q%3D80&w=3840&q=75)
 
 Written by
 
@@ -4293,13 +4293,13 @@ Teams that struggle with knowledge transfer almost never have a writing problem.
 
 Making that sequence explicit, durable, and navigable is the difference between a documentation system that technically contains the answers and one that actually transfers knowledge. The order was always the hard part. It just wasn't visible until now.
 
-[Back to Blog](https://silklearn.io/blog)
+[Back to Blog](https://www.silklearn.io/blog)
 
-[![SILKLEARN](https://silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://silklearn.io/)
+[![SILKLEARN](https://www.silklearn.io/silklearn/black-tr-full-horizontal.svg)](https://www.silklearn.io/)
 
 SILKLEARN compiles dense source material into reviewable learning paths, dependency-aware graphs, and context-efficient outputs for teams working from complex internal knowledge.
 
-[How it works](https://silklearn.io/product) [For Whom](https://silklearn.io/for-whom) [Features](https://silklearn.io/features) [Use cases](https://silklearn.io/use-cases) [Blog](https://silklearn.io/blog) [Waitlist](https://silklearn.io/waitlist) [Privacy](https://silklearn.io/privacy) [Terms](https://silklearn.io/terms) [EULA](https://silklearn.io/eula)
+[How it works](https://www.silklearn.io/product) [For Whom](https://www.silklearn.io/for-whom) [Features](https://www.silklearn.io/features) [Use cases](https://www.silklearn.io/use-cases) [Blog](https://www.silklearn.io/blog) [Waitlist](https://www.silklearn.io/waitlist) [Privacy](https://www.silklearn.io/privacy) [Terms](https://www.silklearn.io/terms) [EULA](https://www.silklearn.io/eula)
 
 SILKLEARNStructure-first knowledge compilation
 
