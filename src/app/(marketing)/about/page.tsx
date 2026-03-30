@@ -10,7 +10,7 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({
   title: 'Jesser & Oussama Bedoui — About SILKLEARN',
   description:
-    'Jesser and Oussama Bedoui are the cofounders of SILKLEARN, building knowledge synthesis infrastructure for anyone working from dense source material — researchers, developers, and learners.',
+    'Jesser and Oussama Bedoui built SILKLEARN after spending years watching technical teams drown in unordered documentation. Two brothers solving a problem they kept running into.',
   path: '/about',
   keywords: ['jesser bedoui', 'oussama bedoui', 'silklearn cofounders', 'knowledge compilation'],
 });
@@ -53,10 +53,10 @@ export default function AboutPage() {
             Cofounders
           </p>
           <h1 className="mt-2 font-(family-name:--font-display) text-3xl sm:text-[2.75rem] sm:leading-[1.15] tracking-tight text-(--foreground)">
-            The Cofounders
+            We kept watching the same failure happen.
           </h1>
           <p className="mt-3 text-base leading-7 text-(--muted-foreground) max-w-[52ch]">
-            Two brothers building SILKLEARN — knowledge synthesis infrastructure for researchers, developers, and anyone trying to absorb a complex body of documents.
+            Two brothers who spent years inside technical teams where the documents existed and the path through them didn&apos;t — and no tool was fixing that.
           </p>
 
           {/* Founders grid — equal columns, staggered entry */}
@@ -79,8 +79,9 @@ export default function AboutPage() {
                 Jesser Bedoui
               </h2>
               <p className="mt-4 text-sm leading-7 text-(--muted-foreground)">
-                Building the product and the vision. Saw teams fail not from missing docs but from
-                docs with no order — and decided to fix that.
+                Spent years watching teams fail not because the documentation was missing — but
+                because nobody had arranged it in the right order. He&apos;s building the product
+                that does.
               </p>
             </div>
 
@@ -102,8 +103,9 @@ export default function AboutPage() {
                 Oussama Bedoui
               </h2>
               <p className="mt-4 text-sm leading-7 text-(--muted-foreground)">
-                Building the system. Six years shipping production software across Angular, Java,
-                and Spring Boot — owns the engineering at SILKLEARN.
+                Six years shipping production software in Angular, Java, and Spring Boot before any
+                of this started — which is why the architecture doesn&apos;t look like something
+                stitched together over weekends. He owns the engineering.
               </p>
             </div>
           </div>
@@ -117,8 +119,8 @@ export default function AboutPage() {
               The Reset
             </h2>
             <p className="mt-3 max-w-[52ch] text-base leading-7 text-(--muted-foreground)">
-              A raw day-by-day founder journal documenting the build from zero. Written in real
-              time, published unfiltered.
+              A day-by-day founder journal — written the same day it happens, not reconstructed
+              later. What actually went wrong, what we shipped, and what we changed our minds about.
             </p>
             <div className="mt-4">
               <TransitionLink

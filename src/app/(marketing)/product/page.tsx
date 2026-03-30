@@ -40,28 +40,28 @@ const productSummary: ProductSummaryItem[] = [
     label: 'Output 1',
     title: 'Learning path',
     copy:
-      'A prerequisite-ordered sequence your engineers follow from day one. Not a pile of docs - an actual order.',
+      'Your engineers arrive day one. Instead of handing them a folder, you hand them an order — every document sequenced by what the system actually requires.',
     icon: Route,
   },
   {
     label: 'Output 2',
     title: 'Rollout checklist',
     copy:
-      'Steps in dependency order. Teams see what must be done first - before a handoff depends on it.',
+      'No one finds out step 7 was blocked by step 3 after the handoff already failed. This surfaces the bottleneck first.',
     icon: ListChecks,
   },
   {
     label: 'Output 3',
     title: 'Compliance review queue',
     copy:
-      'Flagged items with source links, reviewer names, and timestamps. Ready to export for an audit.',
+      "Every flagged item carries its source, the reviewer's name, and a timestamp — export-ready when the auditor asks.",
     icon: ShieldCheck,
   },
   {
     label: 'Output 4',
     title: 'AI context bundle',
     copy:
-      'Structured context for your internal AI assistant - in the right order, from reviewed source. Not a retrieval guess.',
+      'Your AI assistant gets the knowledge in dependency order, from sources a human already reviewed — not a retrieval guess.',
     icon: BrainCircuit,
   },
 ];
@@ -76,7 +76,7 @@ const productFeatureCards = [
   {
     label: '02',
     title: 'Finds the order your docs already imply',
-    copy: "Extracts the prerequisite structure. Doesn't invent it.",
+    copy: "Reads the order your documents already assume. Doesn't invent one.",
     icon: GitFork,
   },
   {
@@ -87,7 +87,7 @@ const productFeatureCards = [
   },
   {
     label: '04',
-    title: 'Audit trail built automatically',
+    title: 'Every review decision is logged as it happens',
     copy: 'Timestamps and reviewer names logged as you review.',
     icon: History,
   },
@@ -144,7 +144,7 @@ export default function ProductPage() {
                   Not where you store knowledge. What happens to it after.
                 </h1>
                 <p className="mt-5 max-w-[50ch] text-[1.03rem] leading-7 text-(--muted-foreground)">
-                  NotebookLM and Perplexity answer questions about your documents. SILKLEARN synthesizes the structure of them — mapping what depends on what, surfacing contradictions between sources, and building a path you can follow rather than a chatbot you can query.
+                  NotebookLM and Perplexity answer questions about your documents. SILKLEARN reads the structure through them — what depends on what, where sources contradict each other, what order the material wants to go in — so you get a path, not a chatbot you have to interrogate.
                 </p>
                 <div className="mt-8">
                   <Button asChild size="lg">
@@ -204,7 +204,7 @@ export default function ProductPage() {
               Capabilities
             </p>
             <h2 className="mt-4 font-(family-name:--font-display) text-display-lg leading-none tracking-[-0.02em] text-(--foreground)">
-              Core capabilities, laid out directly.
+              Eight things it actually does.
             </h2>
           </div>
         </section>
@@ -233,7 +233,7 @@ export default function ProductPage() {
           <div className="p-6 sm:p-8 lg:p-10 lg:py-14">
             
             <h2 className="mt-4 max-w-[12ch] font-(family-name:--font-display) text-display-lg leading-none tracking-[-0.02em] text-(--foreground)">
-              Ready to see what's inside your document stack?
+              The structure is already in your docs. You just can't see it yet.
             </h2>
           </div>
 

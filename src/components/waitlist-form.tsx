@@ -27,7 +27,7 @@ const idleState: SubmissionState = {
 export function WaitlistForm({
   submitLabel = 'Request early access',
   idleMessage = 'Private beta — we read every application and reply personally within two business days.',
-  fitNote = "Best fit: teams where the knowledge exists in docs but the path through them doesn't.",
+  fitNote = "Not the right fit if your docs are sparse — this works best when the knowledge is already there, just buried.",
 }: WaitlistFormProps) {
   const [email, setEmail] = useState('');
   const [companyName, setCompanyName] = useState('');
@@ -81,7 +81,7 @@ export function WaitlistForm({
       onSubmit={handleSubmit}
     >
       <label className="grid gap-2">
-        <span className="text-sm font-semibold text-(--foreground)">Email</span>
+        <span className="text-sm font-semibold text-(--foreground)">Work email</span>
         <Input
           autoComplete="email"
           name="email"
@@ -116,7 +116,7 @@ export function WaitlistForm({
               <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
               <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
             </svg>
-            Submitting…
+            Sending your application…
           </>
         ) : (
           submitLabel

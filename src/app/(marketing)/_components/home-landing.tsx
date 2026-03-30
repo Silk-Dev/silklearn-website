@@ -37,7 +37,7 @@ const operatingModes = [
     metrics: ['See what must be learned first', 'Keep every step tied to source'],
   },
   {
-    title: 'Reuse one compiled graph across notes, questions, and AI context.',
+    title: 'One compiled graph feeds your notes, your AI, and every question you ask from it.',
     body: 'Build one synthesized structure that feeds your notes, Q&A sessions, and AI conversations without reconstructing the logic each time.',
     animationSrc: '/silklearn/animations/graph_to_lanes.json',
     eyebrow: 'Consolidate',
@@ -48,7 +48,7 @@ const operatingModes = [
 const painBlocks = [
   {
     quote: 'I\'ve read this three times and I still can\'t see how it connects.',
-    answer: 'Because documents show conclusions, not the dependency path that makes them make sense.',
+    answer: 'Because documents show conclusions, not the path that makes them make sense.',
   },
   {
     quote: 'I switched domains. There are 50 tabs open and no map.',
@@ -56,7 +56,7 @@ const painBlocks = [
   },
   {
     quote: 'My AI summarizes everything. It never tells me what order to understand things in.',
-    answer: 'Because the context it receives has no structure or order.',
+    answer: 'Because what it receives has no order — and neither does what it gives back.',
   },
 ];
 
@@ -88,7 +88,7 @@ const actionPanels = [
   {
     step: 'Step 03',
     src: '/silklearn/animations/step-03.json',
-    title: 'Get a path you can actually follow from day one.',
+    title: 'Get a path you can follow from the first document you drop in.',
     summary: 'Learning path, synthesis bundle, or AI context — from one source-linked structure.',
     rows: [
       'Dependency-ordered reading path',
@@ -137,7 +137,7 @@ const stageJourney: StageJourneyStage[] = [
   {
     label: 'Internal AI context',
     title: 'Give your AI structured context, not a RAG guess.',
-    description: 'Every output is grounded in a prerequisite-ordered, source-linked structure.',
+    description: 'Your AI gets structure it can actually use — ordered by how the knowledge depends on itself.',
     point: { x: 460, y: 107 },
     connector: { x: 460, y: 202 },
     card: { x: 684, y: 102 },
@@ -145,7 +145,7 @@ const stageJourney: StageJourneyStage[] = [
   {
     label: 'Conflict detection',
     title: 'Surface what your sources disagree on.',
-    description: 'Contradictions between sources are flagged as you compile — not discovered after you\'ve already built on a wrong assumption.',
+    description: 'SILKLEARN flags contradictions as it compiles — not after you\'ve already built on a wrong assumption.',
     point: { x: 740, y: 85 },
     connector: { x: 740, y: 180 },
     card: { x: 964, y: 80 },
@@ -537,8 +537,8 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
               <div className="mt-6 flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:gap-x-6 sm:gap-y-2">
                 {[
                   'Any doc format — PDF, Markdown, Notion, Confluence',
-                  'Conflict detection across sources built in',
-                  'AI-ready context bundles included',
+                  'Contradiction detection runs at ingest, not on request',
+                  'Structured context your AI can actually use',
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-2">
                     <CheckCircle2 className="size-3.5 shrink-0 text-(--primary)" />
@@ -655,7 +655,7 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
                         <h3 className="mt-4 max-w-[16ch] text-[1.25rem] leading-tight tracking-[-0.02em] text-(--foreground)">{panel.title}</h3>
                         <p className="mt-4 text-sm leading-5 text-(--muted-foreground)">{panel.summary}</p>
                         <a className="mt-8 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-(--foreground)" href="#waitlist">
-                          Learn more
+                          Apply for access
                           <ArrowRight className="size-4" />
                         </a>
                       </div>
@@ -677,7 +677,7 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
           <div className="p-6 sm:p-8 lg:p-10 lg:pt-50 lg:mb-35">
             <ScrollReveal>
             <h2 className=" font-(family-name:--font-display) text-display-lg leading-none tracking-[-0.02em] text-(--foreground)">
-              Built for anyone drowning in documents without a map.
+                  Your documents were organized for the expert who wrote them, not for where you&rsquo;re starting.
             </h2>
             </ScrollReveal>
 
@@ -687,10 +687,10 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
             <ScrollReveal className=" p-6 sm:p-8 lg:absolute lg:z-10 lg:-mt-20 lg:ml-0 lg:max-w-[23rem]  lg:p-10 lg:-top-70">
               <p className="text-xs font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">Why this works</p>
               <h3 className="mt-4 max-w-[16ch] text-[1.25rem] leading-tight tracking-[-0.02em] text-(--foreground)">
-                When structure is visible, you learn faster and waste less time.
+                You can&rsquo;t navigate what you can&rsquo;t see.
               </h3>
               <p className="mt-4 text-sm leading-5 text-(--muted-foreground)">
-                You can only navigate a complex domain when the order, source, and dependencies are mapped before you start reading.
+                Map the order, source, and dependencies before you start reading — or you&rsquo;re guessing at which pieces to trust.
               </p>
 
               <div className="mt-6">
@@ -758,10 +758,10 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
           <ScrollReveal className="grid content-start gap-2 px-8 py-15 ">
             <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">Early access</p>
             <h2 className="max-w-[12ch] font-(family-name:--font-display) text-display-lg leading-none tracking-[-0.02em] text-(--foreground)">
-              See whether your document stack is a fit for early access.
+                Apply if you&rsquo;re working from a stack of documents with no clear path through them.
             </h2>
             <p className="max-w-[56ch] text-base leading-5 text-(--muted-foreground)">
-              Early access rolls out in waves after a quick fit review. Best fit: researchers, developers, students, and domain switchers working from dense documents.
+              We&rsquo;re reviewing applications in waves — researchers, developers, students, and domain switchers working from dense documents are the best fit.
             </p>
 
            

@@ -34,7 +34,7 @@ export default function WaitlistPage() {
             <div className="grid gap-3">
               {[
                 "You have the docs. You still don't know what to read first.",
-                'Multiple sources, and at least two of them disagree.',
+                "You've got multiple sources. At least two of them disagree.",
                 'No one left to ask what order it was meant to go in.',
                 "AI answers your questions. It doesn't tell you which questions to ask first.",
               ].map((item) => (
@@ -50,7 +50,7 @@ export default function WaitlistPage() {
                   {[
                     'The reading order your documents never gave you',
                     "A contradiction map — so you know where sources disagree before you assume they don't",
-                    'Structured context for your AI tools, ordered by how the knowledge actually depends on itself',
+                    'Context your AI tools can actually use — ordered by how the knowledge depends on itself',
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-2.5">
                       <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-(--primary)" />
@@ -62,7 +62,7 @@ export default function WaitlistPage() {
             </div>
           }
           rightEyebrow="Best fit"
-          rightTitle="If the knowledge is in the docs but the path through them isn't, you're in the right place."
+          rightTitle="You'll recognize at least one of these."
           title="Your documents assume you already know where to start."
         />
 
@@ -83,8 +83,8 @@ export default function WaitlistPage() {
           right={
             <>
               <div className="mb-6 border-l-2 border-(--primary) pl-4">
-                <p className="text-sm font-medium text-(--foreground)">Applications reviewed in order</p>
-                <p className="text-sm text-(--muted-foreground)">We review on a rolling basis. The earlier you apply, the earlier you're in.</p>
+                <p className="text-sm font-medium text-(--foreground)">We review in the order we receive them</p>
+                <p className="text-sm text-(--muted-foreground)">We work through applications as they come in. The earlier you apply, the earlier you're in.</p>
               </div>
               <WaitlistForm />
             </>
@@ -93,7 +93,7 @@ export default function WaitlistPage() {
 
         <div className="mt-16 border-t border-(--border) pt-10">
           <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
-            Common questions
+            Before you apply
           </p>
           <div className="mt-6 grid gap-6 sm:grid-cols-2">
             <div>

@@ -29,11 +29,11 @@ export default function UseCasesPage() {
     <PageShell>
       <MarketingPageFrame>
         <MarketingHero
-          description="SILKLEARN is most valuable in workflows where dense private knowledge already exists but the reasoning order is still trapped in docs and expert memory."
+          description="The knowledge is written down somewhere — in runbooks, papers, architecture docs, decision records. The order you're supposed to encounter it in lives in one person's head. When that person's unavailable, so is the path."
           kicker="Use cases"
           rightChildren={
             <div className="grid gap-3 sm:grid-cols-2">
-              {['High-cost mistakes', 'Dense documentation', 'Recurring onboarding', 'Private team knowledge'].map((item) => (
+              {['The expert explains it every time', "Docs exist, order doesn't", 'Every new hire starts from scratch', 'The knowledge left when she did'].map((item) => (
                 <div key={item} className="border border-(--border) px-4 py-3 text-sm font-medium text-(--foreground)">
                   {item}
                 </div>
@@ -41,8 +41,8 @@ export default function UseCasesPage() {
             </div>
           }
           rightEyebrow="Best fit"
-          rightTitle="This is where compiled structure pays off before another training or handoff gets rebuilt manually."
-          title="Where the product is most useful first."
+          rightTitle="This is where it pays off before another onboarding or handoff gets rebuilt from scratch."
+          title="The knowledge exists. The path through it doesn't."
         />
 
         <MarketingSplitSection
@@ -52,7 +52,7 @@ export default function UseCasesPage() {
                 Workflow fit
               </p>
               <h2 className="mt-4 max-w-[10ch] font-(family-name:--font-display) text-display-lg leading-none tracking-[-0.02em] text-(--foreground)">
-                Start with the workflow where missing context already hurts the team.
+                Start where missing context is already costing something.
               </h2>
             </>
           }
@@ -89,13 +89,13 @@ export default function UseCasesPage() {
           actions={
             <Button asChild size="lg">
               <TransitionLink href="/waitlist">
-                Talk to us
+                Show us your workflow
                 <ArrowRight className="size-4" />
               </TransitionLink>
             </Button>
           }
           kicker="Next step"
-          title="Pick one workflow and compile it end to end."
+          title="Pick one workflow. Run it through. See what your docs actually contain."
         />
       </MarketingPageFrame>
       <FloatingCta />

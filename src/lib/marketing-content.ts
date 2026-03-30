@@ -52,15 +52,15 @@ export const primaryNavigation: NavItem[] = [
 export const featurePages: FeaturePage[] = [
   {
     slug: 'dependency-mapping',
-    title: 'Map What Depends on What Across Your Documents',
+    title: 'The reading order your documents never gave you.',
     description:
       'Surface the prerequisite structure across your source material so you know what to read first, what unlocks the next concept, and where your sources disagree.',
     summary:
-      'You uploaded research papers, a sprawling codebase, or three conflicting textbooks. SILKLEARN reads across all of them and shows you the dependency order — without you having to ask. You see what must come first, what unlocks the next concept, and where two sources are telling you different things.',
+      'You\'re starting with three textbooks on the same topic, a stack of papers that reference each other in circles, and a codebase README that assumes you already know the architecture — and none of them tell you which one to open first. SILKLEARN reads across all of them, maps what depends on what, and gives you the dependency order your source material never made explicit. You see what must come before the next layer makes sense, and where two sources are quietly telling you different things.',
     bullets: [
-      'Researchers: see which papers assume which foundations so you stop reading in the wrong order',
-      'Developers: map which modules, docs, and decisions you need to understand before the next layer makes sense',
-      'Students: reconcile multiple textbooks into a single dependency graph so contradictions become visible instead of confusing',
+      'Researchers: see which papers assume which priors so you stop building a mental model in the wrong order',
+      'Developers: know which architecture decisions to understand before you ship something that breaks one of them',
+      'Students: see where your textbooks disagree before the contradiction becomes a gap in your reasoning',
     ],
     useCaseHref: '/use-cases/engineering-onboarding',
     guideHref: '/blog',
@@ -81,13 +81,13 @@ export const featurePages: FeaturePage[] = [
   },
   {
     slug: 'leader-review',
-    title: 'Review the Compiled Structure Before You Follow It',
+    title: "You shouldn't trust a path you can't inspect.",
     description:
       'SILKLEARN surfaces what it compiled — the dependency graph, the contradictions, the source references — so you can verify the structure before trusting it.',
     summary:
-      'You are the reviewer. SILKLEARN shows you what it built — every edge, every source reference, every place where your documents conflict — and you decide what to trust before you follow the path.',
+      "Automated synthesis gets the structure mostly right — and occasionally wrong in ways that only someone with domain knowledge would catch. SILKLEARN shows you everything it built before you follow any of it: every edge, every source reference, every place where your documents conflict. You decide what to trust. The path earns your confidence; it doesn't demand it.",
     bullets: [
-      'Inspect every connection between concepts and trace it back to the source document that produced it',
+      'Trace every connection back to the source passage that produced it — nothing is asserted without a reference',
       'See exactly where two sources contradict each other so you can decide which one to trust',
       'Approve the path before you follow it — no black box, no silent synthesis',
     ],
@@ -113,23 +113,23 @@ export const featurePages: FeaturePage[] = [
 export const useCasePages: UseCasePage[] = [
   {
     slug: 'engineering-onboarding',
-    title: 'Developer Onboarding Into an Unfamiliar Codebase',
+    title: 'You joined a codebase. The docs exist. The reading order doesn\'t.',
     metaTitle: 'Developer Onboarding Into an Unfamiliar Codebase',
     description:
       'Upload the architecture docs, READMEs, runbooks, and decision records. SILKLEARN maps the dependency order so you know what to read first instead of guessing.',
     summary:
-      'Joining a large, unfamiliar codebase is a reading problem before it\'s a coding problem. The documentation exists — but it doesn\'t tell you what order to read it in, which pieces conflict, or which assumptions you\'re supposed to already have. SILKLEARN compiles that structure directly from the docs so you have a path, not a pile.',
+      'Joining a large, unfamiliar codebase is a reading problem before it\'s a coding problem. The documentation exists — but it doesn\'t tell you what order to read it in, which pieces conflict, or which assumptions you\'re supposed to already have. SILKLEARN reads that order directly from the docs and hands you a path, not a pile.',
     outcomes: [
-      'Know what to read first — the dependency graph shows you which concepts unlock the next layer',
-      'Surface which docs contradict each other so you\'re not unknowingly building on inconsistent foundations',
-      'Have a path through the material instead of an undifferentiated pile of files',
+      'Know what to read first — not because someone told you, but because the structure says so',
+      'See where your docs contradict each other before you build on the wrong one',
+      'A path through the material, not a pile of files to guess your way through',
     ],
     featureHref: '/features/dependency-mapping',
     guideHref: '/blog',
   },
   {
     slug: 'internal-docs-training',
-    title: 'Researcher Reconciling Multiple Sources on the Same Topic',
+    title: 'You\'re working across multiple sources. They quietly disagree on the foundations.',
     metaTitle: 'Researcher Reconciling Multiple Sources on the Same Topic',
     description:
       'Upload the papers, reports, and sources you\'re working across. SILKLEARN maps which findings depend on which foundations, and surfaces where your sources contradict each other.',
@@ -138,7 +138,7 @@ export const useCasePages: UseCasePage[] = [
     outcomes: [
       'See which papers depend on which foundations so your reading order stops being accidental',
       'Surface contradictions between sources before they corrupt your mental model',
-      'Build a stable synthesized structure you can inspect and refine as you add new material',
+      'Build a structure you can inspect and refine as you add new material',
     ],
     featureHref: '/features/leader-review',
     guideHref: '/blog',

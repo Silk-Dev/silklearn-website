@@ -17,9 +17,9 @@ import { featurePages } from '@/lib/marketing-content';
 import { buildMetadata } from '@/lib/seo';
 
 const featureSignals = [
-  'Map what depends on what across your sources',
-  'Surface where your documents contradict each other',
-  'Build a path through your knowledge, not just an answer',
+  "You have the sources. You still don't know which one to open first.",
+  "Two of your sources disagree. Neither one flags it.",
+  "AI answers your questions. It doesn't tell you which question to ask first.",
 ];
 
 export const metadata: Metadata = buildMetadata({
@@ -35,7 +35,7 @@ export default function FeaturesPage() {
     <PageShell>
       <MarketingPageFrame>
         <MarketingHero
-          description="The core capabilities of SILKLEARN exist to synthesize the structure of your documents — not answer questions about them. Map dependencies. Surface contradictions. Build paths."
+          description="Every document you're learning from was organized by someone who already knew where to start — they wrote it in the order that made sense to them, which is almost never the order that makes sense to you. SILKLEARN maps what depends on what, surfaces where your sources disagree, and gives you a path through the structure your materials assume you already have."
           kicker="Features"
           rightChildren={
             <div className="grid gap-3">
@@ -47,8 +47,8 @@ export default function FeaturesPage() {
             </div>
           }
           rightEyebrow="Feature families"
-          rightTitle="The product surface stays focused on extracting structure and keeping review visible."
-          title="Product capabilities built around real source material."
+          rightTitle="Two problems existing tools ignore: knowing what to read first, and being able to trust that order."
+          title="Your documents already contain the path. You just can't see it yet."
         />
 
         <MarketingSplitSection
@@ -58,7 +58,7 @@ export default function FeaturesPage() {
                 Capabilities
               </p>
               <h2 className="mt-4 max-w-[10ch] font-(family-name:--font-display) text-display-lg leading-none tracking-[-0.02em] text-(--foreground)">
-                Each feature exists to make the compiled graph more defensible and useful.
+                The structure comes from your sources. You inspect it before you follow it.
               </h2>
             </>
           }
@@ -105,7 +105,7 @@ export default function FeaturesPage() {
             </Button>
           }
           kicker="Next step"
-          title="Start with the feature that unlocks your first workflow."
+          title="The reading order is already in your documents. Let's find it."
         />
       </MarketingPageFrame>
       <FloatingCta />

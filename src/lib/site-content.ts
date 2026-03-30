@@ -107,7 +107,7 @@ export const fallbackHomePageContent: HomePageContent = {
     {
       question: 'Who is SILKLEARN for?',
       answer:
-        'Anyone trying to absorb a complex body of knowledge from documents: researchers reconciling sources, developers onboarding into a large codebase, students working from multiple textbooks, or professionals switching domains and needing to ramp up fast.',
+        'Researchers reconciling conflicting sources, developers onboarding into an unfamiliar codebase, students working from multiple textbooks, and professionals entering a new domain who need a path, not a pile.',
     },
     {
       question: 'How is this different from NotebookLM, Perplexity, or ChatGPT with PDFs?',
