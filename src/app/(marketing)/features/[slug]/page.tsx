@@ -15,7 +15,7 @@ import { PageShell } from '@/components/marketing/page-shell';
 import { Button } from '@/components/ui/button';
 import { featurePages, getFeaturePage } from '@/lib/marketing-content';
 import { absoluteUrl, buildMetadata } from '@/lib/seo';
-import { getBreadcrumbSchema, getWebPageSchema } from '@/lib/structured-data';
+import { getBreadcrumbSchema, getFaqPageSchema, getWebPageSchema } from '@/lib/structured-data';
 
 type FeatureDetailPageProps = {
   params: Promise<{
@@ -165,6 +165,50 @@ export default async function FeatureDetailPage({ params }: FeatureDetailPagePro
           kicker="Next step"
           title="Use this capability to make the graph more defensible."
         />
+
+        {page.deepSummary && (
+          <section className="border-t border-(--border) py-14 px-6 sm:px-8 lg:px-10">
+            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">In depth</p>
+            <p className="mt-4 max-w-[72ch] text-base leading-7 text-(--foreground)">{page.deepSummary}</p>
+          </section>
+        )}
+
+        {page.howItWorks && page.howItWorks.length > 0 && (
+          <section className="border-t border-(--border) py-14 px-6 sm:px-8 lg:px-10">
+            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">How it works</p>
+            <h2 className="mt-4 font-(family-name:--font-display) text-2xl tracking-tight text-(--foreground)">Step by step</h2>
+            <ol className="mt-8 space-y-8">
+              {page.howItWorks.map((item, i) => (
+                <li key={i} className="grid grid-cols-[2rem_1fr] gap-4">
+                  <span className="text-sm font-bold text-(--muted-foreground) tabular-nums">{String(i + 1).padStart(2, '0')}</span>
+                  <div>
+                    <p className="text-sm font-semibold text-(--foreground)">{item.step}</p>
+                    <p className="mt-1 text-sm leading-6 text-(--muted-foreground)">{item.detail}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </section>
+        )}
+
+        {page.faqs && page.faqs.length > 0 && (
+          <section className="border-t border-(--border) py-14 px-6 sm:px-8 lg:px-10">
+            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">Common questions</p>
+            <h2 className="mt-4 font-(family-name:--font-display) text-2xl tracking-tight text-(--foreground)">Frequently asked</h2>
+            <dl className="mt-8 space-y-8">
+              {page.faqs.map((faq) => (
+                <div key={faq.question} className="border-t border-(--border) pt-6">
+                  <dt className="text-sm font-semibold text-(--foreground)">{faq.question}</dt>
+                  <dd className="mt-2 text-sm leading-6 text-(--muted-foreground)">{faq.answer}</dd>
+                </div>
+              ))}
+            </dl>
+          </section>
+        )}
+
+        {page.faqs && (
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(getFaqPageSchema(page.faqs)) }} />
+        )}
       </MarketingPageFrame>
     </PageShell>
   );
