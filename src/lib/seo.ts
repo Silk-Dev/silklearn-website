@@ -50,6 +50,11 @@ export function buildMetadata({
     title,
     description,
     keywords,
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: { index: true, follow: true },
+    },
     alternates: {
       canonical: path,
     },
