@@ -37,7 +37,7 @@ const sanityClient = createClient({
   projectId: projectId ?? 'placeholder',
   dataset: dataset ?? 'production',
   apiVersion: '2026-03-27',
-  useCdn: true,
+  useCdn: false,
 });
 
 const homePageQuery = `*[_type == "homePage"][0]{

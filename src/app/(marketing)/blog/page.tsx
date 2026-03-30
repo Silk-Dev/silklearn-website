@@ -6,6 +6,8 @@ import { Button } from '@/components/ui/button';
 import { getAllPosts } from '@/lib/sanity';
 import { buildMetadata } from '@/lib/seo';
 
+export const revalidate = 60;
+
 const BlogFilter = dynamic(() => import('./blog-filter').then(m => m.BlogFilter));
 
 export const metadata = buildMetadata({

@@ -13,6 +13,8 @@ import { getAllPosts, getPostBySlug, sanityImageUrl } from '@/lib/sanity';
 import { absoluteUrl, buildMetadata } from '@/lib/seo';
 import { getArticleSchema } from '@/lib/structured-data';
 
+export const revalidate = 60;
+
 type BlogPostPageProps = {
   params: Promise<{ slug: string }>;
 };
