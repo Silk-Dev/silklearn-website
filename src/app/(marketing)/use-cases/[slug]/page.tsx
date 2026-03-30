@@ -14,7 +14,8 @@ import {
 import { PageShell } from '@/components/marketing/page-shell';
 import { Button } from '@/components/ui/button';
 import { getUseCasePage, useCasePages } from '@/lib/marketing-content';
-import { buildMetadata } from '@/lib/seo';
+import { absoluteUrl, buildMetadata } from '@/lib/seo';
+import { getBreadcrumbSchema, getWebPageSchema } from '@/lib/structured-data';
 
 type UseCaseDetailPageProps = {
   params: Promise<{
@@ -52,6 +53,30 @@ export default async function UseCaseDetailPage({ params }: UseCaseDetailPagePro
 
   return (
     <PageShell>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            getBreadcrumbSchema([
+              { name: 'Home', url: absoluteUrl('/') },
+              { name: 'Use Cases', url: absoluteUrl('/use-cases') },
+              { name: page.title, url: absoluteUrl(`/use-cases/${page.slug}`) },
+            ])
+          ),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            getWebPageSchema({
+              title: page.title,
+              description: page.description,
+              url: absoluteUrl(`/use-cases/${page.slug}`),
+            })
+          ),
+        }}
+      />
       <MarketingPageFrame>
         <MarketingHero
           description={page.summary}

@@ -11,6 +11,9 @@ export type FeaturePage = {
   bullets: string[];
   useCaseHref: string;
   guideHref: string;
+  howItWorks?: { step: string; detail: string }[];
+  faqs?: { question: string; answer: string }[];
+  deepSummary?: string;
 };
 
 export type UseCasePage = {
@@ -59,6 +62,20 @@ export const featurePages: FeaturePage[] = [
     ],
     useCaseHref: '/use-cases/engineering-onboarding',
     guideHref: '/blog',
+    deepSummary: `Most internal documents don't fail because the information is wrong — they fail because the reading order is wrong. When a new engineer opens a stack of runbooks, they have no visible signal about what to read first. When a team lead prepares a rollout, they have to manually reconstruct which steps block others. SILKLEARN's dependency mapping feature makes that prerequisite structure explicit. It turns what used to be buried in expert memory into a graph your team can inspect, review, and reuse.`,
+    howItWorks: [
+      { step: 'Ingest source material', detail: 'SILKLEARN ingests your documents — runbooks, specs, standards, training notes — and begins identifying the conceptual relationships between sections.' },
+      { step: 'Surface implicit edges', detail: 'Using structural analysis, it finds where one concept assumes another has been understood — and makes those assumptions into explicit prerequisite edges.' },
+      { step: 'Build the graph', detail: 'The result is a directed acyclic graph (DAG) showing which concepts must come before others. The order is extracted from the source, not invented.' },
+      { step: 'Leader review', detail: 'Before the graph is used, a designated leader reviews the dependency edges, corrects exceptions, and approves the sequence. The graph doesn\'t ship without sign-off.' },
+      { step: 'Output to team', detail: 'The approved graph becomes the onboarding path, rollout checklist, or context bundle — in the exact order the material demands.' },
+    ],
+    faqs: [
+      { question: 'How is this different from a manually written onboarding guide?', answer: 'A manually written guide reflects what the author remembered to include on the day they wrote it. SILKLEARN\'s dependency map is extracted from the actual source documents your team uses, so it stays grounded in what the docs actually say — not what one person thought they should say.' },
+      { question: 'Does this work with unstructured documents?', answer: 'Yes. SILKLEARN is designed specifically for dense, unstructured source material — internal wikis, PDF runbooks, Notion pages, Confluence spaces. You don\'t need clean structure to start.' },
+      { question: 'What happens when the source documents change?', answer: 'The compiled graph becomes a stable reference point. When source material changes, leaders can flag the relevant nodes for re-review and update the sequence without rebuilding from scratch.' },
+      { question: 'Who reviews the dependency graph?', answer: 'Whoever owns the knowledge domain — usually a senior engineer, team lead, or subject matter expert. The review step is built into the workflow, not optional.' },
+    ],
   },
   {
     slug: 'leader-review',
@@ -74,6 +91,20 @@ export const featurePages: FeaturePage[] = [
     ],
     useCaseHref: '/use-cases/internal-docs-training',
     guideHref: '/blog',
+    deepSummary: `Automated knowledge compilation is only useful if someone who understands the domain has checked it. SILKLEARN's leader review feature is the human checkpoint between compilation and rollout. Instead of trusting a black box to get the sequence right, it gives domain experts a structured interface to inspect every node, every edge, and every source reference — before the output reaches the team. The review isn't a formality. It's where domain exceptions get caught, where ambiguous dependencies get resolved, and where the compiled graph earns the trust of the people who have to use it.`,
+    howItWorks: [
+      { step: 'Compilation produces a draft graph', detail: 'After SILKLEARN processes source material, it produces a draft dependency graph with nodes, edges, and source provenance for each decision.' },
+      { step: 'Leader is assigned to review', detail: 'A team lead or senior SME is assigned to the review queue. They see the full graph — not a summary — with every source reference visible.' },
+      { step: 'Node-by-node inspection', detail: 'The reviewer walks through each node: checking if the concept is placed correctly in the sequence, whether the source reference is accurate, and whether any domain exceptions apply.' },
+      { step: 'Corrections and approvals', detail: 'The reviewer can reorder nodes, add missing prerequisites, flag inaccuracies, or approve sections as correct. Every action is timestamped and tied to their account.' },
+      { step: 'Approved graph ships to team', detail: 'Only after review approval does the compiled output reach the team. The audit trail — who reviewed what, when, and what they changed — stays attached to the artifact.' },
+    ],
+    faqs: [
+      { question: 'Why is human review necessary if compilation is automated?', answer: 'Automated compilation can surface the structure that\'s already in the documents. It can\'t know about domain-specific exceptions, organizational context, or recent changes that haven\'t made it into the docs yet. The leader review step is where that context gets added.' },
+      { question: 'How long does a review typically take?', answer: 'For a 20–30 node graph, most reviewers complete a first pass in under two hours. The interface is designed to surface what needs attention rather than requiring a full read-through of every source document.' },
+      { question: 'What if multiple leaders need to review different sections?', answer: 'The review queue can be split by domain. A security lead reviews the security nodes; an infra lead reviews the infrastructure nodes. Each section can be approved independently.' },
+      { question: 'Is the review audit trail exportable?', answer: 'Yes. The review history — who approved each node, what was changed, and when — can be exported as a compliance artifact, useful for regulated industries or formal audit processes.' },
+    ],
   },
 ];
 

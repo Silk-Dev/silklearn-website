@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { personas } from '@/lib/marketing-personas';
-import { buildMetadata } from '@/lib/seo';
+import { absoluteUrl, buildMetadata } from '@/lib/seo';
+import { getBreadcrumbSchema, getWebPageSchema } from '@/lib/structured-data';
 import { PageShell } from '@/components/marketing/page-shell';
 import { MarketingPageFrame } from '@/components/marketing/page-structure';
 import { PersonaPageContent } from './persona-page-content';
@@ -38,6 +39,30 @@ export default async function ForWhomPersonaPage({
 
   return (
     <PageShell>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            getBreadcrumbSchema([
+              { name: 'Home', url: absoluteUrl('/') },
+              { name: 'For Teams', url: absoluteUrl('/for-teams') },
+              { name: persona.selector, url: absoluteUrl(`/for-teams/${persona.id}`) },
+            ])
+          ),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            getWebPageSchema({
+              title: persona.selector,
+              description: persona.problem.length > 160 ? persona.problem.slice(0, 157) + '...' : persona.problem,
+              url: absoluteUrl(`/for-teams/${persona.id}`),
+            })
+          ),
+        }}
+      />
       <MarketingPageFrame>
         <PersonaPageContent persona={persona} />
       </MarketingPageFrame>
