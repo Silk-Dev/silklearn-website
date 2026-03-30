@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 
 import { TransitionLink } from '@/components/marketing/page-transition';
@@ -62,6 +63,15 @@ export default function AboutPage() {
           <div className="mt-14 grid gap-12 sm:grid-cols-2">
             {/* Jesser */}
             <div>
+              <div className="mb-5 overflow-hidden rounded-sm w-24 h-24 bg-(--muted)">
+                <Image
+                  src="/founders/jesser-bedoui.png"
+                  alt="Jesser Bedoui — Cofounder of SILKLEARN"
+                  width={288}
+                  height={288}
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
               <p className="text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-(--muted-foreground)">
                 Cofounder
               </p>
@@ -95,6 +105,15 @@ export default function AboutPage() {
 
             {/* Oussama */}
             <div>
+              <div className="mb-5 overflow-hidden rounded-sm w-24 h-24 bg-(--muted)">
+                <Image
+                  src="/founders/oussama-bedoui.jpg"
+                  alt="Oussama Bedoui — Cofounder of SILKLEARN"
+                  width={400}
+                  height={400}
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
               <p className="text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-(--muted-foreground)">
                 Cofounder
               </p>
