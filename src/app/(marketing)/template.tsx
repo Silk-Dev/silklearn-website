@@ -10,6 +10,7 @@ const PAGE_ROUTES: Record<string, string> = {
   '/product': 'How It Works',
   '/features': 'Features',
   '/use-cases': 'Use Cases',
+  '/blog': 'Blog',
   '/guides': 'Guides',
   '/waitlist': 'Waitlist',
 };
