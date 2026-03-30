@@ -386,7 +386,7 @@ function StageJourneyCurve() {
               <StageJourneyIcon index={stageIndex} />
               <p className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">{stage.label}</p>
             </div>
-            <h3 className="mt-3 text-base font-medium leading-5 text-(--foreground)">{stage.title}</h3>
+            <p className="mt-3 text-base font-medium leading-5 text-(--foreground)">{stage.title}</p>
             <p className="mt-2 text-sm leading-5 text-(--muted-foreground)">{stage.description}</p>
           </div>
         ))}
