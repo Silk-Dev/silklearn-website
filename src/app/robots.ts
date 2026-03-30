@@ -3,6 +3,6 @@ import type { MetadataRoute } from 'next';
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: { userAgent: '*', allow: '/', disallow: '/studio' },
-    sitemap: 'https://www.silklearn.io/sitemap.xml',
+    sitemap: ['https://www.silklearn.io/sitemap.xml', 'https://www.silklearn.io/image-sitemap.xml'],
   };
 }

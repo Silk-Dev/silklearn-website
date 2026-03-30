@@ -14,6 +14,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     '/features',
     '/use-cases',
     '/blog',
+    '/the-reset',
     '/waitlist',
   ];
 
@@ -23,32 +24,22 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...staticRoutes.map((route) => ({
       url: absoluteUrl(route),
       lastModified: now,
-      changeFrequency: route === '/' ? ('weekly' as const) : ('monthly' as const),
-      priority: route === '/' ? 1 : route === '/waitlist' ? 0.3 : 0.8,
     })),
     ...featurePages.map((page) => ({
       url: absoluteUrl(`/features/${page.slug}`),
       lastModified: now,
-      changeFrequency: 'monthly' as const,
-      priority: 0.6,
     })),
     ...useCasePages.map((page) => ({
       url: absoluteUrl(`/use-cases/${page.slug}`),
       lastModified: now,
-      changeFrequency: 'monthly' as const,
-      priority: 0.6,
     })),
     ...personas.map((persona) => ({
       url: absoluteUrl(`/for-teams/${persona.id}`),
       lastModified: now,
-      changeFrequency: 'monthly' as const,
-      priority: 0.6,
     })),
     ...blogPosts.map((post) => ({
       url: absoluteUrl(`/blog/${post.slug}`),
       lastModified: new Date(post.publishedAt),
-      changeFrequency: 'never' as const,
-      priority: 0.7,
     })),
   ];
 }
