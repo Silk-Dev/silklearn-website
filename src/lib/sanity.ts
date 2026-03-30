@@ -28,14 +28,18 @@ export function sanityImageUrl(
   return `${base}?w=${width}&h=${height}&fm=${fm}&fit=${fit}&q=${q}`;
 }
 
-const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
-const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET;
+const rawProjectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID?.trim();
+const rawDataset = process.env.NEXT_PUBLIC_SANITY_DATASET?.trim();
+
+// Only accept values that match Sanity's allowed format (a-z, 0-9, dashes)
+const projectId = rawProjectId && /^[a-z0-9-]+$/.test(rawProjectId) ? rawProjectId : undefined;
+const dataset = rawDataset || undefined;
 
 export const isSanityConfigured = Boolean(projectId && dataset);
 
 const sanityClient = createClient({
-  projectId: projectId || 'placeholder',
-  dataset: dataset || 'production',
+  projectId: projectId ?? 'placeholder',
+  dataset: dataset ?? 'production',
   apiVersion: '2026-03-27',
   useCdn: false,
 });
