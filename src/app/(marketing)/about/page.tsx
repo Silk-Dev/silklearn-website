@@ -59,11 +59,11 @@ export default function AboutPage() {
             Two brothers building SILKLEARN — knowledge compilation infrastructure for teams working from dense source material.
           </p>
 
-          {/* Founders grid — equal columns, equal depth */}
+          {/* Founders grid — equal columns, staggered entry */}
           <div className="mt-14 grid gap-12 sm:grid-cols-2">
-            {/* Jesser */}
-            <div>
-              <div className="mb-5 overflow-hidden rounded-sm w-24 h-24 bg-(--muted)">
+            {/* Jesser — enters first */}
+            <div style={{ animation: 'fade-up 0.5s cubic-bezier(0.23,1,0.32,1) both' }}>
+              <div className="founder-photo mb-5 overflow-hidden rounded-sm w-24 h-24 bg-(--muted)">
                 <Image
                   src="/founders/jesser-bedoui.png"
                   alt="Jesser Bedoui — Cofounder of SILKLEARN"
@@ -84,9 +84,9 @@ export default function AboutPage() {
               </p>
             </div>
 
-            {/* Oussama */}
-            <div>
-              <div className="mb-5 overflow-hidden rounded-sm w-24 h-24 bg-(--muted)">
+            {/* Oussama — enters 80ms after */}
+            <div style={{ animation: 'fade-up 0.5s cubic-bezier(0.23,1,0.32,1) 80ms both' }}>
+              <div className="founder-photo mb-5 overflow-hidden rounded-sm w-24 h-24 bg-(--muted)">
                 <Image
                   src="/founders/oussama-bedoui.jpg"
                   alt="Oussama Bedoui — Cofounder of SILKLEARN"
@@ -123,10 +123,10 @@ export default function AboutPage() {
             <div className="mt-4">
               <TransitionLink
                 href="/the-reset"
-                className="inline-flex items-center gap-1.5 text-sm text-(--foreground) underline underline-offset-4 decoration-(--border) hover:decoration-(--foreground) transition-colors duration-150"
+                className="group inline-flex items-center gap-1.5 text-sm text-(--foreground) underline underline-offset-4 decoration-(--border) hover:decoration-(--foreground) [transition:color_150ms_ease-out,text-decoration-color_150ms_ease-out]"
               >
                 Read The Reset
-                <ArrowRight className="size-3.5" />
+                <ArrowRight className="size-3.5 transition-transform duration-150 ease-out group-hover:translate-x-0.5" />
               </TransitionLink>
             </div>
           </div>
