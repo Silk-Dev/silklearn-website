@@ -48,6 +48,21 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const post = await getPostBySlug(slug);
   if (!post) redirect('/blog');
 
+  // Get Reset series navigation if applicable
+  let resetPrev: { title: string; slug: string } | null = null;
+  let resetNext: { title: string; slug: string } | null = null;
+
+  if (slug.startsWith('the-reset-')) {
+    const allPosts = await getAllPosts();
+    const resetPosts = allPosts
+      .filter(p => p.slug.startsWith('the-reset-'))
+      .sort((a, b) => new Date(a.publishedAt).getTime() - new Date(b.publishedAt).getTime());
+
+    const currentIndex = resetPosts.findIndex(p => p.slug === slug);
+    if (currentIndex > 0) resetPrev = { title: resetPosts[currentIndex - 1].title, slug: resetPosts[currentIndex - 1].slug };
+    if (currentIndex < resetPosts.length - 1) resetNext = { title: resetPosts[currentIndex + 1].title, slug: resetPosts[currentIndex + 1].slug };
+  }
+
   const formattedDate = new Date(post.publishedAt).toLocaleDateString('en-US', {
     month: 'long',
     day: 'numeric',
@@ -141,6 +156,34 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               </div>
             </article>
           </div>
+
+          {slug.startsWith('the-reset-') && (
+            <nav className="border-t border-(--border) mt-16 pt-10 px-6 sm:px-8 lg:px-10">
+              <div className="flex items-center justify-between gap-4">
+                <div className="flex-1">
+                  {resetPrev && (
+                    <TransitionLink href={`/blog/${resetPrev.slug}`} className="group flex flex-col gap-1">
+                      <span className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">← Previous</span>
+                      <span className="text-sm font-medium text-(--foreground) group-hover:underline line-clamp-2">{resetPrev.title}</span>
+                    </TransitionLink>
+                  )}
+                </div>
+                <div className="flex-shrink-0">
+                  <TransitionLink href="/the-reset" className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground) hover:text-(--foreground) transition-colors">
+                    All Episodes
+                  </TransitionLink>
+                </div>
+                <div className="flex-1 text-right">
+                  {resetNext && (
+                    <TransitionLink href={`/blog/${resetNext.slug}`} className="group flex flex-col gap-1 items-end">
+                      <span className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">Next →</span>
+                      <span className="text-sm font-medium text-(--foreground) group-hover:underline line-clamp-2">{resetNext.title}</span>
+                    </TransitionLink>
+                  )}
+                </div>
+              </div>
+            </nav>
+          )}
 
           <div className="mt-16 border-t border-(--border) pt-12">
             <div className="rounded-sm border border-(--border) bg-[oklch(from_var(--foreground)_l_c_h/0.03)] px-8 py-10">

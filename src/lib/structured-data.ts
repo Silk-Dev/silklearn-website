@@ -65,6 +65,34 @@ export function getFaqPageSchema(faq: SiteFaq[]) {
   };
 }
 
+export function getBreadcrumbSchema(items: { name: string; url: string }[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      item: item.url,
+    })),
+  };
+}
+
+export function getWebPageSchema({ title, description, url }: { title: string; description: string; url: string }) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: title,
+    description,
+    url,
+    isPartOf: {
+      '@type': 'WebSite',
+      name: 'SILKLEARN',
+      url: 'https://www.silklearn.io',
+    },
+  };
+}
+
 export function getArticleSchema({
   title,
   description,
@@ -90,9 +118,9 @@ export function getArticleSchema({
     ...(dateModified && { dateModified }),
     ...(imageUrl && { image: imageUrl }),
     author: {
-      '@type': 'Organization',
-      name: siteMetadata.siteName,
-      url: absoluteUrl('/'),
+      '@type': 'Person',
+      name: 'Jesser Bedoui',
+      url: absoluteUrl('/about'),
     },
     publisher: {
       '@type': 'Organization',
