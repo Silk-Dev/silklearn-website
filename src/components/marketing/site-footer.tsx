@@ -48,6 +48,9 @@ export function SiteFooter() {
                   {item.label}
                 </TransitionLink>
               ))}
+              <TransitionLink className="transition-colors hover:text-(--foreground)" href="/about">
+                About
+              </TransitionLink>
               <TransitionLink className="transition-colors hover:text-(--foreground)" href="/waitlist">
                 Join the waitlist
               </TransitionLink>

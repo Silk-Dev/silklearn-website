@@ -45,6 +45,7 @@ export const primaryNavigation: NavItem[] = [
   { href: '/features', label: 'Features' },
   { href: '/use-cases', label: 'Use cases' },
   { href: '/blog', label: 'Blog' },
+  { href: '/the-reset', label: 'The Reset' },
 ];
 
 export const featurePages: FeaturePage[] = [
