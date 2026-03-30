@@ -48,12 +48,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const post = await getPostBySlug(slug);
   if (!post) redirect('/blog');
 
+  const allPosts = await getAllPosts();
+
   // Get Reset series navigation if applicable
   let resetPrev: { title: string; slug: string } | null = null;
   let resetNext: { title: string; slug: string } | null = null;
 
   if (slug.startsWith('the-reset-')) {
-    const allPosts = await getAllPosts();
     const resetPosts = allPosts
       .filter(p => p.slug.startsWith('the-reset-'))
       .sort((a, b) => new Date(a.publishedAt).getTime() - new Date(b.publishedAt).getTime());
@@ -62,6 +63,20 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     if (currentIndex > 0) resetPrev = { title: resetPosts[currentIndex - 1].title, slug: resetPosts[currentIndex - 1].slug };
     if (currentIndex < resetPosts.length - 1) resetNext = { title: resetPosts[currentIndex + 1].title, slug: resetPosts[currentIndex + 1].slug };
   }
+
+  // Related posts: score by shared tags, tiebreak by recency
+  const currentTags = post.tags ?? [];
+  const relatedPosts = allPosts
+    .filter(p => p.slug !== slug)
+    .map(p => ({
+      ...p,
+      score: (p.tags ?? []).filter((t: string) => currentTags.includes(t)).length,
+    }))
+    .sort((a, b) => {
+      if (b.score !== a.score) return b.score - a.score;
+      return new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime();
+    })
+    .slice(0, 3);
 
   const formattedDate = new Date(post.publishedAt).toLocaleDateString('en-US', {
     month: 'long',
@@ -188,6 +203,48 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 </div>
               </div>
             </nav>
+          )}
+
+          {relatedPosts.length > 0 && (
+            <div className="mt-16 border-t border-(--border) pt-12">
+              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
+                Read next
+              </p>
+              <div className="mt-6 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                {relatedPosts.map((related) => (
+                  <TransitionLink
+                    key={related.slug}
+                    href={`/blog/${related.slug}`}
+                    className="group flex flex-col gap-3"
+                  >
+                    {related.mainImage?.asset?.url && (
+                      <div className="overflow-hidden rounded-sm">
+                        <Image
+                          src={sanityImageUrl(related.mainImage.asset.url, 600, 315)}
+                          alt={related.mainImage.alt || related.title}
+                          width={600}
+                          height={315}
+                          className="w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                        />
+                      </div>
+                    )}
+                    {related.eyebrow && (
+                      <p className="text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-(--muted-foreground)">
+                        {related.eyebrow}
+                      </p>
+                    )}
+                    <h3 className="text-sm font-medium leading-snug text-(--foreground) group-hover:underline underline-offset-4 decoration-(--border) group-hover:decoration-(--foreground) transition-colors line-clamp-2">
+                      {related.title}
+                    </h3>
+                    {related.excerpt && (
+                      <p className="text-xs leading-relaxed text-(--muted-foreground) line-clamp-2">
+                        {related.excerpt}
+                      </p>
+                    )}
+                  </TransitionLink>
+                ))}
+              </div>
+            </div>
           )}
 
           <div className="mt-16 border-t border-(--border) pt-12">
