@@ -120,7 +120,7 @@ const productFeatureCards = [
 export const metadata: Metadata = buildMetadata({
   title: 'Knowledge Compilation Platform',
   description:
-    'Go deeper on how SILKLEARN compiles document stacks into reviewable graphs, approval workflows, and reusable outputs for onboarding, rollout, AI, and compliance.',
+    'SILKLEARN compiles document stacks into reviewable graphs, approval workflows, and reusable outputs for onboarding, rollout, AI, and compliance.',
   path: '/product',
   keywords: [
     'knowledge compilation infrastructure',
