@@ -26,8 +26,8 @@ const idleState: SubmissionState = {
 
 export function WaitlistForm({
   submitLabel = 'Request early access',
-  idleMessage = 'Private beta access. No spam. We review every application.',
-  fitNote = 'Best fit: leaders testing onboarding, handoffs, compliance review, or AI context built from dense private docs.',
+  idleMessage = 'Private beta — we read every application and reply personally within two business days.',
+  fitNote = "Best fit: teams where the knowledge exists in docs but the path through them doesn't.",
 }: WaitlistFormProps) {
   const [email, setEmail] = useState('');
   const [companyName, setCompanyName] = useState('');
@@ -58,7 +58,7 @@ export function WaitlistForm({
       setCompanyName('');
       setSubmissionState({
         kind: 'success',
-        message: payload.message || 'You are on the list.',
+        message: payload.message || "You're in.",
       });
     } catch (error) {
       const message =
@@ -77,7 +77,7 @@ export function WaitlistForm({
 
   return (
     <form
-      className="grid gap-4  bg-(--card-strong)  "
+      className="grid gap-4"
       onSubmit={handleSubmit}
     >
       <label className="grid gap-2">
@@ -105,7 +105,11 @@ export function WaitlistForm({
         />
       </label>
 
-      <Button className="cta-pulse inline-flex items-center justify-center gap-2" disabled={isSubmitting} type="submit">
+      <Button
+        className="cta-pulse inline-flex items-center justify-center gap-2 transition-transform duration-150 ease-out active:scale-[0.97]"
+        disabled={isSubmitting}
+        type="submit"
+      >
         {isSubmitting ? (
           <>
             <svg className="animate-spin size-4" viewBox="0 0 24 24" fill="none">
@@ -120,16 +124,16 @@ export function WaitlistForm({
       </Button>
 
       {submissionState.kind === 'success' ? (
-        <div className="rounded-sm border border-(--primary) bg-[oklch(from_var(--primary)_l_c_h/0.05)] p-6">
+        <div className="animate-in fade-in slide-in-from-bottom-1 rounded-sm border border-(--primary) bg-[oklch(from_var(--primary)_l_c_h/0.05)] p-6 duration-300 ease-out">
           <div className="flex items-start gap-3">
             <CheckCircle2 className="mt-0.5 size-5 shrink-0 text-(--primary)" />
             <div>
-              <p className="font-semibold text-(--foreground)">You&apos;re on the list!</p>
+              <p className="font-semibold text-(--foreground)">You&apos;re in.</p>
               <p className="mt-1 text-sm text-(--muted-foreground)">
-                We review every application within 2 business days. Expect a personal email from our team.
+                We&apos;ll reply personally within two business days — not a sequence, an actual email from someone who read your application.
               </p>
               <p className="mt-3 text-xs text-(--muted-foreground)">
-                💡 Teams with dense internal docs and recurring onboarding challenges get prioritized.
+                Teams with recurring onboarding problems and dense internal docs move to the front.
               </p>
             </div>
           </div>

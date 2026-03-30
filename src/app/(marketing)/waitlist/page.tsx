@@ -16,11 +16,11 @@ const WaitlistForm = dynamic(
 );
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Get Early Access to Knowledge Compilation',
+  title: 'Get Early Access — SILKLEARN',
   description:
-    'Join the SILKLEARN waitlist. Upload documents you are trying to learn from — research papers, codebases, onboarding docs — and get back a dependency-ordered path through them.',
+    'Your documents were written by someone who already knew the answer. SILKLEARN reads your sources and gives you back the path through them — dependency-ordered, contradiction-mapped, ready to use.',
   path: '/waitlist',
-  keywords: ['SILKLEARN waitlist', 'knowledge compilation beta', 'reviewable learning path software'],
+  keywords: ['SILKLEARN waitlist', 'knowledge path early access', 'dependency ordered learning', 'document structure AI'],
 });
 
 export default function WaitlistPage() {
@@ -28,15 +28,15 @@ export default function WaitlistPage() {
     <PageShell>
       <MarketingPageFrame>
         <MarketingHero
-          description="Early access is open to researchers, developers, students, and anyone working from dense source material. If the problem is that the knowledge exists but the path through it does not, SILKLEARN is for you."
-          kicker="Waitlist"
+          description="Every document you're learning from was written by someone who already understood the subject — and they arranged it in the order that made sense to them, not to you. SILKLEARN reads your sources and gives you back the path through them that the author assumed you didn't need."
+          kicker="Early access"
           rightChildren={
             <div className="grid gap-3">
               {[
-                'Documents exist but the path through them does not',
-                'Multiple sources that may contradict each other',
-                'No team to ask what to read first',
-                'Existing AI tools answer questions but don\'t synthesize structure',
+                "You have the docs. You still don't know what to read first.",
+                'Multiple sources, and at least two of them disagree.',
+                'No one left to ask what order it was meant to go in.',
+                "AI answers your questions. It doesn't tell you which questions to ask first.",
               ].map((item) => (
                 <div key={item} className="border-b border-(--border) pb-3 last:border-b-0 last:pb-0 text-sm font-medium text-(--foreground)">
                   {item}
@@ -48,9 +48,9 @@ export default function WaitlistPage() {
                 </p>
                 <ul className="mt-3 space-y-2.5">
                   {[
-                    'A dependency-ordered path through your uploaded documents',
-                    'A map of contradictions detected across your sources',
-                    'Structured context for AI that reflects the actual dependency order',
+                    'The reading order your documents never gave you',
+                    "A contradiction map — so you know where sources disagree before you assume they don't",
+                    'Structured context for your AI tools, ordered by how the knowledge actually depends on itself',
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-2.5">
                       <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-(--primary)" />
@@ -62,8 +62,8 @@ export default function WaitlistPage() {
             </div>
           }
           rightEyebrow="Best fit"
-          rightTitle="If the problem is that the knowledge exists but the structure through it does not, this is the right entry point."
-          title="Upload what you’re trying to learn. Get back the structure through it."
+          rightTitle="If the knowledge is in the docs but the path through them isn't, you're in the right place."
+          title="Your documents assume you already know where to start."
         />
 
         <MarketingSplitSection
@@ -73,10 +73,10 @@ export default function WaitlistPage() {
                 Request access
               </p>
               <h2 className="mt-4 max-w-[10ch] font-(family-name:--font-display) text-display-lg leading-none tracking-[-0.02em] text-(--foreground)">
-                Tell us what document stack you want to compile first.
+                Tell us what you're trying to understand.
               </h2>
               <p className="mt-4 max-w-[44ch] text-base leading-5 text-(--muted-foreground)">
-                The beta is best for leaders working from dense internal docs where onboarding, compliance review, operational handoffs, or internal AI delivery still depend on hidden structure.
+                Best for teams where the knowledge lives in documents written by people who no longer work there — or who assumed you understood the domain when they wrote them.
               </p>
             </>
           }
@@ -84,7 +84,7 @@ export default function WaitlistPage() {
             <>
               <div className="mb-6 border-l-2 border-(--primary) pl-4">
                 <p className="text-sm font-medium text-(--foreground)">Applications reviewed in order</p>
-                <p className="text-sm text-(--muted-foreground)">We accept teams on a rolling basis. Earlier applications get earlier access.</p>
+                <p className="text-sm text-(--muted-foreground)">We review on a rolling basis. The earlier you apply, the earlier you're in.</p>
               </div>
               <WaitlistForm />
             </>
@@ -99,7 +99,7 @@ export default function WaitlistPage() {
             <div>
               <p className="font-medium text-(--foreground)">Is this free?</p>
               <p className="mt-1 text-sm text-(--muted-foreground)">
-                Early access is free for the first 3 months. No credit card required — ever, to apply.
+                Free for the first three months — no credit card required to apply, ever. We&apos;d rather you see whether it works before we talk about pricing.
               </p>
             </div>
             <div>
@@ -111,13 +111,13 @@ export default function WaitlistPage() {
             <div>
               <p className="font-medium text-(--foreground)">How long does review take?</p>
               <p className="mt-1 text-sm text-(--muted-foreground)">
-                We review every application personally within 2 business days. You&apos;ll get a real email from a real human, not an automated sequence.
+                We review every application within two business days — you&apos;ll get a real reply from someone who actually read what you submitted, not an automated sequence.
               </p>
             </div>
             <div>
               <p className="font-medium text-(--foreground)">Can I cancel anytime?</p>
               <p className="mt-1 text-sm text-(--muted-foreground)">
-                Yes. There are no contracts or lock-ins during the beta. We want you to stay because it works, not because you&apos;re trapped.
+                Yes. No contracts, no lock-ins during the beta. We want you to stay because it works, not because you&apos;re trapped.
               </p>
             </div>
           </div>
