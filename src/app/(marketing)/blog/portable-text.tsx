@@ -1,55 +1,117 @@
 import type { MarketingPost } from '@/lib/site-content';
 
+type Block = MarketingPost['body'][number];
+type PTBlock = Extract<Block, { _type: 'block' | 'image' }>;
+
+function renderSpans(block: PTBlock) {
+  if (!block.children) return null;
+  return block.children.map((span, i) => {
+    let node: React.ReactNode = span.text;
+    if (span.marks?.includes('strong')) node = <strong key={i}>{node}</strong>;
+    if (span.marks?.includes('em')) node = <em key={i}>{node}</em>;
+    if (span.marks?.includes('code')) node = <code key={i} className="font-mono text-[0.88em] bg-[oklch(from_var(--foreground)_l_c_h/0.06)] px-1 py-0.5 rounded">{node}</code>;
+    return <span key={i}>{node}</span>;
+  });
+}
+
 type PortableTextRendererProps = {
   blocks: MarketingPost['body'];
 };
 
-function getBlockText(block: MarketingPost['body'][number]) {
-  if (block._type !== 'block') {
-    return '';
+export function PortableTextRenderer({ blocks }: PortableTextRendererProps) {
+  const rendered: React.ReactNode[] = [];
+  let i = 0;
+
+  while (i < blocks.length) {
+    const rawBlock = blocks[i];
+
+    // Callout
+    if (rawBlock._type === 'callout') {
+      rendered.push(
+        <aside key={i} className="border border-(--border) bg-[oklch(from_var(--foreground)_l_c_h/0.03)] p-5">
+          {rawBlock.title ? <p className="text-sm font-semibold text-(--foreground)">{rawBlock.title}</p> : null}
+          {rawBlock.body ? <p className="mt-2 text-sm leading-6 text-(--muted-foreground)">{rawBlock.body}</p> : null}
+        </aside>
+      );
+      i++;
+      continue;
+    }
+
+    const block = rawBlock as PTBlock;
+
+    // Image
+    if (block._type === 'image') {
+      i++;
+      continue; // skip inline images without URLs for now
+    }
+
+    const style = block.style ?? 'normal';
+
+    // Headings
+    if (style === 'h1') {
+      rendered.push(<h1 key={i} className="mb-3 pt-6 font-(family-name:--font-display) text-[2rem] leading-tight tracking-[-0.02em] text-(--foreground)">{renderSpans(block)}</h1>);
+      i++; continue;
+    }
+    if (style === 'h2') {
+      rendered.push(<h2 key={i} className="mb-3 pt-8 text-[1.5rem] leading-tight tracking-[-0.02em] text-(--foreground)">{renderSpans(block)}</h2>);
+      i++; continue;
+    }
+    if (style === 'h3') {
+      rendered.push(<h3 key={i} className="mb-2 pt-5 text-[1.15rem] font-semibold leading-tight text-(--foreground)">{renderSpans(block)}</h3>);
+      i++; continue;
+    }
+    if (style === 'h4') {
+      rendered.push(<h4 key={i} className="mb-1 pt-4 text-base font-semibold text-(--foreground)">{renderSpans(block)}</h4>);
+      i++; continue;
+    }
+
+    // Blockquote
+    if (style === 'blockquote') {
+      rendered.push(
+        <blockquote key={i} className="border-l-2 border-(--border) pl-5 italic text-(--muted-foreground)">
+          {renderSpans(block)}
+        </blockquote>
+      );
+      i++; continue;
+    }
+
+    // Bullet list — collect consecutive bullet items
+    if (block.listItem === 'bullet') {
+      const listItems: React.ReactNode[] = [];
+      while (i < blocks.length) {
+        const b = blocks[i] as PTBlock;
+        if (b._type !== 'block' || b.listItem !== 'bullet') break;
+        listItems.push(<li key={i}>{renderSpans(b)}</li>);
+        i++;
+      }
+      rendered.push(<ul key={`ul-${i}`} className="list-disc pl-6 space-y-1">{listItems}</ul>);
+      continue;
+    }
+
+    // Numbered list — collect consecutive numbered items
+    if (block.listItem === 'number') {
+      const listItems: React.ReactNode[] = [];
+      while (i < blocks.length) {
+        const b = blocks[i] as PTBlock;
+        if (b._type !== 'block' || b.listItem !== 'number') break;
+        listItems.push(<li key={i}>{renderSpans(b)}</li>);
+        i++;
+      }
+      rendered.push(<ol key={`ol-${i}`} className="list-decimal pl-6 space-y-1">{listItems}</ol>);
+      continue;
+    }
+
+    // Normal paragraph — skip empty blocks
+    const hasText = block.children?.some(s => s.text?.trim());
+    if (!hasText) { i++; continue; }
+
+    rendered.push(<p key={i}>{renderSpans(block)}</p>);
+    i++;
   }
 
-  return block.children?.map((child) => child.text).join('') ?? '';
-}
-
-export function PortableTextRenderer({ blocks }: PortableTextRendererProps) {
   return (
     <div className="space-y-5 text-base leading-7 text-(--muted-foreground)">
-      {blocks.map((block, index) => {
-        if (block._type === 'callout') {
-          return (
-            <aside key={`callout-${index}`} className="border border-(--border) bg-[oklch(from_var(--foreground)_l_c_h/0.03)] p-5">
-              {block.title ? <p className="text-sm font-semibold text-(--foreground)">{block.title}</p> : null}
-              {block.body ? <p className="mt-2 text-sm leading-6 text-(--muted-foreground)">{block.body}</p> : null}
-            </aside>
-          );
-        }
-
-        const text = getBlockText(block);
-        const style = block.style ?? 'normal';
-
-        if (!text) {
-          return null;
-        }
-
-        if (style === 'h2') {
-          return (
-            <h2 key={`block-${index}`} className="mb-3 pt-6 text-[1.5rem] leading-tight tracking-[-0.02em] text-(--foreground)">
-              {text}
-            </h2>
-          );
-        }
-
-        if (style === 'h3') {
-          return (
-            <h3 key={`block-${index}`} className="mb-2 pt-4 text-[1.15rem] font-semibold leading-tight text-(--foreground)">
-              {text}
-            </h3>
-          );
-        }
-
-        return <p key={`block-${index}`}>{text}</p>;
-      })}
+      {rendered}
     </div>
   );
 }

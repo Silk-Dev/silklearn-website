@@ -29,12 +29,17 @@ export type HomePageContent = {
 export type PortableTextSpan = {
   _type: 'span';
   text: string;
+  marks?: string[];
 };
 
 export type PortableTextBlock = {
-  _type: 'block';
+  _type: 'block' | 'image';
   style?: string;
+  listItem?: string;
+  level?: number;
   children?: PortableTextSpan[];
+  asset?: { _ref?: string; url?: string };
+  alt?: string;
 };
 
 export type PortableTextCallout = {
