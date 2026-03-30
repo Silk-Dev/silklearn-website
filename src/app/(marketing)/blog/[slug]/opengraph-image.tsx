@@ -6,9 +6,15 @@ export const contentType = 'image/png';
 
 export default async function Image({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const post = await getPostBySlug(slug);
-  const title = post?.title ?? 'SILKLEARN Blog';
-  const eyebrow = post?.eyebrow ?? 'Blog';
+  let title = 'SILKLEARN Blog';
+  let eyebrow = 'Blog';
+  try {
+    const post = await getPostBySlug(slug);
+    title = post?.title ?? title;
+    eyebrow = post?.eyebrow ?? eyebrow;
+  } catch {
+    // fallback to defaults
+  }
 
   return new ImageResponse(
     (
