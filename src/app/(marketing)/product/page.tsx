@@ -141,10 +141,10 @@ export default function ProductPage() {
                   THE PRODUCT
                 </p>
                 <h1 className="mt-6 max-w-[15ch] font-(family-name:--font-display) text-display-xl leading-none tracking-[-0.02em] text-(--foreground)">
-                  Your docs, organized into a path your team can actually follow.
+                  Not where you store knowledge. What happens to it after.
                 </h1>
                 <p className="mt-5 max-w-[50ch] text-[1.03rem] leading-7 text-(--muted-foreground)">
-                  Not a course builder. Not a RAG pipeline. SILKLEARN reads what you already have and turns it into a structured, leader-approved path — in the right order, from day one.
+                  NotebookLM and Perplexity answer questions about your documents. SILKLEARN synthesizes the structure of them — mapping what depends on what, surfacing contradictions between sources, and building a path you can follow rather than a chatbot you can query.
                 </p>
                 <div className="mt-8">
                   <Button asChild size="lg">

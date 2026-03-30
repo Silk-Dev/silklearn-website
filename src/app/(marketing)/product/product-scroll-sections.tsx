@@ -14,25 +14,25 @@ const stepSections = [
     label: 'Step 1',
     title: 'Upload',
     copy:
-      'Drop in your document stack, exactly as it is. PDF, Markdown, DOCX, Notion, Confluence - upload what you have. No reformatting. SILKLEARN reads it as-is.',
+      "Drop in what you're trying to learn, exactly as it exists. Research papers, codebase docs, textbooks, SOPs, onboarding notes — any format, any structure. SILKLEARN reads it as-is.",
     detail:
-      'Supported: PDF, Markdown, DOCX, Notion export, Confluence export. GitHub and Google Drive are coming soon.',
+      'Supported: PDF, Markdown, DOCX, Notion export, Confluence export. GitHub and Google Drive coming soon.',
   },
   {
     label: 'Step 2',
     title: 'Review',
     copy:
-      "See the structure. Approve what's right. Fix what isn't. SILKLEARN builds a graph of your docs - what depends on what, what comes first.",
+      'See the structure the system compiled. The dependency graph shows what concepts build on each other. Contradictions surface where your sources disagree. You check the map before you follow it.',
     detail:
-      'You inspect every connection, accept it, reject it, or flag it. Nothing goes to the team until you sign off, and the audit trail logs reviewer names and timestamps as you go.',
+      "Inspect every connection. Accept it, reject it, or flag it for further review. The compiled structure doesn't become your path until you've verified it makes sense.",
   },
   {
     label: 'Step 3',
-    title: 'Ship',
+    title: 'Follow',
     copy:
-      'Publish outputs teams can use from day one. One approved graph. Pick what you need to publish from it.',
+      'Work through the path the system built. Your documents, in the order they actually depend on each other — not the order someone uploaded them, not alphabetical, not by date.',
     detail:
-      'Learning path, rollout checklist, compliance review queue, and AI context bundle all come from the same reviewed source graph.',
+      'Export as a structured reading list, share with a collaborator, or feed as structured context to an AI system that needs the right order, not a retrieval guess.',
   },
 ] as const;
 

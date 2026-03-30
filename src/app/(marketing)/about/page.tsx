@@ -10,7 +10,7 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({
   title: 'Jesser & Oussama Bedoui — About SILKLEARN',
   description:
-    'Jesser and Oussama Bedoui are the cofounders of SILKLEARN, building knowledge compilation infrastructure for teams working from dense source material.',
+    'Jesser and Oussama Bedoui are the cofounders of SILKLEARN, building knowledge synthesis infrastructure for anyone working from dense source material — researchers, developers, and learners.',
   path: '/about',
   keywords: ['jesser bedoui', 'oussama bedoui', 'silklearn cofounders', 'knowledge compilation'],
 });
@@ -56,7 +56,7 @@ export default function AboutPage() {
             The Cofounders
           </h1>
           <p className="mt-3 text-base leading-7 text-(--muted-foreground) max-w-[52ch]">
-            Two brothers building SILKLEARN — knowledge compilation infrastructure for teams working from dense source material.
+            Two brothers building SILKLEARN — knowledge synthesis infrastructure for researchers, developers, and anyone trying to absorb a complex body of documents.
           </p>
 
           {/* Founders grid — equal columns, staggered entry */}

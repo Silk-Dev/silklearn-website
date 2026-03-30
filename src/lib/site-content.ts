@@ -73,51 +73,51 @@ export type MarketingPost = {
 };
 
 export const fallbackHomePageContent: HomePageContent = {
-  kicker: 'For teams that work from big docs.',
-  headline: 'Turn long docs into a clear path your team can follow.',
+  kicker: 'For researchers, developers, and anyone drowning in documents.',
+  headline: 'Upload what you\'re trying to learn. We map the knowledge, surface the conflicts, and build the path through it.',
   subheadline:
-    'SILKLEARN reads your docs, puts the steps in order, and shows leaders what to approve before people or AI use it.',
+    'SILKLEARN synthesizes your documents — not answers questions about them. It maps what depends on what, finds where sources contradict each other, and generates a path you can actually follow.',
   primaryCtaLabel: 'Request early access',
   primaryCtaHref: '#waitlist',
   secondaryCtaLabel: 'See how it works',
   secondaryCtaHref: '/how-it-works',
   metrics: [
-    { label: 'Start with', value: 'PDFs, specs, SOPs, handbooks, and notes you already have' },
-    { label: 'Get back', value: 'A clear path, a map of key links, and reviewed context for AI' },
-    { label: 'Best for', value: 'Teams that lose time when steps are out of order' },
+    { label: 'Works for', value: 'Research papers, codebases, textbooks, onboarding docs, SOPs' },
+    { label: 'Surfaces', value: 'What depends on what, what contradicts, and where to start' },
+    { label: 'Unlike', value: 'NotebookLM or Perplexity — it synthesizes structure, not just answers' },
   ],
   pillars: [
     {
-      title: 'Show what comes first',
+      title: 'Map the knowledge',
       description:
-        'SILKLEARN puts your docs in the right order, so people can see what they need to learn first.',
+        'SILKLEARN reads your documents and maps the dependency structure — what concepts build on which, and what you need to understand before anything else makes sense.',
     },
     {
-      title: 'Use one approved source',
+      title: 'Surface the conflicts',
       description:
-        'Your team, your rollout, and your AI can all use the same reviewed structure.',
+        'When two sources disagree, SILKLEARN flags it. A single person has no team to catch contradictions — the system does it at ingest, not after you\'ve already internalized the wrong thing.',
     },
     {
-      title: 'Keep leaders in control',
+      title: 'Build the path through it',
       description:
-        'Leaders can check the path, fix mistakes, and approve it before anyone uses it.',
+        'The output is a dependency-ordered sequence through your documents — not an answer to a query, but a structure that persists and guides everything you do with that knowledge.',
     },
   ],
   faq: [
     {
       question: 'Who is SILKLEARN for?',
       answer:
-        'It is for teams with a lot of docs. It helps leaders turn those docs into a path people can follow.',
+        'Anyone trying to absorb a complex body of knowledge from documents: researchers reconciling sources, developers onboarding into a large codebase, students working from multiple textbooks, or professionals switching domains and needing to ramp up fast.',
     },
     {
-      question: 'How is this different from RAG, search, or a course builder?',
+      question: 'How is this different from NotebookLM, Perplexity, or ChatGPT with PDFs?',
       answer:
-        'Search helps after a question. Course tools need manual setup. SILKLEARN starts with your docs and builds the order for you.',
+        'Those tools answer questions about documents. SILKLEARN synthesizes the structure of documents. NotebookLM won\'t tell you that chapter 3 of one source contradicts section 2 of another — it answers whatever you ask. SILKLEARN runs at ingest: mapping prerequisites, detecting contradictions, and building a path that outlasts any individual query.',
     },
     {
-      question: 'What does a team actually get?',
+      question: 'What do I actually get out of it?',
       answer:
-        'Your team gets a clear learning path, a map of what connects, and a reviewed context pack for AI.',
+        'A dependency-ordered path through your documents, a map of what connects to what, and a list of contradictions the system detected across your sources — so you know what to read first, and what to question.',
     },
   ],
 };

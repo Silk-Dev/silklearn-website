@@ -1,66 +1,66 @@
 export const personas = [
   {
-    id: 'team-leads',
-    selector: 'Team Leads',
-    eyebrow: 'FOR TEAM LEADS',
-    title: 'Your team reads the docs. They still ask the same questions. Every cohort.',
+    id: 'researcher',
+    selector: 'Researchers',
+    eyebrow: 'FOR RESEARCHERS',
+    title: 'You have fifteen papers on the same topic. Three of them contradict each other.',
     animationSrc: '/silklearn/animations/team%20leader.json',
     problem:
-      "Engineers aren't skipping the docs — they're reading them in the wrong order. The prerequisite structure was never made visible. Every new hire improvises the same path, makes the same early mistakes.",
+      "You're not missing information — you're missing structure. You can't tell which paper's framework supersedes another, which claims are in tension, or what you need to read before the methodology section makes sense.",
     solution:
-      'Compiles your existing runbooks into a prerequisite-ordered path you approve before anyone follows it. No new docs to write.',
+      'SILKLEARN ingests your source material and maps the dependency structure — what concepts build on each other, where papers conflict, and what you need to read first before anything else makes sense.',
     outcomes: [
-      { label: 'You get', value: 'A reviewed onboarding sequence, ready to hand to new hires from day one.' },
-      { label: 'You stop', value: 'Answering the same questions every quarter.' },
-      { label: 'Your team gets', value: 'A clear path - not a pile of docs with no indication of where to start.' },
+      { label: 'You get', value: 'A dependency-ordered reading path through your sources.' },
+      { label: 'You surface', value: 'Contradictions between papers before they confuse your analysis.' },
+      { label: 'You stop', value: 'Rereading sections to figure out what you were supposed to know first.' },
     ],
   },
   {
-    id: 'ops-managers',
-    selector: 'Ops Managers',
-    eyebrow: 'FOR OPS MANAGERS',
-    title: 'Rollouts slow down when critical steps stay buried across runbooks and handoffs.',
-    animationSrc: '/silklearn/animations/ops%20manager.json',
-    problem:
-      'Your team may have the documentation, but not the dependency logic. When rollout order is implied instead of explicit, handoffs slip, steps are missed, and teams discover the sequence only after something breaks.',
-    solution:
-      'SILKLEARN surfaces the rollout order your docs already imply, then gives leaders a review step before the sequence ships to the team. The structure becomes visible before another handoff depends on it being right.',
-    outcomes: [
-      { label: 'You get', value: 'A rollout checklist in dependency order, ready to use.' },
-      { label: 'You stop', value: 'Relying on tribal knowledge to carry critical handoffs.' },
-      { label: 'Your team gets', value: 'A rollout path that shows what must happen first.' },
-    ],
-  },
-  {
-    id: 'compliance',
-    selector: 'Compliance',
-    eyebrow: 'FOR COMPLIANCE',
-    title: 'Audit work gets harder when the reasoning trail is scattered across the docs.',
-    animationSrc: '/silklearn/animations/compliance.json',
-    problem:
-      'When review history, source context, and ownership live in different places, compliance teams spend time reconstructing why a decision was made instead of reviewing a clean trail from source to approval.',
-    solution:
-      'SILKLEARN builds a reviewable audit trail from your actual documents as leaders inspect the compiled structure. Reviewer names, timestamps, and source links stay tied to the material that produced the final output.',
-    outcomes: [
-      { label: 'You get', value: 'A compliance review queue linked back to exact source sections.' },
-      { label: 'You stop', value: 'Rebuilding decision history manually during audits.' },
-      { label: 'Your team gets', value: 'A traceable review path grounded in the original docs.' },
-    ],
-  },
-  {
-    id: 'technical-leaders',
-    selector: 'Technical Leaders',
-    eyebrow: 'FOR TECHNICAL LEADERS',
-    title: 'Your internal AI cannot reason well if the source context arrives unordered.',
+    id: 'developer',
+    selector: 'Developers',
+    eyebrow: 'FOR DEVELOPERS',
+    title: "The codebase has docs. They don't tell you what to read before the architecture doc makes sense.",
     animationSrc: '/silklearn/animations/tech%20lead.json',
     problem:
-      'Most internal AI setups inherit the same weakness as the docs they pull from: the context has no visible prerequisite order, no review step, and no clear boundary between source and guesswork.',
+      "The repo has a wiki, runbooks, architecture notes, and an onboarding doc that assumes you already know things. There's no signal about what depends on what. You discover the sequence by getting things wrong.",
     solution:
-      'SILKLEARN gives your AI structured context from leader-reviewed source. Instead of a retrieval guess, the system packages the material in the order the team has already approved.',
+      "SILKLEARN maps the dependency structure across your codebase docs — what foundational concepts unlock the rest, where the runbooks assume knowledge the onboarding doc doesn't provide, and what order actually makes sense.",
     outcomes: [
-      { label: 'You get', value: 'An AI context bundle grounded in reviewed source.' },
-      { label: 'You stop', value: 'Trusting unordered retrieval to stand in for actual structure.' },
-      { label: 'Your team gets', value: 'Context that arrives in the right order, not just the closest match.' },
+      { label: 'You get', value: 'A dependency-ordered path through the docs, not a pile of links.' },
+      { label: 'You surface', value: "Gaps where the onboarding docs assume knowledge they don't provide." },
+      { label: 'You stop', value: 'Asking senior engineers to reconstruct the sequence for you.' },
+    ],
+  },
+  {
+    id: 'student',
+    selector: 'Students',
+    eyebrow: 'FOR STUDENTS',
+    title: 'Three textbooks on the same subject. They define the same term differently.',
+    animationSrc: '/silklearn/animations/ops%20manager.json',
+    problem:
+      "You're working from a primary textbook, a secondary reference, and a set of lecture notes. They don't agree on terminology, they assume different prerequisites, and you can't tell whose framing to follow when they conflict.",
+    solution:
+      "SILKLEARN maps what each source assumes you already know, surfaces where they disagree, and builds a reading path that respects the dependency structure across all three — so you're not reconciling contradictions manually at the end.",
+    outcomes: [
+      { label: 'You get', value: 'A single dependency-ordered path across all your source material.' },
+      { label: 'You surface', value: 'Terminological conflicts and contradictions before your exam.' },
+      { label: 'You stop', value: 'Manually cross-referencing sources to figure out which one is right.' },
+    ],
+  },
+  {
+    id: 'domain-switcher',
+    selector: 'Domain switchers',
+    eyebrow: 'FOR DOMAIN SWITCHERS',
+    title: 'New job. New field. The reading list has thirty items and no order.',
+    animationSrc: '/silklearn/animations/compliance.json',
+    problem:
+      "You're switching domains — new company, new industry, new technical stack. Everyone says \"just read these docs\" but nobody explains what order the docs assume, which ones are foundational, or where the gaps are.",
+    solution:
+      "SILKLEARN takes whatever you've been handed and compiles the structure it implies — what must come first, what assumes other knowledge, and where the material contradicts itself — so you can ramp up in the right order rather than the wrong one.",
+    outcomes: [
+      { label: 'You get', value: 'A dependency-ordered entry path into an unfamiliar domain.' },
+      { label: 'You surface', value: "What the material assumes you already know that wasn't in the reading list." },
+      { label: 'You stop', value: 'Spending the first month discovering the sequence the hard way.' },
     ],
   },
 ] as const;

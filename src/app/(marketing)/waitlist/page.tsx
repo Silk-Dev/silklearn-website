@@ -18,7 +18,7 @@ const WaitlistForm = dynamic(
 export const metadata: Metadata = buildMetadata({
   title: 'Get Early Access to Knowledge Compilation',
   description:
-    'Join the SILKLEARN waitlist if your team works from dense source material and wants reviewable learning paths, dependency graphs, and context bundles.',
+    'Join the SILKLEARN waitlist. Upload documents you are trying to learn from — research papers, codebases, onboarding docs — and get back a dependency-ordered path through them.',
   path: '/waitlist',
   keywords: ['SILKLEARN waitlist', 'knowledge compilation beta', 'reviewable learning path software'],
 });
@@ -28,15 +28,15 @@ export default function WaitlistPage() {
     <PageShell>
       <MarketingPageFrame>
         <MarketingHero
-          description="Early access is aimed at teams testing onboarding flows, knowledge audits, and AI context workflows built from dense private material. If your problem is hidden structure, not missing documents, SILKLEARN is for you."
+          description="Early access is open to researchers, developers, students, and anyone working from dense source material. If the problem is that the knowledge exists but the path through it does not, SILKLEARN is for you."
           kicker="Waitlist"
           rightChildren={
             <div className="grid gap-3">
               {[
-                'Dense private docs already exist',
-                'Onboarding or handoffs still depend on experts',
-                'Wrong sequence creates expensive mistakes',
-                'AI context needs better structure before retrieval',
+                'Documents exist but the path through them does not',
+                'Multiple sources that may contradict each other',
+                'No team to ask what to read first',
+                'Existing AI tools answer questions but don\'t synthesize structure',
               ].map((item) => (
                 <div key={item} className="border-b border-(--border) pb-3 last:border-b-0 last:pb-0 text-sm font-medium text-(--foreground)">
                   {item}
@@ -48,9 +48,9 @@ export default function WaitlistPage() {
                 </p>
                 <ul className="mt-3 space-y-2.5">
                   {[
-                    'Dependency-ordered learning path from your own docs',
-                    'Leader review workflow with full audit trail',
-                    'AI-ready context bundle for internal LLMs',
+                    'A dependency-ordered path through your uploaded documents',
+                    'A map of contradictions detected across your sources',
+                    'Structured context for AI that reflects the actual dependency order',
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-2.5">
                       <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-(--primary)" />
@@ -62,8 +62,8 @@ export default function WaitlistPage() {
             </div>
           }
           rightEyebrow="Best fit"
-          rightTitle="If the problem is hidden dependency order rather than missing documentation, this is the right entry point."
-          title="Bring your team’s raw knowledge into reviewable structure."
+          rightTitle="If the problem is that the knowledge exists but the structure through it does not, this is the right entry point."
+          title="Upload what you’re trying to learn. Get back the structure through it."
         />
 
         <MarketingSplitSection

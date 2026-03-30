@@ -17,17 +17,17 @@ import { featurePages } from '@/lib/marketing-content';
 import { buildMetadata } from '@/lib/seo';
 
 const featureSignals = [
-  'Structured extraction from real documents',
-  'Dependency-aware sequencing across topics',
-  'Reviewable outputs before team rollout',
+  'Map what depends on what across your sources',
+  'Surface where your documents contradict each other',
+  'Build a path through your knowledge, not just an answer',
 ];
 
 export const metadata: Metadata = buildMetadata({
   title: 'Features — Dependency Mapping & Leader Review',
   description:
-    'Explore SILKLEARN features for dependency mapping, leader review, and turning source documents into structured learning paths.',
+    'Explore SILKLEARN features: dependency mapping that surfaces what to read first, contradiction detection across sources, and a path-building layer that turns documents into structure.',
   path: '/features',
-  keywords: ['SILKLEARN features', 'dependency mapping software', 'leader review workflow'],
+  keywords: ['SILKLEARN features', 'dependency mapping', 'knowledge synthesis', 'contradiction detection'],
 });
 
 export default function FeaturesPage() {
@@ -35,7 +35,7 @@ export default function FeaturesPage() {
     <PageShell>
       <MarketingPageFrame>
         <MarketingHero
-          description="The core capabilities of SILKLEARN exist to make hidden structure visible, reviewable, and reusable downstream."
+          description="The core capabilities of SILKLEARN exist to synthesize the structure of your documents — not answer questions about them. Map dependencies. Surface contradictions. Build paths."
           kicker="Features"
           rightChildren={
             <div className="grid gap-3">

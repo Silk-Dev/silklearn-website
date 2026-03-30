@@ -9,9 +9,9 @@ export const metadata: Metadata = {
   ...buildMetadata({
     title: 'SILKLEARN | Knowledge Compilation for Technical Teams',
     description:
-      'SILKLEARN compiles dense source material into dependency-ordered learning paths, reviewable context bundles, and structured knowledge for teams.',
+      'SILKLEARN synthesizes the structure of your documents — mapping what depends on what, surfacing contradictions between sources, and building a path you can actually follow. Upload what you\'re trying to learn.',
     path: '/',
-    keywords: ['knowledge compilation', 'learning paths', 'structured knowledge', 'silklearn'],
+    keywords: ['knowledge synthesis', 'dependency mapping', 'document structure', 'NotebookLM alternative', 'research paper synthesis', 'silklearn'],
   }),
   title: { absolute: 'SILKLEARN | Knowledge Compilation for Technical Teams' },
 };

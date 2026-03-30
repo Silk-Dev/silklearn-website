@@ -20,42 +20,42 @@ import { getFaqPageSchema } from '@/lib/structured-data';
 gsap.registerPlugin(ScrollTrigger);
 
 const trustMarks = [
-  'Engineering onboarding',
-  'Platform operations',
-  'Support enablement',
-  'Compliance handoff',
+  'Research synthesis',
+  'Technical deep dives',
+  'Domain switching',
+  'Multi-source learning',
   'AI context packaging',
-  'Internal documentation systems',
+  'Dense documentation',
 ];
 
 const operatingModes = [
   {
-    title: 'Make prerequisite order obvious before teams make mistakes',
-    body: 'Turn architecture docs, onboarding notes, and runbooks into a reviewed sequence so teams stop guessing what comes first.',
+    title: 'See what must be learned first — before you waste time on the wrong thing.',
+    body: 'Turn research papers, technical docs, and course materials into a dependency-ordered sequence so you follow the logic, not just read the words.',
     animationSrc: '/silklearn/animations/compile-docs-to-graph.json',
     eyebrow: 'Compile',
     metrics: ['See what must be learned first', 'Keep every step tied to source'],
   },
   {
-    title: 'Reuse one compiled graph across onboarding, rollout, and AI',
-    body: 'Build one reviewed structure that feeds onboarding, rollout review, and AI context delivery without rebuilding the logic each time.',
+    title: 'Reuse one compiled graph across notes, questions, and AI context.',
+    body: 'Build one synthesized structure that feeds your notes, Q&A sessions, and AI conversations without reconstructing the logic each time.',
     animationSrc: '/silklearn/animations/graph_to_lanes.json',
     eyebrow: 'Consolidate',
-    metrics: ['One structure, multiple outputs', 'Leader-approved context bundles'],
+    metrics: ['One structure, multiple outputs', 'Contradiction detection across sources'],
   },
 ];
 
 const painBlocks = [
   {
-    quote: 'Why does everyone ask the same onboarding questions?',
-    answer: 'Because the docs don\'t show what order to read them in.',
+    quote: 'I\'ve read this three times and I still can\'t see how it connects.',
+    answer: 'Because documents show conclusions, not the dependency path that makes them make sense.',
   },
   {
-    quote: 'Our rollout failed because someone missed a step.',
-    answer: 'Because the prerequisite logic was buried across docs nobody connected.',
+    quote: 'I switched domains. There are 50 tabs open and no map.',
+    answer: 'Because the prerequisite logic is scattered across sources no one has mapped for your starting point.',
   },
   {
-    quote: 'Our internal AI gives wrong answers.',
+    quote: 'My AI summarizes everything. It never tells me what order to understand things in.',
     answer: 'Because the context it receives has no structure or order.',
   },
 ];
@@ -69,15 +69,15 @@ const actionPanels = [
     rows: [
       'Architecture spec.pdf',
       'Support escalation runbook.docx',
-      'Internal onboarding handbook.md',
+      'Research paper collection.pdf',
     ],
     note: 'Compile',
   },
   {
     step: 'Step 02',
     src: '/silklearn/animations/step-02.json',
-    title: 'See the structure. Approve it before it ships.',
-    summary: 'Leaders inspect every connection and sign off. Audit trail built automatically.',
+    title: 'See the structure. Confirm it before you follow it.',
+    summary: 'See every dependency as it\'s mapped. Inspect connections and source links before you commit to a learning path.',
     rows: [
       'Auth model -> Access policy',
       'Access policy -> Incident recovery',
@@ -88,12 +88,12 @@ const actionPanels = [
   {
     step: 'Step 03',
     src: '/silklearn/animations/step-03.json',
-    title: 'Publish a path teams can use from day one.',
-    summary: 'Learning path, rollout checklist, compliance queue, or AI context bundle — from one reviewed source.',
+    title: 'Get a path you can actually follow from day one.',
+    summary: 'Learning path, synthesis bundle, or AI context — from one source-linked structure.',
     rows: [
-      'Engineering onboarding path',
-      'Support agent context bundle',
-      'Leader review queue',
+      'Dependency-ordered reading path',
+      'Cross-source synthesis bundle',
+      'Conflict and contradiction log',
     ],
     note: 'Ship',
   },
@@ -119,17 +119,17 @@ type StageJourneyStage = {
 
 const stageJourney: StageJourneyStage[] = [
   {
-    label: 'Engineering onboarding',
-    title: 'Cut ramp time without rewriting a single doc.',
-    description: 'Compile your existing runbooks into a sequence that makes sense from day one.',
+    label: 'Research synthesis',
+    title: 'See how 20 papers connect without building the map yourself.',
+    description: 'Upload your source material and get a dependency-ordered path through it.',
     point: { x: -100, y: 305 },
     connector: { x: -100, y: 400 },
     card: { x: 124, y: 300 },
   },
   {
-    label: 'Rollout readiness',
-    title: 'Ship rollouts where teams know what comes first.',
-    description: 'Surface dependency logic before a handoff depends on it being right.',
+    label: 'Domain switching',
+    title: 'Enter a new field knowing what to learn first.',
+    description: 'Surface the prerequisite logic before you waste time on the wrong starting point.',
     point: { x: 180, y: 168 },
     connector: { x: 180, y: 263 },
     card: { x: 404, y: 163 },
@@ -137,15 +137,15 @@ const stageJourney: StageJourneyStage[] = [
   {
     label: 'Internal AI context',
     title: 'Give your AI structured context, not a RAG guess.',
-    description: 'Every output is grounded in a leader-reviewed, prerequisite-ordered source.',
+    description: 'Every output is grounded in a prerequisite-ordered, source-linked structure.',
     point: { x: 460, y: 107 },
     connector: { x: 460, y: 202 },
     card: { x: 684, y: 102 },
   },
   {
-    label: 'Compliance review',
-    title: 'A reviewable audit trail from your actual docs.',
-    description: 'Reviewer names, timestamps, and source links - built as you review.',
+    label: 'Conflict detection',
+    title: 'Surface what your sources disagree on.',
+    description: 'Contradictions between sources are flagged as you compile — not discovered after you\'ve already built on a wrong assumption.',
     point: { x: 740, y: 85 },
     connector: { x: 740, y: 180 },
     card: { x: 964, y: 80 },
@@ -537,7 +537,7 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
               <div className="mt-6 flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:gap-x-6 sm:gap-y-2">
                 {[
                   'Any doc format — PDF, Markdown, Notion, Confluence',
-                  'Leader review and approval built in',
+                  'Conflict detection across sources built in',
                   'AI-ready context bundles included',
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-2">
@@ -615,7 +615,7 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
             <div>
               <div className="border-b border-(--border) px-6 pt-6 pb-20 sm:px-8 sm:pt-8 lg:px-10">
                 <h2 className="text-[2.5rem] leading-tight tracking-[-0.02em] text-(--foreground)">
-                  Three steps from document stack to team-ready output.
+                  Three steps from document stack to a path you can follow.
                 </h2>
                 
               </div>
@@ -677,7 +677,7 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
           <div className="p-6 sm:p-8 lg:p-10 lg:pt-50 lg:mb-35">
             <ScrollReveal>
             <h2 className=" font-(family-name:--font-display) text-display-lg leading-none tracking-[-0.02em] text-(--foreground)">
-              Built for teams where missing context creates expensive mistakes.
+              Built for anyone drowning in documents without a map.
             </h2>
             </ScrollReveal>
 
@@ -687,10 +687,10 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
             <ScrollReveal className=" p-6 sm:p-8 lg:absolute lg:z-10 lg:-mt-20 lg:ml-0 lg:max-w-[23rem]  lg:p-10 lg:-top-70">
               <p className="text-xs font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">Why this works</p>
               <h3 className="mt-4 max-w-[16ch] text-[1.25rem] leading-tight tracking-[-0.02em] text-(--foreground)">
-                When order is visible, teams ramp faster and handoffs break less often.
+                When structure is visible, you learn faster and waste less time.
               </h3>
               <p className="mt-4 text-sm leading-5 text-(--muted-foreground)">
-                Teams can only reuse internal knowledge safely when the order, source, and impact are clear before rollout, onboarding, or AI delivery.
+                You can only navigate a complex domain when the order, source, and dependencies are mapped before you start reading.
               </p>
 
               <div className="mt-6">
@@ -761,7 +761,7 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
               See whether your document stack is a fit for early access.
             </h2>
             <p className="max-w-[56ch] text-base leading-5 text-(--muted-foreground)">
-              Early access rolls out in waves after a quick fit review. Best fit: engineering, ops, and compliance leaders working from dense internal docs.
+              Early access rolls out in waves after a quick fit review. Best fit: researchers, developers, students, and domain switchers working from dense documents.
             </p>
 
            
