@@ -34,8 +34,8 @@ const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET;
 export const isSanityConfigured = Boolean(projectId && dataset);
 
 const sanityClient = createClient({
-  projectId: projectId ?? 'placeholder',
-  dataset: dataset ?? 'production',
+  projectId: projectId || 'placeholder',
+  dataset: dataset || 'production',
   apiVersion: '2026-03-27',
   useCdn: false,
 });
