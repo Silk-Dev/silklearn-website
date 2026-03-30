@@ -114,7 +114,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 <p className="text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-(--muted-foreground)">
                   Written by
                 </p>
-                <p className="mt-1 text-(--foreground)">{post.author || 'SILKLEARN'}</p>
+                <TransitionLink
+                  href="/about"
+                  className="mt-1 text-(--foreground) underline underline-offset-4 decoration-(--border) hover:decoration-(--foreground) transition-colors duration-150"
+                >
+                  {post.author || 'SILKLEARN'}
+                </TransitionLink>
               </div>
               <div className="mb-6">
                 <p className="text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-(--muted-foreground)">
