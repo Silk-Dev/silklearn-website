@@ -78,29 +78,10 @@ export default function AboutPage() {
               <h2 className="mt-1 font-(family-name:--font-display) text-xl tracking-[-0.02em] text-(--foreground)">
                 Jesser Bedoui
               </h2>
-              <div className="mt-4 space-y-4 text-sm leading-7 text-(--muted-foreground)">
-                <p>
-                  Jesser built SILKLEARN from the observation that teams fail not because they lack
-                  documentation, but because the documentation has no visible order. Engineers read
-                  the right docs in the wrong sequence. Leads ship onboarding that makes sense in
-                  their heads but not on paper.
-                </p>
-                <p>
-                  SILKLEARN is the infrastructure he wanted to exist — a system that compiles dense
-                  source material into dependency-ordered learning paths that leaders can review
-                  before they ship to the team.
-                </p>
-                <p>
-                  He writes about the build in real time through{' '}
-                  <TransitionLink
-                    href="/the-reset"
-                    className="text-(--foreground) underline underline-offset-4 decoration-(--border) hover:decoration-(--foreground) transition-colors duration-150"
-                  >
-                    The Reset
-                  </TransitionLink>
-                  {' '}— a day-by-day founder journal published unfiltered.
-                </p>
-              </div>
+              <p className="mt-4 text-sm leading-7 text-(--muted-foreground)">
+                Building the product and the vision. Saw teams fail not from missing docs but from
+                docs with no order — and decided to fix that.
+              </p>
             </div>
 
             {/* Oussama */}
@@ -120,24 +101,10 @@ export default function AboutPage() {
               <h2 className="mt-1 font-(family-name:--font-display) text-xl tracking-[-0.02em] text-(--foreground)">
                 Oussama Bedoui
               </h2>
-              <div className="mt-4 space-y-4 text-sm leading-7 text-(--muted-foreground)">
-                <p>
-                  Oussama is a full-stack engineer with over six years building production systems
-                  across Angular, Java, Spring Boot, and Node.js. He built a complete multi-tenant
-                  SaaS invoicing platform from scratch at Tanitflow — architecture, modeling,
-                  design, and delivery — and has shipped software for teams in Iceland, Portugal,
-                  Tunisia, and Qatar.
-                </p>
-                <p>
-                  He holds a Computer Engineering degree from Université Sesame and brings the
-                  systems depth needed to turn knowledge compilation from a concept into reliable
-                  infrastructure.
-                </p>
-                <p>
-                  At SILKLEARN, Oussama owns the engineering — making sure the product handles real
-                  source material at the scale and reliability teams depend on.
-                </p>
-              </div>
+              <p className="mt-4 text-sm leading-7 text-(--muted-foreground)">
+                Building the system. Six years shipping production software across Angular, Java,
+                and Spring Boot — owns the engineering at SILKLEARN.
+              </p>
             </div>
           </div>
 
