@@ -47,28 +47,28 @@ export function PortableTextRenderer({ blocks }: PortableTextRendererProps) {
 
     const style = block.style ?? 'normal';
 
-    // Headings
+    // Headings — large space above to open a new section, tight below to group with content
     if (style === 'h1') {
-      rendered.push(<h2 key={i} className="mb-3 pt-8 text-[1.5rem] leading-tight tracking-[-0.02em] text-(--foreground)">{renderSpans(block)}</h2>);
+      rendered.push(<h2 key={i} className="mt-14 mb-3 text-[1.5rem] leading-tight tracking-[-0.02em] text-(--foreground)">{renderSpans(block)}</h2>);
       i++; continue;
     }
     if (style === 'h2') {
-      rendered.push(<h2 key={i} className="mb-3 pt-8 text-[1.5rem] leading-tight tracking-[-0.02em] text-(--foreground)">{renderSpans(block)}</h2>);
+      rendered.push(<h2 key={i} className="mt-14 mb-3 text-[1.5rem] leading-tight tracking-[-0.02em] text-(--foreground)">{renderSpans(block)}</h2>);
       i++; continue;
     }
     if (style === 'h3') {
-      rendered.push(<h3 key={i} className="mb-2 pt-5 text-[1.15rem] font-semibold leading-tight text-(--foreground)">{renderSpans(block)}</h3>);
+      rendered.push(<h3 key={i} className="mt-9 mb-2 text-[1.15rem] font-semibold leading-tight text-(--foreground)">{renderSpans(block)}</h3>);
       i++; continue;
     }
     if (style === 'h4') {
-      rendered.push(<h4 key={i} className="mb-1 pt-4 text-base font-semibold text-(--foreground)">{renderSpans(block)}</h4>);
+      rendered.push(<h4 key={i} className="mt-7 mb-1 text-base font-semibold text-(--foreground)">{renderSpans(block)}</h4>);
       i++; continue;
     }
 
-    // Blockquote
+    // Blockquote — extra vertical breathing room
     if (style === 'blockquote') {
       rendered.push(
-        <blockquote key={i} className="border-l-2 border-(--border) pl-5 italic text-(--muted-foreground)">
+        <blockquote key={i} className="my-2 border-l-2 border-(--border) pl-5 italic text-(--muted-foreground)">
           {renderSpans(block)}
         </blockquote>
       );
@@ -81,10 +81,10 @@ export function PortableTextRenderer({ blocks }: PortableTextRendererProps) {
       while (i < blocks.length) {
         const b = blocks[i] as PTBlock;
         if (b._type !== 'block' || b.listItem !== 'bullet') break;
-        listItems.push(<li key={i}>{renderSpans(b)}</li>);
+        listItems.push(<li key={i} className="leading-[1.8]">{renderSpans(b)}</li>);
         i++;
       }
-      rendered.push(<ul key={`ul-${i}`} className="list-disc pl-6 space-y-1">{listItems}</ul>);
+      rendered.push(<ul key={`ul-${i}`} className="list-disc pl-6 space-y-2">{listItems}</ul>);
       continue;
     }
 
@@ -94,10 +94,10 @@ export function PortableTextRenderer({ blocks }: PortableTextRendererProps) {
       while (i < blocks.length) {
         const b = blocks[i] as PTBlock;
         if (b._type !== 'block' || b.listItem !== 'number') break;
-        listItems.push(<li key={i}>{renderSpans(b)}</li>);
+        listItems.push(<li key={i} className="leading-[1.8]">{renderSpans(b)}</li>);
         i++;
       }
-      rendered.push(<ol key={`ol-${i}`} className="list-decimal pl-6 space-y-1">{listItems}</ol>);
+      rendered.push(<ol key={`ol-${i}`} className="list-decimal pl-6 space-y-2">{listItems}</ol>);
       continue;
     }
 
@@ -110,7 +110,7 @@ export function PortableTextRenderer({ blocks }: PortableTextRendererProps) {
   }
 
   return (
-    <div className="space-y-5 text-base leading-7 text-(--muted-foreground)">
+    <div className="space-y-5 text-[1.0625rem] leading-[1.8] text-(--muted-foreground) [&>h2]:mt-12 [&>h2]:mb-1 [&>h3]:mt-8 [&>h3]:mb-1">
       {rendered}
     </div>
   );
