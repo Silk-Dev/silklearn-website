@@ -29,9 +29,12 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   const post = await getPostBySlug(slug);
   if (!post) return {};
 
+  const rawDesc = post.excerpt || '';
+  const desc = rawDesc.length > 155 ? rawDesc.slice(0, 152) + '...' : rawDesc;
+
   return buildMetadata({
     title: post.title,
-    description: post.excerpt,
+    description: desc,
     path: `/blog/${post.slug}`,
     keywords: [post.title.toLowerCase(), 'silklearn blog'],
   });

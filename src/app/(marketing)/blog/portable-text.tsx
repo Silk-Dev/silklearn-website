@@ -49,7 +49,7 @@ export function PortableTextRenderer({ blocks }: PortableTextRendererProps) {
 
     // Headings
     if (style === 'h1') {
-      rendered.push(<h1 key={i} className="mb-3 pt-6 font-(family-name:--font-display) text-[2rem] leading-tight tracking-[-0.02em] text-(--foreground)">{renderSpans(block)}</h1>);
+      rendered.push(<h2 key={i} className="mb-3 pt-8 text-[1.5rem] leading-tight tracking-[-0.02em] text-(--foreground)">{renderSpans(block)}</h2>);
       i++; continue;
     }
     if (style === 'h2') {
