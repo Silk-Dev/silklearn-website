@@ -224,7 +224,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                           alt={related.mainImage.alt || related.title}
                           width={600}
                           height={315}
-                          className="w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                          className="w-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.02]"
                         />
                       </div>
                     )}

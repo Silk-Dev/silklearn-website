@@ -84,7 +84,7 @@ export function PortableTextRenderer({ blocks }: PortableTextRendererProps) {
         listItems.push(<li key={i} className="leading-[1.8]">{renderSpans(b)}</li>);
         i++;
       }
-      rendered.push(<ul key={`ul-${i}`} className="list-disc pl-6 space-y-2">{listItems}</ul>);
+      rendered.push(<ul key={`ul-${i}`} className="list-disc pl-6 [&>li+li]:mt-3">{listItems}</ul>);
       continue;
     }
 
@@ -97,7 +97,7 @@ export function PortableTextRenderer({ blocks }: PortableTextRendererProps) {
         listItems.push(<li key={i} className="leading-[1.8]">{renderSpans(b)}</li>);
         i++;
       }
-      rendered.push(<ol key={`ol-${i}`} className="list-decimal pl-6 space-y-2">{listItems}</ol>);
+      rendered.push(<ol key={`ol-${i}`} className="list-decimal pl-6 [&>li+li]:mt-3">{listItems}</ol>);
       continue;
     }
 
