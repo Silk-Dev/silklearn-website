@@ -1,7 +1,6 @@
 import type { MetadataRoute } from 'next';
 
 import { featurePages, useCasePages } from '@/lib/marketing-content';
-import { personas } from '@/lib/marketing-personas';
 import { absoluteUrl } from '@/lib/seo';
 import { getAllPosts } from '@/lib/sanity';
 
@@ -10,7 +9,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticRoutes = [
     '/',
     '/product',
-    '/for-teams',
     '/features',
     '/use-cases',
     '/blog',
@@ -32,10 +30,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })),
     ...useCasePages.map((page) => ({
       url: absoluteUrl(`/use-cases/${page.slug}`),
-      lastModified: now,
-    })),
-    ...personas.map((persona) => ({
-      url: absoluteUrl(`/for-teams/${persona.id}`),
       lastModified: now,
     })),
     ...blogPosts.map((post) => ({
