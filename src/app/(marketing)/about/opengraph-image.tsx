@@ -28,18 +28,18 @@ export default function Image() {
               textTransform: 'uppercase',
             }}
           >
-            Founder — SILKLEARN
+            Cofounders — SILKLEARN
           </div>
           <div
             style={{
               color: '#ffffff',
-              fontSize: '64px',
+              fontSize: '56px',
               fontWeight: '700',
               letterSpacing: '-2px',
-              lineHeight: 1,
+              lineHeight: 1.1,
             }}
           >
-            Jesser Bedoui
+            Jesser &amp; Oussama Bedoui
           </div>
         </div>
         <div

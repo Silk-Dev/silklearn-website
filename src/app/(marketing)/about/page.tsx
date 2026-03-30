@@ -7,26 +7,31 @@ import { Button } from '@/components/ui/button';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
-  title: 'Jesser Bedoui — Founder of SILKLEARN',
+  title: 'Jesser & Oussama Bedoui — Founders of SILKLEARN',
   description:
-    'Jesser Bedoui is the founder of SILKLEARN, building knowledge compilation infrastructure for teams working from dense source material.',
+    'Jesser and Oussama Bedoui are the cofounders of SILKLEARN, building knowledge compilation infrastructure for teams working from dense source material.',
   path: '/about',
-  keywords: ['jesser bedoui', 'silklearn founder', 'knowledge compilation'],
+  keywords: ['jesser bedoui', 'oussama bedoui', 'silklearn founders', 'knowledge compilation'],
 });
 
-const personSchema = {
+const foundersSchema = {
   '@context': 'https://schema.org',
-  '@type': 'Person',
-  name: 'Jesser Bedoui',
-  url: 'https://www.silklearn.io/about',
-  jobTitle: 'Founder',
-  worksFor: {
-    '@type': 'Organization',
-    name: 'SILKLEARN',
-    url: 'https://www.silklearn.io',
-  },
-  description: 'Founder of SILKLEARN, building knowledge compilation infrastructure for teams.',
-  sameAs: ['https://x.com/silklearn'],
+  '@graph': [
+    {
+      '@type': 'Person',
+      name: 'Jesser Bedoui',
+      url: 'https://www.silklearn.io/about',
+      jobTitle: 'Founder',
+      worksFor: { '@type': 'Organization', name: 'SILKLEARN', url: 'https://www.silklearn.io' },
+    },
+    {
+      '@type': 'Person',
+      name: 'Oussama Bedoui',
+      url: 'https://www.silklearn.io/about',
+      jobTitle: 'Cofounder',
+      worksFor: { '@type': 'Organization', name: 'SILKLEARN', url: 'https://www.silklearn.io' },
+    },
+  ],
 };
 
 export default function AboutPage() {
@@ -34,34 +39,62 @@ export default function AboutPage() {
     <PageShell>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(foundersSchema) }}
       />
       <MarketingPageFrame>
         <div className="mx-auto max-w-4xl px-6 py-16 sm:py-24">
           {/* Header */}
           <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
-            Founder
+            Founders
           </p>
           <h1 className="mt-2 font-(family-name:--font-display) text-3xl sm:text-[2.75rem] sm:leading-[1.15] tracking-tight text-(--foreground)">
-            Jesser Bedoui
+            The Founders
           </h1>
           <p className="mt-3 text-base leading-7 text-(--muted-foreground) max-w-[52ch]">
             Building SILKLEARN — knowledge compilation infrastructure for teams.
           </p>
 
-          {/* Bio */}
-          <div className="mt-14 max-w-[62ch] space-y-6 text-base leading-7 text-(--muted-foreground)">
-            <p>
-              I&apos;m building SILKLEARN after spending years watching teams fail not because they
-              lacked documentation, but because the documentation had no visible order. Engineers
-              would read the right docs in the wrong sequence. Leads would ship onboarding that made
-              sense in their heads but not on paper.
-            </p>
-            <p>
-              SILKLEARN is the infrastructure I wanted to exist. It compiles dense source material
-              into dependency-ordered learning paths that leaders can review before they ship to the
-              team.
-            </p>
+          {/* Founders grid */}
+          <div className="mt-14 grid gap-12 sm:grid-cols-2">
+            {/* Jesser */}
+            <div>
+              <p className="text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-(--muted-foreground)">
+                Founder
+              </p>
+              <h2 className="mt-1 font-(family-name:--font-display) text-xl tracking-[-0.02em] text-(--foreground)">
+                Jesser Bedoui
+              </h2>
+              <div className="mt-4 space-y-4 text-base leading-7 text-(--muted-foreground)">
+                <p>
+                  I&apos;m building SILKLEARN after spending years watching teams fail not because
+                  they lacked documentation, but because the documentation had no visible order.
+                  Engineers would read the right docs in the wrong sequence. Leads would ship
+                  onboarding that made sense in their heads but not on paper.
+                </p>
+                <p>
+                  SILKLEARN is the infrastructure I wanted to exist. It compiles dense source
+                  material into dependency-ordered learning paths that leaders can review before
+                  they ship to the team.
+                </p>
+              </div>
+            </div>
+
+            {/* Oussama */}
+            <div>
+              <p className="text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-(--muted-foreground)">
+                Cofounder
+              </p>
+              <h2 className="mt-1 font-(family-name:--font-display) text-xl tracking-[-0.02em] text-(--foreground)">
+                Oussama Bedoui
+              </h2>
+              <div className="mt-4 text-base leading-7 text-(--muted-foreground)">
+                <p>
+                  Oussama joined SILKLEARN as cofounder, bringing the technical depth needed to
+                  turn the knowledge compilation concept into a working system. He and Jesser have
+                  been building together since before SILKLEARN had a name.
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* The Reset section */}
