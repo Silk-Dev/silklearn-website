@@ -47,28 +47,28 @@ export function PortableTextRenderer({ blocks }: PortableTextRendererProps) {
 
     const style = block.style ?? 'normal';
 
-    // Headings — large space above to open a new section, tight below to group with content
+    // Headings — !important beats space-y's high-specificity :not([hidden]) selector
     if (style === 'h1') {
-      rendered.push(<h2 key={i} className="mt-14 mb-3 text-[1.5rem] leading-tight tracking-[-0.02em] text-(--foreground)">{renderSpans(block)}</h2>);
+      rendered.push(<h2 key={i} className="!mt-14 text-[1.5rem] leading-tight tracking-[-0.02em] text-(--foreground)">{renderSpans(block)}</h2>);
       i++; continue;
     }
     if (style === 'h2') {
-      rendered.push(<h2 key={i} className="mt-14 mb-3 text-[1.5rem] leading-tight tracking-[-0.02em] text-(--foreground)">{renderSpans(block)}</h2>);
+      rendered.push(<h2 key={i} className="!mt-14 text-[1.5rem] leading-tight tracking-[-0.02em] text-(--foreground)">{renderSpans(block)}</h2>);
       i++; continue;
     }
     if (style === 'h3') {
-      rendered.push(<h3 key={i} className="mt-9 mb-2 text-[1.15rem] font-semibold leading-tight text-(--foreground)">{renderSpans(block)}</h3>);
+      rendered.push(<h3 key={i} className="!mt-10 text-[1.15rem] font-semibold leading-tight text-(--foreground)">{renderSpans(block)}</h3>);
       i++; continue;
     }
     if (style === 'h4') {
-      rendered.push(<h4 key={i} className="mt-7 mb-1 text-base font-semibold text-(--foreground)">{renderSpans(block)}</h4>);
+      rendered.push(<h4 key={i} className="!mt-8 text-base font-semibold text-(--foreground)">{renderSpans(block)}</h4>);
       i++; continue;
     }
 
-    // Blockquote — extra vertical breathing room
+    // Blockquote
     if (style === 'blockquote') {
       rendered.push(
-        <blockquote key={i} className="my-2 border-l-2 border-(--border) pl-5 italic text-(--muted-foreground)">
+        <blockquote key={i} className="!mt-8 border-l-2 border-(--border) pl-5 italic text-(--muted-foreground)">
           {renderSpans(block)}
         </blockquote>
       );
@@ -110,7 +110,7 @@ export function PortableTextRenderer({ blocks }: PortableTextRendererProps) {
   }
 
   return (
-    <div className="space-y-5 text-[1.0625rem] leading-[1.8] text-(--muted-foreground) [&>h2]:mt-12 [&>h2]:mb-1 [&>h3]:mt-8 [&>h3]:mb-1">
+    <div className="space-y-6 text-[1.0625rem] leading-[1.8] text-(--muted-foreground)">
       {rendered}
     </div>
   );
