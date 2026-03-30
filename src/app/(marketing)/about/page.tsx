@@ -7,11 +7,11 @@ import { Button } from '@/components/ui/button';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
-  title: 'Jesser & Oussama Bedoui — Founders of SILKLEARN',
+  title: 'Jesser & Oussama Bedoui — Cofounders of SILKLEARN',
   description:
     'Jesser and Oussama Bedoui are the cofounders of SILKLEARN, building knowledge compilation infrastructure for teams working from dense source material.',
   path: '/about',
-  keywords: ['jesser bedoui', 'oussama bedoui', 'silklearn founders', 'knowledge compilation'],
+  keywords: ['jesser bedoui', 'oussama bedoui', 'silklearn cofounders', 'knowledge compilation'],
 });
 
 const foundersSchema = {
@@ -21,7 +21,7 @@ const foundersSchema = {
       '@type': 'Person',
       name: 'Jesser Bedoui',
       url: 'https://www.silklearn.io/about',
-      jobTitle: 'Founder',
+      jobTitle: 'Cofounder',
       worksFor: { '@type': 'Organization', name: 'SILKLEARN', url: 'https://www.silklearn.io' },
     },
     {
@@ -29,6 +29,10 @@ const foundersSchema = {
       name: 'Oussama Bedoui',
       url: 'https://www.silklearn.io/about',
       jobTitle: 'Cofounder',
+      alumniOf: [
+        { '@type': 'EducationalOrganization', name: 'Université Sesame' },
+        { '@type': 'EducationalOrganization', name: 'Institut Supérieur de Gestion de Tunis' },
+      ],
       worksFor: { '@type': 'Organization', name: 'SILKLEARN', url: 'https://www.silklearn.io' },
     },
   ],
@@ -45,36 +49,46 @@ export default function AboutPage() {
         <div className="mx-auto max-w-4xl px-6 py-16 sm:py-24">
           {/* Header */}
           <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
-            Founders
+            Cofounders
           </p>
           <h1 className="mt-2 font-(family-name:--font-display) text-3xl sm:text-[2.75rem] sm:leading-[1.15] tracking-tight text-(--foreground)">
-            The Founders
+            The Cofounders
           </h1>
           <p className="mt-3 text-base leading-7 text-(--muted-foreground) max-w-[52ch]">
-            Building SILKLEARN — knowledge compilation infrastructure for teams.
+            Two brothers building SILKLEARN — knowledge compilation infrastructure for teams working from dense source material.
           </p>
 
-          {/* Founders grid */}
+          {/* Founders grid — equal columns, equal depth */}
           <div className="mt-14 grid gap-12 sm:grid-cols-2">
             {/* Jesser */}
             <div>
               <p className="text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-(--muted-foreground)">
-                Founder
+                Cofounder
               </p>
               <h2 className="mt-1 font-(family-name:--font-display) text-xl tracking-[-0.02em] text-(--foreground)">
                 Jesser Bedoui
               </h2>
-              <div className="mt-4 space-y-4 text-base leading-7 text-(--muted-foreground)">
+              <div className="mt-4 space-y-4 text-sm leading-7 text-(--muted-foreground)">
                 <p>
-                  I&apos;m building SILKLEARN after spending years watching teams fail not because
-                  they lacked documentation, but because the documentation had no visible order.
-                  Engineers would read the right docs in the wrong sequence. Leads would ship
-                  onboarding that made sense in their heads but not on paper.
+                  Jesser built SILKLEARN from the observation that teams fail not because they lack
+                  documentation, but because the documentation has no visible order. Engineers read
+                  the right docs in the wrong sequence. Leads ship onboarding that makes sense in
+                  their heads but not on paper.
                 </p>
                 <p>
-                  SILKLEARN is the infrastructure I wanted to exist. It compiles dense source
-                  material into dependency-ordered learning paths that leaders can review before
-                  they ship to the team.
+                  SILKLEARN is the infrastructure he wanted to exist — a system that compiles dense
+                  source material into dependency-ordered learning paths that leaders can review
+                  before they ship to the team.
+                </p>
+                <p>
+                  He writes about the build in real time through{' '}
+                  <TransitionLink
+                    href="/the-reset"
+                    className="text-(--foreground) underline underline-offset-4 decoration-(--border) hover:decoration-(--foreground) transition-colors duration-150"
+                  >
+                    The Reset
+                  </TransitionLink>
+                  {' '}— a day-by-day founder journal published unfiltered.
                 </p>
               </div>
             </div>
@@ -87,11 +101,22 @@ export default function AboutPage() {
               <h2 className="mt-1 font-(family-name:--font-display) text-xl tracking-[-0.02em] text-(--foreground)">
                 Oussama Bedoui
               </h2>
-              <div className="mt-4 text-base leading-7 text-(--muted-foreground)">
+              <div className="mt-4 space-y-4 text-sm leading-7 text-(--muted-foreground)">
                 <p>
-                  Oussama joined SILKLEARN as cofounder, bringing the technical depth needed to
-                  turn the knowledge compilation concept into a working system. He and Jesser have
-                  been building together since before SILKLEARN had a name.
+                  Oussama is a full-stack engineer with over six years building production systems
+                  across Angular, Java, Spring Boot, and Node.js. He built a complete multi-tenant
+                  SaaS invoicing platform from scratch at Tanitflow — architecture, modeling,
+                  design, and delivery — and has shipped software for teams in Iceland, Portugal,
+                  Tunisia, and Qatar.
+                </p>
+                <p>
+                  He holds a Computer Engineering degree from Université Sesame and brings the
+                  systems depth needed to turn knowledge compilation from a concept into reliable
+                  infrastructure.
+                </p>
+                <p>
+                  At SILKLEARN, Oussama owns the engineering — making sure the product handles real
+                  source material at the scale and reliability teams depend on.
                 </p>
               </div>
             </div>
