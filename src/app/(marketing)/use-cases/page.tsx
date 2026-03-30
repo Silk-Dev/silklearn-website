@@ -17,7 +17,7 @@ import { useCasePages } from '@/lib/marketing-content';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Use Cases for Teams',
+  title: 'Use Cases — Knowledge Compilation for Teams',
   description:
     'See how SILKLEARN is used for engineering onboarding, internal docs training, and other dense knowledge rollout workflows.',
   path: '/use-cases',

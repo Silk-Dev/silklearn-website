@@ -16,7 +16,7 @@ import { buildMetadata } from '@/lib/seo';
 
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Who Benefits from SILKLEARN',
+  title: 'Teams That Benefit from Knowledge Compilation',
   description:
     'See which teams get the most value from SILKLEARN when missing context, hidden dependencies, and wrong sequencing create expensive mistakes.',
   path: '/for-teams',

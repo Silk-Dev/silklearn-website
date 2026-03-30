@@ -20,6 +20,9 @@ type Persona = (typeof personas)[number];
 export function PersonaPageContent({ persona }: { persona: Persona }) {
   return (
     <>
+      <h1 className="text-3xl font-bold tracking-tight text-(--foreground) mb-8">
+        {persona.title}
+      </h1>
       <div className="grid grid-cols-1 gap-y-12 lg:grid-cols-[1.2fr_1px_1fr]">
           <div className="col-span-1">
             <PersonaScrollSections persona={persona} />
