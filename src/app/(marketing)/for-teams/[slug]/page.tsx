@@ -17,7 +17,7 @@ export async function generateMetadata({
   if (!persona) return {};
 
   return buildMetadata({
-    title: `${persona.selector} — Knowledge Compilation for Teams`,
+    title: `${persona.selector} — Knowledge Compilation Guide`,
     description: persona.problem.length > 152 ? persona.problem.slice(0, 152) + '...' : persona.problem,
     path: `/for-teams/${persona.id}`,
     keywords: [persona.selector.toLowerCase(), "silklearn", "knowledge compilation"],

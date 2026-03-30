@@ -7,13 +7,13 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = {
   ...buildMetadata({
-    title: 'SILKLEARN | Knowledge Compilation Infrastructure',
+    title: 'SILKLEARN | Knowledge Compilation for Technical Teams',
     description:
       'SILKLEARN compiles dense source material into dependency-ordered learning paths, reviewable context bundles, and structured knowledge for teams.',
     path: '/',
     keywords: ['knowledge compilation', 'learning paths', 'structured knowledge', 'silklearn'],
   }),
-  title: { absolute: 'SILKLEARN | Knowledge Compilation Infrastructure' },
+  title: { absolute: 'SILKLEARN | Knowledge Compilation for Technical Teams' },
 };
 
 export default async function Home() {

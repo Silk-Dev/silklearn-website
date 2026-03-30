@@ -10,7 +10,7 @@ import { buildMetadata } from '@/lib/seo';
 export const revalidate = 60;
 
 export const metadata = buildMetadata({
-  title: 'The Reset — Founder Journal | SILKLEARN',
+  title: 'The Reset — Building SILKLEARN From Zero',
   description:
     'A raw, day-by-day account of building SILKLEARN from scratch — skill synthesis, market selection, product decisions, and hitting walls.',
   path: '/the-reset',

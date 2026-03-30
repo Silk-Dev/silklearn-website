@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: UseCaseDetailPageProps): Prom
   }
 
   return buildMetadata({
-    title: page.title,
+    title: page.metaTitle ?? page.title,
     description: page.description,
     path: `/use-cases/${page.slug}`,
     keywords: [page.title.toLowerCase(), 'internal docs onboarding', 'team knowledge transfer'],

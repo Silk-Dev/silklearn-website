@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
-  title: 'Jesser & Oussama Bedoui — Cofounders of SILKLEARN',
+  title: 'Jesser & Oussama Bedoui — About SILKLEARN',
   description:
     'Jesser and Oussama Bedoui are the cofounders of SILKLEARN, building knowledge compilation infrastructure for teams working from dense source material.',
   path: '/about',

@@ -19,6 +19,7 @@ export type FeaturePage = {
 export type UseCasePage = {
   slug: string;
   title: string;
+  metaTitle?: string;
   description: string;
   summary: string;
   outcomes: string[];
@@ -54,7 +55,7 @@ export const featurePages: FeaturePage[] = [
     slug: 'dependency-mapping',
     title: 'Compile Dependency Order From Source Material',
     description:
-      'Expose prerequisite structure across dense documents so teams and AI systems receive knowledge in a defensible order.',
+      'Expose prerequisite structure across dense documents so teams and AI systems receive knowledge in a defensible, dependency-ordered sequence.',
     summary:
       'SILKLEARN turns hidden assumptions into explicit edges so teams can see what must come first, what unlocks the next concept, and where review is still required.',
     bullets: [
@@ -83,7 +84,7 @@ export const featurePages: FeaturePage[] = [
     slug: 'leader-review',
     title: 'Review Compiled Outputs Before Rollout',
     description:
-      'Keep humans in the loop so compiled outputs can be inspected, corrected, and trusted before they affect team execution.',
+      'Keep humans in the loop so compiled outputs can be inspected, corrected, and trusted by leaders before they affect team execution.',
     summary:
       'SILKLEARN does not ask leaders to trust a black box. It gives them a reviewable graph with provenance, dependency logic, and visible downstream implications.',
     bullets: [
@@ -114,8 +115,9 @@ export const useCasePages: UseCasePage[] = [
   {
     slug: 'engineering-onboarding',
     title: 'Engineering Onboarding From Internal Systems Knowledge',
+    metaTitle: 'Engineering Onboarding from Internal Docs',
     description:
-      'Turn architecture docs, runbooks, and technical standards into a dependency-aware onboarding path for engineers.',
+      'Turn architecture docs, runbooks, and technical standards into a dependency-aware onboarding path your engineers can follow.',
     summary:
       'Instead of asking senior engineers to repeatedly explain the same system from scratch, SILKLEARN compiles the order directly from the documentation and related sources.',
     outcomes: [
@@ -129,8 +131,9 @@ export const useCasePages: UseCasePage[] = [
   {
     slug: 'internal-docs-training',
     title: 'Operational Knowledge Transfer From Internal Documentation',
+    metaTitle: 'Internal Docs Training & Knowledge Transfer',
     description:
-      'Convert dense internal documentation into structured, reviewable guidance without rewriting everything as a course.',
+      'Convert dense internal documentation into clearly structured, reviewable guidance without rewriting everything as a course.',
     summary:
       'SILKLEARN is useful when the knowledge is already in the docs, but the dependency order, hidden assumptions, and contradictions are fragmented across multiple sources.',
     outcomes: [
