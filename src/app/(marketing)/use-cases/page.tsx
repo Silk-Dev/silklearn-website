@@ -17,11 +17,11 @@ import { useCasePages } from '@/lib/marketing-content';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Document Learning Paths for Onboarding, Compliance, and Knowledge Handoff',
+  title: 'Research Synthesis and Knowledge Paths From Any Source',
   description:
-    'See how SILKLEARN maps your documents into a dependency-ordered learning path — for engineering onboarding, research synthesis, and any subject where the reading order isn\'t obvious.',
+    'SILKLEARN synthesizes your sources into a dependency-ordered path — for research, deep learning, and any domain where the reading order isn\'t obvious.',
   path: '/use-cases',
-  keywords: ['document learning path', 'engineering onboarding', 'research synthesis tool', 'knowledge path from documents', 'dependency ordered reading'],
+  keywords: ['research synthesis', 'knowledge path from sources', 'dependency ordered reading', 'research synthesis tool', 'knowledge compilation'],
 });
 
 export default function UseCasesPage() {
@@ -29,11 +29,11 @@ export default function UseCasesPage() {
     <PageShell>
       <MarketingPageFrame>
         <MarketingHero
-          description="The knowledge is written down somewhere — in runbooks, papers, architecture docs, decision records. The order you're supposed to encounter it in lives in one person's head. When that person's unavailable, so is the path."
+          description="The structure is already implicit in the material. Your sources reference each other, assume prior concepts, and quietly contradict each other — but none of them tell you which one to read first. That order isn't missing. It's just not visible yet."
           kicker="Use cases"
           rightChildren={
             <div className="grid gap-3 sm:grid-cols-2">
-              {['The expert explains it every time', "Docs exist, order doesn't", 'Every new hire starts from scratch', 'The knowledge left when she did'].map((item) => (
+              {['Twenty sources, no obvious starting point', 'They contradict each other and neither flags it', 'You finish one, realize you needed another first', 'The structure exists — it\'s just invisible'].map((item) => (
                 <div key={item} className="bg-[oklch(from_var(--foreground)_l_c_h/0.04)] px-4 py-3 text-sm font-medium text-(--foreground)">
                   {item}
                 </div>
@@ -41,8 +41,8 @@ export default function UseCasesPage() {
             </div>
           }
           rightEyebrow="Best fit"
-          rightTitle="This is where it pays off before another onboarding or handoff gets rebuilt from scratch."
-          title="Document learning paths for onboarding, compliance, and knowledge handoff."
+          rightTitle="This is where it pays off before you spend hours reading in the wrong order."
+          title="Research synthesis and knowledge paths from any source."
         />
 
         <MarketingSplitSection
@@ -95,7 +95,7 @@ export default function UseCasesPage() {
             </Button>
           }
           kicker="Next step"
-          title="Pick one workflow. Run it through. See what your docs actually contain."
+          title="Pick one workflow. Run it through. See what your sources actually contain."
         />
       </MarketingPageFrame>
       <FloatingCta />

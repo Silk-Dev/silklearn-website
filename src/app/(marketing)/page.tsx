@@ -6,13 +6,13 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = {
   ...buildMetadata({
-    title: 'SILKLEARN | The reading order your documents never gave you',
+    title: 'Synthesize Any Source Into Structured Knowledge — SILKLEARN',
     description:
-      'SILKLEARN synthesizes the structure of your documents — mapping what depends on what, surfacing contradictions between sources, and building a path you can actually follow. Upload what you\'re trying to learn.',
+      'SILKLEARN synthesizes any source — documents, papers, videos, links — into a dependency-ordered knowledge path you can follow or feed to an AI.',
     path: '/',
-    keywords: ['knowledge synthesis', 'dependency mapping', 'document structure', 'NotebookLM alternative', 'research paper synthesis', 'silklearn'],
+    keywords: ['knowledge synthesis', 'dependency mapping', 'source synthesis', 'NotebookLM alternative', 'research paper synthesis', 'silklearn'],
   }),
-  title: { absolute: 'SILKLEARN | The reading order your documents never gave you' },
+  title: { absolute: 'Synthesize Any Source Into Structured Knowledge — SILKLEARN' },
 };
 
 export default function Home() {

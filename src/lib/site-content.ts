@@ -73,10 +73,10 @@ export type MarketingPost = {
 };
 
 export const fallbackHomePageContent: HomePageContent = {
-  kicker: 'For researchers, developers, and anyone drowning in documents.',
-  headline: 'The reading order your documents never gave you.',
+  kicker: 'For researchers, developers, and anyone drowning in sources.',
+  headline: 'Synthesize any source into structured knowledge.',
   subheadline:
-    'SILKLEARN synthesizes your documents — not answers questions about them. It maps what depends on what, finds where sources contradict each other, and generates a path you can actually follow.',
+    'SILKLEARN synthesizes your sources — not answers questions about them. It maps what depends on what, finds where sources contradict each other, and generates a path you can actually follow.',
   primaryCtaLabel: 'Request early access',
   primaryCtaHref: '/waitlist',
   secondaryCtaLabel: 'See how it works',
@@ -90,7 +90,7 @@ export const fallbackHomePageContent: HomePageContent = {
     {
       title: 'Map the knowledge',
       description:
-        'SILKLEARN reads your documents and maps the dependency structure — what concepts build on which, and what you need to understand before anything else makes sense.',
+        'SILKLEARN reads your sources and maps the dependency structure — what concepts build on which, and what you need to understand before anything else makes sense.',
     },
     {
       title: 'Surface the conflicts',
@@ -107,17 +107,17 @@ export const fallbackHomePageContent: HomePageContent = {
     {
       question: 'Who is SILKLEARN for?',
       answer:
-        'Researchers reconciling conflicting sources, developers onboarding into an unfamiliar codebase, students working from multiple textbooks, and professionals entering a new domain who need a path, not a pile.',
+        'Researchers reconciling conflicting sources, developers navigating an unfamiliar codebase, students working from multiple textbooks, and professionals entering a new domain who need a path, not a pile.',
     },
     {
       question: 'How is this different from NotebookLM, Perplexity, or ChatGPT with PDFs?',
       answer:
-        'Those tools answer questions about documents. SILKLEARN synthesizes the structure of documents. NotebookLM won\'t tell you that chapter 3 of one source contradicts section 2 of another — it answers whatever you ask. SILKLEARN runs at ingest: mapping prerequisites, detecting contradictions, and building a path that outlasts any individual query.',
+        'Those tools answer questions about your sources. SILKLEARN synthesizes the structure of your sources. NotebookLM won\'t tell you that chapter 3 of one source contradicts section 2 of another — it answers whatever you ask. SILKLEARN runs at ingest: mapping prerequisites, detecting contradictions, and building a path that outlasts any individual query.',
     },
     {
       question: 'What do I actually get out of it?',
       answer:
-        'A dependency-ordered path through your documents, a map of what connects to what, and a list of contradictions the system detected across your sources — so you know what to read first, and what to question.',
+        'A dependency-ordered path through your sources, a map of what connects to what, and a list of contradictions the system detected across your sources — so you know what to read first, and what to question.',
     },
   ],
 };

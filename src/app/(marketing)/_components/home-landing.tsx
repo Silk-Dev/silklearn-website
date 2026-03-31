@@ -49,7 +49,7 @@ const operatingModes = [
 const painBlocks = [
   {
     quote: 'I\'ve read this three times and I still can\'t see how it connects.',
-    answer: 'Because documents show conclusions, not the path that makes them make sense.',
+    answer: 'Because sources show conclusions, not the path that makes them make sense.',
   },
   {
     quote: 'I switched domains. There are 50 tabs open and no map.',
@@ -89,7 +89,7 @@ const actionPanels = [
   {
     step: 'Step 03',
     src: '/silklearn/animations/step-03.json',
-    title: 'Get a path you can follow from the first document you drop in.',
+    title: 'Get a path you can follow from the first source you add.',
     summary: 'Learning path, synthesis bundle, or AI context — from one source-linked structure.',
     rows: [
       'Dependency-ordered reading path',
@@ -600,7 +600,7 @@ export function HomeLanding() {
             <div>
               <div className="border-b border-(--border) px-6 pt-6 pb-20 sm:px-8 sm:pt-8 lg:px-10">
                 <h2 className="text-[2.5rem] leading-tight tracking-[-0.02em] text-(--foreground)">
-                  Three steps from document stack to a path you can follow.
+                  Three steps from any source to a path you can follow.
                 </h2>
                 
               </div>
@@ -621,9 +621,9 @@ export function HomeLanding() {
                             animationClassName="h-full w-full max-h-full max-w-full"
                             className="w-full"
                             description={panel.step === 'Step 01'
-                              ? 'Animated stack of documents fanning out with file-type badges, then being drawn into a scanning beam that highlights headings and structure.'
+                              ? 'Animated stack of sources fanning out with file-type badges, then being drawn into a scanning beam that highlights headings and structure.'
                               : panel.step === 'Step 02'
-                                ? 'Animated dependency graph building itself: nodes appear one by one, then directed edges draw between them showing prerequisite order. Cross-document links highlight in a different color.'
+                                ? 'Animated dependency graph building itself: nodes appear one by one, then directed edges draw between them showing prerequisite order. Cross-source links highlight in a different color.'
                                 : 'Animated split view: a compiled graph on the left emits three output artifacts to the right — a learning path, a review checklist, and a context bundle — each sliding into place.'}
                             height="h-44 sm:h-48"
                             label={`Lottie · ${panel.step}`}
@@ -662,7 +662,7 @@ export function HomeLanding() {
           <div className="p-6 sm:p-8 lg:p-10 lg:pt-50 lg:mb-35">
             <ScrollReveal>
             <h2 className=" font-(family-name:--font-display) text-display-lg leading-none tracking-[-0.02em] text-(--foreground)">
-                  Your documents were organized for the expert who wrote them, not for where you&rsquo;re starting.
+                  Your sources were organized for the expert who wrote them, not for where you&rsquo;re starting.
             </h2>
             </ScrollReveal>
 
@@ -743,10 +743,10 @@ export function HomeLanding() {
           <ScrollReveal className="grid content-start gap-2 px-8 py-15 ">
             <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">Early access</p>
             <h2 className="max-w-[12ch] font-(family-name:--font-display) text-display-lg leading-none tracking-[-0.02em] text-(--foreground)">
-                Apply if you&rsquo;re working from a stack of documents with no clear path through them.
+                Apply if you&rsquo;re working from a stack of sources with no clear path through them.
             </h2>
             <p className="max-w-[56ch] text-base leading-5 text-(--muted-foreground)">
-              We&rsquo;re reviewing applications in waves — researchers, developers, students, and domain switchers working from dense documents are the best fit.
+              We&rsquo;re reviewing applications in waves — researchers, developers, students, and domain switchers working from dense sources are the best fit.
             </p>
 
            

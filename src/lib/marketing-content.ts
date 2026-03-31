@@ -149,10 +149,10 @@ export const useCasePages: UseCasePage[] = [
     description:
       'Upload the architecture docs, READMEs, runbooks, and decision records. SILKLEARN maps the dependency order so you know what to read first instead of guessing.',
     summary:
-      'Joining a large, unfamiliar codebase is a reading problem before it\'s a coding problem. The documentation exists — but it doesn\'t tell you what order to read it in, which pieces conflict, or which assumptions you\'re supposed to already have. SILKLEARN reads that order directly from the docs and hands you a path, not a pile.',
+      'Joining a large, unfamiliar codebase is a reading problem before it\'s a coding problem. Your sources exist — but they don\'t tell you what order to read them in, which pieces conflict, or which assumptions you\'re supposed to already have. SILKLEARN reads that order directly from your sources and hands you a path, not a pile.',
     outcomes: [
       'Know what to read first — not because someone told you, but because the structure says so',
-      'See where your docs contradict each other before you build on the wrong one',
+      'See where your sources contradict each other before you build on the wrong one',
       'A path through the material, not a pile of files to guess your way through',
     ],
     featureHref: '/features/dependency-mapping',
@@ -172,6 +172,22 @@ export const useCasePages: UseCasePage[] = [
       'Build a structure you can inspect and refine as you add new material',
     ],
     featureHref: '/features/canvas',
+    guideHref: '/blog',
+  },
+  {
+    slug: 'ai-context-preparation',
+    title: "You're building AI workflows. Your agents need structured knowledge, not a retrieval guess.",
+    metaTitle: 'Structured Knowledge Context for AI Agents and Workflows',
+    description:
+      'Feed any sources into SILKLEARN. It maps the dependency structure and hands your agent a context bundle it can actually reason across — ordered, reviewed, and linked to source.',
+    summary:
+      "Vector stores retrieve. They don't reason about what depends on what. When your agent needs to understand a domain — not just retrieve from it — the reading order and dependency structure matter. SILKLEARN hands your agent the synthesized structure a human already inspected.",
+    outcomes: [
+      'Dependency-ordered context your agent can traverse without RAG guesswork',
+      'Every claim traced to its source — no hallucinated foundations',
+      'Update your sources, re-synthesize, push a fresh context bundle to your workflow',
+    ],
+    featureHref: '/features/mcp-integration',
     guideHref: '/blog',
   },
 ];

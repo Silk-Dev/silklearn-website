@@ -52,14 +52,14 @@ const productSummary: ProductSummaryItem[] = [
     label: 'Output 1',
     title: 'Learning path',
     copy:
-      'Your engineers arrive day one. Instead of handing them a folder, you hand them an order — every document sequenced by what the system actually requires.',
+      'You have a pile of sources with no obvious order. SILKLEARN reads the dependency structure through them and hands you a sequenced path — from the source that unlocks everything else to the one that builds on all of them.',
     icon: Route,
   },
   {
     label: 'Output 2',
-    title: 'Rollout checklist',
+    title: 'Source map',
     copy:
-      'No one finds out step 7 was blocked by step 3 after the handoff already failed. This surfaces the bottleneck first.',
+      'See which sources depend on which foundations. The structure that was implicit in your material becomes explicit and inspectable before you follow it.',
     icon: ListChecks,
   },
   {
@@ -104,8 +104,8 @@ const productFeatureCards = [
   },
   {
     label: '03',
-    title: 'Leaders review before anything ships',
-    copy: 'Visual graph. Accept, reject, or flag every connection.',
+    title: 'Review the graph before you follow it',
+    copy: 'Visual graph. Inspect every dependency connection. Accept, adjust, or flag before you start reading.',
     icon: Eye,
   },
   {
@@ -141,14 +141,14 @@ const productFeatureCards = [
 ] as const;
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Compile Your Documents into a Structured Knowledge Path — SILKLEARN',
+  title: 'Synthesize Knowledge From Any Source',
   description:
-    'SILKLEARN compiles document stacks into reviewable graphs, approval workflows, and reusable outputs for onboarding, rollout, AI, and compliance.',
+    'SILKLEARN synthesizes any source — documents, papers, links, Notion, video — into a dependency-ordered path you inspect before you follow.',
   path: '/product',
   keywords: [
-    'knowledge compilation infrastructure',
-    'docs to learning paths',
-    'reviewable context bundles',
+    'knowledge synthesis platform',
+    'synthesize sources into learning paths',
+    'dependency-ordered knowledge path',
   ],
 });
 
@@ -164,10 +164,10 @@ export default function ProductPage() {
                   THE PRODUCT
                 </p>
                 <h1 className="mt-6 max-w-[15ch] font-(family-name:--font-display) text-display-xl leading-none tracking-[-0.02em] text-(--foreground)">
-                  Compile your documents into a structured knowledge path.
+                  Synthesize knowledge from any source.
                 </h1>
                 <p className="mt-5 max-w-[50ch] text-[1.03rem] leading-7 text-(--muted-foreground)">
-                  NotebookLM and Perplexity answer questions about your documents. SILKLEARN reads the structure through them — what depends on what, where sources contradict each other, what order the material wants to go in — so you get a path, not a chatbot you have to interrogate.
+                  NotebookLM and Perplexity answer questions about your sources. SILKLEARN reads the structure through them — what depends on what, where sources contradict each other, what order the material wants to go in — so you get a path, not a chatbot you have to interrogate.
                 </p>
                 <div className="mt-8">
                   <Button asChild size="lg">
@@ -263,7 +263,7 @@ export default function ProductPage() {
           <div className="p-6 sm:p-8 lg:p-10 lg:py-14">
             
             <h2 className="mt-4 max-w-[12ch] font-(family-name:--font-display) text-display-lg leading-none tracking-[-0.02em] text-(--foreground)">
-              The structure is already in your docs. You just can't see it yet.
+              The structure is already in your sources. You just can't see it yet.
             </h2>
           </div>
 

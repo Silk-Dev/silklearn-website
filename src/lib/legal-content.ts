@@ -237,7 +237,7 @@ export const termsOfServiceContent: LegalDocument = {
       paragraphs: [
         'If you are a consumer in the European Union, you have the right to withdraw from a distance contract within 14 days of its conclusion, without giving a reason.',
         'Because SILKLEARN delivers digital content and services that begin immediately upon your request, by completing your purchase you: (a) give your express prior consent for the service to begin immediately, and (b) acknowledge that you thereby waive your 14-day right of withdrawal once the service has been fully performed. If only part of the service has been performed, you remain entitled to a proportionate refund for the unused portion.',
-        'To exercise your withdrawal right (where it has not been waived), send a clear statement to support@silklearn.io within 14 days of purchase. We will process refunds within 14 days of receiving your withdrawal notice, using the same payment method you used for the original purchase.',
+        'To exercise your withdrawal right (where it has not been waived), send a clear statement to contact@silklearn.io within 14 days of purchase. We will process refunds within 14 days of receiving your withdrawal notice, using the same payment method you used for the original purchase.',
       ],
     },
     {
@@ -309,7 +309,7 @@ export const termsOfServiceContent: LegalDocument = {
     {
       title: '18. Contact',
       paragraphs: [
-        'For questions about these Terms, contact us at support@silklearn.io.',
+        'For questions about these Terms, contact us at legal@silklearn.io.',
       ],
     },
   ],
@@ -440,7 +440,7 @@ export const eulaContent: LegalDocument = {
     {
       title: '15. Contact',
       paragraphs: [
-        'For questions about this Agreement, contact us at support@silklearn.io.',
+        'For questions about this Agreement, contact us at legal@silklearn.io.',
       ],
     },
   ],

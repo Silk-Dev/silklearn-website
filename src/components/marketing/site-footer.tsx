@@ -29,10 +29,10 @@ export function SiteFooter() {
             <p className="mt-2 text-sm text-(--muted-foreground)">
               Questions?{' '}
               <a
-                href="mailto:hello@silklearn.io"
+                href="mailto:contact@silklearn.io"
                 className="underline underline-offset-3 transition-colors hover:text-(--foreground)"
               >
-                hello@silklearn.io
+                contact@silklearn.io
               </a>
             </p>
           </div>

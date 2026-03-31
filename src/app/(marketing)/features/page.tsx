@@ -23,9 +23,9 @@ const featureSignals = [
 ];
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Dependency Mapping That Finds the Reading Order in Your Documents',
+  title: 'Dependency Mapping That Finds the Structure in Any Source',
   description:
-    'SILKLEARN reads across your documents, maps what depends on what, and hands you a dependency-ordered reading path — one you inspect before you follow.',
+    'SILKLEARN reads across your sources, maps what depends on what, and hands you a dependency-ordered path — one you inspect before you follow.',
   path: '/features',
   keywords: ['SILKLEARN features', 'dependency mapping', 'document learning path', 'knowledge dependency map', 'contradiction detection'],
 });
@@ -35,7 +35,7 @@ export default function FeaturesPage() {
     <PageShell>
       <MarketingPageFrame>
         <MarketingHero
-          description="Every document you're learning from was organized by someone who already knew where to start — they wrote it in the order that made sense to them, which is almost never the order that makes sense to you. SILKLEARN maps what depends on what, surfaces where your sources disagree, and gives you the dependency-ordered reading path your material never made explicit."
+          description="Every source you're learning from — papers, videos, docs, Notion pages, API references, posts — was structured by someone who already knew where to start. They organized it in the order that made sense to them, which is almost never the order that makes sense to you. SILKLEARN synthesizes across heterogeneous sources, maps what depends on what, and surfaces the dependency-ordered path your material never made explicit."
           kicker="Features"
           rightChildren={
             <div className="grid gap-3">
@@ -48,7 +48,7 @@ export default function FeaturesPage() {
           }
           rightEyebrow="Why it exists"
           rightTitle="Three things every other tool assumes you already know."
-          title="Dependency mapping that finds the reading order already in your documents."
+          title="Dependency mapping that finds the structure in any source."
         />
 
         <MarketingSplitSection
@@ -58,7 +58,7 @@ export default function FeaturesPage() {
                 Capabilities
               </p>
               <h2 className="mt-4 max-w-[10ch] font-(family-name:--font-display) text-display-lg leading-none tracking-[-0.02em] text-(--foreground)">
-                The dependency structure is in your documents. You inspect it before you follow it.
+                The dependency structure is in your sources. You inspect it before you follow it.
               </h2>
             </>
           }
@@ -153,7 +153,7 @@ export default function FeaturesPage() {
             </Button>
           }
           kicker="Next step"
-          title="The reading order is already in your documents. Let's find it."
+          title="The reading order is already in your sources. Let's find it."
         />
       </MarketingPageFrame>
       <FloatingCta />
