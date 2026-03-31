@@ -1,7 +1,10 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
-import gsap from 'gsap/dist/gsap';
+import { useRef } from 'react';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+
+gsap.registerPlugin(useGSAP);
 
 import { LottiePlaceholder } from '@/components/marketing/lottie-placeholder';
 import { ProductLinkedNodesGraph } from './product-linked-nodes-graph';
@@ -34,7 +37,7 @@ export function ProductHeroGraph() {
   const flowPathRefs = useRef<Record<string, SVGPathElement | null>>({});
   const processingNodeRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
+  useGSAP(() => {
     const track = trackRef.current;
     if (!track) return;
 
@@ -49,72 +52,62 @@ export function ProductHeroGraph() {
     );
     const processingNode = processingNodeRef.current;
 
-    const context = gsap.context(() => {
-      const tween = gsap.fromTo(
-        track,
-        { y: 0 },
-        {
-          y: -distance,
-          duration: 14,
-          ease: 'none',
-          repeat: -1,
-        },
-      );
+    gsap.fromTo(
+      track,
+      { y: 0 },
+      {
+        y: -distance,
+        duration: 14,
+        ease: 'none',
+        repeat: -1,
+      },
+    );
 
-      connectorPaths.forEach((path, index) => {
-        const pathLength = path.getTotalLength();
+    connectorPaths.forEach((path, index) => {
+      const pathLength = path.getTotalLength();
 
-        gsap.set(path, {
-          strokeDasharray: pathLength,
-          strokeDashoffset: pathLength,
-          opacity: 0,
-        });
-
-        gsap.timeline({ repeat: -1, repeatDelay: 0.4, delay: index * 0.18 })
-          .to(path, {
-            strokeDashoffset: 0,
-            opacity: Number(path.dataset.id?.startsWith('incoming') ? 0.22 : 0.18),
-            duration: 1.1,
-            ease: 'power2.out',
-          })
-          .to(path, {
-            opacity: Number(path.dataset.id?.startsWith('incoming') ? 0.14 : 0.12),
-            duration: 0.9,
-            ease: 'sine.inOut',
-          });
+      gsap.set(path, {
+        strokeDasharray: pathLength,
+        strokeDashoffset: pathLength,
+        opacity: 0,
       });
 
-      if (processingNode) {
-        gsap.to(processingNode, {
-          scale: 1.06,
+      gsap.timeline({ repeat: -1, repeatDelay: 0.4, delay: index * 0.18 })
+        .to(path, {
+          strokeDashoffset: 0,
+          opacity: Number(path.dataset.id?.startsWith('incoming') ? 0.22 : 0.18),
+          duration: 1.1,
+          ease: 'power2.out',
+        })
+        .to(path, {
+          opacity: Number(path.dataset.id?.startsWith('incoming') ? 0.14 : 0.12),
+          duration: 0.9,
+          ease: 'sine.inOut',
+        });
+    });
+
+    if (processingNode) {
+      gsap.to(processingNode, {
+        scale: 1.06,
+        duration: 1.8,
+        repeat: -1,
+        yoyo: true,
+        ease: 'sine.inOut',
+      });
+
+      const halo = processingNode.querySelector<HTMLElement>('[data-processing-halo]');
+      if (halo) {
+        gsap.to(halo, {
+          scale: 1.14,
+          opacity: 0.3,
           duration: 1.8,
           repeat: -1,
           yoyo: true,
           ease: 'sine.inOut',
         });
-
-        const halo = processingNode.querySelector<HTMLElement>('[data-processing-halo]');
-        if (halo) {
-          gsap.to(halo, {
-            scale: 1.14,
-            opacity: 0.3,
-            duration: 1.8,
-            repeat: -1,
-            yoyo: true,
-            ease: 'sine.inOut',
-          });
-        }
       }
-
-      return () => {
-        tween.kill();
-      };
-    });
-
-    return () => {
-      context.revert();
-    };
-  }, []);
+    }
+  });
 
   return (
     <div className="relative h-full min-h-[360px] w-full overflow-hidden px-6 py-8">

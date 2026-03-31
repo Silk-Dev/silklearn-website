@@ -17,8 +17,10 @@ import type { LucideIcon } from 'lucide-react';
 
 import { TransitionLink } from '@/components/marketing/page-transition';
 import { FloatingCta } from '@/components/marketing/floating-cta';
+import { ScrollReveal } from '@/components/marketing/scroll-animations';
 import { ProductHeroGraph } from './product-hero-graph';
 import { ProductScrollSections } from './product-scroll-sections';
+import { ProductCapabilityCards } from './product-capability-cards';
 
 import type { Metadata } from 'next';
 
@@ -199,20 +201,21 @@ export default function ProductPage() {
         </section>
 
         <section className="grid border-t border-(--border)">
-          <div className="p-6 sm:p-8 lg:p-10 lg:pt-16">
+          <ScrollReveal className="p-6 sm:p-8 lg:p-10 lg:pt-16">
             <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
               Capabilities
             </p>
             <h2 className="mt-4 font-(family-name:--font-display) text-display-lg leading-none tracking-[-0.02em] text-(--foreground)">
               Eight things it actually does.
             </h2>
-          </div>
+          </ScrollReveal>
         </section>
 
-        <section className="grid border-b border-(--border) lg:grid-cols-2">
+        <ProductCapabilityCards>
           {productFeatureCards.map((card, index) => (
             <div
               key={card.label}
+              data-capability-card
               className={`px-6 py-8 sm:px-8 lg:px-10 lg:py-10 ${index > 0 ? 'border-t border-(--border)' : ''} ${index % 2 === 1 ? 'lg:border-l' : ''} ${index < 2 ? 'lg:border-t-0' : ''}`}
             >
               <div className="flex items-center gap-2.5">
@@ -227,7 +230,7 @@ export default function ProductPage() {
               <p className="mt-4 max-w-[38ch] text-sm leading-6 text-(--muted-foreground)">{card.copy}</p>
             </div>
           ))}
-        </section>
+        </ProductCapabilityCards>
 
         <section className="grid lg:grid-cols-[1fr_1px_auto]">
           <div className="p-6 sm:p-8 lg:p-10 lg:py-14">

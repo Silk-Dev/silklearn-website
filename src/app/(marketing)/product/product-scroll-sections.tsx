@@ -1,13 +1,14 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
+import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { CheckCircle2 } from 'lucide-react';
 
 import { ScrollReveal } from '@/components/marketing/scroll-animations';
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 const stepSections = [
   {
@@ -42,7 +43,7 @@ export function ProductScrollSections() {
   const sectionRefs = useRef<Array<HTMLElement | null>>([]);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  useEffect(() => {
+  useGSAP(() => {
     const container = containerRef.current;
     const progress = progressRef.current;
     const sections = sectionRefs.current.filter((section): section is HTMLElement => section !== null);
@@ -57,7 +58,7 @@ export function ProductScrollSections() {
       transformOrigin: 'top top',
     });
 
-    const tween = gsap.to(progress, {
+    gsap.to(progress, {
       scaleY: 1,
       ease: 'none',
       scrollTrigger: {
@@ -69,24 +70,16 @@ export function ProductScrollSections() {
       },
     });
 
-    const triggers = sections
-      .map((section, index) => {
-        return ScrollTrigger.create({
-          trigger: section,
-          start: 'center center',
-          end: index < sections.length - 1 ? 'bottom center' : 'bottom top',
-          onEnter: () => setActiveIndex(index),
-          onEnterBack: () => setActiveIndex(index),
-        });
-      })
-      .filter((trigger): trigger is ScrollTrigger => trigger !== null);
-
-    return () => {
-      tween.scrollTrigger?.kill();
-      tween.kill();
-      triggers.forEach((trigger) => trigger.kill());
-    };
-  }, []);
+    sections.forEach((section, index) => {
+      ScrollTrigger.create({
+        trigger: section,
+        start: 'center center',
+        end: index < sections.length - 1 ? 'bottom center' : 'bottom top',
+        onEnter: () => setActiveIndex(index),
+        onEnterBack: () => setActiveIndex(index),
+      });
+    });
+  });
 
   const sectionCount: number = stepSections.length;
 
