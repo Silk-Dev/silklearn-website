@@ -18,6 +18,7 @@
     "test:e2e:waitlist": "node tests/e2e/waitlist-e2e.mjs"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
     "@radix-ui/react-slot": "^1.2.3",
     "@sanity/icons": "^3.7.4",
     "@sanity/image-url": "^1.2.0",
@@ -51,5 +52,6 @@
     "tailwindcss": "^4.1.8",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3"
-  }
+  },
+  "packageManager": "pnpm@10.24.0"
 }

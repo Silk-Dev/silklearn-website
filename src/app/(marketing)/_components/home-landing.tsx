@@ -3,6 +3,7 @@
 import { Fragment, useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
 import {
   ArrowRight,
   CheckCircle2,
@@ -291,43 +292,34 @@ function StageJourneyCurve() {
     };
   }, []);
 
-  useEffect(() => {
+  useGSAP(() => {
     const section = sectionRef.current;
     if (!section) return;
 
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const drawPaths = Array.from(section.querySelectorAll<SVGPathElement>('[data-stage-draw-path]'));
     const dots = Array.from(section.querySelectorAll<SVGGElement>('[data-stage-dot]'));
     const cards = Array.from(section.querySelectorAll<HTMLElement>('[data-stage-card]'));
 
     if (drawPaths.length === 0) return;
 
-    const context = gsap.context(() => {
+    const mm = gsap.matchMedia();
+
+    mm.add('(prefers-reduced-motion: reduce)', () => {
       drawPaths.forEach((path) => {
         const length = path.getTotalLength();
-
-        gsap.set(path, {
-          strokeDasharray: length,
-          strokeDashoffset: reduceMotion ? 0 : length,
-        });
+        gsap.set(path, { strokeDasharray: length, strokeDashoffset: 0 });
       });
+      gsap.set(dots, { opacity: 1, scale: 1, transformOrigin: 'center center' });
+      gsap.set(cards, { opacity: 1, x: 0, y: 0, filter: 'blur(0px)' });
+    });
 
-      gsap.set(dots, {
-        opacity: reduceMotion ? 1 : 0,
-        scale: reduceMotion ? 1 : 0.7,
-        transformOrigin: 'center center',
+    mm.add('(prefers-reduced-motion: no-preference)', () => {
+      drawPaths.forEach((path) => {
+        const length = path.getTotalLength();
+        gsap.set(path, { strokeDasharray: length, strokeDashoffset: length });
       });
-
-      gsap.set(cards, {
-        opacity: reduceMotion ? 1 : 0,
-        x: reduceMotion ? 0 : -24,
-        y: reduceMotion ? 0 : 14,
-        filter: reduceMotion ? 'blur(0px)' : 'blur(8px)',
-      });
-
-      if (reduceMotion) {
-        return;
-      }
+      gsap.set(dots, { opacity: 0, scale: 0.7, transformOrigin: 'center center' });
+      gsap.set(cards, { opacity: 0, x: -24, y: 14, filter: 'blur(8px)' });
 
       const timeline = gsap.timeline({
         defaults: {
@@ -371,11 +363,7 @@ function StageJourneyCurve() {
         }, '<');
       });
     });
-
-    return () => {
-      context.revert();
-    };
-  }, []);
+  }, { scope: sectionRef });
 
   return (
     <>

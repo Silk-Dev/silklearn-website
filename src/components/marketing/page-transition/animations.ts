@@ -14,6 +14,9 @@ export const animatePageIn = () => {
   const curveTransition = document.getElementById('curve-transition');
   if (!curvePath || !pageNameDisplay || !curveTransition) return;
 
+  // Kill any lingering tweens from a previous transition so they don't conflict.
+  gsap.killTweensOf([curvePath, pageNameDisplay]);
+
   const tl = gsap.timeline();
 
   tl.set(curveTransition, { visibility: 'visible' })

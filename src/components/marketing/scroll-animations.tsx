@@ -1,10 +1,11 @@
 'use client';
 
-import { useEffect, useRef, type ElementType, type ReactNode } from 'react';
+import { useRef, type ElementType, type ReactNode } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 // ── Reveal on scroll ──
 // Rollups pattern: elements start translated 20px down, blurred 5px, opacity 0
@@ -38,45 +39,36 @@ export function ScrollReveal({
 }: ScrollRevealProps) {
   const ref = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
+  useGSAP(() => {
     const el = ref.current;
     if (!el) return;
 
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (prefersReducedMotion) {
+    const mm = gsap.matchMedia();
+
+    mm.add('(prefers-reduced-motion: reduce)', () => {
       const targets = stagger > 0 ? Array.from(el.children) : [el];
       gsap.set(targets, { opacity: 1, y: 0, filter: 'none' });
-      return;
-    }
-
-    const targets = stagger > 0 ? Array.from(el.children) : [el];
-
-    gsap.set(targets, {
-      opacity: 0,
-      y,
-      filter: `blur(${blur}px)`,
     });
 
-    const tween = gsap.to(targets, {
-      opacity: 1,
-      y: 0,
-      filter: 'blur(0px)',
-      duration: 0.8,
-      delay,
-      ease: 'power2.out',
-      stagger: stagger > 0 ? stagger : 0,
-      scrollTrigger: {
-        trigger: el,
-        start,
-        toggleActions: 'play none none none',
-      },
+    mm.add('(prefers-reduced-motion: no-preference)', () => {
+      const targets = stagger > 0 ? Array.from(el.children) : [el];
+      gsap.set(targets, { opacity: 0, y, filter: `blur(${blur}px)` });
+      gsap.to(targets, {
+        opacity: 1,
+        y: 0,
+        filter: 'blur(0px)',
+        duration: 0.8,
+        delay,
+        ease: 'power2.out',
+        stagger: stagger > 0 ? stagger : 0,
+        scrollTrigger: {
+          trigger: el,
+          start,
+          toggleActions: 'play none none none',
+        },
+      });
     });
-
-    return () => {
-      tween.scrollTrigger?.kill();
-      tween.kill();
-    };
-  }, [y, blur, stagger, delay, start]);
+  }, { scope: ref, dependencies: [y, blur, stagger, delay, start], revertOnUpdate: true });
 
   return (
     <Tag ref={ref} className={className}>
@@ -122,33 +114,29 @@ type ParallaxProps = {
 export function Parallax({ children, className, distance = 40 }: ParallaxProps) {
   const ref = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
+  useGSAP(() => {
     const el = ref.current;
     if (!el) return;
 
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (prefersReducedMotion) return;
+    const mm = gsap.matchMedia();
 
-    const tween = gsap.fromTo(
-      el,
-      { y: distance },
-      {
-        y: -distance,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: el,
-          start: 'top bottom',
-          end: 'bottom top',
-          scrub: true,
+    mm.add('(prefers-reduced-motion: no-preference)', () => {
+      gsap.fromTo(
+        el,
+        { y: distance },
+        {
+          y: -distance,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: el,
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: true,
+          },
         },
-      },
-    );
-
-    return () => {
-      tween.scrollTrigger?.kill();
-      tween.kill();
-    };
-  }, [distance]);
+      );
+    });
+  }, { scope: ref, dependencies: [distance], revertOnUpdate: true });
 
   return (
     <div ref={ref} className={className}>
@@ -171,36 +159,33 @@ type CounterProps = {
 export function Counter({ target, suffix = '', prefix = '', className, duration = 1.2 }: CounterProps) {
   const ref = useRef<HTMLSpanElement>(null);
 
-  useEffect(() => {
+  useGSAP(() => {
     const el = ref.current;
     if (!el) return;
 
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (prefersReducedMotion) {
-      el.textContent = `${prefix}${target}${suffix}`;
-      return;
-    }
+    const mm = gsap.matchMedia();
 
-    const obj = { val: 0 };
-    const tween = gsap.to(obj, {
-      val: target,
-      duration,
-      ease: 'power2.out',
-      scrollTrigger: {
-        trigger: el,
-        start: 'top 90%',
-        toggleActions: 'play none none none',
-      },
-      onUpdate: () => {
-        el.textContent = `${prefix}${Math.round(obj.val)}${suffix}`;
-      },
+    mm.add('(prefers-reduced-motion: reduce)', () => {
+      el.textContent = `${prefix}${target}${suffix}`;
     });
 
-    return () => {
-      tween.scrollTrigger?.kill();
-      tween.kill();
-    };
-  }, [target, suffix, prefix, duration]);
+    mm.add('(prefers-reduced-motion: no-preference)', () => {
+      const obj = { val: 0 };
+      gsap.to(obj, {
+        val: target,
+        duration,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: el,
+          start: 'top 90%',
+          toggleActions: 'play none none none',
+        },
+        onUpdate: () => {
+          el.textContent = `${prefix}${Math.round(obj.val)}${suffix}`;
+        },
+      });
+    });
+  }, { scope: ref, dependencies: [target, suffix, prefix, duration], revertOnUpdate: true });
 
   return <span ref={ref} className={className}>{prefix}0{suffix}</span>;
 }
