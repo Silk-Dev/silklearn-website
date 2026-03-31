@@ -24,7 +24,7 @@ export function SiteFooter() {
               />
             </TransitionLink>
             <p className="mt-4 max-w-[48ch] text-sm leading-6 text-(--muted-foreground)">
-              SILKLEARN compiles dense source material into reviewable learning paths, dependency-aware graphs, and context-efficient outputs for teams working from complex internal knowledge.
+              SILKLEARN compiles dense source material into reviewable learning paths, dependency-aware graphs, and context-efficient outputs for anyone working from complex source material.
             </p>
             <p className="mt-2 text-sm text-(--muted-foreground)">
               Questions?{' '}
@@ -95,7 +95,7 @@ export function SiteFooter() {
           {[
             'Privacy-first analytics',
             'GDPR ready',
-            'Your data never leaves your team',
+            'Your data stays on your account',
           ].map((item) => (
             <div key={item} className="flex items-center gap-1.5">
               <ShieldCheck className="size-3.5 shrink-0 text-(--primary)" />
