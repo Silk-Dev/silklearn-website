@@ -21,6 +21,16 @@ import { ScrollReveal } from '@/components/marketing/scroll-animations';
 import { ProductHeroGraph } from './product-hero-graph';
 import { ProductScrollSections } from './product-scroll-sections';
 import { ProductCapabilityCards } from './product-capability-cards';
+import {
+  Illustration01,
+  Illustration02,
+  Illustration03,
+  Illustration04,
+  Illustration05,
+  Illustration06,
+  Illustration07,
+  Illustration08,
+} from './product-capability-illustrations';
 
 import type { Metadata } from 'next';
 
@@ -67,6 +77,17 @@ const productSummary: ProductSummaryItem[] = [
     icon: BrainCircuit,
   },
 ];
+
+const capabilityIllustrations = [
+  Illustration01,
+  Illustration02,
+  Illustration03,
+  Illustration04,
+  Illustration05,
+  Illustration06,
+  Illustration07,
+  Illustration08,
+] as const;
 
 const productFeatureCards = [
   {
@@ -212,24 +233,30 @@ export default function ProductPage() {
         </section>
 
         <ProductCapabilityCards>
-          {productFeatureCards.map((card, index) => (
-            <div
-              key={card.label}
-              data-capability-card
-              className={`px-6 py-8 sm:px-8 lg:px-10 lg:py-10 ${index > 0 ? 'border-t border-(--border)' : ''} ${index % 2 === 1 ? 'lg:border-l' : ''} ${index < 2 ? 'lg:border-t-0' : ''}`}
-            >
-              <div className="flex items-center gap-2.5">
-                <card.icon className="size-4 text-(--muted-foreground)" />
-                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
-                  {card.label}
-                </p>
+          {productFeatureCards.map((card, index) => {
+            const Illustration = capabilityIllustrations[index];
+            return (
+              <div
+                key={card.label}
+                data-capability-card
+                className={`px-6 py-8 sm:px-8 lg:px-10 lg:py-10 ${index > 0 ? 'border-t border-(--border)' : ''} ${index % 2 === 1 ? 'lg:border-l' : ''} ${index < 2 ? 'lg:border-t-0' : ''}`}
+              >
+                <div className="mb-4 h-20 w-full overflow-hidden">
+                  <Illustration />
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <card.icon className="size-4 text-(--muted-foreground)" />
+                  <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
+                    {card.label}
+                  </p>
+                </div>
+                <h3 className="mt-3 max-w-[22ch] text-[1.15rem] leading-tight tracking-[-0.02em] text-(--foreground)">
+                  {card.title}
+                </h3>
+                <p className="mt-4 max-w-[38ch] text-sm leading-6 text-(--muted-foreground)">{card.copy}</p>
               </div>
-              <h3 className="mt-3 max-w-[22ch] text-[1.15rem] leading-tight tracking-[-0.02em] text-(--foreground)">
-                {card.title}
-              </h3>
-              <p className="mt-4 max-w-[38ch] text-sm leading-6 text-(--muted-foreground)">{card.copy}</p>
-            </div>
-          ))}
+            );
+          })}
         </ProductCapabilityCards>
 
         <section className="grid lg:grid-cols-[1fr_1px_auto]">
