@@ -76,7 +76,7 @@ export function SiteHeader() {
         ref={announcementRef}
         className="fixed inset-x-0 top-0 z-50 border-b border-(--border) bg-(--primary) px-4 py-3 text-center text-sm font-medium tracking-[-0.01em] text-(--primary-foreground) sm:px-6"
       >
-        <span>Early access is limited to 20 teams per cohort.</span>{' '}
+        <span>Early access is open — spots are limited.</span>{' '}
         <TransitionLink className="font-semibold underline underline-offset-3" href="/waitlist">
           Check availability →
         </TransitionLink>

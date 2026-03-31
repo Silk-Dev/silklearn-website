@@ -42,7 +42,7 @@ export default async function BlogListPage() {
               Ready to structure your knowledge?
             </h2>
             <p className="mt-3 max-w-[52ch] text-base leading-7 text-(--muted-foreground)">
-              Join teams using SILKLEARN to compile their docs into learning paths that actually stick.
+              Join individuals using SILKLEARN to build learning paths through the material that matters to them.
             </p>
             <div className="mt-6">
               <Button asChild size="lg">

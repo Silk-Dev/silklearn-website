@@ -254,7 +254,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 Start compiling your knowledge.
               </h2>
               <p className="mt-3 max-w-[52ch] text-base leading-7 text-(--muted-foreground)">
-                SILKLEARN turns complex source material into reviewable learning paths your team can actually follow.
+                SILKLEARN turns complex source material into a dependency-ordered path you can actually follow.
               </p>
               <div className="mt-6">
                 <Button asChild size="lg">

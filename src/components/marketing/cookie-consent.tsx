@@ -27,7 +27,7 @@ export function CookieConsent() {
   };
 
   return (
-    <div className="fixed inset-x-0 bottom-0 z-50 border-t border-(--border) bg-(--background)">
+    <div className="fixed inset-x-0 bottom-0 max-sm:bottom-20 z-50 border-t border-(--border) bg-(--background)">
       <div className="mx-auto flex max-w-400 flex-col gap-4 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
         <p className="text-sm text-(--muted-foreground)">
           We use privacy-first analytics to understand how people use the product. No ads, no cross-site tracking.{' '}

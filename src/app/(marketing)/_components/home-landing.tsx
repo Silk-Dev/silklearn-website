@@ -514,7 +514,7 @@ export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
           <div className="px-6 py-10 sm:px-8 lg:px-10 lg:py-50">
             <div className="max-w-125">
 
-              <h1 className=" font-(family-name:--font-display) text-display-xl leading-none tracking-[-0.02em] text-(--foreground)">
+              <h1 className="font-(family-name:--font-display) text-display-xl max-sm:text-display-md leading-none tracking-[-0.02em] text-(--foreground)">
                 {content.headline}
               </h1>
 

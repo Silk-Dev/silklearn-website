@@ -13,6 +13,10 @@ import { buildMetadata } from '@/lib/seo';
 
 const WaitlistForm = dynamic(
   () => import('@/components/waitlist-form').then(mod => mod.WaitlistForm),
+  {
+    loading: () => <div className="h-64 animate-pulse rounded-sm bg-(--muted)" />,
+    ssr: false,
+  }
 );
 
 export const metadata: Metadata = buildMetadata({
