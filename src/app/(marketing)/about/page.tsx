@@ -6,11 +6,12 @@ import { MarketingPageFrame } from '@/components/marketing/page-structure';
 import { PageShell } from '@/components/marketing/page-shell';
 import { Button } from '@/components/ui/button';
 import { buildMetadata } from '@/lib/seo';
+import { AboutTimeline } from './about-timeline';
 
 export const metadata = buildMetadata({
   title: 'The Team Behind SILKLEARN — Jesser & Oussama Bedoui',
   description:
-    'Jesser and Oussama Bedoui built SILKLEARN after years of working with sources that had no reading order — and no tool that could find it.',
+    'Jesser and Oussama Bedoui built SILKLEARN after years of working with sources that had all the knowledge but none of the order — and no tool that could find it.',
   path: '/about',
   keywords: ['jesser bedoui', 'oussama bedoui', 'silklearn cofounders', 'knowledge synthesis'],
 });
@@ -48,7 +49,8 @@ export default function AboutPage() {
       />
       <MarketingPageFrame>
         <div className="mx-auto max-w-4xl px-6 py-16 sm:py-24">
-          {/* Header */}
+
+          {/* ── Header ── */}
           <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
             Cofounders
           </p>
@@ -56,7 +58,8 @@ export default function AboutPage() {
             The team behind SILKLEARN — and why we built it.
           </h1>
           <p className="mt-3 text-base leading-7 text-(--muted-foreground) max-w-[52ch]">
-            Two brothers who spent years working across sources that had all the knowledge and none of the order — and no tool that could surface it.
+            One career reset. A skill inventory. Seven years teaching music, years in code, and a
+            pattern that kept showing up everywhere: the knowledge existed. The structure didn&apos;t.
           </p>
 
           {/* Founders grid — equal columns, staggered entry */}
@@ -79,9 +82,11 @@ export default function AboutPage() {
                 Jesser Bedoui
               </h2>
               <p className="mt-4 text-sm leading-7 text-(--muted-foreground)">
-                Spent years watching people fail to synthesize knowledge not because the sources
-                were missing — but because the structure in them was invisible. He&apos;s building
-                the product that makes it visible.
+                Did a career reset and a full skill inventory: programming, design, seven years
+                teaching music. Used Hormozi&apos;s 0→$1M framework to map the gap. Saw AI-induced
+                panic learning — people scrambling to stay relevant as their fields shifted. The
+                insight: every source had the knowledge. None had the order. He&apos;s building the
+                product that finds it.
               </p>
             </div>
 
@@ -110,8 +115,64 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {/* The Reset section */}
-          <div className="mt-16 border-t border-(--border) pt-12">
+          {/* ── The Dream — editorial manifesto ── */}
+          <div className="mt-20 border-t border-(--border) pt-16">
+            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
+              The thesis
+            </p>
+            <h2 className="mt-4 font-(family-name:--font-display) text-[2.2rem] sm:text-[3.4rem] leading-[1.1] tracking-tight text-(--foreground) max-w-[18ch]">
+              The knowledge already exists. The structure doesn&apos;t.
+            </h2>
+            <div className="mt-8 max-w-[62ch] space-y-5 text-base leading-7 text-(--muted-foreground)">
+              <p>
+                We&apos;re building the layer between knowledge and understanding. Not a search
+                engine. Not a chatbot. The thing that reads across everything you&apos;re trying to
+                learn, maps how it all depends on each other, and hands you back the order that was
+                always implicit in the material — just invisible.
+              </p>
+              <p>
+                Any source. Docs, papers, videos, links, Notion, runbooks — whatever you&apos;re
+                working from. You bring the material. SILKLEARN finds the dependency structure,
+                generates a path, and puts a human in the loop before anything gets followed.
+              </p>
+              <p>
+                The AI code assistant doesn&apos;t write perfect code — a developer reviews, fixes,
+                ships in a fraction of the time. Same logic here. AI generates structure. You
+                inspect before you follow. That reframe turned an NP-hard problem into the right
+                architecture.
+              </p>
+              <p>
+                Current LLMs retrieve. They don&apos;t build world models. Structured dependency
+                paths build actual understanding. Following a path built from your own sources, in
+                the right order, is categorically different from asking a chatbot to summarize them.
+              </p>
+              <p>
+                The long game: community-forged knowledge paths. The next Wikipedia — but for
+                understanding, not facts. Where paths are contested, updated, forked, and improved
+                by the people who&apos;ve followed them. And callable by any AI agent via MCP —
+                because understanding shouldn&apos;t be locked in a dashboard.
+              </p>
+            </div>
+          </div>
+
+          {/* ── Timeline ── */}
+          <div className="mt-20 border-t border-(--border) pt-16">
+            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
+              The build
+            </p>
+            <h2 className="mt-2 font-(family-name:--font-display) text-2xl tracking-[-0.02em] text-(--foreground) sm:text-3xl">
+              From reset to product.
+            </h2>
+            <p className="mt-3 text-sm leading-7 text-(--muted-foreground) max-w-[52ch]">
+              What shipped, when it shipped, and what&apos;s still in progress.
+            </p>
+            <div className="mt-10">
+              <AboutTimeline />
+            </div>
+          </div>
+
+          {/* ── The Reset ── */}
+          <div className="mt-20 border-t border-(--border) pt-16">
             <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
               Writing
             </p>
@@ -133,7 +194,7 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {/* CTAs */}
+          {/* ── CTAs ── */}
           <div className="mt-16 border-t border-(--border) pt-12 flex flex-wrap gap-3">
             <Button asChild size="lg">
               <TransitionLink href="/the-reset">Read The Reset</TransitionLink>
