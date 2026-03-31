@@ -11,7 +11,7 @@ export const revalidate = 60;
 const BlogFilter = dynamic(() => import('./blog-filter').then(m => m.BlogFilter));
 
 export const metadata = buildMetadata({
-  title: 'Blog — Essays on Knowledge, Teams & AI',
+  title: 'Essays on Structured Knowledge — SILKLEARN Blog',
   description:
     'Longer-form essays and thinking from SILKLEARN on knowledge compilation, synthesis, learning paths, and structured reasoning.',
   path: '/blog',

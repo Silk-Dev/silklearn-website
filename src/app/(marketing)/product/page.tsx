@@ -120,7 +120,7 @@ const productFeatureCards = [
 ] as const;
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Compile Docs into Structured Knowledge Paths',
+  title: 'Compile Your Documents into a Structured Knowledge Path — SILKLEARN',
   description:
     'SILKLEARN compiles document stacks into reviewable graphs, approval workflows, and reusable outputs for onboarding, rollout, AI, and compliance.',
   path: '/product',
@@ -143,7 +143,7 @@ export default function ProductPage() {
                   THE PRODUCT
                 </p>
                 <h1 className="mt-6 max-w-[15ch] font-(family-name:--font-display) text-display-xl leading-none tracking-[-0.02em] text-(--foreground)">
-                  Not where you store knowledge. What happens to it after.
+                  Compile your documents into a structured knowledge path.
                 </h1>
                 <p className="mt-5 max-w-[50ch] text-[1.03rem] leading-7 text-(--muted-foreground)">
                   NotebookLM and Perplexity answer questions about your documents. SILKLEARN reads the structure through them — what depends on what, where sources contradict each other, what order the material wants to go in — so you get a path, not a chatbot you have to interrogate.

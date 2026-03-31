@@ -12,7 +12,7 @@ import { WaitlistForm } from '@/components/waitlist-form';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Get Early Access — SILKLEARN',
+  title: 'Get Early Access to SILKLEARN',
   description:
     'Your documents were written by someone who already knew the answer. SILKLEARN reads your sources and gives you back the path through them — dependency-ordered, contradiction-mapped, ready to use.',
   path: '/waitlist',
@@ -23,6 +23,11 @@ export default function WaitlistPage() {
   return (
     <PageShell>
       <MarketingPageFrame>
+        <div className="px-6 sm:px-8 lg:px-10 py-10 sm:py-14">
+          <h1 className="font-(family-name:--font-display) text-display-lg leading-none tracking-[-0.02em] text-(--foreground)">
+            Get early access to SILKLEARN.
+          </h1>
+        </div>
         <MarketingHero
           description="Every document you're learning from was written by someone who already understood the subject — and they arranged it in the order that made sense to them, not to you. SILKLEARN reads your sources and gives you back the path through them that the author assumed you didn't need."
           kicker="Early access"

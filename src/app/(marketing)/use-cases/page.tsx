@@ -17,7 +17,7 @@ import { useCasePages } from '@/lib/marketing-content';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'SILKLEARN Use Cases: Document Learning Paths & Onboarding',
+  title: 'Document Learning Paths for Onboarding, Compliance, and Knowledge Handoff',
   description:
     'See how SILKLEARN maps your documents into a dependency-ordered learning path — for engineering onboarding, research synthesis, and any subject where the reading order isn\'t obvious.',
   path: '/use-cases',
@@ -42,7 +42,7 @@ export default function UseCasesPage() {
           }
           rightEyebrow="Best fit"
           rightTitle="This is where it pays off before another onboarding or handoff gets rebuilt from scratch."
-          title="The knowledge exists. The path through it doesn't."
+          title="Document learning paths for onboarding, compliance, and knowledge handoff."
         />
 
         <MarketingSplitSection

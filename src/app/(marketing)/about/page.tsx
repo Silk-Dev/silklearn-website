@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
-  title: 'Jesser & Oussama Bedoui — About SILKLEARN',
+  title: 'The Team Behind SILKLEARN — Jesser & Oussama Bedoui',
   description:
     'Jesser and Oussama Bedoui built SILKLEARN after spending years watching technical teams drown in unordered documentation. Two brothers solving a problem they kept running into.',
   path: '/about',
@@ -53,7 +53,7 @@ export default function AboutPage() {
             Cofounders
           </p>
           <h1 className="mt-2 font-(family-name:--font-display) text-3xl sm:text-[2.75rem] sm:leading-[1.15] tracking-tight text-(--foreground)">
-            We kept watching the same failure happen.
+            The team behind SILKLEARN — and why we built it.
           </h1>
           <p className="mt-3 text-base leading-7 text-(--muted-foreground) max-w-[52ch]">
             Two brothers who spent years inside technical teams where the documents existed and the path through them didn&apos;t — and no tool was fixing that.

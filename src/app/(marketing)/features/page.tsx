@@ -23,7 +23,7 @@ const featureSignals = [
 ];
 
 export const metadata: Metadata = buildMetadata({
-  title: 'SILKLEARN Features: Dependency Mapping & Learning Paths',
+  title: 'Dependency Mapping That Finds the Reading Order in Your Documents',
   description:
     'SILKLEARN reads across your documents, maps what depends on what, and hands you a dependency-ordered reading path — one you inspect before you follow.',
   path: '/features',
@@ -48,7 +48,7 @@ export default function FeaturesPage() {
           }
           rightEyebrow="Why it exists"
           rightTitle="Three things every other tool assumes you already know."
-          title="Your documents already contain the path. You just can't see it yet."
+          title="Dependency mapping that finds the reading order already in your documents."
         />
 
         <MarketingSplitSection
