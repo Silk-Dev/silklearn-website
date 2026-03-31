@@ -241,7 +241,7 @@ export default function ProductPage() {
                 data-capability-card
                 className={`px-6 py-8 sm:px-8 lg:px-10 lg:py-10 ${index > 0 ? 'border-t border-(--border)' : ''} ${index % 2 === 1 ? 'lg:border-l' : ''} ${index < 2 ? 'lg:border-t-0' : ''}`}
               >
-                <div className="mb-4 h-20 w-full overflow-hidden">
+                <div className="mb-4 h-36 w-full overflow-hidden rounded-sm">
                   <Illustration />
                 </div>
                 <div className="flex items-center gap-2.5">

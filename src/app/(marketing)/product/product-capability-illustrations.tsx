@@ -78,7 +78,7 @@ export function Illustration01() {
       <svg
         className="absolute inset-0 h-full w-full"
         fill="none"
-        preserveAspectRatio="xMidYMid meet"
+        preserveAspectRatio="xMidYMid slice"
         viewBox="0 0 200 80"
       >
         {/* File-type badges: PDF, MD, DOCX */}
@@ -230,7 +230,7 @@ export function Illustration02() {
       <svg
         className="absolute inset-0 h-full w-full"
         fill="none"
-        preserveAspectRatio="xMidYMid meet"
+        preserveAspectRatio="xMidYMid slice"
         viewBox="0 0 200 80"
       >
         {/* Dependency edges: A→B, A→C, B→D, C→D */}
@@ -399,7 +399,7 @@ export function Illustration03() {
       <svg
         className="absolute inset-0 h-full w-full"
         fill="none"
-        preserveAspectRatio="xMidYMid meet"
+        preserveAspectRatio="xMidYMid slice"
         viewBox="0 0 200 80"
       >
         {/* Left connector paths → central node */}
@@ -601,7 +601,7 @@ export function Illustration04() {
       <svg
         className="absolute inset-0 h-full w-full"
         fill="none"
-        preserveAspectRatio="xMidYMid meet"
+        preserveAspectRatio="xMidYMid slice"
         viewBox="0 0 200 80"
       >
         {/* Vertical timeline spine */}
@@ -791,7 +791,7 @@ export function Illustration05() {
       <svg
         viewBox="0 0 200 80"
         fill="none"
-        preserveAspectRatio="xMidYMid meet"
+        preserveAspectRatio="xMidYMid slice"
         className="w-full h-full"
         aria-hidden="true"
       >
@@ -938,7 +938,7 @@ export function Illustration06() {
       <svg
         viewBox="0 0 200 80"
         fill="none"
-        preserveAspectRatio="xMidYMid meet"
+        preserveAspectRatio="xMidYMid slice"
         className="w-full h-full"
         aria-hidden="true"
       >
@@ -1094,7 +1094,7 @@ export function Illustration07() {
       <svg
         viewBox="0 0 200 80"
         fill="none"
-        preserveAspectRatio="xMidYMid meet"
+        preserveAspectRatio="xMidYMid slice"
         className="w-full h-full"
         aria-hidden="true"
       >
@@ -1229,7 +1229,7 @@ export function Illustration08() {
       <svg
         viewBox="0 0 200 80"
         fill="none"
-        preserveAspectRatio="xMidYMid meet"
+        preserveAspectRatio="xMidYMid slice"
         className="w-full h-full"
         aria-hidden="true"
       >
