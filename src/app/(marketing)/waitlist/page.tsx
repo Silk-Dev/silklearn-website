@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 
-import dynamic from 'next/dynamic';
 import { CheckCircle2 } from 'lucide-react';
 
 import {
@@ -9,15 +8,8 @@ import {
   MarketingSplitSection,
 } from '@/components/marketing/page-structure';
 import { PageShell } from '@/components/marketing/page-shell';
+import { WaitlistForm } from '@/components/waitlist-form';
 import { buildMetadata } from '@/lib/seo';
-
-const WaitlistForm = dynamic(
-  () => import('@/components/waitlist-form').then(mod => mod.WaitlistForm),
-  {
-    loading: () => <div className="h-64 animate-pulse rounded-sm bg-(--muted)" />,
-    ssr: false,
-  }
-);
 
 export const metadata: Metadata = buildMetadata({
   title: 'Get Early Access — SILKLEARN',

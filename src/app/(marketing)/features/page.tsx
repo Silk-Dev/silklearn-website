@@ -23,11 +23,11 @@ const featureSignals = [
 ];
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Features — Dependency Mapping & Leader Review',
+  title: 'SILKLEARN Features: Document Dependency Mapping & Learning Paths',
   description:
-    'Explore SILKLEARN features: dependency mapping that surfaces what to read first, contradiction detection across sources, and a path-building layer that turns documents into structure.',
+    'SILKLEARN reads across your documents, maps what depends on what, and hands you a dependency-ordered reading path — one you inspect before you follow.',
   path: '/features',
-  keywords: ['SILKLEARN features', 'dependency mapping', 'knowledge synthesis', 'contradiction detection'],
+  keywords: ['SILKLEARN features', 'dependency mapping', 'document learning path', 'knowledge dependency map', 'contradiction detection'],
 });
 
 export default function FeaturesPage() {
@@ -35,7 +35,7 @@ export default function FeaturesPage() {
     <PageShell>
       <MarketingPageFrame>
         <MarketingHero
-          description="Every document you're learning from was organized by someone who already knew where to start — they wrote it in the order that made sense to them, which is almost never the order that makes sense to you. SILKLEARN maps what depends on what, surfaces where your sources disagree, and gives you a path through the structure your materials assume you already have."
+          description="Every document you're learning from was organized by someone who already knew where to start — they wrote it in the order that made sense to them, which is almost never the order that makes sense to you. SILKLEARN maps what depends on what, surfaces where your sources contradict, and gives you the dependency-ordered reading path your material never made explicit."
           kicker="Features"
           rightChildren={
             <div className="grid gap-3">
@@ -47,7 +47,7 @@ export default function FeaturesPage() {
             </div>
           }
           rightEyebrow="Feature families"
-          rightTitle="Two problems existing tools ignore: knowing what to read first, and being able to trust that order."
+          rightTitle="Two problems every other tool leaves unsolved — what to read first, and whether that order earns your trust."
           title="Your documents already contain the path. You just can't see it yet."
         />
 
@@ -58,7 +58,7 @@ export default function FeaturesPage() {
                 Capabilities
               </p>
               <h2 className="mt-4 max-w-[10ch] font-(family-name:--font-display) text-display-lg leading-none tracking-[-0.02em] text-(--foreground)">
-                The structure comes from your sources. You inspect it before you follow it.
+                The dependency structure is in your documents. You inspect it before you follow it.
               </h2>
             </>
           }

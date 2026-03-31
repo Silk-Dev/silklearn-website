@@ -56,11 +56,11 @@ export const featurePages: FeaturePage[] = [
     description:
       'Surface the prerequisite structure across your source material so you know what to read first, what unlocks the next concept, and where your sources disagree.',
     summary:
-      'You\'re starting with three textbooks on the same topic, a stack of papers that reference each other in circles, and a codebase README that assumes you already know the architecture — and none of them tell you which one to open first. SILKLEARN reads across all of them, maps what depends on what, and gives you the dependency order your source material never made explicit. You see what must come before the next layer makes sense, and where two sources are quietly telling you different things.',
+      'You\'re starting with three textbooks on the same topic, a stack of papers that reference each other in circles, and a codebase README that assumes you already know the architecture — and none of them tell you which one to open first. SILKLEARN reads across all of them, maps what depends on what, and gives you the dependency order your source material never made explicit. You see exactly what must come first — and where two of your sources are quietly contradicting each other.',
     bullets: [
-      'Researchers: see which papers assume which priors so you stop building a mental model in the wrong order',
+      'Researchers: find which papers assume which priors — and stop assembling your model backwards.',
       'Developers: know which architecture decisions to understand before you ship something that breaks one of them',
-      'Students: see where your textbooks disagree before the contradiction becomes a gap in your reasoning',
+      'Students: see where your textbooks disagree before that gap distorts your reasoning.',
     ],
     useCaseHref: '/use-cases/engineering-onboarding',
     guideHref: '/blog',
