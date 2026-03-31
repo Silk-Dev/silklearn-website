@@ -15,7 +15,7 @@ import { LottiePlaceholder } from '@/components/marketing/lottie-placeholder';
 import { ScrollReveal, StaggerReveal } from '@/components/marketing/scroll-animations';
 import { WaitlistForm } from '@/components/waitlist-form';
 import { Button } from '@/components/ui/button';
-import { fallbackHomePageContent } from '@/lib/site-content';
+
 import { getFaqPageSchema } from '@/lib/structured-data';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -444,7 +444,70 @@ function StageJourneyCurve() {
 }
 
 export function HomeLanding() {
-  const content = fallbackHomePageContent;
+  const content = {
+    kicker: 'For researchers, developers, and anyone drowning in sources.',
+    headline: 'Synthesize any source into structured knowledge.',
+    subheadline:
+      'SILKLEARN synthesizes your sources — not answers questions about them. It maps what depends on what, finds where sources contradict each other, and generates a path you can actually follow.',
+    primaryCtaLabel: 'Request early access',
+    primaryCtaHref: '/waitlist',
+    secondaryCtaLabel: 'See how it works',
+    secondaryCtaHref: '/product',
+    metrics: [
+      { label: 'Works for', value: 'Research papers, codebases, textbooks, Notion pages, SOPs, and more' },
+      { label: 'Surfaces', value: 'What depends on what, what contradicts, and where to start' },
+      { label: 'Unlike', value: 'NotebookLM or Perplexity — it synthesizes structure, not just answers' },
+    ],
+    pillars: [
+      {
+        title: 'Map the knowledge',
+        description:
+          'SILKLEARN reads your sources and maps the dependency structure — what concepts build on which, and what you need to understand before anything else makes sense.',
+      },
+      {
+        title: 'Surface the conflicts',
+        description:
+          "When two sources disagree, SILKLEARN flags it. A single person has no team to catch contradictions — the system does it at ingest, not after you've already internalized the wrong thing.",
+      },
+      {
+        title: 'Build the path through it',
+        description:
+          "The output is a dependency-ordered sequence through your sources — not an answer to a query, but a structure that persists and guides everything you do with that knowledge.",
+      },
+    ],
+    faq: [
+      {
+        question: 'What sources can I use with SILKLEARN?',
+        answer:
+          'Anything text-based today: PDFs, docs, Notion pages, web links, code repos. Video, audio, and API feeds are coming. The synthesis engine works on any source you can point it at.',
+      },
+      {
+        question: 'How is this different from ChatGPT, NotebookLM, or Perplexity?',
+        answer:
+          "Those tools answer questions about your sources. SILKLEARN synthesizes the structure of your sources. It doesn't wait for you to ask — it runs at ingest, maps what depends on what, and flags where sources contradict each other. The output is a path that persists, not an answer that disappears.",
+      },
+      {
+        question: 'What do I actually get out of it?',
+        answer:
+          'A dependency-ordered path through your sources, a visual graph of what connects to what, and a list of contradictions detected across your material — so you know what to read first, what to question, and what order actually matters.',
+      },
+      {
+        question: 'Who is SILKLEARN for?',
+        answer:
+          'Anyone synthesizing knowledge from multiple sources — researchers reconciling conflicting papers, developers onboarding to an unfamiliar codebase, consultants distilling client materials, or solo learners who need a path, not a pile. Individual-first by design.',
+      },
+      {
+        question: 'Can AI agents use SILKLEARN?',
+        answer:
+          'Yes — MCP integration is in progress. Any AI agent will be able to call the synthesis engine directly, get back a structured dependency map, and use it as clean context for downstream reasoning. This is what RaaS (Results-as-a-Service) means: the output works for humans AND agents.',
+      },
+      {
+        question: 'Is there a team plan?',
+        answer:
+          'The platform is individual-first — built for the person doing the synthesis, not the org buying seats. Canvas (the visual review layer) supports sharing and collaboration, but the core product is yours to run alone. Enterprise (private cloud deployment) is coming.',
+      },
+    ],
+  };
   const [activeActionPanel, setActiveActionPanel] = useState(0);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
   const actionPanelRefs = useRef<Array<HTMLDivElement | null>>([]);

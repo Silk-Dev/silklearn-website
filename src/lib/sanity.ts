@@ -1,9 +1,7 @@
 import { createClient } from 'next-sanity';
 
 import {
-  fallbackHomePageContent,
   fallbackPosts,
-  type HomePageContent,
   type MarketingPost,
   type MarketingPostCategory,
 } from '@/lib/site-content';
@@ -43,19 +41,6 @@ const sanityClient = createClient({
   apiVersion: '2026-03-27',
   useCdn: false,
 });
-
-const homePageQuery = `*[_type == "homePage"][0]{
-  kicker,
-  headline,
-  subheadline,
-  primaryCtaLabel,
-  primaryCtaHref,
-  secondaryCtaLabel,
-  secondaryCtaHref,
-  metrics[]{label, value},
-  pillars[]{title, description},
-  faq[]{question, answer}
-}`;
 
 const allPostsQuery = `*[_type == "post"] | order(publishedAt desc){
   title,
@@ -102,51 +87,12 @@ const postBySlugQuery = `*[_type == "post" && slug.current == $slug][0]{
   body
 }`;
 
-function mergeHomePageContent(content: Partial<HomePageContent> | null): HomePageContent {
-  if (!content) {
-    return fallbackHomePageContent;
-  }
-
-  return {
-    kicker: content.kicker || fallbackHomePageContent.kicker,
-    headline: content.headline || fallbackHomePageContent.headline,
-    subheadline: content.subheadline || fallbackHomePageContent.subheadline,
-    primaryCtaLabel: content.primaryCtaLabel || fallbackHomePageContent.primaryCtaLabel,
-    primaryCtaHref: content.primaryCtaHref || fallbackHomePageContent.primaryCtaHref,
-    secondaryCtaLabel: content.secondaryCtaLabel || fallbackHomePageContent.secondaryCtaLabel,
-    secondaryCtaHref: content.secondaryCtaHref || fallbackHomePageContent.secondaryCtaHref,
-    metrics:
-      content.metrics && content.metrics.length > 0
-        ? content.metrics
-        : fallbackHomePageContent.metrics,
-    pillars:
-      content.pillars && content.pillars.length > 0
-        ? content.pillars
-        : fallbackHomePageContent.pillars,
-    faq: content.faq && content.faq.length > 0 ? content.faq : fallbackHomePageContent.faq,
-  };
-}
-
 function mergePosts(content: MarketingPost[] | null, category: MarketingPostCategory) {
   if (!content || content.length === 0) {
     return fallbackPosts.filter((post) => post.category === category);
   }
 
   return content;
-}
-
-export async function getHomePageContent(): Promise<HomePageContent> {
-  if (!isSanityConfigured) {
-    return fallbackHomePageContent;
-  }
-
-  try {
-    const content = await sanityClient.fetch<Partial<HomePageContent> | null>(homePageQuery);
-
-    return mergeHomePageContent(content);
-  } catch {
-    return fallbackHomePageContent;
-  }
 }
 
 export async function getAllPosts(): Promise<MarketingPost[]> {
