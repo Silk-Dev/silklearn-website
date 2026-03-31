@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 
 import { HomeLanding } from './_components/home-landing';
 import { PageShell } from '@/components/marketing/page-shell';
-import { getHomePageContent, isSanityConfigured } from '@/lib/sanity';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = {
@@ -16,12 +15,10 @@ export const metadata: Metadata = {
   title: { absolute: 'SILKLEARN | The reading order your documents never gave you' },
 };
 
-export default async function Home() {
-  const content = await getHomePageContent();
-
+export default function Home() {
   return (
     <PageShell>
-      <HomeLanding content={content} isSanityConfigured={isSanityConfigured} />
+      <HomeLanding />
     </PageShell>
   );
 }

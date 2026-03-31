@@ -74,13 +74,13 @@ export type MarketingPost = {
 
 export const fallbackHomePageContent: HomePageContent = {
   kicker: 'For researchers, developers, and anyone drowning in documents.',
-  headline: 'Upload what you\'re trying to learn. We map the knowledge, surface the conflicts, and build the path through it.',
+  headline: 'The reading order your documents never gave you.',
   subheadline:
     'SILKLEARN synthesizes your documents — not answers questions about them. It maps what depends on what, finds where sources contradict each other, and generates a path you can actually follow.',
   primaryCtaLabel: 'Request early access',
-  primaryCtaHref: '#waitlist',
+  primaryCtaHref: '/waitlist',
   secondaryCtaLabel: 'See how it works',
-  secondaryCtaHref: '/how-it-works',
+  secondaryCtaHref: '/product',
   metrics: [
     { label: 'Works for', value: 'Research papers, codebases, textbooks, onboarding docs, SOPs' },
     { label: 'Surfaces', value: 'What depends on what, what contradicts, and where to start' },

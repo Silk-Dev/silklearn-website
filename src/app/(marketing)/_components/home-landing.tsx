@@ -15,7 +15,7 @@ import { LottiePlaceholder } from '@/components/marketing/lottie-placeholder';
 import { ScrollReveal, StaggerReveal } from '@/components/marketing/scroll-animations';
 import { WaitlistForm } from '@/components/waitlist-form';
 import { Button } from '@/components/ui/button';
-import { type HomePageContent } from '@/lib/site-content';
+import { fallbackHomePageContent } from '@/lib/site-content';
 import { getFaqPageSchema } from '@/lib/structured-data';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -246,10 +246,6 @@ function StageJourneyIcon({ index }: { index: number }) {
   );
 }
 
-type HomeLandingProps = {
-  content: HomePageContent;
-  isSanityConfigured: boolean;
-};
 
 function StageJourneyCurve() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -447,7 +443,8 @@ function StageJourneyCurve() {
   );
 }
 
-export function HomeLanding({ content, isSanityConfigured }: HomeLandingProps) {
+export function HomeLanding() {
+  const content = fallbackHomePageContent;
   const [activeActionPanel, setActiveActionPanel] = useState(0);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
   const actionPanelRefs = useRef<Array<HTMLDivElement | null>>([]);
