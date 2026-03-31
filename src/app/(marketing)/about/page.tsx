@@ -10,9 +10,9 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({
   title: 'The Team Behind SILKLEARN — Jesser & Oussama Bedoui',
   description:
-    'Jesser and Oussama Bedoui built SILKLEARN after spending years watching technical teams drown in unordered documentation. Two brothers solving a problem they kept running into.',
+    'Jesser and Oussama Bedoui built SILKLEARN after years of working with sources that had no reading order — and no tool that could find it.',
   path: '/about',
-  keywords: ['jesser bedoui', 'oussama bedoui', 'silklearn cofounders', 'knowledge compilation'],
+  keywords: ['jesser bedoui', 'oussama bedoui', 'silklearn cofounders', 'knowledge synthesis'],
 });
 
 const foundersSchema = {
@@ -56,7 +56,7 @@ export default function AboutPage() {
             The team behind SILKLEARN — and why we built it.
           </h1>
           <p className="mt-3 text-base leading-7 text-(--muted-foreground) max-w-[52ch]">
-            Two brothers who spent years inside technical teams where the documents existed and the path through them didn&apos;t — and no tool was fixing that.
+            Two brothers who spent years working across sources that had all the knowledge and none of the order — and no tool that could surface it.
           </p>
 
           {/* Founders grid — equal columns, staggered entry */}
@@ -79,9 +79,9 @@ export default function AboutPage() {
                 Jesser Bedoui
               </h2>
               <p className="mt-4 text-sm leading-7 text-(--muted-foreground)">
-                Spent years watching teams fail not because the documentation was missing — but
-                because nobody had arranged it in the right order. He&apos;s building the product
-                that does.
+                Spent years watching people fail to synthesize knowledge not because the sources
+                were missing — but because the structure in them was invisible. He&apos;s building
+                the product that makes it visible.
               </p>
             </div>
 

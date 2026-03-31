@@ -14,9 +14,9 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata: Metadata = buildMetadata({
   title: 'Get Early Access to SILKLEARN',
   description:
-    'Your documents were written by someone who already knew the answer. SILKLEARN reads your sources and gives you back the path through them — dependency-ordered, contradiction-mapped, ready to use.',
+    'Your sources were written by someone who already knew the answer. SILKLEARN reads your sources and gives you back the path through them — dependency-ordered, contradiction-mapped, ready to use.',
   path: '/waitlist',
-  keywords: ['SILKLEARN waitlist', 'knowledge path early access', 'dependency ordered learning', 'document structure AI'],
+  keywords: ['SILKLEARN waitlist', 'knowledge synthesis early access', 'dependency ordered learning', 'synthesize sources'],
 });
 
 export default function WaitlistPage() {
@@ -29,12 +29,12 @@ export default function WaitlistPage() {
           </h1>
         </div>
         <MarketingHero
-          description="Every document you're learning from was written by someone who already understood the subject — and they arranged it in the order that made sense to them, not to you. SILKLEARN reads your sources and gives you back the path through them that the author assumed you didn't need."
+          description="Every source you're learning from was written by someone who already understood the subject — and they arranged it in the order that made sense to them, not to you. SILKLEARN reads your sources and gives you back the path through them that the author assumed you didn't need."
           kicker="Early access"
           rightChildren={
             <div className="grid gap-3">
               {[
-                "You have the docs. You still don't know what to read first.",
+                "You have the sources. You still don't know what to read first.",
                 "You've got multiple sources. At least two of them disagree.",
                 'No one left to ask what order it was meant to go in.',
                 "AI answers your questions. It doesn't tell you which questions to ask first.",
@@ -49,7 +49,7 @@ export default function WaitlistPage() {
                 </p>
                 <ul className="mt-3 space-y-2.5">
                   {[
-                    'The reading order your documents never gave you',
+                    'The reading order your sources never gave you',
                     "A contradiction map — so you know where sources disagree before you assume they don't",
                     'Context your AI tools can actually use — ordered by how the knowledge depends on itself',
                   ].map((item) => (
@@ -64,7 +64,7 @@ export default function WaitlistPage() {
           }
           rightEyebrow="Best fit"
           rightTitle="You'll recognize at least one of these."
-          title="Your documents assume you already know where to start."
+          title="Your sources assume you already know where to start."
         />
 
         <MarketingSplitSection
@@ -77,7 +77,7 @@ export default function WaitlistPage() {
                 Tell us what you're trying to understand.
               </h2>
               <p className="mt-4 max-w-[44ch] text-base leading-5 text-(--muted-foreground)">
-                Best for teams where the knowledge lives in documents written by people who no longer work there — or who assumed you understood the domain when they wrote them.
+                Best for anyone working across sources that were never written with your starting point in mind — technical papers, runbooks, course materials, or anything that assumes you already know what to read first.
               </p>
             </>
           }
@@ -104,9 +104,9 @@ export default function WaitlistPage() {
               </p>
             </div>
             <div>
-              <p className="font-medium text-(--foreground)">What kinds of docs work best?</p>
+              <p className="font-medium text-(--foreground)">What kinds of sources work best?</p>
               <p className="mt-1 text-sm text-(--muted-foreground)">
-                Technical runbooks, onboarding handbooks, architecture specs, compliance docs — anything with implicit prerequisite order buried across files.
+                Technical runbooks, research papers, architecture specs, course materials, Notion pages — anything with implicit prerequisite order buried across files.
               </p>
             </div>
             <div>
