@@ -23,7 +23,7 @@ const featureSignals = [
 ];
 
 export const metadata: Metadata = buildMetadata({
-  title: 'SILKLEARN Features: Document Dependency Mapping & Learning Paths',
+  title: 'SILKLEARN Features: Dependency Mapping & Learning Paths',
   description:
     'SILKLEARN reads across your documents, maps what depends on what, and hands you a dependency-ordered reading path — one you inspect before you follow.',
   path: '/features',
@@ -35,7 +35,7 @@ export default function FeaturesPage() {
     <PageShell>
       <MarketingPageFrame>
         <MarketingHero
-          description="Every document you're learning from was organized by someone who already knew where to start — they wrote it in the order that made sense to them, which is almost never the order that makes sense to you. SILKLEARN maps what depends on what, surfaces where your sources contradict, and gives you the dependency-ordered reading path your material never made explicit."
+          description="Every document you're learning from was organized by someone who already knew where to start — they wrote it in the order that made sense to them, which is almost never the order that makes sense to you. SILKLEARN maps what depends on what, surfaces where your sources disagree, and gives you the dependency-ordered reading path your material never made explicit."
           kicker="Features"
           rightChildren={
             <div className="grid gap-3">
@@ -46,8 +46,8 @@ export default function FeaturesPage() {
               ))}
             </div>
           }
-          rightEyebrow="Feature families"
-          rightTitle="Two problems every other tool leaves unsolved — what to read first, and whether that order earns your trust."
+          rightEyebrow="Why it exists"
+          rightTitle="Three things every other tool assumes you already know."
           title="Your documents already contain the path. You just can't see it yet."
         />
 
@@ -70,14 +70,14 @@ export default function FeaturesPage() {
                 return (
                   <div key={page.slug} className={index > 0 ? 'border-t border-(--border) pt-6' : ''}>
                     <div className="flex items-center gap-3">
-                      <div className="flex size-10 items-center justify-center border border-(--border) text-(--primary)">
+                      <div className="flex size-10 max-sm:size-8 items-center justify-center border border-(--border) text-(--primary)">
                         <Icon className="size-4.5" />
                       </div>
                       <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
                         {index === 0 ? 'Structure extraction' : 'Review layer'}
                       </p>
                     </div>
-                    <TransitionLink className="mt-4 block text-[1.25rem] leading-tight tracking-[-0.02em] text-(--foreground)" href={`/features/${page.slug}`}>
+                    <TransitionLink className="mt-4 block text-[1.25rem] leading-tight tracking-[-0.02em] text-(--foreground) transition-colors duration-150 hover:text-(--primary)" href={`/features/${page.slug}`}>
                       {page.title}
                     </TransitionLink>
                     <p className="mt-3 max-w-[56ch] text-sm leading-5 text-(--muted-foreground)">{page.summary}</p>
