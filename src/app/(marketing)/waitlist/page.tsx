@@ -98,27 +98,33 @@ export default function WaitlistPage() {
           </p>
           <div className="mt-6 grid gap-6 sm:grid-cols-2">
             <div>
-              <p className="font-medium text-(--foreground)">Is this free?</p>
+              <p className="font-medium text-(--foreground)">What happens when I join the waitlist?</p>
               <p className="mt-1 text-sm text-(--muted-foreground)">
-                Free for the first three months — no credit card required to apply, ever. We&apos;d rather you see whether it works before we talk about pricing.
+                You&apos;ll get early access before the public launch. We&apos;re onboarding in small batches so we can work closely with each user — expect an invite within a few weeks, not months.
               </p>
             </div>
             <div>
-              <p className="font-medium text-(--foreground)">What kinds of sources work best?</p>
+              <p className="font-medium text-(--foreground)">What formats does SILKLEARN support?</p>
               <p className="mt-1 text-sm text-(--muted-foreground)">
-                Technical runbooks, research papers, architecture specs, course materials, Notion pages — anything with implicit prerequisite order buried across files.
+                PDFs, documents, Notion pages, web links, and code repositories today. Video, audio, images, and API feeds (Confluence, etc.) are on the roadmap. If you can point to it, the synthesis engine can process it.
               </p>
             </div>
             <div>
-              <p className="font-medium text-(--foreground)">How long does review take?</p>
+              <p className="font-medium text-(--foreground)">Is this a team product?</p>
               <p className="mt-1 text-sm text-(--muted-foreground)">
-                We review every application within two business days — you&apos;ll get a real reply from someone who actually read what you submitted, not an automated sequence.
+                No. SILKLEARN is built for the individual doing the synthesis work — the researcher, the developer, the consultant. You don&apos;t need a team to use it. Canvas supports sharing when you want it, but the core product runs solo.
               </p>
             </div>
             <div>
-              <p className="font-medium text-(--foreground)">Can I cancel anytime?</p>
+              <p className="font-medium text-(--foreground)">How much will it cost?</p>
               <p className="mt-1 text-sm text-(--muted-foreground)">
-                Yes. No contracts, no lock-ins during the beta. We want you to stay because it works, not because you&apos;re trapped.
+                Early access is free while we&apos;re in private beta. Pricing hasn&apos;t been finalized — early users will get founding-member terms.
+              </p>
+            </div>
+            <div>
+              <p className="font-medium text-(--foreground)">Can I use this as an AI agent or with my own AI stack?</p>
+              <p className="mt-1 text-sm text-(--muted-foreground)">
+                Yes. MCP integration is in progress — any AI agent will be able to call the synthesis engine directly and get back a structured dependency map as clean context. If you&apos;re building on AI, get on the waitlist now.
               </p>
             </div>
           </div>
