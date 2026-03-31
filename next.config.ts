@@ -14,6 +14,11 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: '/features/leader-review',
+        destination: '/features/canvas',
+        permanent: true,
+      },
+      {
         source: '/for-whom',
         destination: '/for-teams',
         permanent: true,

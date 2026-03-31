@@ -14,6 +14,7 @@ export type FeaturePage = {
   howItWorks?: { step: string; detail: string }[];
   faqs?: { question: string; answer: string }[];
   deepSummary?: string;
+  comingSoon?: boolean;
 };
 
 export type UseCasePage = {
@@ -80,33 +81,63 @@ export const featurePages: FeaturePage[] = [
     ],
   },
   {
-    slug: 'leader-review',
-    title: "You shouldn't trust a path you can't inspect.",
+    slug: 'canvas',
+    title: 'The compiled structure, visible. Every edge inspectable before you follow it.',
     description:
-      'SILKLEARN surfaces what it compiled — the dependency graph, the contradictions, the source references — so you can verify the structure before trusting it.',
+      'A visual synthesis canvas where the compiled dependency graph lives. Review every node, trace every edge to its source, resolve contradictions with your team — before following the path.',
     summary:
-      "Automated synthesis gets the structure mostly right — and occasionally wrong in ways that only someone with domain knowledge would catch. SILKLEARN shows you everything it built before you follow any of it: every edge, every source reference, every place where your documents conflict. You decide what to trust. The path earns your confidence; it doesn't demand it.",
+      'Automated compilation gets the structure mostly right. Canvas is where your domain knowledge catches the rest. You see the full dependency graph — every concept node, every prerequisite edge, every contradiction flagged — and your team reviews it together before anyone follows the path. Nothing is trusted until it has been inspected.',
     bullets: [
-      'Trace every connection back to the source passage that produced it — nothing is asserted without a reference',
-      'See exactly where two sources contradict each other so you can decide which one to trust',
-      'Approve the path before you follow it — no black box, no silent synthesis',
+      'Every edge traces back to the exact source passage that produced it',
+      'Contradictions between sources surface as visual conflict nodes — you resolve them',
+      'Share the reviewed canvas with your team or publish it publicly with one link',
     ],
     useCaseHref: '/use-cases/internal-docs-training',
     guideHref: '/blog',
-    deepSummary: `Automated synthesis is only useful if the person who understands the domain has checked it. That person is you. SILKLEARN's review step exists because you shouldn't follow a compiled path you can't inspect. Before you adopt the dependency order or act on surfaced contradictions, you see the full graph — every node, every edge, every source reference — and you decide what's right. This isn't a formality. It's where your domain knowledge catches what the system got wrong, where ambiguous dependencies get resolved by someone who actually understands the material, and where you earn the confidence to follow the path SILKLEARN built.`,
+    deepSummary: `Compilation produces a draft. Canvas is where that draft becomes trustworthy. The dependency graph is laid out visually: concepts as nodes, prerequisites as directed edges. Every node carries its source provenance — the exact passage it came from. Every contradiction your sources contain surfaces as a visible conflict. Your team reviews the compiled structure together, corrects what's wrong, approves what's right, and publishes the verified path. Canvas is the interface that turns a compiled knowledge graph into something an organization can stake its onboarding, compliance, and reasoning on.`,
     howItWorks: [
-      { step: 'Compilation produces a draft graph', detail: 'After SILKLEARN processes your source material, it produces a draft dependency graph with nodes, edges, and source provenance for each decision.' },
-      { step: 'You see the full structure', detail: 'You\'re shown the complete graph — not a summary — with every source reference visible. You can see why each dependency edge was drawn.' },
-      { step: 'Node-by-node inspection', detail: 'Walk through each concept: check if it\'s placed correctly in the sequence, whether the source reference is accurate, and whether any contradiction needs your judgment.' },
-      { step: 'You correct and approve', detail: 'Reorder nodes, add missing prerequisites, flag inaccuracies, or mark sections as confirmed. Every decision stays in your hands.' },
-      { step: 'Follow the verified path', detail: 'Only after you\'ve reviewed the structure do you follow it. The path you use is one you\'ve inspected, not one handed to you opaquely.' },
+      { step: 'Compilation produces a draft canvas', detail: 'After SILKLEARN processes your source material, the dependency graph is laid out as a visual canvas — nodes, edges, source references, and flagged contradictions all visible at once.' },
+      { step: 'Your team reviews together', detail: 'Invite teammates to the canvas. Walk through the graph together — each person can inspect nodes, check source provenance, and flag anything that needs a second opinion.' },
+      { step: 'Node-by-node inspection', detail: 'Click any node to see its source document and passage. Click any edge to see why the dependency was drawn. Nothing is hidden behind a summary.' },
+      { step: 'Resolve contradictions', detail: 'Where two sources disagree, a conflict node appears. Your team decides which source to trust — or marks it as an open question — and the graph updates.' },
+      { step: 'Publish and share', detail: 'Once reviewed, publish the canvas. Share it with teammates via link, or make it publicly accessible for onboarding new members to the same verified knowledge.' },
     ],
     faqs: [
-      { question: 'Why do I need to review it if synthesis is automated?', answer: 'Automated synthesis can surface the structure that\'s already in your documents. It can\'t know about gaps in your sources, recent information that hasn\'t made it into any document yet, or domain-specific exceptions only you would recognize. The review step is where that knowledge gets added.' },
-      { question: 'What exactly can I see during review?', answer: 'You see the full dependency graph — every concept node, every prerequisite edge, and the source document and passage that produced each connection. Nothing is hidden behind a summary.' },
-      { question: 'What if the graph has contradictions I\'m not sure how to resolve?', answer: 'SILKLEARN flags them explicitly. You can see which sources conflict and on which concept. You decide which source to trust, or mark it as an open question you want to investigate further.' },
-      { question: 'Can I trust the path without reviewing it?', answer: 'You can — but we don\'t recommend it for material where accuracy matters. The review step exists precisely because your domain knowledge is what makes the compiled structure trustworthy.' },
+      { question: 'What does "visual dependency graph" mean?', answer: 'It means every concept your documents contain is a node, and every prerequisite relationship between concepts is a visible arrow. You can see the full structure of your compiled knowledge at a glance — not as a flat list, but as the graph it actually is.' },
+      { question: 'Can my whole team review the same canvas?', answer: 'Yes. Canvas is built for collaborative review. Multiple teammates can be on the same canvas, each inspecting different nodes, leaving comments, and approving or flagging edges. The review is a team activity, not a solo one.' },
+      { question: 'What happens to contradictions?', answer: 'When two sources give conflicting accounts of the same concept, Canvas surfaces them as visible conflict nodes. Your team sees exactly which sources disagree and on which concept, and you decide together which source to trust.' },
+      { question: 'Can I share the canvas with people outside my team?', answer: 'Yes. You can generate a public share link for any reviewed canvas. Anyone with the link can view the dependency graph without needing an account.' },
     ],
+  },
+  {
+    slug: 'mcp-integration',
+    title: 'Your compiled knowledge, available to every AI that asks for it.',
+    description:
+      'SILKLEARN becomes an MCP server. Any AI that supports Model Context Protocol — Claude, Cursor, Copilot — can pull dependency-ordered, contradiction-resolved knowledge from your compiled workspaces.',
+    summary:
+      "Your compiled knowledge graph — structured, dependency-ordered, contradiction-resolved — available to any AI tool via Model Context Protocol. Instead of pasting raw documents into a prompt, your AI gets the compiled version: the minimum sufficient context, in the right order, with conflicts already flagged.",
+    bullets: [
+      'Connect any MCP-compatible AI to your compiled SILKLEARN workspace',
+      'Skills and extensions for Cursor, Claude, Copilot, and Windsurf',
+      'Agents get the minimum sufficient context — not a raw document dump',
+    ],
+    useCaseHref: '/use-cases/engineering-onboarding',
+    guideHref: '/blog',
+    deepSummary: `Most AI tools get context wrong. They retrieve document chunks based on query similarity — which means they bring in fragments, miss prerequisites, and include contradictions the user doesn't know about. SILKLEARN's MCP integration changes this. Your compiled knowledge graph — with its dependency order, conflict flags, and source provenance — becomes an MCP server that any AI client can connect to. Claude, Cursor, GitHub Copilot, and Windsurf can pull exactly the nodes required for the task at hand, in the order they need to be processed, with contradictions already surfaced. The agent doesn't guess at context. It gets the compiled version.`,
+    howItWorks: [
+      { step: 'Compile your knowledge first', detail: 'Run your documents through SILKLEARN. The result is a dependency graph with every concept ordered, every contradiction flagged, and every node linked to its source.' },
+      { step: 'Enable MCP server', detail: 'With one toggle, your compiled workspace becomes an MCP server. Any AI tool that supports the Model Context Protocol can connect to it.' },
+      { step: 'Install the skill or extension', detail: 'Install the SILKLEARN skill for your preferred tool — Cursor, Claude Desktop, GitHub Copilot, or Windsurf. The skill knows how to query your compiled workspace.' },
+      { step: 'AI pulls compiled context', detail: 'When your AI agent needs context, it queries SILKLEARN instead of raw documents. It gets the minimum sufficient nodes — in dependency order — for whatever task it is working on.' },
+      { step: 'Contradictions are already resolved', detail: 'By the time context reaches your AI, your team has already reviewed and resolved the contradictions in the source material. No silent inconsistencies in the prompt.' },
+    ],
+    faqs: [
+      { question: 'What is MCP?', answer: 'Model Context Protocol is an open standard that lets AI clients (like Claude or Cursor) connect to external data sources and tools. When SILKLEARN exposes your compiled knowledge as an MCP server, your AI tools can query it directly — structured, ordered context instead of raw document retrieval.' },
+      { question: 'Which AI tools will be supported?', answer: 'Any tool that supports MCP — Claude Desktop, Cursor, GitHub Copilot (via extensions), and Windsurf at launch. We are also building dedicated skills and plugins for each tool for the best integration experience.' },
+      { question: 'When is this available?', answer: 'MCP integration is coming soon. Join the waitlist to be notified when it ships.' },
+      { question: 'How is this different from giving an AI my documents directly?', answer: 'Raw documents give the AI too much or the wrong context. SILKLEARN\'s compiled version gives it the exact nodes required for the task, in dependency order, with contradictions already resolved. The AI reasons better because the context is better.' },
+    ],
+    comingSoon: true,
   },
 ];
 
@@ -140,7 +171,7 @@ export const useCasePages: UseCasePage[] = [
       'Surface contradictions between sources before they corrupt your mental model',
       'Build a structure you can inspect and refine as you add new material',
     ],
-    featureHref: '/features/leader-review',
+    featureHref: '/features/canvas',
     guideHref: '/blog',
   },
 ];
@@ -197,7 +228,7 @@ export const guidePages: GuidePage[] = [
           'Structured learning paths become usable when leads can inspect the sequence and validate it against real domain expectations.',
       },
     ],
-    featureHref: '/features/leader-review',
+    featureHref: '/features/canvas',
     useCaseHref: '/use-cases/internal-docs-training',
   },
 ];

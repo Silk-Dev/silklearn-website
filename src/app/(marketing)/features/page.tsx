@@ -1,4 +1,4 @@
-import { ArrowRight, GitBranch, ShieldCheck } from 'lucide-react';
+import { ArrowRight, Cpu, GitBranch, LayoutTemplate } from 'lucide-react';
 
 import { TransitionLink } from '@/components/marketing/page-transition';
 import { FloatingCta } from '@/components/marketing/floating-cta';
@@ -65,7 +65,8 @@ export default function FeaturesPage() {
           right={
             <div>
               {featurePages.map((page, index) => {
-                const Icon = index === 0 ? GitBranch : ShieldCheck;
+                const Icon = index === 0 ? GitBranch : index === 1 ? LayoutTemplate : Cpu;
+                const label = index === 0 ? 'Structure extraction' : index === 1 ? 'Synthesis canvas' : 'AI integration';
 
                 return (
                   <div key={page.slug} className={index > 0 ? 'border-t border-(--border) pt-6' : ''}>
@@ -74,12 +75,23 @@ export default function FeaturesPage() {
                         <Icon className="size-4.5" />
                       </div>
                       <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
-                        {index === 0 ? 'Structure extraction' : 'Review layer'}
+                        {label}
+                        {index === 2 && (
+                          <span className="ml-2 rounded-full bg-[oklch(from_var(--primary)_l_c_h/0.12)] px-2 py-0.5 text-[0.6rem] font-semibold uppercase tracking-[0.12em] text-(--primary)">
+                            Coming soon
+                          </span>
+                        )}
                       </p>
                     </div>
-                    <TransitionLink className="mt-4 block text-[1.25rem] leading-tight tracking-[-0.02em] text-(--foreground) transition-colors duration-150 hover:text-(--primary)" href={`/features/${page.slug}`}>
-                      {page.title}
-                    </TransitionLink>
+                    {index === 2 ? (
+                      <p className="mt-4 block text-[1.25rem] leading-tight tracking-[-0.02em] text-(--foreground)">
+                        {page.title}
+                      </p>
+                    ) : (
+                      <TransitionLink className="mt-4 block text-[1.25rem] leading-tight tracking-[-0.02em] text-(--foreground) transition-colors duration-150 hover:text-(--primary)" href={`/features/${page.slug}`}>
+                        {page.title}
+                      </TransitionLink>
+                    )}
                     <p className="mt-3 max-w-[56ch] text-sm leading-5 text-(--muted-foreground)">{page.summary}</p>
                     <div className="mt-5 grid gap-3 sm:grid-cols-3">
                       {page.bullets.map((bullet) => (
@@ -94,6 +106,42 @@ export default function FeaturesPage() {
             </div>
           }
         />
+
+        <section className="grid border-b border-(--border) lg:grid-cols-[1fr_1px_1fr]">
+          <div className="p-6 sm:p-8 lg:p-10 lg:flex lg:flex-col lg:justify-center">
+            <div className="flex items-center gap-2">
+              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
+                Enterprise
+              </p>
+              <span className="rounded-full bg-[oklch(from_var(--primary)_l_c_h/0.12)] px-2 py-0.5 text-[0.6rem] font-semibold uppercase tracking-[0.12em] text-(--primary)">
+                Coming soon
+              </span>
+            </div>
+            <h2 className="mt-4 max-w-[14ch] font-(family-name:--font-display) text-display-md leading-none tracking-[-0.02em] text-(--foreground)">
+              Private deployment. Your knowledge stays on your infrastructure.
+            </h2>
+            <p className="mt-4 max-w-[48ch] text-sm leading-6 text-(--muted-foreground)">
+              For organizations where the knowledge is sensitive, large, or deeply integrated. Run SILKLEARN on your own infrastructure — same compilation engine, no external data transfer.
+            </p>
+          </div>
+
+          <div className="hidden bg-(--border) lg:block" />
+
+          <div className="grid content-start gap-0 divide-y divide-(--border) p-6 sm:p-8 lg:p-10">
+            {[
+              { label: 'Private cloud deployment', detail: 'On-prem or private VPC. Your compiled knowledge never leaves your infrastructure.' },
+              { label: 'SSO & RBAC', detail: 'Single sign-on with your identity provider. Role-based access control across workspaces.' },
+              { label: 'Audit logs', detail: 'Full provenance on every compilation, review decision, and published artifact.' },
+              { label: 'Volume operation commits', detail: 'Annual contracts with committed operation volumes and negotiated rates.' },
+              { label: 'Priority support & onboarding', detail: 'Dedicated support and migration assistance for large knowledge repositories.' },
+            ].map((item) => (
+              <div key={item.label} className="py-4 first:pt-0 last:pb-0">
+                <p className="text-sm font-medium text-(--foreground)">{item.label}</p>
+                <p className="mt-1 text-sm text-(--muted-foreground)">{item.detail}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
         <MarketingCtaSection
           actions={
