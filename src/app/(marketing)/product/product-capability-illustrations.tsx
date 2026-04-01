@@ -1006,84 +1006,118 @@ export function Illustration06() {
 }
 
 // ─── 07 · Integrations ─────────────────────────────────────────────────────
-
-const IL07_NODES = [
-  { cx: 30,  cy: 22, label: 'Notion'  },
-  { cx: 70,  cy: 22, label: 'Drive'   },
-  { cx: 110, cy: 22, label: 'GitHub'  },
-  { cx: 150, cy: 22, label: 'Slack'   },
-  { cx: 30,  cy: 58, label: 'Conf.'   },
-  { cx: 70,  cy: 58, label: 'Linear'  },
-  { cx: 110, cy: 58, label: 'API'     },
-  { cx: 150, cy: 58, label: 'Zapier'  },
+// Brand icon paths from simple-icons (24×24 viewBox)
+const IL07_BRANDS = [
+  {
+    label: 'Notion',
+    cy: 8,
+    path: 'M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632z',
+  },
+  {
+    label: 'Confluence',
+    cy: 21,
+    path: 'M.87 18.257c-.248.382-.53.875-.763 1.245a.764.764 0 0 0 .255 1.04l4.965 3.054a.764.764 0 0 0 1.058-.26c.199-.332.454-.763.733-1.221 1.967-3.247 3.945-2.853 7.508-1.146l4.957 2.337a.764.764 0 0 0 1.028-.382l2.364-5.346a.764.764 0 0 0-.382-1 599.851 599.851 0 0 1-4.965-2.361C10.911 10.97 5.224 11.185.87 18.257zM23.131 5.743c.249-.405.531-.875.764-1.25a.764.764 0 0 0-.256-1.034L18.675.404a.764.764 0 0 0-1.058.26c-.195.335-.451.763-.734 1.225-1.966 3.246-3.945 2.85-7.508 1.146L4.437.694a.764.764 0 0 0-1.027.382L1.046 6.422a.764.764 0 0 0 .382 1c1.039.49 3.105 1.467 4.965 2.361 6.698 3.246 12.392 3.029 16.738-4.04z',
+  },
+  {
+    label: 'Drive',
+    cy: 34,
+    path: 'M12.01 1.485c-2.082 0-3.754.02-3.743.047.01.02 1.708 3.001 3.774 6.62l3.76 6.574h3.76c2.081 0 3.753-.02 3.742-.047-.005-.02-1.708-3.001-3.775-6.62l-3.76-6.574zm-4.76 1.73a789.828 789.861 0 0 0-3.63 6.319L0 15.868l1.89 3.298 1.885 3.297 3.62-6.335 3.618-6.33-1.88-3.287C8.1 4.704 7.255 3.22 7.25 3.214zm2.259 12.653-.203.348c-.114.198-.96 1.672-1.88 3.287a423.93 423.948 0 0 1-1.698 2.97c-.01.026 3.24.042 7.222.042h7.244l1.796-3.157c.992-1.734 1.85-3.23 1.906-3.323l.104-.167h-7.249z',
+  },
+  {
+    label: 'GitHub',
+    cy: 47,
+    path: 'M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12',
+  },
+  {
+    label: 'Slack',
+    cy: 60,
+    // Official Slack brand SVG path
+    path: 'M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zM6.313 15.165a2.527 2.527 0 0 1 2.521-2.52 2.527 2.527 0 0 1 2.521 2.52v6.313A2.528 2.528 0 0 1 8.834 24a2.528 2.528 0 0 1-2.521-2.522v-6.313zM8.834 5.042a2.528 2.528 0 0 1-2.521-2.52A2.528 2.528 0 0 1 8.834 0a2.528 2.528 0 0 1 2.521 2.522v2.52H8.834zM8.834 6.313a2.528 2.528 0 0 1 2.521 2.521 2.528 2.528 0 0 1-2.521 2.521H2.522A2.528 2.528 0 0 1 0 8.834a2.528 2.528 0 0 1 2.522-2.521h6.312zM18.956 8.834a2.528 2.528 0 0 1 2.522-2.521A2.528 2.528 0 0 1 24 8.834a2.528 2.528 0 0 1-2.522 2.521h-2.522V8.834zM17.688 8.834a2.528 2.528 0 0 1-2.523 2.521 2.527 2.527 0 0 1-2.52-2.521V2.522A2.527 2.527 0 0 1 15.165 0a2.528 2.528 0 0 1 2.523 2.522v6.312zM15.165 18.956a2.528 2.528 0 0 1 2.523 2.522A2.528 2.528 0 0 1 15.165 24a2.527 2.527 0 0 1-2.52-2.522v-2.522h2.52zM15.165 17.688a2.527 2.527 0 0 1-2.52-2.523 2.526 2.526 0 0 1 2.52-2.52h6.313A2.527 2.527 0 0 1 24 15.165a2.528 2.528 0 0 1-2.522 2.523h-6.313z',
+  },
+  {
+    label: 'Linear',
+    cy: 73,
+    path: 'M2.886 4.18A11.982 11.982 0 0 1 11.99 0C18.624 0 24 5.376 24 12.009c0 3.64-1.62 6.903-4.18 9.105L2.887 4.18ZM1.817 5.626l16.556 16.556c-.524.33-1.075.62-1.65.866L.951 7.277c.247-.575.537-1.126.866-1.65ZM.322 9.163l14.515 14.515c-.71.172-1.443.282-2.195.322L0 11.358a12 12 0 0 1 .322-2.195Zm-.17 4.862 9.823 9.824a12.02 12.02 0 0 1-9.824-9.824Z',
+  },
 ] as const;
 
-// Segments between circle edges (r=12); horizontal gaps = 16px, vertical gaps = 12px
-const IL07_LINES = [
-  { x1: 42,  y1: 22, x2: 58,  y2: 22 },
-  { x1: 82,  y1: 22, x2: 98,  y2: 22 },
-  { x1: 122, y1: 22, x2: 138, y2: 22 },
-  { x1: 42,  y1: 58, x2: 58,  y2: 58 },
-  { x1: 82,  y1: 58, x2: 98,  y2: 58 },
-  { x1: 122, y1: 58, x2: 138, y2: 58 },
-  { x1: 30,  y1: 34, x2: 30,  y2: 46 },
-  { x1: 70,  y1: 34, x2: 70,  y2: 46 },
-  { x1: 110, y1: 34, x2: 110, y2: 46 },
-  { x1: 150, y1: 34, x2: 150, y2: 46 },
-] as const;
+// Bezier paths from each brand node edge (x=25) to center node edge (x=108)
+// using cubic bezier with control points that create a smooth funnel
+const IL07_PATHS = IL07_BRANDS.map(({ cy }) =>
+  `M 25,${cy} C 70,${cy} 70,40 108,40`
+);
 
 export function Illustration07() {
-  const containerRef   = useRef<HTMLDivElement>(null);
-  const nodeGroupRefs  = useRef<(SVGGElement    | null)[]>(Array(8).fill(null));
-  const brightDotRefs  = useRef<(SVGCircleElement | null)[]>(Array(8).fill(null));
-  const lineRefs       = useRef<(SVGLineElement  | null)[]>(Array(10).fill(null));
+  const containerRef  = useRef<HTMLDivElement>(null);
+  const brandRefs     = useRef<(SVGGElement | null)[]>(Array(6).fill(null));
+  const pathRefs      = useRef<(SVGPathElement | null)[]>(Array(6).fill(null));
+  const centerRef     = useRef<SVGGElement>(null);
+  const outPathRef    = useRef<SVGPathElement>(null);
+  const outNodeRef    = useRef<SVGGElement>(null);
 
   useGSAP(
     () => {
       const mm = gsap.matchMedia();
 
       mm.add('(prefers-reduced-motion: no-preference)', () => {
-        const nodeGroups = nodeGroupRefs.current.filter(Boolean) as SVGGElement[];
-        const brightDots = brightDotRefs.current.filter(Boolean) as SVGCircleElement[];
-        const lines      = lineRefs.current.filter(Boolean)      as SVGLineElement[];
+        const brands  = brandRefs.current.filter(Boolean) as SVGGElement[];
+        const paths   = pathRefs.current.filter(Boolean) as SVGPathElement[];
+        const center  = centerRef.current;
+        const outPath = outPathRef.current;
+        const outNode = outNodeRef.current;
+        if (!center || !outPath || !outNode) return;
 
-        gsap.set([nodeGroups, lines], { opacity: 0 });
-        gsap.set(brightDots, { opacity: 0 });
+        // Measure path lengths for strokeDashoffset draw-in
+        paths.forEach((p) => {
+          const len = p.getTotalLength();
+          gsap.set(p, { strokeDasharray: len, strokeDashoffset: len, opacity: 0 });
+        });
+        const outLen = outPath.getTotalLength();
+        gsap.set(outPath, { strokeDasharray: outLen, strokeDashoffset: outLen, opacity: 0 });
 
-        // Repeating loop: sequentially light up then ripple-dim
-        const loopTl = gsap.timeline({ repeat: -1, repeatDelay: 0.4, paused: true });
-        loopTl
-          .to(brightDots, { opacity: 1, stagger: 0.16, duration: 0.22, ease: 'power2.out' })
-          .to({}, { duration: 0.5 })
-          .to(brightDots, {
-            opacity: 0,
-            stagger: { each: 0.12, from: 'end' },
-            duration: 0.18,
-            ease: 'power2.in',
-          })
-          .to({}, { duration: 0.3 });
+        gsap.set(brands,  { opacity: 0, scale: 0.7, transformOrigin: 'center center' });
+        gsap.set(center,  { opacity: 0, scale: 0.5, transformOrigin: '130px 40px' });
+        gsap.set(outNode, { opacity: 0, scale: 0.5, transformOrigin: '178px 40px' });
 
-        // Entrance, then kick off the loop
-        const masterTl = gsap.timeline({
-          scrollTrigger: {
-            trigger: containerRef.current,
-            start: 'top 90%',
-            toggleActions: 'play none none none',
-          },
+        const tl = gsap.timeline({
+          scrollTrigger: { trigger: containerRef.current, start: 'top 90%', toggleActions: 'play none none none' },
         });
 
-        masterTl
-          .to(nodeGroups, { opacity: 1, stagger: 0.07, duration: 0.3, ease: 'power2.out' })
-          .to(lines, { opacity: 1, stagger: 0.04, duration: 0.22, ease: 'power2.out' }, '-=0.2')
-          .add(() => { loopTl.play(); });
+        tl
+          // Brand icons stagger in
+          .to(brands, { opacity: 1, scale: 1, stagger: 0.09, duration: 0.4, ease: 'back.out(1.7)' })
+          // Paths draw in simultaneously with stagger
+          .to(paths, { strokeDashoffset: 0, opacity: 1, stagger: 0.07, duration: 0.55, ease: 'power2.out' }, '-=0.3')
+          // Center SILKLEARN node pops in
+          .to(center, { opacity: 1, scale: 1, duration: 0.45, ease: 'back.out(1.7)' }, '-=0.1')
+          // Output path + node
+          .to(outPath, { strokeDashoffset: 0, opacity: 1, duration: 0.35, ease: 'power2.out' }, '-=0.1')
+          .to(outNode, { opacity: 1, scale: 1, duration: 0.35, ease: 'back.out(1.7)' }, '-=0.1')
+          // Center pulse loop
+          .to(center, { scale: 1.06, transformOrigin: '130px 40px', duration: 1.6, repeat: -1, yoyo: true, ease: 'sine.inOut' }, '+=0.2')
+          // Marching-dash flow on the input paths (loop)
+          .call(() => {
+            paths.forEach((p, i) => {
+              const len = p.getTotalLength();
+              gsap.to(p, {
+                strokeDashoffset: -len,
+                duration: 1.8,
+                repeat: -1,
+                ease: 'none',
+                delay: i * 0.18,
+              });
+            });
+          }, [], '<');
       });
 
       mm.add('(prefers-reduced-motion: reduce)', () => {
-        const nodeGroups = nodeGroupRefs.current.filter(Boolean);
-        const brightDots = brightDotRefs.current.filter(Boolean);
-        const lines      = lineRefs.current.filter(Boolean);
-        gsap.set([nodeGroups, lines], { opacity: 1 });
-        gsap.set(brightDots, { opacity: 1 });
+        const brands  = brandRefs.current.filter(Boolean) as SVGGElement[];
+        const paths   = pathRefs.current.filter(Boolean) as SVGPathElement[];
+        gsap.set(brands, { opacity: 1 });
+        gsap.set(paths, { opacity: 1 });
+        gsap.set(centerRef.current,  { opacity: 1 });
+        gsap.set(outPathRef.current, { opacity: 1 });
+        gsap.set(outNodeRef.current, { opacity: 1 });
       });
     },
     { scope: containerRef },
@@ -1094,55 +1128,119 @@ export function Illustration07() {
       <svg
         viewBox="0 0 200 80"
         fill="none"
-        preserveAspectRatio="xMidYMid slice"
+        preserveAspectRatio="xMidYMid meet"
         className="w-full h-full"
         aria-hidden="true"
       >
-        {/* Grid connector lines */}
-        {IL07_LINES.map((line, i) => (
-          <line
+        {/* Converging bezier paths */}
+        {IL07_PATHS.map((d, i) => (
+          <path
             key={i}
-            ref={(el) => { lineRefs.current[i] = el; }}
-            x1={line.x1} y1={line.y1} x2={line.x2} y2={line.y2}
-            stroke="oklch(from var(--foreground) l c h / 0.06)"
-            strokeWidth="0.5"
+            ref={(el) => { pathRefs.current[i] = el; }}
+            d={d}
+            stroke="oklch(from var(--primary) l c h / 0.35)"
+            strokeWidth="0.7"
             vectorEffect="non-scaling-stroke"
+            strokeDasharray="4 8"
           />
         ))}
 
-        {/* Service nodes */}
-        {IL07_NODES.map((node, i) => (
-          <g key={i} ref={(el) => { nodeGroupRefs.current[i] = el; }}>
-            {/* Outer ring */}
+        {/* Output path: center → output node */}
+        <path
+          ref={outPathRef}
+          d="M 142,40 L 168,40"
+          stroke="oklch(from var(--primary) l c h / 0.5)"
+          strokeWidth="0.7"
+          vectorEffect="non-scaling-stroke"
+        />
+
+        {/* Brand icon nodes */}
+        {IL07_BRANDS.map((brand, i) => (
+          <g key={brand.label} ref={(el) => { brandRefs.current[i] = el; }}>
+            {/* Circle bg */}
             <circle
-              cx={node.cx} cy={node.cy} r="12"
-              fill="oklch(from var(--foreground) l c h / 0.04)"
-              stroke="oklch(from var(--foreground) l c h / 0.12)"
-              strokeWidth="0.8"
+              cx={16} cy={brand.cy} r="9"
+              fill="oklch(from var(--foreground) l c h / 0.05)"
+              stroke="oklch(from var(--foreground) l c h / 0.15)"
+              strokeWidth="0.6"
               vectorEffect="non-scaling-stroke"
             />
-            {/* Dim base dot (always visible once node fades in) */}
-            <circle
-              cx={node.cx} cy={node.cy} r="5"
-              fill="oklch(from var(--primary) l c h / 0.3)"
-            />
-            {/* Bright dot — animated by the loop */}
-            <circle
-              ref={(el) => { brightDotRefs.current[i] = el; }}
-              cx={node.cx} cy={node.cy} r="5"
-              fill="var(--primary)"
-            />
-            {/* Label below circle */}
-            <text
-              x={node.cx} y={node.cy + 17}
-              textAnchor="middle" dominantBaseline="hanging"
-              fontSize="4.5"
-              fill="var(--muted-foreground)"
+            {/* Brand icon — scale 24×24 path to fit ~10×10 centered in circle */}
+            <g
+              transform={`translate(${16 - 5}, ${brand.cy - 5}) scale(0.417)`}
+              fill="oklch(from var(--foreground) l c h / 0.7)"
             >
-              {node.label}
+              <path d={brand.path} />
+            </g>
+            {/* Label */}
+            <text
+              x={16} y={brand.cy + 12.5}
+              textAnchor="middle"
+              fontSize="3.8"
+              fill="oklch(from var(--foreground) l c h / 0.45)"
+            >
+              {brand.label}
             </text>
           </g>
         ))}
+
+        {/* Central SILKLEARN synthesis node */}
+        <g ref={centerRef}>
+          <circle
+            cx={130} cy={40} r={13}
+            fill="oklch(from var(--primary) l c h / 0.1)"
+            stroke="oklch(from var(--primary) l c h / 0.5)"
+            strokeWidth="0.8"
+            vectorEffect="non-scaling-stroke"
+          />
+          <text
+            x={130} y={38.5}
+            textAnchor="middle"
+            fontSize="4.5"
+            fontWeight="600"
+            fill="oklch(from var(--primary) l c h / 0.9)"
+            letterSpacing="0.04em"
+          >
+            SILK
+          </text>
+          <text
+            x={130} y={44}
+            textAnchor="middle"
+            fontSize="3.6"
+            fill="oklch(from var(--primary) l c h / 0.65)"
+            letterSpacing="0.06em"
+          >
+            LEARN
+          </text>
+        </g>
+
+        {/* Output node */}
+        <g ref={outNodeRef}>
+          <circle
+            cx={178} cy={40} r={9}
+            fill="oklch(from var(--foreground) l c h / 0.05)"
+            stroke="oklch(from var(--foreground) l c h / 0.2)"
+            strokeWidth="0.6"
+            vectorEffect="non-scaling-stroke"
+          />
+          <text
+            x={178} y={38.5}
+            textAnchor="middle"
+            fontSize="3.8"
+            fill="oklch(from var(--foreground) l c h / 0.6)"
+          >
+            API
+          </text>
+          <text
+            x={178} y={44}
+            textAnchor="middle"
+            fontSize="3"
+            fill="oklch(from var(--foreground) l c h / 0.35)"
+            letterSpacing="0.04em"
+          >
+            beta
+          </text>
+        </g>
       </svg>
     </div>
   );
