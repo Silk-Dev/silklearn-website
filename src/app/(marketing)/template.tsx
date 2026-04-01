@@ -33,19 +33,12 @@ export default function Template({ children }: { children: React.ReactNode }) {
     const el = document.querySelector('#page-name-display span');
     if (el) el.textContent = pageName;
 
-    const curveTransition = document.getElementById('curve-transition');
-    const curvePath = document.getElementById('curve-path');
-    if (curveTransition && curvePath) {
-      curveTransition.style.visibility = 'visible';
-      curvePath.setAttribute('d', 'M 0,0 Q 50,-15 100,0 L 100,100 Q 50,115 0,100 Z');
-    }
-
     // Only animate on cold/direct URL loads — skip on in-app SPA navigations
     if (typeof sessionStorage !== 'undefined' && !sessionStorage.getItem('page-entered')) {
       sessionStorage.setItem('page-entered', '1');
       animatePageIn();
     } else {
-      // Ensure the overlay is hidden when the wipe animation is skipped
+      // Ensure overlay stays hidden on every SPA navigation
       const ct = document.getElementById('curve-transition');
       if (ct) ct.style.visibility = 'hidden';
     }
@@ -57,7 +50,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
       <div
         id="curve-transition"
         className="pointer-events-none fixed inset-0 z-100 overflow-hidden"
-        style={{ visibility: 'visible' }}
+        style={{ visibility: 'hidden' }}
       >
         <svg
           id="curve-svg"
