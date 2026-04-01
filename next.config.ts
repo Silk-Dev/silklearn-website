@@ -99,7 +99,7 @@ const nextConfig: NextConfig = {
       "default-src 'self'",
       `style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.intercomcdn.com ${posthogHosts}`,
       "font-src 'self' https://fonts.gstatic.com https://fonts.intercomcdn.com data:",
-      `img-src 'self' data: blob: https://cdn.sanity.io https://www.google-analytics.com https://vitals.vercel-insights.com https://va.vercel-scripts.com https://static.intercomcdn.com https://downloads.intercomcdn.com https://uploads.intercomusercontent.com https://js.intercomcdn.com https://static.intercomassets.com https://*.intercomcdn.com https://*.intercomusercontent.com https://*.intercomassets.com ${posthogHosts}`,
+      `img-src 'self' data: blob: https://cdn.sanity.io https://www.google-analytics.com https://www.googletagmanager.com https://vitals.vercel-insights.com https://va.vercel-scripts.com https://static.intercomcdn.com https://downloads.intercomcdn.com https://uploads.intercomusercontent.com https://js.intercomcdn.com https://static.intercomassets.com https://*.intercomcdn.com https://*.intercomusercontent.com https://*.intercomassets.com ${posthogHosts}`,
       `frame-src 'self' ${intercomFrameHosts}`,
       (
         isDevelopment
@@ -108,8 +108,8 @@ const nextConfig: NextConfig = {
       ),
       (
         isDevelopment
-          ? `connect-src 'self' http://localhost:* https://localhost:* ws://localhost:* wss://localhost:* https://www.google-analytics.com https://vitals.vercel-insights.com https://va.vercel-scripts.com https://api-iam.intercom.io https://api.intercom.io https://*.intercom.io https://nexus-websocket-a.intercom.io https://nexus-websocket-b.intercom.io wss://nexus-websocket-a.intercom.io wss://nexus-websocket-b.intercom.io ${posthogHosts}`
-          : `connect-src 'self' https://www.google-analytics.com https://vitals.vercel-insights.com https://va.vercel-scripts.com https://api-iam.intercom.io https://api.intercom.io https://*.intercom.io https://nexus-websocket-a.intercom.io https://nexus-websocket-b.intercom.io wss://nexus-websocket-a.intercom.io wss://nexus-websocket-b.intercom.io ${posthogHosts}`
+          ? `connect-src 'self' http://localhost:* https://localhost:* ws://localhost:* wss://localhost:* https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://vitals.vercel-insights.com https://va.vercel-scripts.com https://api-iam.intercom.io https://api.intercom.io https://*.intercom.io https://nexus-websocket-a.intercom.io https://nexus-websocket-b.intercom.io wss://nexus-websocket-a.intercom.io wss://nexus-websocket-b.intercom.io ${posthogHosts}`
+          : `connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://vitals.vercel-insights.com https://va.vercel-scripts.com https://api-iam.intercom.io https://api.intercom.io https://*.intercom.io https://nexus-websocket-a.intercom.io https://nexus-websocket-b.intercom.io wss://nexus-websocket-a.intercom.io wss://nexus-websocket-b.intercom.io ${posthogHosts}`
       ),
       "media-src 'self' blob:",
       "object-src 'none'",
