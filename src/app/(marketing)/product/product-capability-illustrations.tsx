@@ -74,7 +74,7 @@ export function Illustration01() {
   );
 
   return (
-    <div ref={containerRef} aria-hidden="true" className="relative h-36 w-full overflow-hidden">
+    <div ref={containerRef} aria-hidden="true" className="relative h-full w-full overflow-hidden">
       <svg
         className="absolute inset-0 h-full w-full"
         fill="none"
@@ -226,7 +226,7 @@ export function Illustration02() {
   );
 
   return (
-    <div ref={containerRef} aria-hidden="true" className="relative h-36 w-full overflow-hidden">
+    <div ref={containerRef} aria-hidden="true" className="relative h-full w-full overflow-hidden">
       <svg
         className="absolute inset-0 h-full w-full"
         fill="none"
@@ -395,7 +395,7 @@ export function Illustration03() {
   );
 
   return (
-    <div ref={containerRef} aria-hidden="true" className="relative h-36 w-full overflow-hidden">
+    <div ref={containerRef} aria-hidden="true" className="relative h-full w-full overflow-hidden">
       <svg
         className="absolute inset-0 h-full w-full"
         fill="none"
@@ -597,7 +597,7 @@ export function Illustration04() {
   );
 
   return (
-    <div ref={containerRef} aria-hidden="true" className="relative h-36 w-full overflow-hidden">
+    <div ref={containerRef} aria-hidden="true" className="relative h-full w-full overflow-hidden">
       <svg
         className="absolute inset-0 h-full w-full"
         fill="none"
@@ -787,7 +787,7 @@ export function Illustration05() {
   );
 
   return (
-    <div ref={containerRef} className="relative w-full h-36 overflow-hidden">
+    <div ref={containerRef} className="relative w-full h-full overflow-hidden">
       <svg
         viewBox="0 0 200 80"
         fill="none"
@@ -934,7 +934,7 @@ export function Illustration06() {
   );
 
   return (
-    <div ref={containerRef} className="relative w-full h-36 overflow-hidden">
+    <div ref={containerRef} className="relative w-full h-full overflow-hidden">
       <svg
         viewBox="0 0 200 80"
         fill="none"
@@ -1090,7 +1090,7 @@ export function Illustration07() {
   );
 
   return (
-    <div ref={containerRef} className="relative w-full h-36 overflow-hidden">
+    <div ref={containerRef} className="relative w-full h-full overflow-hidden">
       <svg
         viewBox="0 0 200 80"
         fill="none"
@@ -1225,7 +1225,7 @@ export function Illustration08() {
   );
 
   return (
-    <div ref={containerRef} className="relative w-full h-36 overflow-hidden">
+    <div ref={containerRef} className="relative w-full h-full overflow-hidden">
       <svg
         viewBox="0 0 200 80"
         fill="none"
