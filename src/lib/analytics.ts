@@ -24,6 +24,7 @@ export interface FirstTouchProperties {
 
 export interface BaseProperties extends UTMProperties, FirstTouchProperties {
   page_path: string;
+  page_type: string;
   page_title: string;
   referrer: string;
   device_type: 'mobile' | 'tablet' | 'desktop';
@@ -134,6 +135,7 @@ export function registerSuperProperties(): void {
     ...firstTouch,
     device_type: getDeviceType(),
     app_env: process.env.NEXT_PUBLIC_VERCEL_ENV ?? 'local',
+    page_type: getPageType(window.location.pathname),
   });
 }
 
@@ -156,13 +158,29 @@ export function isInternalTraffic(): boolean {
 }
 
 /**
+ * Derive a stable page_type label from the current pathname.
+ * Used in every event for easy segmentation in reports.
+ */
+function getPageType(pathname: string): string {
+  if (pathname === '/') return 'homepage';
+  if (pathname.startsWith('/product')) return 'product';
+  if (pathname.startsWith('/use-cases')) return 'use-cases';
+  if (pathname.startsWith('/blog')) return 'blog';
+  if (pathname.startsWith('/waitlist')) return 'waitlist';
+  if (pathname.startsWith('/guides')) return 'guides';
+  return 'other';
+}
+
+/**
  * Build the base properties attached to every event.
  */
 export function getBaseProperties(): BaseProperties {
+  const pathname = window.location.pathname;
   return {
     ...getCurrentUTMs(),
     ...getFirstTouchUTMs(),
-    page_path: window.location.pathname,
+    page_path: pathname,
+    page_type: getPageType(pathname),
     page_title: document.title,
     referrer: document.referrer,
     device_type: getDeviceType(),
