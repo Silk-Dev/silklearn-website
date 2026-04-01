@@ -32,10 +32,16 @@ export function MarketingAnalytics() {
           id="posthog"
           strategy="lazyOnload"
           onLoad={() => {
-            // Persist first-touch UTMs on this page load
             captureUTMs();
-            // Register super properties (UTMs, device, env) on PostHog
-            registerSuperProperties();
+            // Apply stored consent now that PostHog is actually loaded.
+            // CookieConsent's useEffect fires during hydration (before PostHog
+            // exists on window), so we must re-apply the decision here.
+            const consent = localStorage.getItem('silklearn_cookie_consent');
+            if (consent === 'accepted') {
+              window.posthog?.opt_in_capturing();
+              registerSuperProperties();
+            }
+            // 'declined' or no decision → stays opted out (default)
           }}
         >
           {`

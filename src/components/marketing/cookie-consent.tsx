@@ -12,15 +12,7 @@ export function CookieConsent() {
 
   useEffect(() => {
     const stored = localStorage.getItem(CONSENT_KEY);
-    if (!stored) {
-      setVisible(true);
-    } else if (stored === 'accepted') {
-      // Already consented — re-opt in on load (in case of new session)
-      window.posthog?.opt_in_capturing();
-      registerSuperProperties();
-    } else {
-      window.posthog?.opt_out_capturing();
-    }
+    if (!stored) setVisible(true);
   }, []);
 
   if (!visible) return null;
