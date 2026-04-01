@@ -1,7 +1,5 @@
 import type { Metadata } from 'next';
 
-import { CheckCircle2 } from 'lucide-react';
-
 import {
   MarketingHero,
   MarketingPageFrame,
@@ -10,6 +8,8 @@ import {
 import { PageShell } from '@/components/marketing/page-shell';
 import { WaitlistForm } from '@/components/waitlist-form';
 import { buildMetadata } from '@/lib/seo';
+import { WaitlistHeroGraph } from './waitlist-hero-graph';
+import { WaitlistBenefitsStagger, WaitlistSignalsStagger } from './waitlist-benefits-stagger';
 
 export const metadata: Metadata = buildMetadata({
   title: 'Get Early Access to SILKLEARN',
@@ -41,33 +41,27 @@ export default function WaitlistPage() {
           kicker="Early access"
           titleAs="h2"
           rightChildren={
-            <div className="grid gap-3">
-              {[
-                "You have the sources. You still don't know what to read first.",
-                "You've got multiple sources. At least two of them disagree.",
-                'No one left to ask what order it was meant to go in.',
-                "AI answers your questions. It doesn't tell you which questions to ask first.",
-              ].map((item) => (
-                <div key={item} className="border-b border-(--border) pb-3 last:border-b-0 last:pb-0 text-sm font-medium text-(--foreground)">
-                  {item}
-                </div>
-              ))}
+            <div>
+              <WaitlistHeroGraph className="mb-6" />
+              <WaitlistSignalsStagger
+                items={[
+                  "You have the sources. You still don't know what to read first.",
+                  "You've got multiple sources. At least two of them disagree.",
+                  'No one left to ask what order it was meant to go in.',
+                  "AI answers your questions. It doesn't tell you which questions to ask first.",
+                ]}
+              />
               <div className="mt-6">
                 <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
                   What you get
                 </p>
-                <ul className="mt-3 space-y-2.5">
-                  {[
+                <WaitlistBenefitsStagger
+                  items={[
                     'The reading order your sources never gave you',
                     "A contradiction map — so you know where sources disagree before you assume they don't",
                     'Context your AI tools can actually use — ordered by how the knowledge depends on itself',
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-2.5">
-                      <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-(--primary)" />
-                      <span className="text-sm text-(--muted-foreground)">{item}</span>
-                    </li>
-                  ))}
-                </ul>
+                  ]}
+                />
               </div>
             </div>
           }
