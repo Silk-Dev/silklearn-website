@@ -9,19 +9,79 @@
 - Environments: .env.local
 
   Creating an optimized production build ...
-✓ Compiled successfully in 25.7s
+✓ Compiled successfully in 28.0s
   Running TypeScript ...
-Failed to compile.
+  Collecting page data using 7 workers ...
+(node:518495) Warning: `--localstorage-file` was provided without a valid path
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:518481) Warning: `--localstorage-file` was provided without a valid path
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:518466) Warning: `--localstorage-file` was provided without a valid path
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:518488) Warning: `--localstorage-file` was provided without a valid path
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:518474) Warning: `--localstorage-file` was provided without a valid path
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:518459) Warning: `--localstorage-file` was provided without a valid path
+(Use `node --trace-warnings ...` to show where the warning was created)
+  Generating static pages using 7 workers (0/72) ...
+(node:518502) Warning: `--localstorage-file` was provided without a valid path
+(Use `node --trace-warnings ...` to show where the warning was created)
+  Generating static pages using 7 workers (18/72) 
+  Generating static pages using 7 workers (36/72) 
+  Generating static pages using 7 workers (54/72) 
+✓ Generating static pages using 7 workers (72/72) in 3.2s
+  Finalizing page optimization ...
 
-./src/app/(marketing)/features/page.tsx:95:104
-Type error: Property 'summary' does not exist on type 'FeaturePage'.
+Route (app)                                                   Revalidate  Expire
+┌ ○ /
+├ ○ /_not-found
+├ ○ /about
+├ ○ /about/opengraph-image-1v42b1
+├ ƒ /api/waitlist
+├ ○ /blog                                                             1m      1y
+├ ● /blog/[slug]                                                      1m      1y
+│ ├ /blog/from-text-to-video-ai-understanding-evolving                1m      1y
+│ ├ /blog/before-google-librarians-organized-knowledge                1m      1y
+│ ├ /blog/vannevar-bush-memex-vision-linked-knowledge                 1m      1y
+│ └ [+31 more paths]
+├ ƒ /blog/[slug]/opengraph-image-yqks0s
+├ ○ /blog/opengraph-image-ey669m
+├ ○ /eula
+├ ○ /features
+├ ○ /features/canvas
+├ ○ /features/canvas/opengraph-image-uhzb7k
+├ ○ /features/dependency-mapping
+├ ○ /features/dependency-mapping/opengraph-image-8m3vjw
+├ ○ /features/mcp-integration
+├ ○ /features/mcp-integration/opengraph-image-1xmajt
+├ ○ /features/opengraph-image-959drp
+├ ○ /image-sitemap.xml                                                1h      1y
+├ ○ /opengraph-image
+├ ○ /opengraph-image-pwu6ef
+├ ○ /privacy
+├ ○ /product
+├ ○ /product/opengraph-image-15qh44
+├ ○ /robots.txt
+├ ○ /sitemap.xml
+├ ƒ /studio/[[...tool]]
+├ ○ /terms
+├ ○ /the-reset                                                        1m      1y
+├ ○ /the-reset/opengraph-image-1uzfx4
+├ ○ /use-cases
+├ ○ /use-cases/ai-context-preparation
+├ ○ /use-cases/ai-context-preparation/opengraph-image-1cz72p
+├ ○ /use-cases/engineering-onboarding
+├ ○ /use-cases/engineering-onboarding/opengraph-image-1y6q6x
+├ ○ /use-cases/internal-docs-training
+├ ○ /use-cases/internal-docs-training/opengraph-image-1tdqgi
+├ ○ /use-cases/opengraph-image-12r1rs
+├ ○ /waitlist
+└ ○ /waitlist/opengraph-image-1cuodf
 
-[0m [90m 93 |[39m                       [33m<[39m[33m/[39m[33mTransitionLink[39m[33m>[39m
- [90m 94 |[39m                     )}
-[31m[1m>[22m[39m[90m 95 |[39m                     [33m<[39m[33mp[39m className[33m=[39m[32m"mt-3 max-w-[56ch] text-sm leading-5 text-(--muted-foreground)"[39m[33m>[39m{page[33m.[39msummary}[33m<[39m[33m/[39m[33mp[39m[33m>[39m
- [90m    |[39m                                                                                                        [31m[1m^[22m[39m
- [90m 96 |[39m                     [33m<[39m[33mdiv[39m className[33m=[39m[32m"mt-5 grid gap-3 sm:grid-cols-3"[39m[33m>[39m
- [90m 97 |[39m                       {page[33m.[39mbullets[33m.[39mmap((bullet) [33m=>[39m (
- [90m 98 |[39m                         [33m<[39m[33mdiv[39m key[33m=[39m{bullet} className[33m=[39m[32m"bg-[oklch(from_var(--foreground)_l_c_h/0.04)] px-4 py-3 max-sm:py-2.5 text-sm leading-6 text-(--foreground)"[39m[33m>[39m[0m
-Next.js build worker exited with code: 1 and signal: null
-EXIT:1
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+
+EXIT:0
