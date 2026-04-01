@@ -3,6 +3,8 @@ import { ArrowRight, Cpu, GitBranch, LayoutTemplate } from 'lucide-react';
 import { TransitionLink } from '@/components/marketing/page-transition';
 import { FloatingCta } from '@/components/marketing/floating-cta';
 import { Button } from '@/components/ui/button';
+import { FeaturesHeroGraph } from './features-hero-graph';
+import { FeaturesCapabilitiesStagger } from './features-capabilities-stagger';
 
 import type { Metadata } from 'next';
 
@@ -38,12 +40,15 @@ export default function FeaturesPage() {
           description="Every source you're learning from — papers, videos, docs, Notion pages, API references, posts — was structured by someone who already knew where to start. They organized it in the order that made sense to them, which is almost never the order that makes sense to you. SILKLEARN synthesizes across heterogeneous sources, maps what depends on what, and surfaces the dependency-ordered path your material never made explicit."
           kicker="Features"
           rightChildren={
-            <div className="grid gap-3">
-              {featureSignals.map((signal) => (
-                <div key={signal} className="border-b border-(--border) pb-3 last:border-b-0 last:pb-0 text-sm font-medium text-(--foreground)">
-                  {signal}
-                </div>
-              ))}
+            <div>
+              <FeaturesHeroGraph />
+              <div className="mt-4 grid gap-3">
+                {featureSignals.map((signal) => (
+                  <div key={signal} className="border-b border-(--border) pb-3 last:border-b-0 last:pb-0 text-sm font-medium text-(--foreground)">
+                    {signal}
+                  </div>
+                ))}
+              </div>
             </div>
           }
           rightEyebrow="Why it exists"
@@ -63,7 +68,7 @@ export default function FeaturesPage() {
             </>
           }
           right={
-            <div>
+            <FeaturesCapabilitiesStagger>
               {featurePages.map((page, index) => {
                 const Icon = index === 0 ? GitBranch : index === 1 ? LayoutTemplate : Cpu;
                 const label = index === 0 ? 'Structure extraction' : index === 1 ? 'Synthesis canvas' : 'AI integration';
@@ -96,7 +101,7 @@ export default function FeaturesPage() {
                   </div>
                 );
               })}
-            </div>
+            </FeaturesCapabilitiesStagger>
           }
         />
 
