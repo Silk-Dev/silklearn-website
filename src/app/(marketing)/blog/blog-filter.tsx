@@ -1,11 +1,15 @@
 'use client';
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import Image from 'next/image';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 import { TransitionLink } from '@/components/marketing/page-transition';
 import { sanityImageUrl } from '@/lib/sanity';
 import type { MarketingPost } from '@/lib/site-content';
+
+gsap.registerPlugin(useGSAP);
 
 type BlogFilterProps = {
   posts: MarketingPost[];
@@ -39,10 +43,30 @@ function estimateReadTime(body: Record<string, unknown>[]): string {
 
 export function BlogFilter({ posts, tags }: BlogFilterProps) {
   const [activeTag, setActiveTag] = useState<string | null>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const filtered = activeTag
     ? posts.filter((post) => post.tags?.includes(activeTag))
     : posts;
+
+  useGSAP(
+    () => {
+      const mm = gsap.matchMedia();
+      mm.add('(prefers-reduced-motion: no-preference)', () => {
+        const cardEls = containerRef.current?.querySelectorAll<HTMLElement>('[data-post-card]');
+        if (!cardEls || cardEls.length === 0) return;
+        gsap.from(cardEls, {
+          opacity: 0,
+          y: 16,
+          stagger: 0.06,
+          duration: 0.45,
+          ease: 'power2.out',
+          clearProps: 'all',
+        });
+      });
+    },
+    { dependencies: [filtered], scope: containerRef, revertOnUpdate: true },
+  );
 
   return (
     <>
@@ -74,12 +98,12 @@ export function BlogFilter({ posts, tags }: BlogFilterProps) {
         ))}
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8">
+      <div ref={containerRef} className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8">
         {filtered.map((post) => {
           const imageUrl = post.mainImage?.asset?.url;
 
           return (
-            <article key={post.slug} className="border-b border-(--border) pb-8">
+            <article key={post.slug} data-post-card className="border-b border-(--border) pb-8">
               <TransitionLink href={`/blog/${post.slug}`} className="group flex gap-4">
                 {imageUrl && (
                   <Image
