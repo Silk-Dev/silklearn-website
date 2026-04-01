@@ -74,14 +74,7 @@ export default function UseCasesPage() {
                       {page.title}
                     </h3>
                   </TransitionLink>
-                  <p className="mt-3 max-w-[56ch] text-sm leading-5 text-(--muted-foreground)">{page.summary}</p>
-                  <div className="mt-5 grid gap-3 sm:grid-cols-3">
-                    {page.outcomes.map((outcome) => (
-                      <div key={outcome} className="bg-[oklch(from_var(--foreground)_l_c_h/0.04)] px-4 py-3 max-sm:py-2.5 text-sm leading-6 text-(--foreground)">
-                        {outcome}
-                      </div>
-                    ))}
-                  </div>
+                  <p className="mt-3 max-w-[56ch] text-sm leading-5 text-(--muted-foreground)">{page.description}</p>
                 </div>
               ))}
             </div>
