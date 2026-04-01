@@ -32,12 +32,7 @@ export function TransitionLink({
     e.preventDefault();
     onClick?.(e);
     onBeforeNavigate?.();
-    // Skip the wipe animation on in-app navigations after the first cold load
-    if (typeof sessionStorage !== 'undefined' && sessionStorage.getItem('page-entered')) {
-      router.push(target);
-    } else {
-      animatePageOut(target, router);
-    }
+    animatePageOut(target, router);
   };
 
   return <Link href={href} onClick={handleClick} {...props} />;

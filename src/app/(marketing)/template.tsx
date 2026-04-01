@@ -32,16 +32,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const el = document.querySelector('#page-name-display span');
     if (el) el.textContent = pageName;
-
-    // Only animate on cold/direct URL loads — skip on in-app SPA navigations
-    if (typeof sessionStorage !== 'undefined' && !sessionStorage.getItem('page-entered')) {
-      sessionStorage.setItem('page-entered', '1');
-      animatePageIn();
-    } else {
-      // Ensure overlay stays hidden on every SPA navigation
-      const ct = document.getElementById('curve-transition');
-      if (ct) ct.style.visibility = 'hidden';
-    }
+    animatePageIn();
   }, [pathname, pageName]);
 
   return (
