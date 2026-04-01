@@ -3,6 +3,8 @@ import { ArrowRight, Network } from 'lucide-react';
 import { TransitionLink } from '@/components/marketing/page-transition';
 import { FloatingCta } from '@/components/marketing/floating-cta';
 import { Button } from '@/components/ui/button';
+import { UseCasesFlowIllustration } from './use-cases-flow-illustration';
+import { UseCasesCardsStagger } from './use-cases-cards-stagger';
 
 import type { Metadata } from 'next';
 
@@ -32,12 +34,15 @@ export default function UseCasesPage() {
           description="The structure is already implicit in the material. Your sources reference each other, assume prior concepts, and quietly contradict each other — but none of them tell you which one to read first. That order isn't missing. It's just not visible yet."
           kicker="Use cases"
           rightChildren={
-            <div className="grid gap-3 sm:grid-cols-2">
-              {['Twenty sources, no obvious starting point', 'They contradict each other and neither flags it', 'You finish one, realize you needed another first', 'The structure exists — it\'s just invisible'].map((item) => (
-                <div key={item} className="bg-[oklch(from_var(--foreground)_l_c_h/0.04)] px-4 py-3 text-sm font-medium text-(--foreground)">
-                  {item}
-                </div>
-              ))}
+            <div>
+              <UseCasesFlowIllustration />
+              <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                {['Twenty sources, no obvious starting point', 'They contradict each other and neither flags it', 'You finish one, realize you needed another first', 'The structure exists — it\'s just invisible'].map((item) => (
+                  <div key={item} className="bg-[oklch(from_var(--foreground)_l_c_h/0.04)] px-4 py-3 text-sm font-medium text-(--foreground)">
+                    {item}
+                  </div>
+                ))}
+              </div>
             </div>
           }
           rightEyebrow="Best fit"
@@ -58,9 +63,9 @@ export default function UseCasesPage() {
             </>
           }
           right={
-            <div>
+            <UseCasesCardsStagger>
               {useCasePages.map((page, index) => (
-                <div key={page.slug} className={index > 0 ? 'border-t border-(--border) pt-6' : ''}>
+                <div key={page.slug} data-usecase-card className={index > 0 ? 'border-t border-(--border) pt-6' : ''}>
                   <div className="flex items-center gap-3">
                     <div className="flex size-10 max-sm:size-8 items-center justify-center border border-(--border) text-(--primary)">
                       <Network className="size-4.5" />
@@ -77,7 +82,7 @@ export default function UseCasesPage() {
                   <p className="mt-3 max-w-[56ch] text-sm leading-5 text-(--muted-foreground)">{page.description}</p>
                 </div>
               ))}
-            </div>
+            </UseCasesCardsStagger>
           }
         />
 
