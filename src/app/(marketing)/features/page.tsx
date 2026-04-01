@@ -76,20 +76,20 @@ export default function FeaturesPage() {
                       </div>
                       <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
                         {label}
-                        {index === 2 && (
-                          <span className="ml-2 rounded-full bg-[oklch(from_var(--primary)_l_c_h/0.12)] px-2 py-0.5 text-[0.6rem] font-semibold uppercase tracking-[0.12em] text-(--primary)">
-                            Coming soon
-                          </span>
-                        )}
                       </p>
                     </div>
-                    {index === 2 ? (
-                      <p className="mt-4 block text-[1.25rem] leading-tight tracking-[-0.02em] text-(--foreground)">
+                    {page.comingSoon ? (
+                      <p className="mt-4 text-[1.25rem] leading-tight tracking-[-0.02em] text-(--foreground)">
                         {page.title}
+                        <span className="ml-2 inline-flex items-center rounded-full bg-(--muted) px-2 py-0.5 text-[11px] font-medium tracking-wide text-(--muted-foreground) ring-1 ring-inset ring-(--border)">
+                          Coming soon
+                        </span>
                       </p>
                     ) : (
-                      <TransitionLink className="mt-4 block text-[1.25rem] leading-tight tracking-[-0.02em] text-(--foreground) transition-colors duration-150 hover:text-(--primary)" href={`/features/${page.slug}`}>
-                        {page.title}
+                      <TransitionLink className="group mt-4 block" href={`/features/${page.slug}`}>
+                        <h3 className="text-[1.25rem] leading-tight tracking-[-0.02em] text-(--foreground) transition-colors duration-150 group-hover:underline underline-offset-4 decoration-1 decoration-(--border) group-hover:decoration-(--foreground)">
+                          {page.title}
+                        </h3>
                       </TransitionLink>
                     )}
                     <p className="mt-3 max-w-[56ch] text-sm leading-5 text-(--muted-foreground)">{page.summary}</p>
@@ -145,7 +145,7 @@ export default function FeaturesPage() {
 
         <MarketingCtaSection
           actions={
-            <Button asChild size="lg">
+            <Button asChild size="lg" className="active:scale-[0.97] transition-transform duration-[160ms] ease-out">
               <TransitionLink href="/waitlist">
                 Request access
                 <ArrowRight className="size-4" />

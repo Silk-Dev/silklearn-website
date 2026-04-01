@@ -43,6 +43,7 @@ export default function UseCasesPage() {
           rightEyebrow="Best fit"
           rightTitle="This is where it pays off before you spend hours reading in the wrong order."
           title="Research synthesis and knowledge paths from any source."
+          titleClassName="text-4xl sm:text-5xl lg:text-6xl"
         />
 
         <MarketingSplitSection
@@ -68,8 +69,10 @@ export default function UseCasesPage() {
                       Use case {index + 1}
                     </p>
                   </div>
-                  <TransitionLink className="mt-4 block text-[1.25rem] leading-tight tracking-[-0.02em] text-(--foreground) transition-colors duration-150 hover:text-(--primary)" href={`/use-cases/${page.slug}`}>
-                    {page.title}
+                  <TransitionLink className="group mt-4 block" href={`/use-cases/${page.slug}`}>
+                    <h3 className="text-[1.25rem] leading-tight tracking-[-0.02em] text-(--foreground) transition-colors duration-150 group-hover:underline underline-offset-4 decoration-1 decoration-(--border) group-hover:decoration-(--foreground)">
+                      {page.title}
+                    </h3>
                   </TransitionLink>
                   <p className="mt-3 max-w-[56ch] text-sm leading-5 text-(--muted-foreground)">{page.summary}</p>
                   <div className="mt-5 grid gap-3 sm:grid-cols-3">
@@ -87,7 +90,7 @@ export default function UseCasesPage() {
 
         <MarketingCtaSection
           actions={
-            <Button asChild size="lg">
+            <Button asChild size="lg" className="active:scale-[0.97] transition-transform duration-[160ms] ease-out">
               <TransitionLink href="/waitlist">
                 Show us your workflow
                 <ArrowRight className="size-4" />

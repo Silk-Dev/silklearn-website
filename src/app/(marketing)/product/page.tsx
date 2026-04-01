@@ -163,7 +163,7 @@ export default function ProductPage() {
                 <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
                   THE PRODUCT
                 </p>
-                <h1 className="mt-6 max-w-[15ch] font-(family-name:--font-display) text-display-xl leading-none tracking-[-0.02em] text-(--foreground)">
+                <h1 className="mt-6 max-w-[15ch] font-(family-name:--font-display) text-display-xl leading-[0.94] tracking-[-0.02em] text-(--foreground)">
                   Synthesize knowledge from any source.
                 </h1>
                 <p className="mt-5 max-w-[50ch] text-[1.03rem] leading-7 text-(--muted-foreground)">
@@ -246,7 +246,7 @@ export default function ProductPage() {
                 </div>
                 <div className="flex items-center gap-2.5">
                   <card.icon className="size-4 text-(--muted-foreground)" />
-                  <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
+                  <p className="font-mono text-[0.68rem] tracking-[0.06em] text-(--primary) opacity-60">
                     {card.label}
                   </p>
                 </div>

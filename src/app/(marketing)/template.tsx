@@ -40,7 +40,15 @@ export default function Template({ children }: { children: React.ReactNode }) {
       curvePath.setAttribute('d', 'M 0,0 Q 50,-15 100,0 L 100,100 Q 50,115 0,100 Z');
     }
 
-    animatePageIn();
+    // Only animate on cold/direct URL loads — skip on in-app SPA navigations
+    if (typeof sessionStorage !== 'undefined' && !sessionStorage.getItem('page-entered')) {
+      sessionStorage.setItem('page-entered', '1');
+      animatePageIn();
+    } else {
+      // Ensure the overlay is hidden when the wipe animation is skipped
+      const ct = document.getElementById('curve-transition');
+      if (ct) ct.style.visibility = 'hidden';
+    }
   }, [pathname, pageName]);
 
   return (
