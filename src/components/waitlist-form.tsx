@@ -7,6 +7,7 @@ import { CheckCircle2 } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { track } from '@/lib/analytics';
 
 type SubmissionState = {
   kind: 'idle' | 'success' | 'error';
@@ -17,6 +18,8 @@ type WaitlistFormProps = {
   submitLabel?: string;
   idleMessage?: string;
   fitNote?: string | null;
+  /** Where the form is placed — used in analytics */
+  section?: string;
 };
 
 const idleState: SubmissionState = {
@@ -28,11 +31,21 @@ export function WaitlistForm({
   submitLabel = 'Request early access',
   idleMessage = 'Private beta — we read every application and reply personally within two business days.',
   fitNote = "Not the right fit if your docs are sparse — this works best when the knowledge is already there, just buried.",
+  section = 'waitlist',
 }: WaitlistFormProps) {
   const [email, setEmail] = useState('');
   const [companyName, setCompanyName] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submissionState, setSubmissionState] = useState<SubmissionState>(idleState);
+  const [started, setStarted] = useState(false);
+
+  function handleFirstFocus() {
+    if (started) return;
+    setStarted(true);
+    track('waitlist_started', {
+      section_name: section,
+    });
+  }
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -54,11 +67,20 @@ export function WaitlistForm({
         throw new Error(payload.message || 'Unable to join the waitlist right now.');
       }
 
+      const emailDomain = email.split('@')[1] ?? '';
+
       setEmail('');
       setCompanyName('');
       setSubmissionState({
         kind: 'success',
         message: payload.message || "You're in.",
+      });
+
+      track('waitlist_submitted', {
+        section_name: section,
+        email_domain: emailDomain,
+        has_company: Boolean(companyName),
+        is_duplicate: response.status === 200,
       });
     } catch (error) {
       const message =
@@ -69,6 +91,11 @@ export function WaitlistForm({
       setSubmissionState({
         kind: 'error',
         message,
+      });
+
+      track('waitlist_error', {
+        section_name: section,
+        error_message: message,
       });
     } finally {
       setIsSubmitting(false);
@@ -86,6 +113,7 @@ export function WaitlistForm({
           autoComplete="email"
           name="email"
           onChange={(event) => setEmail(event.target.value)}
+          onFocus={handleFirstFocus}
           placeholder="leader@company.com"
           required
           type="email"
@@ -99,6 +127,7 @@ export function WaitlistForm({
           autoComplete="organization"
           name="companyName"
           onChange={(event) => setCompanyName(event.target.value)}
+          onFocus={handleFirstFocus}
           placeholder="Acme Systems"
           type="text"
           value={companyName}

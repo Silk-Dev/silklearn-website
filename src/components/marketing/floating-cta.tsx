@@ -6,6 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { TransitionLink } from '@/components/marketing/page-transition';
+import { track } from '@/lib/analytics';
 
 export function FloatingCta() {
   const [visible, setVisible] = useState(false);
@@ -28,7 +29,18 @@ export function FloatingCta() {
         visible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0 pointer-events-none'
       }`}
     >
-      <Button asChild size="lg" className="shadow-lg">
+      <Button
+        asChild
+        size="lg"
+        className="shadow-lg"
+        onClick={() =>
+          track('cta_primary_clicked', {
+            cta_label: 'Join the waitlist',
+            cta_position: 'floating',
+            section_name: 'floating-cta',
+          })
+        }
+      >
         <TransitionLink href="/waitlist">
           Join the waitlist
           <ArrowRight className="ml-1.5 size-4" />

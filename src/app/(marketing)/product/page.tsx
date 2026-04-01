@@ -16,6 +16,7 @@ import {
 import type { LucideIcon } from 'lucide-react';
 
 import { TransitionLink } from '@/components/marketing/page-transition';
+import { TrackedTransitionLink } from '@/components/marketing/tracked-cta';
 import { FloatingCta } from '@/components/marketing/floating-cta';
 import { ScrollReveal } from '@/components/marketing/scroll-animations';
 import { ProductHeroGraph } from './product-hero-graph';
@@ -156,7 +157,7 @@ export default function ProductPage() {
   return (
     <PageShell>
       <MarketingPageFrame>
-        <section className="border-b border-(--border)">
+        <section className="border-b border-(--border)" data-section="hero">
           <div className="grid lg:grid-cols-[1fr_1px_1fr]">
             <div className="px-6  sm:px-8 lg:px-10 lg:py-30">
               <div className="max-w-165">
@@ -171,10 +172,14 @@ export default function ProductPage() {
                 </p>
                 <div className="mt-8">
                   <Button asChild size="lg">
-                    <TransitionLink href="/waitlist">
+                    <TrackedTransitionLink
+                      href="/waitlist"
+                      trackEvent="cta_primary_clicked"
+                      trackPayload={{ cta_label: 'Request Early Access', cta_position: 'hero', section_name: 'hero' }}
+                    >
                       Request Early Access
                       <ArrowRight className="size-4" />
-                    </TransitionLink>
+                    </TrackedTransitionLink>
                   </Button>
                 </div>
               </div>
@@ -190,7 +195,7 @@ export default function ProductPage() {
 
         <ProductScrollSections />
 
-        <section className="grid border-b border-(--border) lg:grid-cols-[1fr_1px_1.3fr]">
+        <section className="grid border-b border-(--border) lg:grid-cols-[1fr_1px_1.3fr]" data-section="product-outputs">
           <div className="p-6 sm:p-8 lg:flex lg:h-full lg:flex-col lg:justify-center lg:p-10">
             <h2 className="max-w-[13ch] font-(family-name:--font-display) text-display-lg leading-none tracking-[-0.02em] text-(--foreground)">
               What you get out of one reviewed graph.
@@ -221,7 +226,7 @@ export default function ProductPage() {
           </div>
         </section>
 
-        <section className="grid border-t border-(--border)">
+        <section className="grid border-t border-(--border)" data-section="capabilities">
           <ScrollReveal className="p-6 sm:p-8 lg:p-10 lg:pt-16">
             <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
               Capabilities
@@ -259,7 +264,7 @@ export default function ProductPage() {
           })}
         </ProductCapabilityCards>
 
-        <section className="grid lg:grid-cols-[1fr_1px_auto]">
+        <section className="grid lg:grid-cols-[1fr_1px_auto]" data-section="final-cta">
           <div className="p-6 sm:p-8 lg:p-10 lg:py-14">
             
             <h2 className="mt-4 max-w-[12ch] font-(family-name:--font-display) text-display-lg leading-none tracking-[-0.02em] text-(--foreground)">
@@ -271,13 +276,23 @@ export default function ProductPage() {
 
           <div className="border-t border-(--border) p-6 sm:p-8 lg:flex lg:items-center lg:gap-4 lg:border-t-0 lg:p-10 lg:py-14">
             <Button asChild size="lg">
-              <TransitionLink href="/waitlist">
+              <TrackedTransitionLink
+                href="/waitlist"
+                trackEvent="cta_primary_clicked"
+                trackPayload={{ cta_label: 'Request Early Access', cta_position: 'bottom', section_name: 'final-cta' }}
+              >
                 Request Early Access
                 <ArrowRight className="size-4" />
-              </TransitionLink>
+              </TrackedTransitionLink>
             </Button>
             <Button asChild size="lg" variant="outline">
-              <TransitionLink href="/waitlist">Or book a 20-minute walkthrough with the team</TransitionLink>
+              <TrackedTransitionLink
+                href="/waitlist"
+                trackEvent="cta_secondary_clicked"
+                trackPayload={{ cta_label: 'Book a walkthrough', cta_position: 'bottom', section_name: 'final-cta' }}
+              >
+                Or book a 20-minute walkthrough with the team
+              </TrackedTransitionLink>
             </Button>
           </div>
         </section>

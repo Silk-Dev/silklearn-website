@@ -17,6 +17,7 @@ import { WaitlistForm } from '@/components/waitlist-form';
 import { Button } from '@/components/ui/button';
 
 import { getFaqPageSchema } from '@/lib/structured-data';
+import { track } from '@/lib/analytics';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -558,7 +559,7 @@ export function HomeLanding() {
       {/* Outer rails — border-left + border-right form the two continuous vertical lines */}
       <div className="border-x border-(--border)  ">
 
-        <div className="grid lg:grid-cols-[1fr_1px_1fr] ">
+        <div className="grid lg:grid-cols-[1fr_1px_1fr] " data-section="hero">
           <div className="px-6 py-10 sm:px-8 lg:px-10 lg:py-50">
             <div className="max-w-125">
 
@@ -572,13 +573,21 @@ export function HomeLanding() {
 
               <div className="mt-6 flex flex-wrap items-center gap-3">
                 <Button asChild size="lg" >
-                  <a href={content.primaryCtaHref}>
+                  <a
+                    href={content.primaryCtaHref}
+                    onClick={() => track('cta_primary_clicked', { cta_label: content.primaryCtaLabel, cta_position: 'hero', section_name: 'hero' })}
+                  >
                     {content.primaryCtaLabel}
                     <ArrowRight className="size-4" />
                   </a>
                 </Button>
                 <Button asChild size="lg" variant="outline">
-                  <a href={content.secondaryCtaHref}>{content.secondaryCtaLabel}</a>
+                  <a
+                    href={content.secondaryCtaHref}
+                    onClick={() => track('cta_secondary_clicked', { cta_label: content.secondaryCtaLabel, cta_position: 'hero', section_name: 'hero' })}
+                  >
+                    {content.secondaryCtaLabel}
+                  </a>
                 </Button>
               </div>
 
@@ -609,7 +618,7 @@ export function HomeLanding() {
 
 
 
-        <div className="border-t border-(--border)">
+        <div className="border-t border-(--border)" data-section="problem">
           {painBlocks.map((item, index) => (
             <div
               key={item.quote}
@@ -638,7 +647,7 @@ export function HomeLanding() {
       
 
         {/* ── IN ACTION ── left rail + stacked cards, Rollups pattern */}
-        <div className="grid border-t border-(--border) lg:grid-cols-[1fr_1px_2fr] pt-40">
+        <div className="grid border-t border-(--border) lg:grid-cols-[1fr_1px_2fr] pt-40" data-section="how-it-works">
           <ScrollReveal className="hidden p-6 sm:p-8 lg:block lg:py-48 lg:sticky lg:top-28 lg:self-start">
             
 
@@ -721,7 +730,7 @@ export function HomeLanding() {
         </div>
 
         {/* ── STAGES ── left text block + right sidebar, Rollups "Used by companies" */}
-        <div className="grid border-t border-(--border) ">
+        <div className="grid border-t border-(--border) " data-section="proof">
           <div className="p-6 sm:p-8 lg:p-10 lg:pt-50 lg:mb-35">
             <ScrollReveal>
             <h2 className=" font-(family-name:--font-display) text-display-lg leading-none tracking-[-0.02em] text-(--foreground)">
@@ -743,7 +752,10 @@ export function HomeLanding() {
 
               <div className="mt-6">
                 <Button asChild size="lg">
-                  <a href="#waitlist">
+                  <a
+                    href="#waitlist"
+                    onClick={() => track('cta_primary_clicked', { cta_label: 'Request early access', cta_position: 'inline', section_name: 'how-it-works' })}
+                  >
                     Request early access
                     <ArrowRight className="size-4" />
                   </a>
@@ -756,7 +768,7 @@ export function HomeLanding() {
 
 
 
-        <div className="grid border-t border-(--border) ">
+        <div className="grid border-t border-(--border) " data-section="faq">
           <ScrollReveal className="p-6 sm:p-8 lg:p-10 lg:pt-50">
             <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">Common questions</p>
             <h2 className="mt-4  font-(family-name:--font-display) text-display-lg leading-none tracking-[-0.02em] text-(--foreground)">
@@ -802,7 +814,7 @@ export function HomeLanding() {
         </div>
 
         {/* ── WAITLIST ── */}
-        <div className="grid border-t border-(--border) lg:grid-cols-[1fr_1px_1fr]" id="waitlist">
+        <div className="grid border-t border-(--border) lg:grid-cols-[1fr_1px_1fr]" id="waitlist" data-section="final-cta">
           <ScrollReveal className="grid content-start gap-2 px-8 py-15 ">
             <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">Early access</p>
             <h2 className="max-w-[12ch] font-(family-name:--font-display) text-display-lg leading-none tracking-[-0.02em] text-(--foreground)">

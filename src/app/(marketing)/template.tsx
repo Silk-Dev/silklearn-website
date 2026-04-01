@@ -4,6 +4,7 @@ import { useLayoutEffect, useMemo } from 'react';
 import { usePathname } from 'next/navigation';
 
 import { animatePageIn } from '@/components/marketing/page-transition/animations';
+import { usePageAnalytics } from '@/lib/use-page-analytics';
 
 const PAGE_ROUTES: Record<string, string> = {
   '/': 'SILKLEARN',
@@ -36,6 +37,9 @@ export default function Template({ children }: { children: React.ReactNode }) {
     if (el) el.textContent = pageName;
     animatePageIn();
   }, [pathname, pageName]);
+
+  // Scroll depth, time-on-page, section views, form abandoned — resets per page
+  usePageAnalytics();
 
   return <div className="relative min-h-screen">{children}</div>;
 }

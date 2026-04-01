@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { TransitionLink } from '@/components/marketing/page-transition';
 import { Button } from '@/components/ui/button';
+import { registerSuperProperties } from '@/lib/analytics';
 
 const CONSENT_KEY = 'silklearn_cookie_consent';
 
@@ -11,18 +12,29 @@ export function CookieConsent() {
 
   useEffect(() => {
     const stored = localStorage.getItem(CONSENT_KEY);
-    if (!stored) setVisible(true);
+    if (!stored) {
+      setVisible(true);
+    } else if (stored === 'accepted') {
+      // Already consented — re-opt in on load (in case of new session)
+      window.posthog?.opt_in_capturing();
+      registerSuperProperties();
+    } else {
+      window.posthog?.opt_out_capturing();
+    }
   }, []);
 
   if (!visible) return null;
 
   const handleAccept = () => {
     localStorage.setItem(CONSENT_KEY, 'accepted');
+    window.posthog?.opt_in_capturing();
+    registerSuperProperties();
     setVisible(false);
   };
 
   const handleDecline = () => {
     localStorage.setItem(CONSENT_KEY, 'declined');
+    window.posthog?.opt_out_capturing();
     setVisible(false);
   };
 
