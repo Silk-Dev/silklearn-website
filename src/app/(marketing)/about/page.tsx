@@ -120,7 +120,7 @@ export default function AboutPage() {
             <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
               The thesis
             </p>
-            <h2 className="mt-4 font-(family-name:--font-display) text-[2.2rem] sm:text-[3.4rem] leading-[1.1] tracking-tight text-(--foreground) max-w-[18ch]">
+            <h2 className="mt-4 font-(family-name:--font-display) text-[clamp(1.8rem,5vw,3.8rem)] leading-[1.05] tracking-[-0.03em] text-(--foreground) max-w-[18ch]">
               The knowledge already exists. The structure doesn&apos;t.
             </h2>
             <div className="mt-8 max-w-[62ch] space-y-5 text-base leading-7 text-(--muted-foreground)">

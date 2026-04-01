@@ -93,29 +93,24 @@ const futureItems: TimelineItem[] = [
   },
 ];
 
-function TimelineRow({
-  item,
-  setRef,
-}: {
-  item: TimelineItem;
-  setRef: (el: HTMLDivElement | null) => void;
-}) {
+function TimelineRow({ item }: { item: TimelineItem }) {
   return (
-    <div ref={setRef} className="relative pl-8 pb-10 last:pb-0">
-      {/* Dot — box-shadow creates background ring that separates dot from the line behind it */}
-      <div
-        className={cn(
-          'absolute left-0 top-[5px] size-3.5 rounded-full',
-          item.type === 'past' && 'bg-(--muted-foreground)',
-          item.type === 'now' && 'bg-(--primary)',
-          item.type === 'future' && 'border border-(--border) bg-(--background)',
-        )}
-        style={{ boxShadow: '0 0 0 3px var(--background)' }}
-      >
-        {item.type === 'now' && (
-          <span className="absolute inset-0 rounded-full bg-(--primary) animate-ping opacity-50" />
-        )}
-      </div>
+    <div data-timeline-item className="relative">
+      {/* Dot — positioned on the spine */}
+      {item.type === 'now' ? (
+        <div className="absolute -left-8 mt-1.5 flex h-3 w-3 items-center justify-center">
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-(--primary) opacity-60 motion-reduce:hidden" />
+          <span className="relative h-3 w-3 rounded-full bg-(--primary)" />
+        </div>
+      ) : (
+        <div
+          className={cn(
+            'absolute -left-8 mt-1.5 h-3 w-3 rounded-full ring-2 ring-(--background)',
+            item.type === 'past' && 'bg-(--muted-foreground)',
+            item.type === 'future' && 'border border-(--border) bg-(--background)',
+          )}
+        />
+      )}
 
       {/* Inner wrapper: future items get opacity-50 so GSAP can animate
           the outer container from 0→1 while future items still land at 50% */}
@@ -154,47 +149,40 @@ function TimelineRow({
 export function AboutTimeline() {
   const containerRef = useRef<HTMLDivElement>(null);
   const lineRef = useRef<HTMLDivElement>(null);
-  const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useGSAP(
     () => {
       const line = lineRef.current;
-      const items = itemRefs.current.filter((el): el is HTMLDivElement => el !== null);
-      if (!line || items.length === 0) return;
+      if (!line || !containerRef.current) return;
+
+      const items = containerRef.current.querySelectorAll('[data-timeline-item]');
+      if (items.length === 0) return;
 
       const mm = gsap.matchMedia();
 
       mm.add('(prefers-reduced-motion: reduce)', () => {
-        gsap.set(line, { scaleY: 1, transformOrigin: 'top center' });
-        gsap.set(items, { opacity: 1, y: 0 });
+        gsap.set(line, { scaleY: 1, transformOrigin: 'top' });
+        gsap.set(Array.from(items), { opacity: 1, y: 0 });
       });
 
       mm.add('(prefers-reduced-motion: no-preference)', () => {
-        gsap.set(line, { scaleY: 0, transformOrigin: 'top center' });
-        gsap.set(items, { opacity: 0, y: 20 });
-
-        gsap.to(line, {
-          scaleY: 1,
-          duration: 1.8,
+        // Line draws in
+        gsap.from(line, {
+          scaleY: 0,
+          transformOrigin: 'top',
+          duration: 1.5,
           ease: 'power2.out',
-          scrollTrigger: {
-            trigger: containerRef.current,
-            start: 'top 80%',
-            toggleActions: 'play none none none',
-          },
+          scrollTrigger: { trigger: containerRef.current, start: 'top 85%' },
         });
 
-        gsap.to(items, {
-          opacity: 1,
-          y: 0,
-          duration: 0.6,
-          ease: 'power2.out',
-          stagger: 0.08,
-          scrollTrigger: {
-            trigger: containerRef.current,
-            start: 'top 80%',
-            toggleActions: 'play none none none',
-          },
+        // Items stagger in — first item starts visible
+        gsap.from(Array.from(items).slice(1), {
+          opacity: 0,
+          y: 12,
+          duration: 0.4,
+          stagger: 0.05,
+          ease: 'power3.out',
+          scrollTrigger: { trigger: containerRef.current, start: 'top 85%' },
         });
       });
 
@@ -205,43 +193,34 @@ export function AboutTimeline() {
 
   return (
     <div ref={containerRef} className="relative">
-      {/* Single animated solid line — scaleY: 0→1 from top */}
+      {/* Spine line — drawn by GSAP scaleY 0→1 */}
       <div
         ref={lineRef}
-        className="absolute left-[7px] top-2 bottom-2 w-px bg-(--border)"
+        className="absolute left-0 top-0 w-0.5 bg-(--border) origin-top"
+        style={{ height: '100%' }}
       />
 
-      {/* Past + Now items */}
-      {[...pastItems, nowItem].map((item, i) => (
-        <TimelineRow
-          key={item.date}
-          item={item}
-          setRef={el => {
-            itemRefs.current[i] = el;
-          }}
-        />
-      ))}
+      <div className="pl-8 space-y-10">
+        {/* Past + Now items */}
+        {[...pastItems, nowItem].map((item) => (
+          <TimelineRow key={item.date} item={item} />
+        ))}
 
-      {/* Future items — dashed overlay sits on top of the solid line in this section.
-          The overlay uses alternating transparent/--background stops to erase the solid
-          line in the "gap" segments, creating a native dashed appearance. */}
-      <div className="relative">
-        <div
-          className="absolute left-[7px] top-0 bottom-0 w-px pointer-events-none"
-          style={{
-            backgroundImage:
-              'repeating-linear-gradient(to bottom, transparent 0px, transparent 5px, var(--background) 5px, var(--background) 11px)',
-          }}
-        />
-        {futureItems.map((item, i) => (
-          <TimelineRow
-            key={item.date}
-            item={item}
-            setRef={el => {
-              itemRefs.current[pastItems.length + 1 + i] = el;
+        {/* Future items — dashed overlay sits on top of the solid line in this section.
+            The overlay uses alternating transparent/--background stops to erase the solid
+            line in the "gap" segments, creating a native dashed appearance. */}
+        <div className="relative space-y-10">
+          <div
+            className="absolute -left-8 top-0 bottom-0 w-0.5 pointer-events-none"
+            style={{
+              backgroundImage:
+                'repeating-linear-gradient(to bottom, transparent 0px, transparent 5px, var(--background) 5px, var(--background) 11px)',
             }}
           />
-        ))}
+          {futureItems.map((item) => (
+            <TimelineRow key={item.date} item={item} />
+          ))}
+        </div>
       </div>
     </div>
   );
