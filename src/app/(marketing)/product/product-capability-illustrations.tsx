@@ -1164,25 +1164,11 @@ export function Illustration07() {
             strokeWidth="0.8"
             vectorEffect="non-scaling-stroke"
           />
-          <text
-            x={130} y={38.5}
-            textAnchor="middle"
-            fontSize="4.5"
-            fontWeight="600"
-            fill="oklch(from var(--primary) l c h / 0.9)"
-            letterSpacing="0.04em"
-          >
-            SILK
-          </text>
-          <text
-            x={130} y={44}
-            textAnchor="middle"
-            fontSize="3.6"
-            fill="oklch(from var(--primary) l c h / 0.65)"
-            letterSpacing="0.06em"
-          >
-            LEARN
-          </text>
+          {/* SILKLEARN brand mark — tr-icon.svg path inlined, viewBox 307×476
+              scale(24/476≈0.0504), translate so it centers at (130, 40) */}
+          <g transform="translate(122.25, 28) scale(0.0504)" fill="oklch(from var(--primary) l c h / 0.9)">
+            <path d="M96.3578 383C96.1679 380.939 96.0468 378.838 95.9991 376.698L95.9988 370H201V332H95.9976C95.995 214.295 95.9991 40.6981 95.9991 40.6981C87.4951 -15.3019 7.99445 -11.8019 6.68761e-05 40.6981L0 310.698C1.77748 374.227 41.0988 419.072 84.9999 445.025C115.041 462.785 148.232 472 172 472H307V434H118.472C115.094 430.009 111.911 425.68 109.061 421H253V383H96.3578Z" />
+          </g>
         </g>
 
         {/* Output node — r=10, API beta */}
