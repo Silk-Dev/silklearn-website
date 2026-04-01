@@ -19,6 +19,14 @@ export const metadata: Metadata = buildMetadata({
   keywords: ['SILKLEARN waitlist', 'knowledge synthesis early access', 'dependency ordered learning', 'synthesize sources'],
 });
 
+const faqs = [
+  { question: 'What happens when I join the waitlist?', answer: "You'll get early access before the public launch. We're onboarding in small batches so we can work closely with each user — expect an invite within a few weeks, not months." },
+  { question: 'What formats does SILKLEARN support?', answer: 'PDFs, documents, Notion pages, web links, and code repositories today. Video, audio, images, and API feeds (Confluence, etc.) are on the roadmap. If you can point to it, the synthesis engine can process it.' },
+  { question: 'Is this a team product?', answer: "No. SILKLEARN is built for the individual doing the synthesis work — the researcher, the developer, the consultant. You don't need a team to use it. Canvas supports sharing when you want it, but the core product runs solo." },
+  { question: 'How much will it cost?', answer: "Early access is free while we're in private beta. Pricing hasn't been finalized — early users will get founding-member terms." },
+  { question: 'Can I use this as an AI agent or with my own AI stack?', answer: "Yes. MCP integration is in progress — any AI agent will be able to call the synthesis engine directly and get back a structured dependency map as clean context. If you're building on AI, get on the waitlist now." },
+];
+
 export default function WaitlistPage() {
   return (
     <PageShell>
@@ -31,6 +39,7 @@ export default function WaitlistPage() {
         <MarketingHero
           description="Every source you're learning from was written by someone who already understood the subject — and they arranged it in the order that made sense to them, not to you. SILKLEARN reads your sources and gives you back the path through them that the author assumed you didn't need."
           kicker="Early access"
+          titleAs="h2"
           rightChildren={
             <div className="grid gap-3">
               {[
@@ -96,37 +105,26 @@ export default function WaitlistPage() {
           <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
             Before you apply
           </p>
-          <div className="mt-6 grid gap-6 sm:grid-cols-2">
-            <div>
-              <p className="font-medium text-(--foreground)">What happens when I join the waitlist?</p>
-              <p className="mt-1 text-sm text-(--muted-foreground)">
-                You&apos;ll get early access before the public launch. We&apos;re onboarding in small batches so we can work closely with each user — expect an invite within a few weeks, not months.
-              </p>
-            </div>
-            <div>
-              <p className="font-medium text-(--foreground)">What formats does SILKLEARN support?</p>
-              <p className="mt-1 text-sm text-(--muted-foreground)">
-                PDFs, documents, Notion pages, web links, and code repositories today. Video, audio, images, and API feeds (Confluence, etc.) are on the roadmap. If you can point to it, the synthesis engine can process it.
-              </p>
-            </div>
-            <div>
-              <p className="font-medium text-(--foreground)">Is this a team product?</p>
-              <p className="mt-1 text-sm text-(--muted-foreground)">
-                No. SILKLEARN is built for the individual doing the synthesis work — the researcher, the developer, the consultant. You don&apos;t need a team to use it. Canvas supports sharing when you want it, but the core product runs solo.
-              </p>
-            </div>
-            <div>
-              <p className="font-medium text-(--foreground)">How much will it cost?</p>
-              <p className="mt-1 text-sm text-(--muted-foreground)">
-                Early access is free while we&apos;re in private beta. Pricing hasn&apos;t been finalized — early users will get founding-member terms.
-              </p>
-            </div>
-            <div>
-              <p className="font-medium text-(--foreground)">Can I use this as an AI agent or with my own AI stack?</p>
-              <p className="mt-1 text-sm text-(--muted-foreground)">
-                Yes. MCP integration is in progress — any AI agent will be able to call the synthesis engine directly and get back a structured dependency map as clean context. If you&apos;re building on AI, get on the waitlist now.
-              </p>
-            </div>
+          <div className="mt-6 grid gap-2 sm:grid-cols-1">
+            {faqs.map((faq, i) => (
+              <details
+                key={i}
+                className="group border-b border-(--border) py-4 first:border-t"
+              >
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-medium text-(--foreground) [&::-webkit-details-marker]:hidden">
+                  {faq.question}
+                  <svg
+                    className="h-4 w-4 shrink-0 text-(--muted-foreground) transition-transform duration-200 group-open:rotate-180"
+                    fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <p className="mt-3 text-sm leading-6 text-(--muted-foreground)">
+                  {faq.answer}
+                </p>
+              </details>
+            ))}
           </div>
         </div>
       </MarketingPageFrame>

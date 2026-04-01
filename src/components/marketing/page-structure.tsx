@@ -15,6 +15,8 @@ export function MarketingPageFrame({ children, className }: MarketingPageFramePr
 type MarketingHeroProps = {
   kicker: string;
   title: string;
+  titleAs?: 'h1' | 'h2';
+  titleClassName?: string;
   description: string;
   actions?: ReactNode;
   rightEyebrow?: string;
@@ -26,6 +28,8 @@ type MarketingHeroProps = {
 export function MarketingHero({
   kicker,
   title,
+  titleAs: TitleTag = 'h1',
+  titleClassName,
   description,
   actions,
   rightEyebrow,
@@ -40,9 +44,9 @@ export function MarketingHero({
           <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
             {kicker}
           </p>
-          <h1 className="mt-6 max-w-[11ch] font-(family-name:--font-display) text-display-xl max-sm:text-display-lg leading-none tracking-[-0.02em] text-(--foreground) max-sm:max-w-none">
+          <TitleTag className={cn('mt-6 max-w-[11ch] font-(family-name:--font-display) leading-none tracking-[-0.02em] text-(--foreground) max-sm:max-w-none', titleClassName ?? 'text-display-xl max-sm:text-display-lg')}>
             {title}
-          </h1>
+          </TitleTag>
           <p className="mt-5 max-w-[58ch] text-[1rem] leading-5 text-(--muted-foreground)">
             {description}
           </p>
