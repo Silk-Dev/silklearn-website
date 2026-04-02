@@ -141,6 +141,13 @@
   box-sizing: border-box;
 }
 
+/* Hide the native cursor on pointer devices — custom trail animation takes over */
+@media (pointer: fine) {
+  *, *::before, *::after {
+    cursor: none !important;
+  }
+}
+
 html {
   scroll-behavior: auto;
   text-rendering: optimizeLegibility;
