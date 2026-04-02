@@ -18,7 +18,7 @@ interface Props {
 
 export function CursorTrailAnimation({
   totalSegments = 20,
-  lineColor = '#fff',
+  lineColor = '#000',
   maxLineWidth = 8,
   movementThreshold = 4000,
   timeWindow = 500,
