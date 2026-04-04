@@ -159,7 +159,7 @@ export default function ProductPage() {
       <MarketingPageFrame>
         <section className="border-b border-(--border)" data-section="hero">
           <div className="grid lg:grid-cols-[1fr_1px_1fr]">
-            <div className="px-6  sm:px-8 lg:px-10 lg:py-30">
+            <div className="px-6 py-8 sm:px-8 sm:py-10 lg:px-10 lg:py-30">
               <div className="max-w-165">
                 <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-(--muted-foreground)">
                   THE PRODUCT
@@ -274,8 +274,8 @@ export default function ProductPage() {
 
           <div className="hidden  lg:block" />
 
-          <div className="border-t border-(--border) p-6 sm:p-8 lg:flex lg:items-center lg:gap-4 lg:border-t-0 lg:p-10 lg:py-14">
-            <Button asChild size="lg">
+          <div className="border-t border-(--border) flex flex-col gap-3 p-6 sm:p-8 lg:flex-row lg:items-center lg:gap-4 lg:border-t-0 lg:p-10 lg:py-14">
+            <Button asChild size="lg" className="w-full lg:w-auto">
               <TrackedTransitionLink
                 href="/waitlist"
                 trackEvent="cta_primary_clicked"
@@ -285,7 +285,7 @@ export default function ProductPage() {
                 <ArrowRight className="size-4" />
               </TrackedTransitionLink>
             </Button>
-            <Button asChild size="lg" variant="outline">
+            <Button asChild size="lg" variant="outline" className="h-auto w-full whitespace-normal py-3 text-center leading-5 lg:h-12 lg:w-auto lg:whitespace-nowrap lg:py-2">
               <TrackedTransitionLink
                 href="/waitlist"
                 trackEvent="cta_secondary_clicked"

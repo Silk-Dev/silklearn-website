@@ -97,7 +97,7 @@ export default function FeaturesPage() {
                         </h3>
                       </TransitionLink>
                     )}
-                    <p className="mt-3 max-w-[56ch] text-sm leading-5 text-(--muted-foreground)">{page.description}</p>
+                    <p className="mt-3 mb-6 max-w-[56ch] text-sm leading-5 text-(--muted-foreground)">{page.description}</p>
                   </div>
                 );
               })}

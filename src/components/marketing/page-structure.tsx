@@ -92,7 +92,7 @@ export function MarketingSplitSection({
   stickyLeft = false,
 }: MarketingSplitSectionProps) {
   return (
-    <section className={cn('grid border-t border-(--border) lg:grid-cols-[1fr_1px_1.3fr]', className)}>
+    <section className={cn('grid border-t border-b border-(--border) lg:grid-cols-[1fr_1px_1.3fr]', className)}>
       <ScrollReveal
         className={cn(
           'p-6 sm:p-8 lg:p-10',
